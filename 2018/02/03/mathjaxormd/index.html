@@ -441,10 +441,10 @@
       
 
       
-        <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>在使用 <strong><em>Hexo</em></strong> 写文章时,会遇到这样一个问题:<br>如果我们使用 MathJax 来渲染 Tex 公式并且使用到了 <strong><em>下标</em></strong> 例如<br><code>f(n)=\sum\limits_{i=1}^n\sum\limits_{j=1}^m\cdots</code><br>$$f(n)=\sum\limits<em>{i=1}^n\sum\limits</em>{j=1}^m\cdots$$就会发生两个<code>_</code>符号之间的内容变成了 <strong><em>斜体</em></strong> 并且公式不能正确渲染;而在一般的 Markdown 编辑器中就能正确渲染.相似情况的还有<code>\\</code>等字符.<br>这是因为在 Markdown 中,<strong><em> $\ldots$</em></strong> 表示<strong>斜体</strong>,而 Hexo 默认的<strong>渲染引擎</strong>会自动将其<strong>转义</strong>,导致问题出现.</p>
+        <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>在使用 <strong><em>Hexo</em></strong> 写文章时,会遇到这样一个问题:<br>如果我们使用 MathJax 来渲染 Tex 公式并且使用到了 <strong><em>下标</em></strong> 例如<br><code>f(n)=\sum\limits_{i=1}^n\sum\limits_{j=1}^m\cdots</code><br>$$f(n)=\sum\limits_{i=1}^n\sum\limits_{j=1}^m\cdots$$就会发生两个<code>_</code>符号之间的内容变成了 <strong><em>斜体</em></strong> 并且公式不能正确渲染;而在一般的 Markdown 编辑器中就能正确渲染.相似情况的还有<code>\\</code>等字符.<br>这是因为在 Markdown 中,<strong>_ $\ldots$_</strong> 表示<strong>斜体</strong>,而 Hexo 默认的<strong>渲染引擎</strong>会自动将其<strong>转义</strong>,导致问题出现.</p>
 <h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><ul>
 <li>更换渲染引擎, github 上有不少诸如此类优化过的渲染引擎,自行<code>uninstall</code>,<code>install</code>即可.</li>
-<li>[推荐]直接更改渲染引擎的脚本文件,取消其对<code>_..._</code>和’\‘的转义即可.</li>
+<li>[推荐]直接更改渲染引擎的脚本文件,取消其对<code>_..._</code>和’\\’的转义即可.</li>
 </ul>
 <p><strong><em>Tips:如果使用第二种解决方案,仍可使用`</em>…<em>`对目标处理产生斜体</em></strong></p>
 <h4 id="附件"><a href="#附件" class="headerlink" title="附件"></a>附件</h4><ul>

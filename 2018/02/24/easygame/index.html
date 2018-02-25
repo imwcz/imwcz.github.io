@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="题目,博弈论,Bash博弈,nim博弈,Wythoff博弈,Zeckendorf定理,Beatty定理,一堆简单题," />
+  <meta name="keywords" content="博弈论,题目,Bash博弈,nim博弈,Wythoff博弈,Zeckendorf定理,Beatty定理,一堆简单题," />
 
 
 
@@ -482,11 +482,11 @@
 <h3 id="Input示例-3"><a href="#Input示例-3" class="headerlink" title="Input示例"></a>Input示例</h3><p>3<br>2<br>3<br>4</p>
 <h3 id="Output示例-3"><a href="#Output示例-3" class="headerlink" title="Output示例"></a>Output示例</h3><p>B<br>B<br>A</p>
 <h3 id="做法-3"><a href="#做法-3" class="headerlink" title="做法"></a>做法</h3><h4 id="斐波那契博弈问题"><a href="#斐波那契博弈问题" class="headerlink" title="斐波那契博弈问题"></a>斐波那契博弈问题</h4><p>　　可以看出这是一个简单的斐波那契博弈问题, 也就是当 n 为斐波那契数的时候后手必胜, 但是由于以前从未接触过斐波那契堆所以来学习一下.</p>
-<h4 id="齐肯多夫定理"><a href="#齐肯多夫定理" class="headerlink" title="齐肯多夫定理"></a>齐肯多夫定理</h4><p>　　任何正整数都可以被表示成不连续的斐波那契堆之和的形式, 斐波那契堆就是依据这个定理.<br>　　这个定理可以利用归纳法证明, 首先对于任意非斐波那契数 n , 存在$Fib<em>{i}&lt;n&lt;Fib</em>{i+1}$, 我们取满足性质的最大的 $i$, 设$n’=n-Fib{i}$, 又因为$Fib<em>{i-1}+Fib</em>{i}=Fib{i+1}$, 所以$n’&lt; Fib_{i-1}$.所以对于$n’$相似的划分能进行下去, 因此定理成立.</p>
+<h4 id="齐肯多夫定理"><a href="#齐肯多夫定理" class="headerlink" title="齐肯多夫定理"></a>齐肯多夫定理</h4><p>　　任何正整数都可以被表示成不连续的斐波那契堆之和的形式, 斐波那契堆就是依据这个定理.<br>　　这个定理可以利用归纳法证明, 首先对于任意非斐波那契数 n , 存在$Fib_{i}&lt;n&lt;Fib_{i+1}$, 我们取满足性质的最大的 $i$, 设$n’=n-Fib{i}$, 又因为$Fib_{i-1}+Fib_{i}=Fib{i+1}$, 所以$n’&lt; Fib_{i-1}$.所以对于$n’$相似的划分能进行下去, 因此定理成立.</p>
 <h4 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h4><p>　　证明对于 n 为斐波那契数先手必败.</p>
 <ul>
 <li>首先对于斐波那契数 $1,2,3$ 先手必败显然成立.</li>
-<li>假设这个结论在$n\leq k$时成立,<br>对于$k+1$, Fib<em>{k+1}=Fib</em>{k}+Fib<em>{k-1}.<br>那么我们可以将这一堆石子看成两堆, 数量分别为$Fib</em>{k}$和$Fib<em>{k-1}$.<br>对于$Fib</em>{k-1}$先手总能取到最后一颗, 那么后手可以选择只取完$Fib<em>{k-1}$那么先手将面临取$Fib</em>{k}$的情况, 但是不同的是先手有可能会全部取完所以还需要考虑上一步后手取的数量.<br>通过归纳我们又知道后手在$Fib<em>{k-1}$取的最后一次不会超过$\frac{2}{3}Fib</em>{k-1}$, 所以先手在$Fib<em>{k}$堆中取的第一次不会超过$\frac{4}{3}Fib</em>{k-1}$.所以后手在$Fib_{k}$中仍然拥有必胜策略.</li>
+<li>假设这个结论在$n\leq k$时成立,<br>对于$k+1$, Fib_{k+1}=Fib_{k}+Fib_{k-1}.<br>那么我们可以将这一堆石子看成两堆, 数量分别为$Fib_{k}$和$Fib_{k-1}$.<br>对于$Fib_{k-1}$先手总能取到最后一颗, 那么后手可以选择只取完$Fib_{k-1}$那么先手将面临取$Fib_{k}$的情况, 但是不同的是先手有可能会全部取完所以还需要考虑上一步后手取的数量.<br>通过归纳我们又知道后手在$Fib_{k-1}$取的最后一次不会超过$\frac{2}{3}Fib_{k-1}$, 所以先手在$Fib_{k}$堆中取的第一次不会超过$\frac{4}{3}Fib_{k-1}$.所以后手在$Fib_{k}$中仍然拥有必胜策略.</li>
 </ul>
 <p>问题得证</p>
 <h3 id="Code-3"><a href="#Code-3" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">55</span>;</div><div class="line"><span class="keyword">int</span> Fib[N]=&#123;<span class="number">1</span>,<span class="number">1</span>&#125;;</div><div class="line"><span class="keyword">int</span> n,now;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="built_in">cin</span>&gt;&gt;n;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=<span class="number">50</span>;++i)</div><div class="line">		Fib[i]=Fib[i<span class="number">-1</span>]+Fib[i<span class="number">-2</span>];</div><div class="line">	<span class="keyword">while</span>(n--)&#123;</div><div class="line">		<span class="built_in">cin</span>&gt;&gt;now;</div><div class="line">		<span class="keyword">bool</span> flag=<span class="literal">false</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">50</span>;++i)</div><div class="line">			<span class="keyword">if</span>(now==Fib[i])&#123;</div><div class="line">				<span class="built_in">printf</span>(<span class="string">"B\n"</span>);</div><div class="line">				flag=<span class="literal">true</span>;</div><div class="line">				<span class="keyword">break</span>;</div><div class="line">			&#125;</div><div class="line">		<span class="keyword">if</span>(!flag)</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"A\n"</span>);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -501,11 +501,11 @@
 <li>$a_0=0$,$b_0=0$</li>
 <li>$a_i$是从未在之前的$a_k,b_k (0\leq k\leq i-1) $中出现过的最小自然数, $b_i=a_i+i$</li>
 </ul>
-<h5 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h5><p>1.任何自然数都包含在一个且仅有一个奇异局势中.<br>由于$a_k$是从未在前面出现过的最小自然数, 所以$a_k&gt;a[k-1]$, 而$b_k=a<em>k+k&gt;a</em>{k-1}$.<br>2.任意操作都可将奇异局势变为非奇异局势.</p>
+<h5 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h5><p>1.任何自然数都包含在一个且仅有一个奇异局势中.<br>由于$a_k$是从未在前面出现过的最小自然数, 所以$a_k&gt;a[k-1]$, 而$b_k=a_k+k&gt;a_{k-1}$.<br>2.任意操作都可将奇异局势变为非奇异局势.</p>
 <ul>
 <li>如果只改变$(a_i,b_i)$中的一个, 根据上述结论, 奇异局势一定被改变;</li>
 <li>如果同时改变$(a_i,b_i)$为$(a_i-k,b_i-k)$, 因为$a_j+j=b_j$, 所以两者的差被改变,奇异局势被改变.</li>
-<li>采取一定办法可以将非奇异局势转变为奇异局势.假设当前局势为$(a,b)$.<br>1.若$b=a$, 则同时从堆中取走 $a$ 个物品, 就变成来奇异局势;<br>2.若$\exists a_k=a$且$b&gt;b_k$, 则从$b$中取出$b_k-b$个即可;<br>3.若$\exists a_k=a$且$b&lt; b<em>k$, 则同时从两堆中拿走$a-a</em>{b-a}$个即可变成$(a<em>{b-a},a</em>{b-a}+b-a)$;<br>4.若$\exists b_k=b$且$a&gt;a_k$, 则从 $a$ 中拿出 $a-a_k$即可;<br>5.若$\exists b_k=b$且$a&lt; a_k$, 若$a=a_j\ or\ b_j$则从$b$中拿出$b-b_j$或$b-a_j$即可.<h4 id="Beatty-定理"><a href="#Beatty-定理" class="headerlink" title="Beatty 定理"></a>Beatty 定理</h4>　　这部分内容来自 Matrix67 的博客.<br>　　如果正无理数 $\alpha$ 和$ \beta$ 满足 $\frac{1}{\alpha}+\frac{1}{\beta}=1$, 则数列$\lfloor \alpha,2\dot \alpha,\cdots\rfloor$ 和 $\lfoor \beta,2\dot \alpha,\cdots $既无遗漏又不重复的包含了所有的正整数.</li>
+<li>采取一定办法可以将非奇异局势转变为奇异局势.假设当前局势为$(a,b)$.<br>1.若$b=a$, 则同时从堆中取走 $a$ 个物品, 就变成来奇异局势;<br>2.若$\exists a_k=a$且$b&gt;b_k$, 则从$b$中取出$b_k-b$个即可;<br>3.若$\exists a_k=a$且$b&lt; b_k$, 则同时从两堆中拿走$a-a_{b-a}$个即可变成$(a_{b-a},a_{b-a}+b-a)$;<br>4.若$\exists b_k=b$且$a&gt;a_k$, 则从 $a$ 中拿出 $a-a_k$即可;<br>5.若$\exists b_k=b$且$a&lt; a_k$, 若$a=a_j or b_j$则从$b$中拿出$b-b_j$或$b-a_j$即可.<h4 id="Beatty-定理"><a href="#Beatty-定理" class="headerlink" title="Beatty 定理"></a>Beatty 定理</h4>　　这部分内容来自 Matrix67 的博客.<br>　　如果正无理数 $\alpha$ 和$ \beta$ 满足 $\frac{1}{\alpha}+\frac{1}{\beta}=1$, 则数列$\lfloor \alpha,2\dot \alpha,\cdots\rfloor$ 和 $\lfoor \beta,2\dot \alpha,\cdots $既无遗漏又不重复的包含了所有的正整数.</li>
 </ul>
 <p>**<br>　　首先注意到，如果 x 和 y 都不是整数，那么 [x] 严格地小于 x ，[y] 严格地小于 y ，从而 [x] + [y] &lt; x + y 。另外，[x] 一定严格地大于 x – 1 ， [y] 一定严格地大于 y – 1 ，从而 [x] + [y] 一定严格地大于 x + y – 2。这说明，当 x 和 y 都不是整数时， [x] + [y] 将介于 x + y – 2 和 x + y 之间。</p>
 <p>　　回到原问题。显然，在数列 [1 · α], [2 · α], [3 · α], … 中，小于 n 的正整数有 [n / α] 个。显然，在数列 [1 · β], [2 · β], [3 · β], … 中，小于 n 的正整数有 [n / β] 个。因此，在这两个数列中，小于 n 的正整数共有 [n / α] + [n / β] 个。由于 α 和 β 都是无理数，因此 n / α 和 n / β 不可能为整数，由刚才的结论， [n / α] + [n / β] 一定介于 n / α + n / β – 2 和 n / α + n / β 之间，即 n – 2 和 n 之间。但是， [n / α] + [n / β] 是个整数，因而它精确地等于 n – 1 。</p>
@@ -514,13 +514,13 @@
 <p>　　序列 W 的性质 3 则是， W 当中各项里的较小数依次递增，即 [1·φ], [2·φ], [3·φ], … 依次递增。这就更显然了：在数列 1·φ, 2·φ, 3·φ, … 中，后一项总比前一项大 φ ≈ 1.618 &gt; 1 ，因此即使取整后，后一项也一定严格地大于前一项。注意到，性质 2 和性质 3 结合起来可以告诉我们， W 当中各项里的较大数也是依次递增的。<br>**</p>
 <h4 id="详细证明"><a href="#详细证明" class="headerlink" title="详细证明"></a>详细证明</h4><p>　　用剩下的石子数$(a,b)$来表示状态.<br>　　根据定理”<strong>有限个节点的无回路有向图有唯一的核(终点)</strong>“, 我们可以用 <strong>backward induction</strong> 逐步递推出每种状态的胜负情况. 我们会发现, 对于先手的必败态是这么一些状态 $(0,0), (1,2), (3,5), (6,10)\cdots $, 或许可以从这些数字当中寻找到关于答案的信息.<br>　　记第 n 组必败态为 $(a_n,b_n)$.</p>
 <ul>
-<li>命题一: $a<em>n+1$是前$n$组必败态中从未出现过的最小正整数.<br>如果$a</em>{n+1}$不是未出现的数中最小的, 那么可以从$a<em>{n+1}$到达一个使$a</em>{n+1}$更小的状态.矛盾.</li>
-<li>命题二: $b_n=a<em>n+n$<br>证明: 若前 $k$ 个必败态分别是 $(a</em>{k},a<em>{k}+k)$, 下一个必败态是 $(a</em>{k+1},a_{k+1}+k+1)$.<br>　　从第$k+1$个必胜态出发, 一共能走向三种状态,分别是 拿左边, 拿右边和都拿, 上面的 奇异局势性质 已经说明拿完之后的状态必定不是奇异局势, 下一个操作的人可以将其重新变成奇异局势.</li>
+<li>命题一: $a_n+1$是前$n$组必败态中从未出现过的最小正整数.<br>如果$a_{n+1}$不是未出现的数中最小的, 那么可以从$a_{n+1}$到达一个使$a_{n+1}$更小的状态.矛盾.</li>
+<li>命题二: $b_n=a_n+n$<br>证明: 若前 $k$ 个必败态分别是 $(a_{k},a_{k}+k)$, 下一个必败态是 $(a_{k+1},a_{k+1}+k+1)$.<br>　　从第$k+1$个必胜态出发, 一共能走向三种状态,分别是 拿左边, 拿右边和都拿, 上面的 奇异局势性质 已经说明拿完之后的状态必定不是奇异局势, 下一个操作的人可以将其重新变成奇异局势.</li>
 </ul>
 <p>　　这样我们就得到了这个数列的递推式.<br>　　接下来我们将这两个命题看作是这个数列的定义, 来得到它的性质.</p>
 <ul>
 <li>性质一: $(a_n,b_n)$遍历所有正整数.</li>
-<li>性质二: $A=a<em>{i},i=1,2,\cdots, B=a</em>{i},i=1,2,\cdots $, 则$A\cup B=\varnothing$.<br>可以知道$A$和$B$满足 Beatty定理.<br>$$a_n=\lfloor \alpha n\rfloor, b_n=\lfloor \beta n\rfloor, a<em>n+n=\lfloor(\alpha+1)n\rfloor=\lfloor \beta n \rfloor$$,<br>得<br>$$\frac{1}{\alpha+1}+\frac{1}{\alpha}=1$$<br>解得$$\alpha=\frac{\sqrt{5}+1}{2}$$<br>可以得到该数列的通项公式.<br>$$a</em>{i}=\alpha i,b_{i}=i\alpha^2=i\alpha+i$$</li>
+<li>性质二: $A=a_{i},i=1,2,\cdots, B=a_{i},i=1,2,\cdots $, 则$A\cup B=\varnothing$.<br>可以知道$A$和$B$满足 Beatty定理.<br>$$a_n=\lfloor \alpha n\rfloor, b_n=\lfloor \beta n\rfloor, a_n+n=\lfloor(\alpha+1)n\rfloor=\lfloor \beta n \rfloor$$,<br>得<br>$$\frac{1}{\alpha+1}+\frac{1}{\alpha}=1$$<br>解得$$\alpha=\frac{\sqrt{5}+1}{2}$$<br>可以得到该数列的通项公式.<br>$$a_{i}=\alpha i,b_{i}=i\alpha^2=i\alpha+i$$</li>
 </ul>
 <h2 id="Poj-2484-A-Funny-Game"><a href="#Poj-2484-A-Funny-Game" class="headerlink" title="Poj 2484 A Funny Game"></a><a href="http://poj.org/problem?id=2484" target="_blank" rel="external">Poj 2484 A Funny Game</a></h2><h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>　　Alice and Bob decide to play a funny game. At the beginning of the game they pick n(1 &lt;= n &lt;= 106) coins in a circle, as Figure 1 shows. A move consists in removing one or two adjacent coins, leaving all other coins untouched. At least one coin must be removed. Players alternate moves with Alice starting. The player that removes the last coin wins. (The last player to move wins. If you can’t move, you lose.)<br><img src="http://poj.org/images/2484_1.jpg" alt="Png1"><br>　　<strong>Note</strong>: For n &gt; 3, we use c1, c2, …, cn to denote the coins clockwise and if Alice remove c2, then c1 and c3 are NOT adjacent! (Because there is an empty place between c1 and c3.)<br>　　Suppose that both Alice and Bob do their best in the game.<br>You are to write a program to determine who will finally win the game.</p>
 <p>###Input<br>　　There are several test cases. Each test case has only one line, which contains a positive integer n (1 &lt;= n &lt;= 106). There are no blank lines between cases. A line with a single 0 terminates the input. </p>
@@ -578,9 +578,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/题目/" rel="tag"># 题目</a>
-          
             <a href="/tags/博弈论/" rel="tag"># 博弈论</a>
+          
+            <a href="/tags/题目/" rel="tag"># 题目</a>
           
             <a href="/tags/Bash博弈/" rel="tag"># Bash博弈</a>
           
