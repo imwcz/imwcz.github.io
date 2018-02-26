@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /2018/
+Allow: /archives/
+Allow: /about/
+Allow: /categories/
+Allow: /page/
+
+Disallow: /images/
+Disallow: /js/
+Disallow: /css/
+Disallow: /myjson/
+Disallow: /lib/
+Disallow: /pdf/
+
+Sitemap: http://www.aiyoupass.com/sitemap.xml
+Sitemap: http://www.aiyoupass.com/baidusitemap.xml
