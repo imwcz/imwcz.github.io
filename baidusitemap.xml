@@ -4,6 +4,40 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/longdebug/</loc>
+    <lastmod>2018-02-26T13:07:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>漫长的 Debug</title>
+        <pubTime>2018-02-26T13:05:34.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>解决方案</tag>
+         
+        <tag>Debug</tag>
+         
+        <tag>copyright</tag>
+         
+        <tag>版权信息</tag>
+         
+         
+           
+             
+              <breadCrumb title="解决方案" url="http://aiyoupass.com/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+          
+             
+              <breadCrumb title="Hexo" url="http://aiyoupass.com/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/Hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+    
+  <url>
     <loc>http://aiyoupass.com/2018/Multi-SG/</loc>
     <lastmod>2018-02-26T12:34:30.000Z</lastmod>
     <data>
@@ -67,9 +101,9 @@
         <title>Anti-SG/Misère Games</title>
         <pubTime>2018-02-26T00:17:21.000Z</pubTime>
         
-        <tag>Anti-SG</tag>
-         
         <tag>博弈论</tag>
+         
+        <tag>Anti-SG</tag>
          
         <tag>Misère Games</tag>
          
