@@ -89,16 +89,16 @@
     })();
 </script>
 
-<meta name="description" content="今天做了一道题目">
+<meta name="description" content="今天做了一道题目, 调试起来没完没了了. 花了起码有两个小时的时间, 看来在 Debug 方面还有很大的进步空间.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="漫长的 Debug">
 <meta property="og:url" content="http://aiyoupass.com/2018/longdebug/index.html">
 <meta property="og:site_name" content="落花微雨">
-<meta property="og:description" content="今天做了一道题目">
-<meta property="og:updated_time" content="2018-02-26T13:07:40.000Z">
+<meta property="og:description" content="今天做了一道题目, 调试起来没完没了了. 花了起码有两个小时的时间, 看来在 Debug 方面还有很大的进步空间.">
+<meta property="og:updated_time" content="2018-02-26T13:44:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="漫长的 Debug">
-<meta name="twitter:description" content="今天做了一道题目">
+<meta name="twitter:description" content="今天做了一道题目, 调试起来没完没了了. 花了起码有两个小时的时间, 看来在 Debug 方面还有很大的进步空间.">
 
 
 
@@ -424,7 +424,7 @@
 
           
               <div class="post-description">
-                  今天做了一道题目
+                  今天做了一道题目, 调试起来没完没了了. 花了起码有两个小时的时间, 看来在 Debug 方面还有很大的进步空间.
               </div>
           
 
@@ -441,12 +441,32 @@
       
 
       
-        
+        <h3 id="二月二十六日"><a href="#二月二十六日" class="headerlink" title="二月二十六日"></a>二月二十六日</h3><h4 id="The-First"><a href="#The-First" class="headerlink" title="The First"></a>The First</h4><p><a href="http://poj.org/problem?id=2311" target="_blank" rel="external">POJ 2311 Cutting Game</a><br><a href="aiyoupass/2018/Multi-SG/">当时</a><br>　　也不是很难的一道题, 代码也不长, 可以即使我一条一条语句的去和别人的对比, 我也找不到错误之处, 这就让人非常无奈, 最终还是到了错误之处, 可是已经花了一个多小时了.原来我 <code>define</code> 了一个变量, 然后当时我定义这个变量的时候大概搞错了题意, 因此这个变量是它本来应该大小的一百分之一.<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 201</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> M 3</span></div><div class="line"></div><div class="line"><span class="keyword">int</span> sg[N][M]</div></pre></td></tr></table></figure></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 201</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> M 201</span></div><div class="line"></div><div class="line"><span class="keyword">int</span> sg[N][N];</div></pre></td></tr></table></figure>
+<p>　　谁知道为什么数组溢出了编译器确不报错?数组溢出这种事情也不是经常出现, 因此被忽视了.</p>
+<p>　　教训: 所以以后在做题的时候一定要注意细心, 而且在 debug 的时候一定要针对全部的代码去调试, 而不是仅仅关注几个关键的地方或者是函数, 错误很可能发生在最难以想到的地方.</p>
+<h4 id="The-Second"><a href="#The-Second" class="headerlink" title="The Second"></a>The Second</h4><p>　　为了给这个 Hexo 博客加一个版权信息, 我参考了<a href="https://segmentfault.com/a/1190000009544924" target="_blank" rel="external">一篇文章</a>, 但是在应用它的时候除了出现很多见过的错误之外,还出现了以前从未出现过的情况.- 新建一个文件却将未将其保存为<code>UTF-8</code>格式, 导致乱码, 以前有不少类似经验, 迅速改正.</p>
+<ul>
+<li>在复制粘贴文章中的代码时, 忘记了将其版权信息删去, 导致调试网页的时候格式全部乱套, 但是 <code>Node js</code> 有提示, 迅速改正两处此类错误.</li>
+<li>在本地调试时, 版权信息正常显示, 但是将其部署到<code>github</code>上之后, 其格式确全部消失.<br>　　于是找出这段代码, 发现其中使用了三个其它网站上的 <code>.js</code> 脚本, 于是猜测这三个脚本负责其格式, 未显示是其服务器阻拦, 于是将其脚本保存在网页中的文件夹里面, 但是仍然没用.<br>　　因此猜测是脚本阻拦了格式?(我到底在想什么乱七八糟的).将其删去, 可想而知, 肯定不行. 随后我开始将两个网页对比(一个是本地, 一个是网络上的), 借助于 <code>Chrome</code> 强大的功能, 我终于找到了问题所在, 原来是缺少样式表, 怪不得显示没有脚本不被正常加载.<br>　　于是我打开了网络上的样式表 <code>main.css</code>, 并和我本地网络上的样式表对比, woc, 原来是少了那段关于其样式的代码, 于是我手动添加, 正常.<br>　　为什么会出现这个问题呢? 我想是因为 hexo 只有在 <code>clean</code> 清理到本地缓存之后才会更改样式表这样底层的东西, 但是我对清理缓存有惧怕心理, 一致不敢清理, 导致了问题的发生.</li>
+</ul>
+<p>　　我也不是很清楚 Hexo 工作的原理, 但是在这一段时间中对其不断的调试还是摸到了一点头绪, 对网页的产生,<code>javascript</code>的工作都有了一定的了解, 这也是 Hexo 和其它博客相比好的地方.</p>
+<p>　　教训: 遇到问题不要盲目到处找原因, 先冷静分析, 找到问题的所在.</p>
+
       
     </div>
     
     
     
+    <div>
+    
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+    
+    </div>
     <div>
     
         
@@ -479,15 +499,7 @@
 
     
     </div>
-    <div>
-    
-        <div>
-    
-        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
-    
-</div>
-    
-    </div>
+
     
 
     
@@ -584,8 +596,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -691,6 +712,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#二月二十六日"><span class="nav-number">1.</span> <span class="nav-text">二月二十六日</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#The-First"><span class="nav-number">1.1.</span> <span class="nav-text">The First</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Second"><span class="nav-number">1.2.</span> <span class="nav-text">The Second</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
