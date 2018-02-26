@@ -95,7 +95,7 @@
 <meta property="og:url" content="http://aiyoupass.com/2018/Multi-SG/index.html">
 <meta property="og:site_name" content="落花微雨">
 <meta property="og:description" content="两个人做游戏, 有很多堆石子, 两个人依次行动, 每次任意一堆中任意多个石子取出或者将一堆分成两堆.问谁会获胜? 这个问题在 Bormal Nim 的基础上增加了 可以将一堆分成两堆的操作, 该如何处理呢?">
-<meta property="og:updated_time" content="2018-02-26T11:57:40.000Z">
+<meta property="og:updated_time" content="2018-02-26T12:30:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Multi-SG">
 <meta name="twitter:description" content="两个人做游戏, 有很多堆石子, 两个人依次行动, 每次任意一堆中任意多个石子取出或者将一堆分成两堆.问谁会获胜? 这个问题在 Bormal Nim 的基础上增加了 可以将一堆分成两堆的操作, 该如何处理呢?">
@@ -465,7 +465,9 @@
 <h4 id="Output-2"><a href="#Output-2" class="headerlink" title="Output"></a>Output</h4><p>　　对于每组测试数据，输出包括两行，第一行为用一个空格两两隔开的三个整数，表示要想赢得游戏，第一步应该选取的3个瓶子的编号i,j,k，如果有多组符合要求的解，那么输出字典序最小的一组。如果无论如何都无法赢得游戏，那么输出用一个空格两两隔开的三个-1。第二行表示要想确保赢得比赛，第一步有多少种不同的取法。</p>
 <h4 id="Sample-Input-2"><a href="#Sample-Input-2" class="headerlink" title="Sample Input"></a>Sample Input</h4><p>2<br>4<br>1 0 1 5000<br>3<br>0 0 1</p>
 <h4 id="Sample-Output-2"><a href="#Sample-Output-2" class="headerlink" title="Sample Output"></a>Sample Output</h4><p>0 2 3<br>1<br>-1 -1 -1<br>0</p>
-<h4 id="做法-2"><a href="#做法-2" class="headerlink" title="做法:"></a>做法:</h4><p>　　这道题目和前面几道题目难度相比上了一个大台阶.但是仍然是 Multi-SG 的基本应用, 难度在于分析于建模.<br>　　我们可以观察出这样的性质, 如果当前位置有偶数个豆子, 那么一个人总能抵消掉一个人的的操作, 因此我们只需要考虑个数为奇数的即可.而且完全可以将奇数个看成1个, 所以序列就变成了01串.</p>
+<h4 id="做法-2"><a href="#做法-2" class="headerlink" title="做法:"></a>做法:</h4><p>　　这道题目和前面几道题目难度要高.但是仍然是 Multi-SG 的基本应用, 难度在于分析于建模.<br>　　我们可以观察出这样的性质, 如果当前位置有偶数个豆子, 那么一个人总能抵消掉一个人的的操作, 因此我们只需要考虑个数为奇数的即可.而且完全可以将奇数个看成1个, 所以序列就变成了01串.<br>　　接下来用 Multi-SG 的方法做就可以了, 最后输出方案就见仁见智了.</p>
+<pre><code class="c++">
+</code></pre>
 <h3 id="Luogu-3235"><a href="#Luogu-3235" class="headerlink" title="Luogu 3235"></a>Luogu 3235</h3>
       
     </div>
@@ -476,10 +478,13 @@
     
         
 <div class="my_post_copyright">
+  <script src="/js/1.js"></script>
+  <script src="/js/2.js"></script>
+  <script src="/js/3.js"></script>
   <p><span>本文标题:</span><a href="/2018/Multi-SG/">Multi-SG</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 aiyoupass 的个人博客">aiyoupass</a></p>
   <p><span>发布时间:</span>2018年02月26日 - 11:02</p>
-  <p><span>最后更新:</span>2018年02月26日 - 19:02</p>
+  <p><span>最后更新:</span>2018年02月26日 - 20:02</p>
   <p><span>原始链接:</span><a href="/2018/Multi-SG/" title="Multi-SG">http://aiyoupass.com/2018/Multi-SG/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://aiyoupass.com/2018/Multi-SG/"  aria-label="复制成功！"></i></span>
   </p>
