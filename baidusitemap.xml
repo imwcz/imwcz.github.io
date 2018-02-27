@@ -3,59 +3,18 @@
 
 
     
-  <url>
-    <loc>http://aiyoupass.com/2018/Fib-SG/</loc>
-    <lastmod>2018-02-27T03:36:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>斐波那契博弈</title>
-        <pubTime>2018-02-27T03:32:44.000Z</pubTime>
-        
-        <tag>博弈论</tag>
-         
-        <tag>斐波那契博弈</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://aiyoupass.com/2018/Every-SG/</loc>
-    <lastmod>2018-02-27T02:47:52.000Z</lastmod>
+    <lastmod>2018-02-27T10:48:12.000Z</lastmod>
     <data>
         <display>
         <title>Every-SG</title>
         <pubTime>2018-02-27T02:47:51.000Z</pubTime>
         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/Multi-SG/</loc>
-    <lastmod>2018-02-27T02:41:46.000Z</lastmod>
-    <data>
-        <display>
-        <title>Multi-SG</title>
-        <pubTime>2018-02-26T03:12:19.000Z</pubTime>
-        
         <tag>博弈论</tag>
          
-        <tag>Multi-SG</tag>
-         
-        <tag>Lasker&#39;s Nim</tag>
+        <tag>Every-SG</tag>
          
          
            
@@ -72,11 +31,11 @@
     
   <url>
     <loc>http://aiyoupass.com/2018/longdebug/</loc>
-    <lastmod>2018-02-27T00:58:46.000Z</lastmod>
+    <lastmod>2018-02-27T09:58:54.000Z</lastmod>
     <data>
         <display>
         <title>漫长的 Debug</title>
-        <pubTime>2018-02-26T13:05:34.000Z</pubTime>
+        <pubTime>2018-02-27T09:35:34.000Z</pubTime>
         
         <tag>解决方案</tag>
          
@@ -101,69 +60,27 @@
     </url>
 
     
-    
-    
-    
   <url>
-    <loc>http://aiyoupass.com/2018/weizuofuth/</loc>
-    <lastmod>2018-02-26T03:12:54.000Z</lastmod>
+    <loc>http://aiyoupass.com/2018/p1678/</loc>
+    <lastmod>2018-02-27T09:42:32.000Z</lastmod>
     <data>
         <display>
-        <title>威佐夫博弈</title>
-        <pubTime>2018-02-25T13:24:22.000Z</pubTime>
+        <title>P1678 烦恼的高考志愿</title>
+        <pubTime>2018-02-27T09:19:03.000Z</pubTime>
         
-        <tag>Wythoff博弈</tag>
-         
-        <tag>Beatty定理</tag>
-         
-        <tag>ICG</tag>
-         
-        <tag>取石子游戏</tag>
-         
          
            
              
               <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
           
-             
-              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
-          
         </display>
     </data>
     </url>
 
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/Anti-SG/</loc>
-    <lastmod>2018-02-26T03:11:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>Anti-SG/Misère Games</title>
-        <pubTime>2018-02-26T00:17:21.000Z</pubTime>
-        
-        <tag>Anti-SG</tag>
-         
-        <tag>博弈论</tag>
-         
-        <tag>Misère Games</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
     
   <url>
     <loc>http://aiyoupass.com/2018/easygame/</loc>
-    <lastmod>2018-02-25T13:35:02.000Z</lastmod>
+    <lastmod>2018-02-27T03:45:28.000Z</lastmod>
     <data>
         <display>
         <title>简单博弈论题目选做</title>
@@ -196,6 +113,117 @@
           
              
               <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/weizuofuth/</loc>
+    <lastmod>2018-02-27T03:44:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>威佐夫博弈</title>
+        <pubTime>2018-02-25T13:24:22.000Z</pubTime>
+        
+        <tag>Wythoff博弈</tag>
+         
+        <tag>Beatty定理</tag>
+         
+        <tag>ICG</tag>
+         
+        <tag>取石子游戏</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/Fib-SG/</loc>
+    <lastmod>2018-02-27T03:42:58.000Z</lastmod>
+    <data>
+        <display>
+        <title>斐波那契博弈</title>
+        <pubTime>2018-02-27T03:32:44.000Z</pubTime>
+        
+        <tag>博弈论</tag>
+         
+        <tag>斐波那契博弈</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/Multi-SG/</loc>
+    <lastmod>2018-02-27T02:41:46.000Z</lastmod>
+    <data>
+        <display>
+        <title>Multi-SG</title>
+        <pubTime>2018-02-26T03:12:19.000Z</pubTime>
+        
+        <tag>博弈论</tag>
+         
+        <tag>Multi-SG</tag>
+         
+        <tag>Lasker&#39;s Nim</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/Anti-SG/</loc>
+    <lastmod>2018-02-26T03:11:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>Anti-SG/Misère Games</title>
+        <pubTime>2018-02-26T00:17:21.000Z</pubTime>
+        
+        <tag>Anti-SG</tag>
+         
+        <tag>博弈论</tag>
+         
+        <tag>Misère Games</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
           
         </display>
     </data>
@@ -430,11 +458,11 @@
         <title>莫比乌斯反演</title>
         <pubTime>2018-02-06T07:40:50.000Z</pubTime>
         
-        <tag>题目</tag>
-         
         <tag>pdf</tag>
          
         <tag>document</tag>
+         
+        <tag>题目</tag>
          
         <tag>莫比乌斯反演</tag>
          
@@ -654,13 +682,13 @@
         <title>P1486 [NOI2004] 郁闷的出纳员</title>
         <pubTime>2018-02-20T11:38:16.000Z</pubTime>
         
-        <tag>省选</tag>
-         
         <tag>平衡树</tag>
          
         <tag>线段树</tag>
          
         <tag>pb_ds</tag>
+         
+        <tag>省选</tag>
          
          
            
@@ -1314,9 +1342,9 @@
         
         <tag>题目</tag>
          
-        <tag>带权并查集</tag>
-         
         <tag>省选</tag>
+         
+        <tag>带权并查集</tag>
          
          
            
@@ -1339,9 +1367,9 @@
         <title>uoj180</title>
         <pubTime>2018-02-02T23:33:11.000Z</pubTime>
         
-        <tag>省选</tag>
-         
         <tag>线段树</tag>
+         
+        <tag>省选</tag>
          
         <tag>数据结构</tag>
          

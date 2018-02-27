@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="博弈论,Every-SG," />
 
 
 
@@ -89,13 +89,16 @@
     })();
 </script>
 
+<meta name="description" content="在一个棋盘上, 有 n 枚棋子, 每次可以向下移动或向右移动, 最后无法移动的人失败, 这就是 Every-SG 的基本模型.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Every-SG">
 <meta property="og:url" content="http://aiyoupass.com/2018/Every-SG/index.html">
 <meta property="og:site_name" content="落花微雨">
-<meta property="og:updated_time" content="2018-02-27T02:47:52.000Z">
+<meta property="og:description" content="在一个棋盘上, 有 n 枚棋子, 每次可以向下移动或向右移动, 最后无法移动的人失败, 这就是 Every-SG 的基本模型.">
+<meta property="og:updated_time" content="2018-02-27T10:48:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Every-SG">
+<meta name="twitter:description" content="在一个棋盘上, 有 n 枚棋子, 每次可以向下移动或向右移动, 最后无法移动的人失败, 这就是 Every-SG 的基本模型.">
 
 
 
@@ -362,6 +365,39 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/总结/" itemprop="url" rel="index">
+                    <span itemprop="name">总结</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -387,6 +423,10 @@
           
 
           
+              <div class="post-description">
+                  在一个棋盘上, 有 n 枚棋子, 每次可以向下移动或向右移动, 最后无法移动的人失败, 这就是 Every-SG 的基本模型.
+              </div>
+          
 
         </div>
       </header>
@@ -401,7 +441,37 @@
       
 
       
-        
+        <h3 id="放在前面"><a href="#放在前面" class="headerlink" title="放在前面"></a>放在前面</h3><p>　　关于这个知识也就只有贾志豪的论文有详细的解释了, 但还是看得我一脸懵圈.<br>而且并不存在很多这类题目, 目前只见过一道, 就是本文的例题.</p>
+<h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><p>　　在一个棋盘上, 有 n 枚棋子, 每次可以向下移动或向右移动, 最后无法移动的人失败, 这就是 Every-SG 的基本模型.<br>　　聪明的读者肯定能想到策略, (<em>然而我不聪明也没有看出这个结论</em>), 对于可以赢的游戏, 一定要拿到这场游戏的胜利.<br>　　所以需要考虑让必胜的游戏尽可能长的玩下去.<br>　　但是对手不希望他必败的单一游戏时间很长.</p>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><ul>
+<li>对于没有结束的单一游戏, 游戏者必须对该游戏作出进一步决策.(<em>不明白</em>).</li>
+<li>其它规则于普通的(<em>ICG</em>)相同.</li>
+</ul>
+<h3 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h3><p>　　在通过拓扑关系计算一个状态的 $SG$ 值时, 对于 $SG$ 值不为 0 的点, 我们需要知道最快几步能将游戏带入终止状态, 对于 $SG$ 值, 我们知道最慢几步游戏被带入终止状态, 这个值用 $step$ 表示.<br>$$<br>step(v)=\begin{cases}<br>0,&amp;v\text{ }is\text{ }a\text{ }terminal\text{ }position \\<br>\max{step(u)}+1,&amp;SG(v)&gt;0\text{ }and\text{ }v\rightarrow u\text{ }and\text{ }SG(u)=0\\<br>\min{step(u)}+1,&amp;SG(v)=0\text{ }and\text{ }v\rightarrow u<br>\end{cases}<br>$$</p>
+<h3 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h3><p>　　对于 Every-SG 游戏先手必胜并且仅当单一游戏中最大的 $step$ 为奇数.</p>
+<h3 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h3><p>　　证明解法的正确性, 需要证明三点:</p>
+<ul>
+<li>对于所有的单一游戏, 先手必胜状态的 $step$ 值为奇数, 后手必胜状态的 $step$ 值为偶数.</li>
+<li>设最大的 $step$ 为 $step_ \max$, 胜手可以保证该单一游戏最少会在 $step_ \max$ 步结束.</li>
+<li>设最大的 $step$ 为 $step_ \max$, 胜手可以所有他必败游戏最多会在 $step_ \max$ 步结束.</li>
+</ul>
+<h4 id="证明一"><a href="#证明一" class="headerlink" title="证明一"></a>证明一</h4><ol>
+<li>所有的终止状态的 $step$ 值为 $0,为先手必败状态.</li>
+<li>假设状态树中某些状态点已经符合要求.我们找后继状态点已经全部被证明的状态点.如果它是先手必败状态，那么它的后继状态都为先手必胜状态,后继状态的 $step$ 值全为奇数，所以该状态点的 $step$ 值为偶数。<br>　　如果它是先手必胜状态，那么它的后继状态中有先手必败状态,且它所有的先手必败的后记状态的 $step$ 值为偶数，所以该状态点的$step$ 值为奇数.</li>
+</ol>
+<p>$\blacksquare$</p>
+<h4 id="证明二"><a href="#证明二" class="headerlink" title="证明二"></a>证明二</h4><p>　　我们设 $step$ 最大的单一游戏为 A（如果有多个的话任取一个） ，最终<br>的胜手为 W.<br>　　W 总在 A 游戏处在先手必胜状态时去移动 A 的状态， 且 W 可以保证他<br>最多将该游戏的 $step$ 值减小 1.$①$<br>　　对手总在 A 游戏处在先手必败状态时去移动 A 的状态，且对手最多<br>将该游戏的 $step$ 值减小 1.$②$<br>　　由$①②$得，J 可以保证 A 游戏最少会在 $\max \text{_} step$ 步结束.<br>$\blacksquare$</p>
+<h4 id="证明三"><a href="#证明三" class="headerlink" title="证明三"></a>证明三</h4><p>　　我们设 step 最大的单一游戏为 A(如果有多个的话任取一个),最终的胜手为 W。我们考虑除 A 外的任意一个他必败的单一游戏 B.<br>　　J 在每一回合都可以将 B 的 $step$ 值减少 1，将 B 带入先手必胜状态, 对手必定将 B 的 $step$ 至少减少 1，所以 J 可以保证 B 游戏最多会在 $\max \text{_} step$ 步结束.<br>$\blacksquare$</p>
+<h3 id="例题-HDU-3595-GG-and-MM"><a href="#例题-HDU-3595-GG-and-MM" class="headerlink" title="例题: HDU 3595 GG and MM"></a>例题: <a href="http://acm.hdu.edu.cn/showproblem.php?pid=3595" target="_blank" rel="external">HDU 3595 GG and MM</a></h3><h4 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h4><p>　　GG and MM like playing a game since they are children. At the beginning of game, there are two piles of stones. MM chooses a pile of stones first, which has x stones, and then she can choose a positive number k and remove k<em>x stones out from the other pile of stones, which has y stones (I think all of you know that y&gt;=k</em>x - -!). Then it comes the turn of GG, followed the rules above-mentioned as well. When someone can’t remove any stone, then he/she loses the game, and this game is finished.<br>　　Many years later, GG and MM find this game is too simple, so they decided to play N games at one time for fun. MM plays first, as the same, and the one on his/her turn must play every unfinished game. Rules to remove are as same as above, and if someone cannot remove any stone (i.e., loses the last ending game), then he/she loses. Of course we can assume GG and MM are clever enough, and GG will not lose intentionally, O(∩_∩)O~</p>
+<h4 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h4><p>　　The input file contains multiply test cases (no more than 100).<br>The first line of each test case is an integer N, N&lt;=1000, which represents there are N games, then N lines following, each line has two numbers: p and q, standing for the number of the two piles of stones of each game, p, q&lt;=1000(it seems that they are so leisure = =!), which represent the numbers of two piles of stones of every game.<br>　　The input will end with EOF.</p>
+<h4 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h4><p>　　For each test case, output the name of the winner.</p>
+<h4 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h4><p>3<br>1 1<br>1 1<br>1 1<br>1<br>3 2</p>
+<h4 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h4><p>MM<br>GG</p>
+<p>Author<br>alpc95<br>Source<br>2010 ACM-ICPC Multi-University Training Contest（16）——Host by NUDT<br>Recommend<br>zhengfeng</p>
+<h4 id="题意"><a href="#题意" class="headerlink" title="题意:"></a>题意:</h4><p>　　游戏共有 $n$ 个子游戏, 每个子游戏有两堆石子, 每次没人可以从较大的一堆中拿出较小一堆的数量的倍数, 最后无法操作的人失败.</p>
+<h4 id="做法"><a href="#做法" class="headerlink" title="做法:"></a>做法:</h4><p>　　通过观察我们发现这道题目胜负在于持续时间最长的那场子游戏. 所以这是一个$Every-SG$游戏, 应用他的基本做法即可.<br>　　有一个比较特殊的性质需要注意, 如果一场子游戏为$(x,y)$, 那么当$\frac{x}{y}&gt;1$时, 这场游戏先手必胜, 因为他可以通过倍数来控制接下来步数的奇偶性.</p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 1005</span></div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">char</span> ch=getchar();<span class="keyword">int</span> s=<span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(!<span class="built_in">isdigit</span>(ch))ch=getchar();</div><div class="line">    <span class="keyword">while</span>(<span class="built_in">isdigit</span>(ch))s=s*<span class="number">10</span>+ch-<span class="string">'0'</span>,ch=getchar();</div><div class="line">    <span class="keyword">return</span> s;</div><div class="line">&#125;</div><div class="line"><span class="keyword">int</span> a[N],b[N],SG[N][N],step[N][N];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">GetSG</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(x&gt;y) <span class="built_in">std</span>::swap(x,y);</div><div class="line">    <span class="keyword">if</span>(SG[x][y]!=<span class="number">-1</span>) <span class="keyword">return</span> SG[x][y];</div><div class="line">    <span class="keyword">if</span>(!x||!y) <span class="keyword">return</span> SG[x][y]=step[x][y]=<span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> willx=y%x,willy=x;</div><div class="line">    <span class="keyword">int</span> k=y/x;</div><div class="line">    <span class="keyword">if</span>(k==<span class="number">1</span>)&#123;</div><div class="line">        SG[x][y]=GetSG(willx,willy)^<span class="number">1</span>;</div><div class="line">        step[x][y]=step[willx][willy]+<span class="number">1</span>;</div><div class="line">        <span class="keyword">return</span> SG[x][y];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span>&#123;</div><div class="line">        step[x][y]=GetSG(willx,willy)+step[willx][willy]+<span class="number">1</span>;</div><div class="line">        <span class="keyword">return</span> SG[x][y]=<span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">memset</span>(SG,<span class="number">-1</span>,<span class="keyword">sizeof</span>(SG));</div><div class="line">    <span class="keyword">int</span> n,x,y,ans;</div><div class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n))&#123;</div><div class="line">        ans=<span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=b;i++) </div><div class="line">            x=read(),y=read();</div><div class="line">            <span class="keyword">if</span>(x&gt;y)swap(x,y);</div><div class="line">            GetSG(x,y);</div><div class="line">            ans=max(ans,step[x][y]);</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">puts</span>(ans&amp;<span class="number">1</span>?<span class="string">"MM"</span>:<span class="string">"GG"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -426,7 +496,7 @@
   <p><span>本文标题:</span><a href="/2018/Every-SG/">Every-SG</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 aiyoupass 的个人博客">aiyoupass</a></p>
   <p><span>发布时间:</span>2018年02月27日 - 10:02</p>
-  <p><span>最后更新:</span>2018年02月27日 - 10:02</p>
+  <p><span>最后更新:</span>2018年02月27日 - 18:02</p>
   <p><span>原始链接:</span><a href="/2018/Every-SG/" title="Every-SG">http://aiyoupass.com/2018/Every-SG/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://aiyoupass.com/2018/Every-SG/"  aria-label="复制成功！"></i></span>
   </p>
@@ -457,6 +527,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/博弈论/" rel="tag"># 博弈论</a>
+          
+            <a href="/tags/Every-SG/" rel="tag"># Every-SG</a>
+          
+        </div>
+      
 
       
       
@@ -466,8 +544,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/longdebug/" rel="next" title="漫长的 Debug">
-                <i class="fa fa-chevron-left"></i> 漫长的 Debug
+              <a href="/2018/Multi-SG/" rel="next" title="Multi-SG">
+                <i class="fa fa-chevron-left"></i> Multi-SG
               </a>
             
           </div>
@@ -535,8 +613,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -555,7 +642,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">57</span>
+                  <span class="site-state-item-count">58</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -566,7 +653,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -577,7 +664,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">103</span>
+                  <span class="site-state-item-count">102</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -642,6 +729,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#放在前面"><span class="nav-number">1.</span> <span class="nav-text">放在前面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引入"><span class="nav-number">2.</span> <span class="nav-text">引入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">3.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解法"><span class="nav-number">4.</span> <span class="nav-text">解法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定理"><span class="nav-number">5.</span> <span class="nav-text">定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#证明"><span class="nav-number">6.</span> <span class="nav-text">证明</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#证明一"><span class="nav-number">6.1.</span> <span class="nav-text">证明一</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#证明二"><span class="nav-number">6.2.</span> <span class="nav-text">证明二</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#证明三"><span class="nav-number">6.3.</span> <span class="nav-text">证明三</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题-HDU-3595-GG-and-MM"><span class="nav-number">7.</span> <span class="nav-text">例题: HDU 3595 GG and MM</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Problem-Description"><span class="nav-number">7.1.</span> <span class="nav-text">Problem Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Input"><span class="nav-number">7.2.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Output"><span class="nav-number">7.3.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Input"><span class="nav-number">7.4.</span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Output"><span class="nav-number">7.5.</span> <span class="nav-text">Sample Output</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#题意"><span class="nav-number">7.6.</span> <span class="nav-text">题意:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#做法"><span class="nav-number">7.7.</span> <span class="nav-text">做法:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number">7.8.</span> <span class="nav-text">Code</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

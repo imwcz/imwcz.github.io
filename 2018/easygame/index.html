@@ -97,7 +97,7 @@
 <meta property="og:description" content="关于简单博弈论的一些题目.">
 <meta property="og:image" content="http://aiyoupass.com/myjson/png2.png">
 <meta property="og:image" content="http://poj.org/images/2484_1.jpg">
-<meta property="og:updated_time" content="2018-02-25T13:35:02.000Z">
+<meta property="og:updated_time" content="2018-02-27T03:45:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="简单博弈论题目选做">
 <meta name="twitter:description" content="关于简单博弈论的一些题目.">
@@ -486,7 +486,7 @@
 <h4 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h4><p>　　证明对于 n 为斐波那契数先手必败.</p>
 <ul>
 <li>首先对于斐波那契数 $1,2,3$ 先手必败显然成立.</li>
-<li>假设这个结论在$n\leq k$时成立,<br>对于$k+1$, Fib_{k+1}=Fib_{k}+Fib_{k-1}.<br>那么我们可以将这一堆石子看成两堆, 数量分别为$Fib_{k}$和$Fib_{k-1}$.<br>对于$Fib_{k-1}$先手总能取到最后一颗, 那么后手可以选择只取完$Fib_{k-1}$那么先手将面临取$Fib_{k}$的情况, 但是不同的是先手有可能会全部取完所以还需要考虑上一步后手取的数量.<br>通过归纳我们又知道后手在$Fib_{k-1}$取的最后一次不会超过$\frac{2}{3}Fib_{k-1}$, 所以先手在$Fib_{k}$堆中取的第一次不会超过$\frac{4}{3}Fib_{k-1}$.所以后手在$Fib_{k}$中仍然拥有必胜策略.</li>
+<li>假设这个结论在$n\leq k$时成立,<br>对于$k+1$, $Fib_{k+1}=Fib_{k}+Fib_{k-1}$.<br>那么我们可以将这一堆石子看成两堆, 数量分别为$Fib_{k}$和$Fib_{k-1}$.<br>对于$Fib_{k-1}$先手总能取到最后一颗, 那么后手可以选择只取完$Fib_{k-1}$那么先手将面临取$Fib_{k}$的情况, 但是不同的是先手有可能会全部取完所以还需要考虑上一步后手取的数量.<br>通过归纳我们又知道后手在$Fib_{k-1}$取的最后一次不会超过$\frac{2}{3}Fib_{k-1}$, 所以先手在$Fib_{k}$堆中取的第一次不会超过$\frac{4}{3}Fib_{k-1}$.所以后手在$Fib_{k}$中仍然拥有必胜策略.</li>
 </ul>
 <p>问题得证</p>
 <h3 id="Code-3"><a href="#Code-3" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">55</span>;</div><div class="line"><span class="keyword">int</span> Fib[N]=&#123;<span class="number">1</span>,<span class="number">1</span>&#125;;</div><div class="line"><span class="keyword">int</span> n,now;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="built_in">cin</span>&gt;&gt;n;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=<span class="number">50</span>;++i)</div><div class="line">		Fib[i]=Fib[i<span class="number">-1</span>]+Fib[i<span class="number">-2</span>];</div><div class="line">	<span class="keyword">while</span>(n--)&#123;</div><div class="line">		<span class="built_in">cin</span>&gt;&gt;now;</div><div class="line">		<span class="keyword">bool</span> flag=<span class="literal">false</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">50</span>;++i)</div><div class="line">			<span class="keyword">if</span>(now==Fib[i])&#123;</div><div class="line">				<span class="built_in">printf</span>(<span class="string">"B\n"</span>);</div><div class="line">				flag=<span class="literal">true</span>;</div><div class="line">				<span class="keyword">break</span>;</div><div class="line">			&#125;</div><div class="line">		<span class="keyword">if</span>(!flag)</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"A\n"</span>);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -501,7 +501,7 @@
 <li>$a_0=0$,$b_0=0$</li>
 <li>$a_i$是从未在之前的$a_k,b_k (0\leq k\leq i-1) $中出现过的最小自然数, $b_i=a_i+i$</li>
 </ul>
-<h5 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h5><p>1.任何自然数都包含在一个且仅有一个奇异局势中.<br>由于$a_k$是从未在前面出现过的最小自然数, 所以$a_k&gt;a[k-1]$, 而$b_k=a_k+k&gt;a_{k-1}$.<br>2.任意操作都可将奇异局势变为非奇异局势.</p>
+<h5 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h5><p>1.任何自然数都包含在一个且仅有一个奇异局势中.<br>由于$a_k$是从未在前面出现过的最小自然数, 所以$a_k&gt;a_{k-1}$, 而$b_k=a_k+k&gt;a_{k-1}$.<br>2.任意操作都可将奇异局势变为非奇异局势.</p>
 <ul>
 <li>如果只改变$(a_i,b_i)$中的一个, 根据上述结论, 奇异局势一定被改变;</li>
 <li>如果同时改变$(a_i,b_i)$为$(a_i-k,b_i-k)$, 因为$a_j+j=b_j$, 所以两者的差被改变,奇异局势被改变.</li>
@@ -721,7 +721,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">57</span>
+                  <span class="site-state-item-count">58</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -732,7 +732,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -743,7 +743,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">103</span>
+                  <span class="site-state-item-count">102</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

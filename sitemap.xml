@@ -2,16 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://aiyoupass.com/2018/Fib-SG/</loc>
+    <loc>http://aiyoupass.com/schedule/index.html</loc>
     
-    <lastmod>2018-02-27T03:36:08.000Z</lastmod>
+    <lastmod>2018-02-27T10:50:10.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://aiyoupass.com/2018/Every-SG/</loc>
     
-    <lastmod>2018-02-27T02:47:52.000Z</lastmod>
+    <lastmod>2018-02-27T10:48:12.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://aiyoupass.com/2018/longdebug/</loc>
+    
+    <lastmod>2018-02-27T09:58:54.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://aiyoupass.com/2018/p1678/</loc>
+    
+    <lastmod>2018-02-27T09:42:32.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://aiyoupass.com/2018/easygame/</loc>
+    
+    <lastmod>2018-02-27T03:45:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://aiyoupass.com/2018/weizuofuth/</loc>
+    
+    <lastmod>2018-02-27T03:44:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://aiyoupass.com/2018/Fib-SG/</loc>
+    
+    <lastmod>2018-02-27T03:42:58.000Z</lastmod>
     
   </url>
   
@@ -23,37 +58,9 @@
   </url>
   
   <url>
-    <loc>http://aiyoupass.com/2018/longdebug/</loc>
-    
-    <lastmod>2018-02-27T00:58:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://aiyoupass.com/2018/weizuofuth/</loc>
-    
-    <lastmod>2018-02-26T03:12:54.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://aiyoupass.com/2018/Anti-SG/</loc>
     
     <lastmod>2018-02-26T03:11:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://aiyoupass.com/schedule/index.html</loc>
-    
-    <lastmod>2018-02-26T03:05:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://aiyoupass.com/2018/easygame/</loc>
-    
-    <lastmod>2018-02-25T13:35:02.000Z</lastmod>
     
   </url>
   
