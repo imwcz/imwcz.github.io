@@ -4,7 +4,34 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/Knowledges/index.html</loc>
+    <loc>http://aiyoupass.com/2018/uoj266/</loc>
+    <lastmod>2018-02-27T13:15:46.000Z</lastmod>
+    <data>
+        <display>
+        <title>UOJ</title>
+        <pubTime>2018-02-27T11:05:29.000Z</pubTime>
+        
+        <tag>博弈论</tag>
+         
+        <tag>Multi-SG</tag>
+         
+        <tag>Trie</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/Knowledge/index.html</loc>
     <lastmod>2018-02-27T12:09:18.000Z</lastmod>
     <data>
         <display>
@@ -67,33 +94,6 @@
           
              
               <breadCrumb title="Luogu省选营" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/Luogu%E7%9C%81%E9%80%89%E8%90%A5/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/uoj266/</loc>
-    <lastmod>2018-02-27T11:33:32.000Z</lastmod>
-    <data>
-        <display>
-        <title>UOJ</title>
-        <pubTime>2018-02-27T11:05:29.000Z</pubTime>
-        
-        <tag>博弈论</tag>
-         
-        <tag>Multi-SG</tag>
-         
-        <tag>Trie</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
           
         </display>
     </data>
@@ -186,9 +186,9 @@
         <title>Every-SG</title>
         <pubTime>2018-02-27T02:47:51.000Z</pubTime>
         
-        <tag>博弈论</tag>
-         
         <tag>Every-SG</tag>
+         
+        <tag>博弈论</tag>
          
          
            
@@ -211,9 +211,9 @@
         <title>漫长的 Debug</title>
         <pubTime>2018-02-27T09:35:34.000Z</pubTime>
         
-        <tag>解决方案</tag>
-         
         <tag>Hexo</tag>
+         
+        <tag>解决方案</tag>
          
         <tag>Debug</tag>
          
@@ -385,9 +385,9 @@
         <title>Anti-SG/Misère Games</title>
         <pubTime>2018-02-26T00:17:21.000Z</pubTime>
         
-        <tag>Anti-SG</tag>
-         
         <tag>博弈论</tag>
+         
+        <tag>Anti-SG</tag>
          
         <tag>Misère Games</tag>
          
@@ -412,9 +412,9 @@
         <title>Hexo 文章置顶</title>
         <pubTime>2018-02-25T13:12:01.000Z</pubTime>
         
-        <tag>解决方案</tag>
-         
         <tag>Hexo</tag>
+         
+        <tag>解决方案</tag>
          
          
            

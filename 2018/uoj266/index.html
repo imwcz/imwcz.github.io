@@ -95,7 +95,7 @@
 <meta property="og:url" content="http://aiyoupass.com/2018/uoj266/index.html">
 <meta property="og:site_name" content="落花微雨">
 <meta property="og:description" content="Alice 和 Bob 又在玩游戏。有$n$个节点，$m$ 条边（$0≤m≤n−1$），构成若干棵有根树，每棵树的根节点是该连通块内编号最小的点。Alice 和 Bob 轮流操作（Alice 先手），每回合选择一个没有被删除的节点 x，将x及其所有祖先全部删除，不能操作的人输。">
-<meta property="og:updated_time" content="2018-02-27T11:33:32.000Z">
+<meta property="og:updated_time" content="2018-02-27T13:15:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UOJ">
 <meta name="twitter:description" content="Alice 和 Bob 又在玩游戏。有$n$个节点，$m$ 条边（$0≤m≤n−1$），构成若干棵有根树，每棵树的根节点是该连通块内编号最小的点。Alice 和 Bob 轮流操作（Alice 先手），每回合选择一个没有被删除的节点 x，将x及其所有祖先全部删除，不能操作的人输。">
@@ -249,12 +249,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-knowledges">
-          <a href="/Knowledges" rel="section">
+        <li class="menu-item menu-item-knowledge">
+          <a href="/Knowledge/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-knowledges"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />
             
-            Knowledges
+            Knowledge
           </a>
         </li>
       
@@ -450,7 +450,7 @@
 <h4 id="output"><a href="#output" class="headerlink" title="output"></a>output</h4><p>Alice<br>Alice<br>Bob<br>Alice</p>
 <h3 id="explanation"><a href="#explanation" class="headerlink" title="explanation"></a>explanation</h3><p>输入共 4 组数据；<br>第一组数据输入是一条链，Alice 可以一次性把所有节点都删掉。<br>第二组数据，Alice 先手第一步删除 1 号点即可胜利。</p>
 <h3 id="限制与约定"><a href="#限制与约定" class="headerlink" title="限制与约定"></a>限制与约定</h3><p>对于10%的数据，$m=0$;<br>对于20%的数据，$1≤n≤20$;<br>对于40%的数据，$1≤n≤10^2$；<br>对于60%的数据，$1≤n≤10^3$；<br>对于100%的数据，$1≤T≤10,1≤n≤10^5,∑n≤2×10^5,0≤m≤n−1$,输入数据保证不会形成环，且每棵树的大小$≤5×10^4$。<br>时间限制：2s<br>空间限制：1024MB</p>
-<h3 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h3><p>　　不要被<em>清华集训</em>吓倒了, 其实并没有想像中的那么难.这道我们只需要从最简单的思路一步步出发就能解决.<br>　　首先确立状态, 我们首先注意到它的模型和 $Multi-SG$ 有相似之处, 如果我们将一棵子树看成是一个”点”的话, 就会发现如果将某一子树$R$的根到它所在树的根的路径删除的话, 就会将这棵子树变成若干棵独立的树. 然后这若干棵独立的树又会进行下一轮游戏.<br>　　根据我们的经验, 这若干棵树的和(异或和)是$R$的一个后继状态.这样我们便表示出了这棵子树$R$的$SG$函数.叶子节点的SG函数为1, 因为将它与根之间路径删去的话, 这个节点就没了, 所以叶子节点的$SG$值是1.<br>　　根据上述思路, 我们完全可以写出一个复杂度为$O(N^2)$的程序.因为求$SG$函数的复杂度为$O(N)$.</p>
+<h3 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h3><p>　　不要被<em>清华集训</em>吓倒了, 其实并没有想像中的那么难.这道我们只需要从最简单的思路一步步出发就能解决.<br>　　首先确立状态, 我们首先注意到它的模型和 $Multi-SG$ 有相似之处, 如果我们将一棵子树看成是一个”点”的话, 就会发现如果将某一子树$R$的根到它所在树的根的路径删除的话, 就会将这棵子树变成若干棵独立的树. 然后这若干棵独立的树又会进行下一轮游戏.<br>　　根据我们的经验, 我们求出$R$的后继状态也就是先删那棵子树.这样我们便表示出了这棵子树$R$的$SG$函数.叶子节点的SG函数为1, 因为将它与根之间路径删去的话, 这个节点就没了, 所以叶子节点的$SG$值是1.<br>　　根据上述思路, 我们完全可以写出一个复杂度为$O(N^2)$的程序.因为求$SG$函数的复杂度为$O(N)$.</p>
 
       
     </div>
@@ -476,7 +476,7 @@
   <p><span>本文标题:</span><a href="/2018/uoj266/">UOJ</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 aiyoupass 的个人博客">aiyoupass</a></p>
   <p><span>发布时间:</span>2018年02月27日 - 19:02</p>
-  <p><span>最后更新:</span>2018年02月27日 - 19:02</p>
+  <p><span>最后更新:</span>2018年02月27日 - 21:02</p>
   <p><span>原始链接:</span><a href="/2018/uoj266/" title="UOJ">http://aiyoupass.com/2018/uoj266/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://aiyoupass.com/2018/uoj266/"  aria-label="复制成功！"></i></span>
   </p>

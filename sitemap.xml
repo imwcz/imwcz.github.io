@@ -2,7 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://aiyoupass.com/Knowledges/index.html</loc>
+    <loc>http://aiyoupass.com/2018/uoj266/</loc>
+    
+    <lastmod>2018-02-27T13:15:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://aiyoupass.com/Knowledge/index.html</loc>
     
     <lastmod>2018-02-27T12:09:18.000Z</lastmod>
     
@@ -19,13 +26,6 @@
     <loc>http://aiyoupass.com/2018/p4093/</loc>
     
     <lastmod>2018-02-27T11:35:22.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://aiyoupass.com/2018/uoj266/</loc>
-    
-    <lastmod>2018-02-27T11:33:32.000Z</lastmod>
     
   </url>
   
