@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="dp,CDQ分治,三维偏序,二维线段树,书套树,线段树套线段树,Luogu新春OI营-省选," />
+  <meta name="keywords" content="动态规划,CDQ分治,三维偏序,二维线段树,树套树,线段树套线段树,Luogu新春OI营-省选," />
 
 
 
@@ -95,7 +95,7 @@
 <meta property="og:url" content="http://aiyoupass.com/2018/p4093/index.html">
 <meta property="og:site_name" content="落花微雨">
 <meta property="og:description" content="给出一个数列,并给出一系列变换使得将一个数变成另一个数,但同时只能发生一个,求最长不下降子序列.">
-<meta property="og:updated_time" content="2018-02-10T09:51:28.000Z">
+<meta property="og:updated_time" content="2018-02-27T11:35:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="未完待续P4093 [HEOI2016/TJOI2016]序列">
 <meta name="twitter:description" content="给出一个数列,并给出一系列变换使得将一个数变成另一个数,但同时只能发生一个,求最长不下降子序列.">
@@ -249,12 +249,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-sitemap">
-          <a href="/sitemap.xml" rel="section">
+        <li class="menu-item menu-item-knowledges">
+          <a href="/Knowledges" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-knowledges"></i> <br />
             
-            Sitemap
+            Knowledges
           </a>
         </li>
       
@@ -465,6 +465,7 @@
 <li><strong>100分</strong>,优化上述dp,可以使用cdq分治当然二维线段树也可以.<br>观察上述限制条件<br>$$\min{a_{i}}\geq a_j,\max{a_j}\leq a_i$$<br>我们发现</li>
 </ul>
 <h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><h4 id="50分"><a href="#50分" class="headerlink" title="50分"></a>50分</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 3005</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> inf 0x3f3f3f3f</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n,m;</div><div class="line"><span class="keyword">int</span> s[N];</div><div class="line"><span class="keyword">int</span> dp[N];</div><div class="line"><span class="keyword">int</span> minl[N];</div><div class="line"><span class="keyword">int</span> maxl[N];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</div><div class="line">		<span class="built_in">cin</span>&gt;&gt;s[i];</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</div><div class="line">		dp[i]=<span class="number">1</span>;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</div><div class="line">		minl[i]=minl[i]=s[i];</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;++i)&#123;</div><div class="line">		<span class="keyword">int</span> a,b;</div><div class="line">		<span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b;</div><div class="line">		minl[a]=min(minl[a],b);</div><div class="line">		maxl[a]=max(maxl[a],b);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;i;++j)</div><div class="line">			<span class="keyword">if</span>(minl[i]&gt;=s[j]&amp;&amp;maxl[j]&lt;=s[i])</div><div class="line">				dp[i]=max(dp[j]+<span class="number">1</span>,dp[i]);</div><div class="line">	<span class="keyword">int</span> ans=<span class="number">1</span>;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</div><div class="line">		ans=max(ans,dp[i]);</div><div class="line">	<span class="built_in">cout</span>&lt;&lt;ans;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -495,7 +496,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/dp/" rel="tag"># dp</a>
+            <a href="/tags/动态规划/" rel="tag"># 动态规划</a>
           
             <a href="/tags/CDQ分治/" rel="tag"># CDQ分治</a>
           
@@ -503,7 +504,7 @@
           
             <a href="/tags/二维线段树/" rel="tag"># 二维线段树</a>
           
-            <a href="/tags/书套树/" rel="tag"># 书套树</a>
+            <a href="/tags/树套树/" rel="tag"># 树套树</a>
           
             <a href="/tags/线段树套线段树/" rel="tag"># 线段树套线段树</a>
           
@@ -618,7 +619,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">58</span>
+                  <span class="site-state-item-count">60</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -629,7 +630,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -640,7 +641,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">102</span>
+                  <span class="site-state-item-count">98</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

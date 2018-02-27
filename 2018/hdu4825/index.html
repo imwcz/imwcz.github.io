@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="异或,Trie树,HDU," />
+  <meta name="keywords" content="Trie,异或,HDU," />
 
 
 
@@ -95,7 +95,7 @@
 <meta property="og:url" content="http://aiyoupass.com/2018/hdu4825/index.html">
 <meta property="og:site_name" content="落花微雨">
 <meta property="og:description" content="给出一个数集,求给定整数与数集中数的最大异或值.">
-<meta property="og:updated_time" content="2018-02-10T08:16:24.000Z">
+<meta property="og:updated_time" content="2018-02-27T11:31:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HDU 4825 Xor Sum">
 <meta name="twitter:description" content="给出一个数集,求给定整数与数集中数的最大异或值.">
@@ -249,12 +249,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-sitemap">
-          <a href="/sitemap.xml" rel="section">
+        <li class="menu-item menu-item-knowledges">
+          <a href="/Knowledges" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-knowledges"></i> <br />
             
-            Sitemap
+            Knowledges
           </a>
         </li>
       
@@ -450,6 +450,7 @@
 <h3 id="Recommend"><a href="#Recommend" class="headerlink" title="Recommend"></a>Recommend</h3><p>liuyiding   |   We have carefully selected several similar problems for you:  6263 6262 6261 6260 6259 </p>
 <h3 id="做法"><a href="#做法" class="headerlink" title="做法:"></a>做法:</h3><p>根据高位到低位建<strong>01 Trie树</strong>,将数集中元素依次加入,查询时尽量选择与数位不同的那位.</p>
 <h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 400005</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">read</span><span class="params">(<span class="keyword">int</span> &amp;s)</span></span>&#123;</div><div class="line">	<span class="keyword">register</span> <span class="keyword">char</span> ch=getchar();</div><div class="line">	<span class="keyword">for</span>(;!<span class="built_in">isdigit</span>(ch);ch=getchar());</div><div class="line">	<span class="keyword">for</span>(s=<span class="number">0</span>;<span class="built_in">isdigit</span>(ch);s=s*<span class="number">10</span>+ch-<span class="string">'0'</span>,ch=getchar());</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">struct</span> Node&#123;</div><div class="line">	Node *ls,*rs;</div><div class="line">	Node():ls(<span class="literal">NULL</span>),rs(<span class="literal">NULL</span>)&#123;&#125;</div><div class="line">&#125;pool[N];</div><div class="line"></div><div class="line"><span class="keyword">int</span> maxw;</div><div class="line"></div><div class="line"><span class="function">Node* <span class="title">newNode</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">static</span> <span class="keyword">int</span> cnt=<span class="number">0</span>;</div><div class="line">	pool[cnt].ls=<span class="literal">NULL</span>;</div><div class="line">	pool[cnt].rs=<span class="literal">NULL</span>;</div><div class="line">	<span class="keyword">return</span> &amp;pool[cnt++];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Insert</span><span class="params">(Node* root,<span class="keyword">int</span> sum)</span></span>&#123;</div><div class="line">	Node* now=root;<span class="keyword">int</span> ver;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">30</span>;i&gt;=<span class="number">0</span>;--i)&#123;</div><div class="line">		<span class="keyword">if</span>(sum-(<span class="number">1</span>&lt;&lt;i)&gt;=<span class="number">0</span>)&#123;</div><div class="line">			ver=<span class="number">1</span>;</div><div class="line">			sum-=(<span class="number">1</span>&lt;&lt;i);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span> ver=<span class="number">0</span>;</div><div class="line">		<span class="keyword">if</span>(ver)&#123;</div><div class="line">			<span class="keyword">if</span>(now-&gt;rs==<span class="literal">NULL</span>)</div><div class="line">				now-&gt;rs=newNode();</div><div class="line">			now=now-&gt;rs;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span> &#123;</div><div class="line">			<span class="keyword">if</span>(now-&gt;ls==<span class="literal">NULL</span>)</div><div class="line">				now-&gt;ls=newNode();</div><div class="line">			now=now-&gt;ls;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> ;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">Query</span><span class="params">(Node* root,<span class="keyword">int</span> sum)</span></span>&#123;</div><div class="line">	Node* now=root;<span class="keyword">int</span> ans=<span class="number">0</span>,ver;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">30</span>;i&gt;=<span class="number">0</span>;--i)&#123;</div><div class="line">		<span class="keyword">if</span>(sum-(<span class="number">1</span>&lt;&lt;i)&gt;=<span class="number">0</span>)&#123;</div><div class="line">			ver=<span class="number">0</span>;</div><div class="line">			sum-=(<span class="number">1</span>&lt;&lt;i);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span> ver=<span class="number">1</span>;	</div><div class="line">		<span class="keyword">if</span>(now-&gt;ls==<span class="literal">NULL</span>)</div><div class="line">			<span class="keyword">if</span>(now-&gt;rs==<span class="literal">NULL</span>)</div><div class="line">				<span class="keyword">return</span> ans;</div><div class="line">		<span class="keyword">if</span>(now-&gt;ls==<span class="literal">NULL</span>)&#123;</div><div class="line">			now=now-&gt;rs;</div><div class="line">			ans+=<span class="number">1</span>&lt;&lt;i;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(now-&gt;rs==<span class="literal">NULL</span>)</div><div class="line">			now=now-&gt;ls;</div><div class="line">		<span class="keyword">else</span> &#123;</div><div class="line">			<span class="keyword">if</span>(ver)&#123;</div><div class="line">				now=now-&gt;rs;</div><div class="line">				ans+=<span class="number">1</span>&lt;&lt;i;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">else</span> now=now-&gt;ls;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> T,n,m,s;</div><div class="line">	read(T);Node* root;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=T;++i)&#123;</div><div class="line">		root=newNode();</div><div class="line">		read(n),read(m);</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"Case #%d:\n"</span>,i);</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</div><div class="line">			read(s);Insert(root,s);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;++i)&#123;</div><div class="line">			read(s);<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,Query(root,s));</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -480,9 +481,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/异或/" rel="tag"># 异或</a>
+            <a href="/tags/Trie/" rel="tag"># Trie</a>
           
-            <a href="/tags/Trie树/" rel="tag"># Trie树</a>
+            <a href="/tags/异或/" rel="tag"># 异或</a>
           
             <a href="/tags/HDU/" rel="tag"># HDU</a>
           
@@ -595,7 +596,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">58</span>
+                  <span class="site-state-item-count">60</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -606,7 +607,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -617,7 +618,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">102</span>
+                  <span class="site-state-item-count">98</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

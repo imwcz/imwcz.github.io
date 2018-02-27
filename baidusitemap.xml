@@ -3,6 +3,180 @@
 
 
     
+  <url>
+    <loc>http://aiyoupass.com/Knowledges/index.html</loc>
+    <lastmod>2018-02-27T12:09:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>知识结构目录</title>
+        <pubTime>2018-02-27T11:37:01.000Z</pubTime>
+        
+         
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/tag/</loc>
+    <lastmod>2018-02-27T12:04:02.000Z</lastmod>
+    <data>
+        <display>
+        <title>知识结构目录</title>
+        <pubTime>2018-02-27T11:37:01.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="其它" url="http://aiyoupass.com/categories/%E5%85%B6%E5%AE%83/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/p4093/</loc>
+    <lastmod>2018-02-27T11:35:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>未完待续P4093 [HEOI2016/TJOI2016]序列</title>
+        <pubTime>2018-02-10T09:07:27.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>CDQ分治</tag>
+         
+        <tag>三维偏序</tag>
+         
+        <tag>二维线段树</tag>
+         
+        <tag>树套树</tag>
+         
+        <tag>线段树套线段树</tag>
+         
+        <tag>Luogu新春OI营-省选</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+             
+              <breadCrumb title="Luogu省选营" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/Luogu%E7%9C%81%E9%80%89%E8%90%A5/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/uoj266/</loc>
+    <lastmod>2018-02-27T11:33:32.000Z</lastmod>
+    <data>
+        <display>
+        <title>UOJ</title>
+        <pubTime>2018-02-27T11:05:29.000Z</pubTime>
+        
+        <tag>博弈论</tag>
+         
+        <tag>Multi-SG</tag>
+         
+        <tag>Trie</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/hdu4825/</loc>
+    <lastmod>2018-02-27T11:31:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>HDU 4825 Xor Sum</title>
+        <pubTime>2018-02-10T16:10:00.000Z</pubTime>
+        
+        <tag>Trie</tag>
+         
+        <tag>异或</tag>
+         
+        <tag>HDU</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/cf842d/</loc>
+    <lastmod>2018-02-27T11:31:10.000Z</lastmod>
+    <data>
+        <display>
+        <title>未完待续CF 842D D. Vitya and Strange Lesson</title>
+        <pubTime>2018-02-10T08:15:31.000Z</pubTime>
+        
+        <tag>Trie</tag>
+         
+        <tag>异或</tag>
+         
+        <tag>CodeForces</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/sgTheorem/</loc>
+    <lastmod>2018-02-27T11:30:12.000Z</lastmod>
+    <data>
+        <display>
+        <title>SG函数和SG定理</title>
+        <pubTime>2018-02-22T07:38:32.000Z</pubTime>
+        
+        <tag>博弈论</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://aiyoupass.com/2018/Every-SG/</loc>
@@ -301,33 +475,6 @@
           
              
               <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/sgTheorem/</loc>
-    <lastmod>2018-02-24T06:29:10.000Z</lastmod>
-    <data>
-        <display>
-        <title>SG函数和SG定理</title>
-        <pubTime>2018-02-22T07:38:32.000Z</pubTime>
-        
-        <tag>博弈论</tag>
-         
-        <tag>SG定理</tag>
-         
-        <tag>总结</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
           
         </display>
     </data>
@@ -682,13 +829,13 @@
         <title>P1486 [NOI2004] 郁闷的出纳员</title>
         <pubTime>2018-02-20T11:38:16.000Z</pubTime>
         
+        <tag>省选</tag>
+         
         <tag>平衡树</tag>
          
         <tag>线段树</tag>
          
         <tag>pb_ds</tag>
-         
-        <tag>省选</tag>
          
          
            
@@ -834,100 +981,6 @@
           
              
               <breadCrumb title="线性代数" url="http://aiyoupass.com/categories/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/p4093/</loc>
-    <lastmod>2018-02-10T09:51:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>未完待续P4093 [HEOI2016/TJOI2016]序列</title>
-        <pubTime>2018-02-10T09:07:27.000Z</pubTime>
-        
-        <tag>dp</tag>
-         
-        <tag>CDQ分治</tag>
-         
-        <tag>三维偏序</tag>
-         
-        <tag>二维线段树</tag>
-         
-        <tag>书套树</tag>
-         
-        <tag>线段树套线段树</tag>
-         
-        <tag>Luogu新春OI营-省选</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
-          
-             
-              <breadCrumb title="Luogu省选营" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/Luogu%E7%9C%81%E9%80%89%E8%90%A5/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/cf842d/</loc>
-    <lastmod>2018-02-10T09:41:30.000Z</lastmod>
-    <data>
-        <display>
-        <title>未完待续CF 842D D. Vitya and Strange Lesson</title>
-        <pubTime>2018-02-10T08:15:31.000Z</pubTime>
-        
-        <tag>Trie</tag>
-         
-        <tag>Mex</tag>
-         
-        <tag>异或</tag>
-         
-        <tag>CodeForces</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/hdu4825/</loc>
-    <lastmod>2018-02-10T08:16:24.000Z</lastmod>
-    <data>
-        <display>
-        <title>HDU 4825 Xor Sum</title>
-        <pubTime>2018-02-10T16:10:00.000Z</pubTime>
-        
-        <tag>异或</tag>
-         
-        <tag>Trie树</tag>
-         
-        <tag>HDU</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
           
         </display>
     </data>
@@ -1342,9 +1395,9 @@
         
         <tag>题目</tag>
          
-        <tag>省选</tag>
-         
         <tag>带权并查集</tag>
+         
+        <tag>省选</tag>
          
          
            
@@ -1367,9 +1420,9 @@
         <title>uoj180</title>
         <pubTime>2018-02-02T23:33:11.000Z</pubTime>
         
-        <tag>线段树</tag>
-         
         <tag>省选</tag>
+         
+        <tag>线段树</tag>
          
         <tag>数据结构</tag>
          
