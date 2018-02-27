@@ -95,7 +95,7 @@
 <meta property="og:url" content="http://aiyoupass.com/2018/longdebug/index.html">
 <meta property="og:site_name" content="落花微雨">
 <meta property="og:description" content="今天做了一道题目, 调试起来没完没了了. 花了起码有两个小时的时间, 看来在 Debug 方面还有很大的进步空间.">
-<meta property="og:updated_time" content="2018-02-26T13:44:20.000Z">
+<meta property="og:updated_time" content="2018-02-27T00:58:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="漫长的 Debug">
 <meta name="twitter:description" content="今天做了一道题目, 调试起来没完没了了. 花了起码有两个小时的时间, 看来在 Debug 方面还有很大的进步空间.">
@@ -441,7 +441,7 @@
       
 
       
-        <h3 id="二月二十六日"><a href="#二月二十六日" class="headerlink" title="二月二十六日"></a>二月二十六日</h3><h4 id="The-First"><a href="#The-First" class="headerlink" title="The First"></a>The First</h4><p><a href="http://poj.org/problem?id=2311" target="_blank" rel="external">POJ 2311 Cutting Game</a><br><a href="aiyoupass/2018/Multi-SG/">当时</a><br>　　也不是很难的一道题, 代码也不长, 可以即使我一条一条语句的去和别人的对比, 我也找不到错误之处, 这就让人非常无奈, 最终还是到了错误之处, 可是已经花了一个多小时了.原来我 <code>define</code> 了一个变量, 然后当时我定义这个变量的时候大概搞错了题意, 因此这个变量是它本来应该大小的一百分之一.<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 201</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> M 3</span></div><div class="line"></div><div class="line"><span class="keyword">int</span> sg[N][M]</div></pre></td></tr></table></figure></p>
+        <h3 id="二月二十七日"><a href="#二月二十七日" class="headerlink" title="二月二十七日"></a>二月二十七日</h3><h4 id="The-First"><a href="#The-First" class="headerlink" title="The First"></a>The First</h4><h3 id="二月二十六日"><a href="#二月二十六日" class="headerlink" title="二月二十六日"></a>二月二十六日</h3><h4 id="The-First-1"><a href="#The-First-1" class="headerlink" title="The First"></a>The First</h4><p><a href="http://poj.org/problem?id=2311" target="_blank" rel="external">POJ 2311 Cutting Game</a><br><a href="aiyoupass.com/2018/Multi-SG/">当时</a><br>　　也不是很难的一道题, 代码也不长, 可以即使我一条一条语句的去和别人的对比, 我也找不到错误之处, 这就让人非常无奈, 最终还是到了错误之处, 可是已经花了一个多小时了.原来我 <code>define</code> 了一个变量, 然后当时我定义这个变量的时候大概搞错了题意, 因此这个变量是它本来应该大小的一百分之一.<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 201</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> M 3</span></div><div class="line"></div><div class="line"><span class="keyword">int</span> sg[N][M]</div></pre></td></tr></table></figure></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 201</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> M 201</span></div><div class="line"></div><div class="line"><span class="keyword">int</span> sg[N][N];</div></pre></td></tr></table></figure>
 <p>　　谁知道为什么数组溢出了编译器确不报错?数组溢出这种事情也不是经常出现, 因此被忽视了.</p>
 <p>　　教训: 所以以后在做题的时候一定要注意细心, 而且在 debug 的时候一定要针对全部的代码去调试, 而不是仅仅关注几个关键的地方或者是函数, 错误很可能发生在最难以想到的地方.</p>
@@ -471,13 +471,13 @@
     
         
 <div class="my_post_copyright">
-  <script src="/myjson/1.js"></script>
-  <script src="/myjson/2.js"></script>
-  <script src="/myjson/3.js"></script>
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>本文标题:</span><a href="/2018/longdebug/">漫长的 Debug</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 aiyoupass 的个人博客">aiyoupass</a></p>
   <p><span>发布时间:</span>2018年02月26日 - 21:02</p>
-  <p><span>最后更新:</span>2018年02月26日 - 21:02</p>
+  <p><span>最后更新:</span>2018年02月27日 - 08:02</p>
   <p><span>原始链接:</span><a href="/2018/longdebug/" title="漫长的 Debug">http://aiyoupass.com/2018/longdebug/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://aiyoupass.com/2018/longdebug/"  aria-label="复制成功！"></i></span>
   </p>
@@ -722,7 +722,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#二月二十六日"><span class="nav-number">1.</span> <span class="nav-text">二月二十六日</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#The-First"><span class="nav-number">1.1.</span> <span class="nav-text">The First</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Second"><span class="nav-number">1.2.</span> <span class="nav-text">The Second</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#二月二十七日"><span class="nav-number">1.</span> <span class="nav-text">二月二十七日</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#The-First"><span class="nav-number">1.1.</span> <span class="nav-text">The First</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二月二十六日"><span class="nav-number">2.</span> <span class="nav-text">二月二十六日</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#The-First-1"><span class="nav-number">2.1.</span> <span class="nav-text">The First</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Second"><span class="nav-number">2.2.</span> <span class="nav-text">The Second</span></a></li></ol></li></ol></div>
             
 
           </div>

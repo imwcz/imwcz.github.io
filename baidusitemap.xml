@@ -4,8 +4,35 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/Multi-SG/</loc>
+    <lastmod>2018-02-27T02:41:46.000Z</lastmod>
+    <data>
+        <display>
+        <title>Multi-SG</title>
+        <pubTime>2018-02-26T03:12:19.000Z</pubTime>
+        
+        <tag>博弈论</tag>
+         
+        <tag>Multi-SG</tag>
+         
+        <tag>Lasker&#39;s Nim</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/longdebug/</loc>
-    <lastmod>2018-02-26T13:44:20.000Z</lastmod>
+    <lastmod>2018-02-27T00:58:46.000Z</lastmod>
     <data>
         <display>
         <title>漫长的 Debug</title>
@@ -36,33 +63,6 @@
     
     
     
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/Multi-SG/</loc>
-    <lastmod>2018-02-26T12:34:30.000Z</lastmod>
-    <data>
-        <display>
-        <title>Multi-SG</title>
-        <pubTime>2018-02-26T03:12:19.000Z</pubTime>
-        
-        <tag>博弈论</tag>
-         
-        <tag>Multi-SG</tag>
-         
-        <tag>Lasker&#39;s Nim</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://aiyoupass.com/2018/weizuofuth/</loc>
