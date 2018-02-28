@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://aiyoupass.com/2018/longdebug/</loc>
+    <loc>http://aiyoupass.com/2018/uoj266/</loc>
     
-    <lastmod>2018-02-28T07:25:02.000Z</lastmod>
+    <lastmod>2018-02-28T12:26:06.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://aiyoupass.com/2018/uoj266/</loc>
+    <loc>http://aiyoupass.com/2018/longdebug/</loc>
     
-    <lastmod>2018-02-28T07:19:48.000Z</lastmod>
+    <lastmod>2018-02-28T07:50:40.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://aiyoupass.com/2018/cf842d/</loc>
+    
+    <lastmod>2018-02-28T07:38:48.000Z</lastmod>
     
   </url>
   
@@ -19,13 +26,6 @@
     <loc>http://aiyoupass.com/schedule/index.html</loc>
     
     <lastmod>2018-02-28T07:17:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://aiyoupass.com/2018/cf842d/</loc>
-    
-    <lastmod>2018-02-28T07:16:28.000Z</lastmod>
     
   </url>
   

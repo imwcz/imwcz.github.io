@@ -4,8 +4,35 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/uoj266/</loc>
+    <lastmod>2018-02-28T12:26:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>UOJ266. 【清华集训2016】Alice和Bob又在玩游戏</title>
+        <pubTime>2018-02-27T11:05:29.000Z</pubTime>
+        
+        <tag>博弈论</tag>
+         
+        <tag>Multi-SG</tag>
+         
+        <tag>Trie</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/longdebug/</loc>
-    <lastmod>2018-02-28T07:25:02.000Z</lastmod>
+    <lastmod>2018-02-28T07:50:40.000Z</lastmod>
     <data>
         <display>
         <title>漫长的 Debug</title>
@@ -35,36 +62,8 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/uoj266/</loc>
-    <lastmod>2018-02-28T07:19:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>UOJ266. 【清华集训2016】Alice和Bob又在玩游戏</title>
-        <pubTime>2018-02-27T11:05:29.000Z</pubTime>
-        
-        <tag>博弈论</tag>
-         
-        <tag>Multi-SG</tag>
-         
-        <tag>Trie</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
     <loc>http://aiyoupass.com/2018/cf842d/</loc>
-    <lastmod>2018-02-28T07:16:28.000Z</lastmod>
+    <lastmod>2018-02-28T07:38:48.000Z</lastmod>
     <data>
         <display>
         <title>CF 842D D. Vitya and Strange Lesson</title>
@@ -88,6 +87,7 @@
     </data>
     </url>
 
+    
     
   <url>
     <loc>http://aiyoupass.com/2018/p1486/</loc>
