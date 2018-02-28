@@ -95,7 +95,7 @@
 <meta property="og:url" content="http://aiyoupass.com/2018/uoj266/index.html">
 <meta property="og:site_name" content="落花微雨">
 <meta property="og:description" content="Alice 和 Bob 又在玩游戏。有$n$个节点，$m$ 条边（$0≤m≤n−1$），构成若干棵有根树，每棵树的根节点是该连通块内编号最小的点。Alice 和 Bob 轮流操作（Alice 先手），每回合选择一个没有被删除的节点 x，将x及其所有祖先全部删除，不能操作的人输。">
-<meta property="og:updated_time" content="2018-02-27T14:01:44.000Z">
+<meta property="og:updated_time" content="2018-02-28T07:19:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UOJ266. 【清华集训2016】Alice和Bob又在玩游戏">
 <meta name="twitter:description" content="Alice 和 Bob 又在玩游戏。有$n$个节点，$m$ 条边（$0≤m≤n−1$），构成若干棵有根树，每棵树的根节点是该连通块内编号最小的点。Alice 和 Bob 轮流操作（Alice 先手），每回合选择一个没有被删除的节点 x，将x及其所有祖先全部删除，不能操作的人输。">
@@ -450,11 +450,17 @@
 <h4 id="output"><a href="#output" class="headerlink" title="output"></a>output</h4><p>Alice<br>Alice<br>Bob<br>Alice</p>
 <h3 id="explanation"><a href="#explanation" class="headerlink" title="explanation"></a>explanation</h3><p>输入共 4 组数据；<br>第一组数据输入是一条链，Alice 可以一次性把所有节点都删掉。<br>第二组数据，Alice 先手第一步删除 1 号点即可胜利。</p>
 <h3 id="限制与约定"><a href="#限制与约定" class="headerlink" title="限制与约定"></a>限制与约定</h3><p>对于10%的数据，$m=0$;<br>对于20%的数据，$1≤n≤20$;<br>对于40%的数据，$1≤n≤10^2$；<br>对于60%的数据，$1≤n≤10^3$；<br>对于100%的数据，$1≤T≤10,1≤n≤10^5,∑n≤2×10^5,0≤m≤n−1$,输入数据保证不会形成环，且每棵树的大小$≤5×10^4$。<br>时间限制：2s<br>空间限制：1024MB</p>
-<h3 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h3><p>　　不要被<em>清华集训</em>吓倒了, 其实并没有想像中的那么难.这道我们只需要从最简单的思路一步步出发就能解决.<br>　　首先确立状态, 我们首先注意到它的模型和 $Multi-SG$ 有相似之处, 如果我们将一棵子树看成是一个”点”的话, 就会发现如果将某一子树$R$的根到它所在树的根的路径删除的话, 就会将这棵子树变成若干棵独立的树. 然后这若干棵独立的树又会进行下一轮游戏.<br>　　我们要求$R$的$SG$值, 就需要枚举删除处于$R$子树上的哪个节点,从而得到其所有后继状态, 再在后继状态中求$mex$从而得到$SG(R)$.叶子节点的SG函数为1, 因为将它与根之间路径删去的话, 这个节点就没了, 所以叶子节点的$SG$值是1.<br>　　根据上述思路, 这是一个复杂度为$O(N^2)$的做法.因为求$SG$函数的复杂度为$O(N)$.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">int dfs(int x,int f)&#123;</div><div class="line">	if(SG[x]&gt;-1)return SG[x];</div><div class="line">	int to,sg=0;bool flag=0;</div><div class="line">	for(int i=head[x];i;i=e[i].nxt,to=e[i].v;)&#123;</div><div class="line">		if(to==fa)continue;</div><div class="line">		sg^=dfs(to,x);</div><div class="line">		flag=1;</div><div class="line">	&#125;</div><div class="line">	for(int i=head[x];i;i=e[i].nxt,to=e[i].v;)&#123;</div><div class="line">		if(to==fa)continue;</div><div class="line">		for(int i=0;;++i)&#123;</div><div class="line">			S[to][i]^=sg^SG[to];</div><div class="line">			if(</div><div class="line">		&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>　　但是这么做肯定不能通过这道题目, 因此需要优化.<br>　　我们观察到如果将每个$SG$值看成是一个01串的话, 我们需要对01串进行异或和的操作, 对01串构成的集合求$mex$, 我们自然而言的想到了用$01\text{ }Trie$来维护这一过程.<br>    如果做过<a href="http://codeforces.com/problemset/problem/842/D" target="_blank" rel="external">CodeForces 842D Vitya and Strange Lesson</a>这道题目的话, 应该就知道怎么用$01\text{ }Trie$来维护01串的异或和$mex$了, 这道题目似乎在为UOJ这道题目做铺垫一样.</p>
+<h3 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h3><p>　　不要被<em>清华集训</em>吓倒了, 其实并没有想像中的那么难.这道我们只需要从最简单的思路一步步出发就能解决.<br>　　首先确立状态, 我们首先注意到它的模型和 $Multi-SG$ 有相似之处, 如果我们将一棵子树看成是一个”点”的话, 就会发现如果将某一子树$R$的根到它所在树的根的路径删除的话, 就会将这棵子树变成若干棵独立的树. 然后这若干棵独立的树又会进行下一轮游戏.<br>　　我们要求$R$的$SG$值, 就要求出$R$的所有后继状态, 它有哪些后继状态呢? 首先可以删除$R$的根, 或者删除$R$子树上的任意一个点$Y$.</p>
 <ul>
-<li>在$01\text{ }Trie$上对一个01串异或一个数, 等价与在对应的数位上翻转子树.</li>
-<li>求所有01串的的mex, 可以在每个节点上维护一个$size$, 找出最小的$size$不满的节点所对应的数.</li>
+<li>如果删除$R$的根, 后继状态是$R$的所有子树的异或和.</li>
+<li>如果删除$R$的某一子树$X$上某一点$Y$, 所有的后继状态是$X$的所有后继状态异或上$R$的其它子树.<br>　　根据上述思路, 我们或许可以想到一个复杂度为$O(N^2)$的做法.因为求$SG$函数的复杂度为$O(N)$.但是一棵点数为十万的树有多少后继状态呢?太多了,因此需要更合适的办法.<br>　　我们观察到如果将每个$SG$值看成是一个01串的话, 我们需要对01串构成的集合求$mex$和对所有01串异或一个数, 我们自然而言的想到了用$01\text{ }Trie$来维护这一过程(<em>可以参考这道题目<a href="http://codeforces.com/problemset/problem/842/D" target="_blank" rel="external">CodeForces 842D Vitya and Strange Lesson</a></em>)可以先写一下这道题目, 我写的很费劲<a href="http://aiyoupass.com/2018/cf842d/"></a>.</li>
+<li>对$01\text{ }Trie$异或一个数, 等价与在对应的数位上翻转子树.</li>
+<li>求所有01串的的mex, 可以在每个节点上维护一个$size$, 找出最小的$size$不满的节点所对应的数.<br>　　该如何把上述方法应用到此题来呢?</li>
+<li>首先我们需要求出每一棵独立的树的$SG$值, 然后异或起来这就是答案.</li>
+<li>递归求解每棵树的$SG$函数, 从树根遍历到叶子, 然后逐步向上合并,这个过程用dfs实现.</li>
+<li>每个点都有一棵Trie树, 记录以这个点为根的子树的所有后继状态, 这个点的$SG$函数就是这棵Trie树的$mex$, 叶子结点的SG值为1, 因为后继状态是$terminal position$.</li>
+<li>每次dfs时先将所有子树的$SG$值异或起来得到一个数$T$, 然后将每个子结点$X$的Trie树异或所有兄弟结点($T\oplus Trie$), 其实就是给Trie树打标记.然后将其合并到父亲的Trie树上.最后在Trie中加入$T$, 这是直接删除树根的后继状态.<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+</li>
 </ul>
 
       
@@ -481,7 +487,7 @@
   <p><span>本文标题:</span><a href="/2018/uoj266/">UOJ266. 【清华集训2016】Alice和Bob又在玩游戏</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 aiyoupass 的个人博客">aiyoupass</a></p>
   <p><span>发布时间:</span>2018年02月27日 - 19:02</p>
-  <p><span>最后更新:</span>2018年02月27日 - 22:02</p>
+  <p><span>最后更新:</span>2018年02月28日 - 15:02</p>
   <p><span>原始链接:</span><a href="/2018/uoj266/" title="UOJ266. 【清华集训2016】Alice和Bob又在玩游戏">http://aiyoupass.com/2018/uoj266/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://aiyoupass.com/2018/uoj266/"  aria-label="复制成功！"></i></span>
   </p>
@@ -531,8 +537,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/longdebug/" rel="next" title="漫长的 Debug">
-                <i class="fa fa-chevron-left"></i> 漫长的 Debug
+              <a href="/2018/p1678/" rel="next" title="P1678 烦恼的高考志愿">
+                <i class="fa fa-chevron-left"></i> P1678 烦恼的高考志愿
               </a>
             
           </div>
@@ -726,7 +732,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#描述"><span class="nav-number">1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输入格式"><span class="nav-number">2.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出格式"><span class="nav-number">3.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#样例"><span class="nav-number">4.</span> <span class="nav-text">样例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#input"><span class="nav-number">4.1.</span> <span class="nav-text">input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#output"><span class="nav-number">4.2.</span> <span class="nav-text">output</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#explanation"><span class="nav-number">5.</span> <span class="nav-text">explanation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#限制与约定"><span class="nav-number">6.</span> <span class="nav-text">限制与约定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#做法"><span class="nav-number">7.</span> <span class="nav-text">做法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#描述"><span class="nav-number">1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输入格式"><span class="nav-number">2.</span> <span class="nav-text">输入格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出格式"><span class="nav-number">3.</span> <span class="nav-text">输出格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#样例"><span class="nav-number">4.</span> <span class="nav-text">样例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#input"><span class="nav-number">4.1.</span> <span class="nav-text">input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#output"><span class="nav-number">4.2.</span> <span class="nav-text">output</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#explanation"><span class="nav-number">5.</span> <span class="nav-text">explanation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#限制与约定"><span class="nav-number">6.</span> <span class="nav-text">限制与约定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#做法"><span class="nav-number">7.</span> <span class="nav-text">做法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code"><span class="nav-number">8.</span> <span class="nav-text">Code</span></a></li></ol></div>
             
 
           </div>
