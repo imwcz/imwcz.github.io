@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="构造,数学,素数,搜索,打表,HAOI2007," />
+  <meta name="keywords" content="构造,数学,搜索,打表," />
 
 
 
@@ -95,7 +95,7 @@
 <meta property="og:url" content="http://aiyoupass.com/2018/p1463/index.html">
 <meta property="og:site_name" content="落花微雨">
 <meta property="og:description" content="一个数为反素数仅当没有比其小但是约数和比其大(等于)的数.求2*1e9内最大的反素数.">
-<meta property="og:updated_time" content="2018-02-20T13:01:02.000Z">
+<meta property="og:updated_time" content="2018-02-28T00:14:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="P1463 [HAOI2007]反素数">
 <meta name="twitter:description" content="一个数为反素数仅当没有比其小但是约数和比其大(等于)的数.求2*1e9内最大的反素数.">
@@ -451,6 +451,7 @@
 <pre><code>在有了以上的思路之后, 我们就可以试着用搜索去做这道题了, 依次枚举每个质因子的次数从而更新答案, 注意前10个质数的成绩就最大的数据范围.所以只需要枚举前10个质数就可以.
 </code></pre><h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><p>　　如果有人看见一个人连续交了很多遍都是60分, 那个智障大概就是我了.(一定要看题啊)<br>　　有一句非常重要的语句一定要注意.<br>//第12行的第二个判断非常重要,缺少就是60分.(其作用yy可知)<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(times&gt;maxt||(times==maxt&amp;&amp;ans&gt;sum))&#123;</div></pre></td></tr></table></figure></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 2000000000</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> prime[<span class="number">50</span>]=&#123;<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">11</span>,<span class="number">13</span>,<span class="number">17</span>,<span class="number">19</span>,<span class="number">23</span>,<span class="number">29</span>,<span class="number">31</span>,<span class="number">37</span>,<span class="number">41</span>,<span class="number">43</span>,<span class="number">47</span>,<span class="number">53</span>,<span class="number">59</span>&#125;;</div><div class="line"><span class="keyword">long</span> <span class="keyword">long</span> ans=<span class="number">1</span>,maxt=<span class="number">1</span>;</div><div class="line"><span class="keyword">int</span> n;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> pos,<span class="keyword">long</span> <span class="keyword">long</span> sum,<span class="keyword">long</span> <span class="keyword">long</span> times,<span class="keyword">int</span> pre)</span></span>&#123;</div><div class="line">	<span class="keyword">if</span>(times&gt;maxt||(times==maxt&amp;&amp;ans&gt;sum))&#123;</div><div class="line">		maxt=times;</div><div class="line">		ans=sum;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span>(pos&gt;<span class="number">10</span>)<span class="keyword">return</span> ;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=pre;++i)&#123;</div><div class="line">		sum=sum*prime[pos];</div><div class="line">		<span class="keyword">if</span>(sum&lt;<span class="number">0</span>||sum&gt;n)<span class="keyword">break</span>;</div><div class="line">		dfs(pos+<span class="number">1</span>,sum,times*(i+<span class="number">1</span>),i);</div><div class="line">	&#125;</div><div class="line">&#125; </div><div class="line">main()&#123;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</div><div class="line">	<span class="keyword">int</span> root=<span class="number">1</span>;</div><div class="line">	dfs(<span class="number">0</span>,root,root,<span class="number">31</span>);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%lld"</span>,ans);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -485,13 +486,9 @@
           
             <a href="/tags/数学/" rel="tag"># 数学</a>
           
-            <a href="/tags/素数/" rel="tag"># 素数</a>
-          
             <a href="/tags/搜索/" rel="tag"># 搜索</a>
           
             <a href="/tags/打表/" rel="tag"># 打表</a>
-          
-            <a href="/tags/HAOI2007/" rel="tag"># HAOI2007</a>
           
         </div>
       
@@ -514,8 +511,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/P2594/" rel="prev" title="P4136 染色问题">
-                P4136 染色问题 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/P4136/" rel="prev" title="P4136 谁能赢呢？">
+                P4136 谁能赢呢？ <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -624,7 +621,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">98</span>
+                  <span class="site-state-item-count">109</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

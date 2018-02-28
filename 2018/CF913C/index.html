@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="动态规划,提高," />
+  <meta name="keywords" content="动态规划," />
 
 
 
@@ -95,7 +95,7 @@
 <meta property="og:url" content="http://aiyoupass.com/2018/CF913C/index.html">
 <meta property="og:site_name" content="落花微雨">
 <meta property="og:description" content="一个有点像背包的题目">
-<meta property="og:updated_time" content="2018-02-03T13:57:28.000Z">
+<meta property="og:updated_time" content="2018-02-27T23:41:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CF913C">
 <meta name="twitter:description" content="一个有点像背包的题目">
@@ -462,6 +462,7 @@
 <p>输入样例#1：<br>4 12<br>20 30 70 90<br>输出样例#1：<br>150<br>输入样例#2：<br>4 3<br>10000 1000 100 10<br>输出样例#2：<br>10<br>输入样例#3：<br>4 3<br>10 100 1000 10000<br>输出样例#3：<br>30<br>输入样例#4：<br>5 787787787<br>123456789 234567890 345678901 456789012 987654321<br>输出样例#4：<br>44981600785557577<br>说明<br>In the first example you should buy one 8-liter bottle for 90 roubles and two 2-liter bottles for 30 roubles each. In total you’ll get 12 liters of lemonade for just 150 roubles.<br>In the second example, even though you need only 3 liters, it’s cheaper to buy a single 8-liter bottle for 10 roubles.<br>In the third example it’s best to buy three 1-liter bottles for 10 roubles each, getting three liters for 30 roubles.</p>
 <h3 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h3><p>dp[i]获得1&lt;&lt;i升柠檬水需要最少的代价</p>
 <h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n,L;</div><div class="line">ll cost[<span class="number">35</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> v)</span></span>&#123;</div><div class="line">    <span class="keyword">double</span> len=log2(v);</div><div class="line">    <span class="keyword">int</span> len1=len;</div><div class="line">    <span class="keyword">if</span>(len==len1)<span class="keyword">return</span> cost[len1];</div><div class="line">    ll left=v-(<span class="number">1</span>&lt;&lt;len1);</div><div class="line">    ll tmp=dfs(left);</div><div class="line">    <span class="keyword">int</span> len2=log2(left);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=len2+<span class="number">1</span>;i&lt;=len1;++i)</div><div class="line">        tmp=min(tmp,cost[i]);</div><div class="line">    <span class="keyword">if</span>((cost[len1]&lt;&lt;<span class="number">1</span>)&lt;cost[len1]+tmp)</div><div class="line">        <span class="keyword">return</span> cost[len1]&lt;&lt;<span class="number">1</span>;</div><div class="line">    <span class="keyword">else</span> cost[len1]+tmp;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;L);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">32</span>;++i)</div><div class="line">        cost[i]=<span class="number">1L</span>L&lt;&lt;<span class="number">61</span>; </div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;++i)</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;cost[i]);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">32</span>;++i)</div><div class="line">        cost[i]=min(cost[i],cost[i<span class="number">-1</span>]*<span class="number">2</span>);</div><div class="line">    <span class="keyword">int</span> len=log2(L);ll ans=dfs(L);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=len+<span class="number">1</span>;i&lt;=<span class="number">32</span>;++i)</div><div class="line">        ans=min(ans,cost[i]);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%lld"</span>,ans);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -493,8 +494,6 @@
         <div class="post-tags">
           
             <a href="/tags/动态规划/" rel="tag"># 动态规划</a>
-          
-            <a href="/tags/提高/" rel="tag"># 提高</a>
           
         </div>
       
@@ -627,7 +626,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">98</span>
+                  <span class="site-state-item-count">109</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

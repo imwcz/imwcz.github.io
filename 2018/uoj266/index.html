@@ -91,13 +91,13 @@
 
 <meta name="description" content="Alice 和 Bob 又在玩游戏。有$n$个节点，$m$ 条边（$0≤m≤n−1$），构成若干棵有根树，每棵树的根节点是该连通块内编号最小的点。Alice 和 Bob 轮流操作（Alice 先手），每回合选择一个没有被删除的节点 x，将x及其所有祖先全部删除，不能操作的人输。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UOJ">
+<meta property="og:title" content="UOJ266. 【清华集训2016】Alice和Bob又在玩游戏">
 <meta property="og:url" content="http://aiyoupass.com/2018/uoj266/index.html">
 <meta property="og:site_name" content="落花微雨">
 <meta property="og:description" content="Alice 和 Bob 又在玩游戏。有$n$个节点，$m$ 条边（$0≤m≤n−1$），构成若干棵有根树，每棵树的根节点是该连通块内编号最小的点。Alice 和 Bob 轮流操作（Alice 先手），每回合选择一个没有被删除的节点 x，将x及其所有祖先全部删除，不能操作的人输。">
-<meta property="og:updated_time" content="2018-02-27T13:15:46.000Z">
+<meta property="og:updated_time" content="2018-02-27T14:01:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="UOJ">
+<meta name="twitter:title" content="UOJ266. 【清华集训2016】Alice和Bob又在玩游戏">
 <meta name="twitter:description" content="Alice 和 Bob 又在玩游戏。有$n$个节点，$m$ 条边（$0≤m≤n−1$），构成若干棵有根树，每棵树的根节点是该连通块内编号最小的点。Alice 和 Bob 轮流操作（Alice 先手），每回合选择一个没有被删除的节点 x，将x及其所有祖先全部删除，不能操作的人输。">
 
 
@@ -134,7 +134,7 @@
 
 
 
-  <title>UOJ | 落花微雨</title>
+  <title>UOJ266. 【清华集训2016】Alice和Bob又在玩游戏 | 落花微雨</title>
   
 
 
@@ -342,7 +342,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">UOJ</h1>
+          <h1 class="post-title" itemprop="name headline">UOJ266. 【清华集训2016】Alice和Bob又在玩游戏</h1>
         
 
         <div class="post-meta">
@@ -450,7 +450,12 @@
 <h4 id="output"><a href="#output" class="headerlink" title="output"></a>output</h4><p>Alice<br>Alice<br>Bob<br>Alice</p>
 <h3 id="explanation"><a href="#explanation" class="headerlink" title="explanation"></a>explanation</h3><p>输入共 4 组数据；<br>第一组数据输入是一条链，Alice 可以一次性把所有节点都删掉。<br>第二组数据，Alice 先手第一步删除 1 号点即可胜利。</p>
 <h3 id="限制与约定"><a href="#限制与约定" class="headerlink" title="限制与约定"></a>限制与约定</h3><p>对于10%的数据，$m=0$;<br>对于20%的数据，$1≤n≤20$;<br>对于40%的数据，$1≤n≤10^2$；<br>对于60%的数据，$1≤n≤10^3$；<br>对于100%的数据，$1≤T≤10,1≤n≤10^5,∑n≤2×10^5,0≤m≤n−1$,输入数据保证不会形成环，且每棵树的大小$≤5×10^4$。<br>时间限制：2s<br>空间限制：1024MB</p>
-<h3 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h3><p>　　不要被<em>清华集训</em>吓倒了, 其实并没有想像中的那么难.这道我们只需要从最简单的思路一步步出发就能解决.<br>　　首先确立状态, 我们首先注意到它的模型和 $Multi-SG$ 有相似之处, 如果我们将一棵子树看成是一个”点”的话, 就会发现如果将某一子树$R$的根到它所在树的根的路径删除的话, 就会将这棵子树变成若干棵独立的树. 然后这若干棵独立的树又会进行下一轮游戏.<br>　　根据我们的经验, 我们求出$R$的后继状态也就是先删那棵子树.这样我们便表示出了这棵子树$R$的$SG$函数.叶子节点的SG函数为1, 因为将它与根之间路径删去的话, 这个节点就没了, 所以叶子节点的$SG$值是1.<br>　　根据上述思路, 我们完全可以写出一个复杂度为$O(N^2)$的程序.因为求$SG$函数的复杂度为$O(N)$.</p>
+<h3 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h3><p>　　不要被<em>清华集训</em>吓倒了, 其实并没有想像中的那么难.这道我们只需要从最简单的思路一步步出发就能解决.<br>　　首先确立状态, 我们首先注意到它的模型和 $Multi-SG$ 有相似之处, 如果我们将一棵子树看成是一个”点”的话, 就会发现如果将某一子树$R$的根到它所在树的根的路径删除的话, 就会将这棵子树变成若干棵独立的树. 然后这若干棵独立的树又会进行下一轮游戏.<br>　　我们要求$R$的$SG$值, 就需要枚举删除处于$R$子树上的哪个节点,从而得到其所有后继状态, 再在后继状态中求$mex$从而得到$SG(R)$.叶子节点的SG函数为1, 因为将它与根之间路径删去的话, 这个节点就没了, 所以叶子节点的$SG$值是1.<br>　　根据上述思路, 这是一个复杂度为$O(N^2)$的做法.因为求$SG$函数的复杂度为$O(N)$.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">int dfs(int x,int f)&#123;</div><div class="line">	if(SG[x]&gt;-1)return SG[x];</div><div class="line">	int to,sg=0;bool flag=0;</div><div class="line">	for(int i=head[x];i;i=e[i].nxt,to=e[i].v;)&#123;</div><div class="line">		if(to==fa)continue;</div><div class="line">		sg^=dfs(to,x);</div><div class="line">		flag=1;</div><div class="line">	&#125;</div><div class="line">	for(int i=head[x];i;i=e[i].nxt,to=e[i].v;)&#123;</div><div class="line">		if(to==fa)continue;</div><div class="line">		for(int i=0;;++i)&#123;</div><div class="line">			S[to][i]^=sg^SG[to];</div><div class="line">			if(</div><div class="line">		&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>　　但是这么做肯定不能通过这道题目, 因此需要优化.<br>　　我们观察到如果将每个$SG$值看成是一个01串的话, 我们需要对01串进行异或和的操作, 对01串构成的集合求$mex$, 我们自然而言的想到了用$01\text{ }Trie$来维护这一过程.<br>    如果做过<a href="http://codeforces.com/problemset/problem/842/D" target="_blank" rel="external">CodeForces 842D Vitya and Strange Lesson</a>这道题目的话, 应该就知道怎么用$01\text{ }Trie$来维护01串的异或和$mex$了, 这道题目似乎在为UOJ这道题目做铺垫一样.</p>
+<ul>
+<li>在$01\text{ }Trie$上对一个01串异或一个数, 等价与在对应的数位上翻转子树.</li>
+<li>求所有01串的的mex, 可以在每个节点上维护一个$size$, 找出最小的$size$不满的节点所对应的数.</li>
+</ul>
 
       
     </div>
@@ -473,11 +478,11 @@
   <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2018/uoj266/">UOJ</a></p>
+  <p><span>本文标题:</span><a href="/2018/uoj266/">UOJ266. 【清华集训2016】Alice和Bob又在玩游戏</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 aiyoupass 的个人博客">aiyoupass</a></p>
   <p><span>发布时间:</span>2018年02月27日 - 19:02</p>
-  <p><span>最后更新:</span>2018年02月27日 - 21:02</p>
-  <p><span>原始链接:</span><a href="/2018/uoj266/" title="UOJ">http://aiyoupass.com/2018/uoj266/</a>
+  <p><span>最后更新:</span>2018年02月27日 - 22:02</p>
+  <p><span>原始链接:</span><a href="/2018/uoj266/" title="UOJ266. 【清华集训2016】Alice和Bob又在玩游戏">http://aiyoupass.com/2018/uoj266/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://aiyoupass.com/2018/uoj266/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
@@ -646,7 +651,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">98</span>
+                  <span class="site-state-item-count">109</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

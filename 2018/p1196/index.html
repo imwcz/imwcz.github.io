@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="题目,带权并查集,省选," />
+  <meta name="keywords" content="带权并查集," />
 
 
 
@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="落花微雨">
 <meta property="og:description" content="有两种操作,将i所在序列合并到j所在序列的尾部,查询i和j之前元素的个数.  这是我接触的第一道有关带权并查集的题目,不如借此机会学习一下带权并查集.">
 <meta property="og:image" content="https://cdn.luogu.org/upload/pic/53.png">
-<meta property="og:updated_time" content="2018-02-06T07:54:46.000Z">
+<meta property="og:updated_time" content="2018-02-28T00:18:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="P1196 [NOI2002] 银河英雄传说">
 <meta name="twitter:description" content="有两种操作,将i所在序列合并到j所在序列的尾部,查询i和j之前元素的个数.  这是我接触的第一道有关带权并查集的题目,不如借此机会学习一下带权并查集.">
@@ -452,6 +452,7 @@
 <h3 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h3><p>除了普通并查集的需要维护元素的祖先之外.<br>带权并查集需要维护其他信息.<br>例如集合的大小</p>
 <p>而这个题目需要维护一个元素到队列头的距离和队列的大小<br>而且在合并两个队列和查询答案以及查询祖先的过程中记得更新这两个值<br>而且需要初始化.</p>
 <h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 30005</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">read</span><span class="params">(<span class="keyword">int</span> &amp;s)</span></span>&#123;</div><div class="line">	<span class="keyword">char</span> ch=getchar();</div><div class="line">	<span class="keyword">for</span>(;!<span class="built_in">isdigit</span>(ch);ch=getchar());</div><div class="line">	<span class="keyword">for</span>(s=<span class="number">0</span>;<span class="built_in">isdigit</span>(ch);s=s*<span class="number">10</span>+ch-<span class="string">'0'</span>,ch=getchar());</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">abs</span><span class="params">(<span class="keyword">int</span> s)</span></span>&#123;</div><div class="line">	<span class="keyword">return</span> s&gt;=<span class="number">0</span>?s:-s;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">int</span> fa[N];</div><div class="line"><span class="keyword">int</span> dis[N];</div><div class="line"><span class="keyword">int</span> num[N];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> son)</span></span>&#123;</div><div class="line">	<span class="keyword">if</span>(son!=fa[son])&#123;</div><div class="line">		<span class="keyword">int</span> k=fa[son];</div><div class="line">		fa[son]=find(fa[son]);</div><div class="line">		dis[son]+=dis[k];</div><div class="line">		num[son]+=num[fa[son]];</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> fa[son];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> f1=find(i),f2=find(j);</div><div class="line">	<span class="keyword">if</span>(f1!=f2)&#123;</div><div class="line">		fa[f1]=f2;</div><div class="line">		dis[f1]=dis[f2]+num[f2];</div><div class="line">		num[f2]+=num[f1];</div><div class="line">		num[f1]=num[f2];</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> f1=find(i),f2=find(j);</div><div class="line">	<span class="keyword">if</span>(f1!=f2)</div><div class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">	<span class="keyword">else</span> <span class="keyword">return</span> <span class="built_in">abs</span>(dis[i]-dis[j])<span class="number">-1</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">int</span> s)</span></span>&#123;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,s);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> T;read(T);<span class="keyword">char</span> ch[N];<span class="keyword">int</span> i,j;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;N;++i)fa[i]=i;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;N;++i)num[i]=<span class="number">1</span>;</div><div class="line">	<span class="keyword">while</span>(T--)&#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%s"</span>,ch);read(i),read(j);</div><div class="line">		<span class="keyword">if</span>(ch[<span class="number">0</span>]==<span class="string">'M'</span>)</div><div class="line">			merge(i,j);</div><div class="line">		<span class="keyword">else</span> print(query(i,j));</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -482,11 +483,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/题目/" rel="tag"># 题目</a>
-          
             <a href="/tags/带权并查集/" rel="tag"># 带权并查集</a>
-          
-            <a href="/tags/省选/" rel="tag"># 省选</a>
           
         </div>
       
@@ -619,7 +616,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">98</span>
+                  <span class="site-state-item-count">109</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
