@@ -4,6 +4,60 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/p4077/</loc>
+    <lastmod>2018-02-28T13:54:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>P4077 [SDOI2016]硬币游戏</title>
+        <pubTime>2018-02-28T13:06:43.000Z</pubTime>
+        
+        <tag>博弈论</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/longdebug/</loc>
+    <lastmod>2018-02-28T13:09:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>漫长的 Debug</title>
+        <pubTime>2018-02-28T09:35:34.000Z</pubTime>
+        
+        <tag>解决方案</tag>
+         
+        <tag>Hexo</tag>
+         
+        <tag>Debug</tag>
+         
+        <tag>copyright</tag>
+         
+        <tag>版权信息</tag>
+         
+         
+           
+             
+              <breadCrumb title="解决方案" url="http://aiyoupass.com/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+          
+             
+              <breadCrumb title="Hexo" url="http://aiyoupass.com/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/Hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/uoj266/</loc>
     <lastmod>2018-02-28T12:26:06.000Z</lastmod>
     <data>
@@ -24,37 +78,6 @@
           
              
               <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/longdebug/</loc>
-    <lastmod>2018-02-28T07:50:40.000Z</lastmod>
-    <data>
-        <display>
-        <title>漫长的 Debug</title>
-        <pubTime>2018-02-28T09:35:34.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-        <tag>解决方案</tag>
-         
-        <tag>Debug</tag>
-         
-        <tag>copyright</tag>
-         
-        <tag>版权信息</tag>
-         
-         
-           
-             
-              <breadCrumb title="解决方案" url="http://aiyoupass.com/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-          
-             
-              <breadCrumb title="Hexo" url="http://aiyoupass.com/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/Hexo/"/>
           
         </display>
     </data>
@@ -351,11 +374,11 @@
         
         <tag>pdf</tag>
          
-        <tag>source</tag>
-         
         <tag>LaTeX</tag>
          
         <tag>TikZ</tag>
+         
+        <tag>source</tag>
          
          
            
@@ -469,11 +492,11 @@
         <title>威佐夫博弈</title>
         <pubTime>2018-02-25T13:24:22.000Z</pubTime>
         
+        <tag>威佐夫博弈</tag>
+         
         <tag>Beatty定理</tag>
          
         <tag>ICG</tag>
-         
-        <tag>威佐夫博弈</tag>
          
          
            
@@ -580,6 +603,33 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/pdftest/</loc>
+    <lastmod>2018-02-28T00:02:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>Link-Cut-Tree</title>
+        <pubTime>2018-01-23T11:02:50.000Z</pubTime>
+        
+        <tag>pdf</tag>
+         
+        <tag>document</tag>
+         
+        <tag>Link-Cut-Tree</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="我的文档" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/p3507a/</loc>
     <lastmod>2018-02-27T23:57:32.000Z</lastmod>
     <data>
@@ -612,7 +662,13 @@
         
         <tag>博弈论</tag>
          
+        <tag>规律</tag>
+         
         <tag>题目</tag>
+         
+        <tag>巴什博弈</tag>
+         
+        <tag>威佐夫博弈</tag>
          
         <tag>Zeckendorf定理</tag>
          
@@ -621,12 +677,6 @@
         <tag>一堆简单题</tag>
          
         <tag>ICG</tag>
-         
-        <tag>规律</tag>
-         
-        <tag>巴什博弈</tag>
-         
-        <tag>威佐夫博弈</tag>
          
         <tag>nim</tag>
          
@@ -728,9 +778,9 @@
         
         <tag>线段树</tag>
          
-        <tag>树状数组</tag>
-         
         <tag>前缀和</tag>
+         
+        <tag>树状数组</tag>
          
          
            
@@ -1077,9 +1127,9 @@
         <title>Every-SG</title>
         <pubTime>2018-02-27T02:47:51.000Z</pubTime>
         
-        <tag>Every-SG</tag>
-         
         <tag>博弈论</tag>
+         
+        <tag>Every-SG</tag>
          
          
            
@@ -1157,9 +1207,9 @@
         <title>Anti-SG/Misère Games</title>
         <pubTime>2018-02-26T00:17:21.000Z</pubTime>
         
-        <tag>博弈论</tag>
-         
         <tag>Anti-SG</tag>
+         
+        <tag>博弈论</tag>
          
         <tag>Misère Games</tag>
          
@@ -1184,9 +1234,9 @@
         <title>Hexo 文章置顶</title>
         <pubTime>2018-02-25T13:12:01.000Z</pubTime>
         
-        <tag>Hexo</tag>
-         
         <tag>解决方案</tag>
+         
+        <tag>Hexo</tag>
          
          
            
@@ -1247,33 +1297,6 @@
         <tag>pdf</tag>
          
         <tag>document</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="我的文档" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/pdftest/</loc>
-    <lastmod>2018-02-21T13:17:24.000Z</lastmod>
-    <data>
-        <display>
-        <title>Link-Cut-Tree</title>
-        <pubTime>2018-01-23T11:02:50.000Z</pubTime>
-        
-        <tag>pdf</tag>
-         
-        <tag>document</tag>
-         
-        <tag>Link-Cut-Tree</tag>
          
          
            
