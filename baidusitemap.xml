@@ -5,11 +5,11 @@
     
   <url>
     <loc>http://aiyoupass.com/2018/test3-3/</loc>
-    <lastmod>2018-03-09T23:30:50.000Z</lastmod>
+    <lastmod>2018-03-10T03:47:08.000Z</lastmod>
     <data>
         <display>
         <title>3月3日考试总结</title>
-        <pubTime>2018-03-09T23:31:46.476Z</pubTime>
+        <pubTime>2018-03-10T03:47:55.062Z</pubTime>
         
         <tag>最短路</tag>
          
@@ -39,12 +39,95 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/bzoj4289/</loc>
+    <lastmod>2018-03-10T03:44:10.000Z</lastmod>
+    <data>
+        <display>
+        <title>BZOJ4289 PA2012 Tax</title>
+        <pubTime>2018-03-10T01:35:45.000Z</pubTime>
+        
+        <tag>最短路</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/bzoj4152/</loc>
+    <lastmod>2018-03-10T01:50:16.000Z</lastmod>
+    <data>
+        <display>
+        <title>BZOJ 4152 [AMPPZ2014]The Captain</title>
+        <pubTime>2018-03-09T23:40:57.000Z</pubTime>
+        
+        <tag>最短路</tag>
+         
+        <tag>堆优化Dijkstra</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/bzoj2763/</loc>
+    <lastmod>2018-03-10T01:49:02.000Z</lastmod>
+    <data>
+        <display>
+        <title>BZOJ 2763 JLOI2011 飞行路线</title>
+        <pubTime>2018-03-09T23:22:02.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>最短路</tag>
+         
+        <tag>拆点</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/Knowledge/index.html</loc>
+    <lastmod>2018-03-10T00:36:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>知识结构目录</title>
+        <pubTime>2018-02-27T11:37:01.000Z</pubTime>
+        
+         
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/cf786a/</loc>
     <lastmod>2018-03-09T23:27:04.000Z</lastmod>
     <data>
         <display>
         <title>CodeForces 786A Berzerk</title>
-        <pubTime>2018-03-09T23:27:20.406Z</pubTime>
+        <pubTime>2018-03-10T01:47:11.820Z</pubTime>
         
         <tag>博弈论</tag>
          
@@ -73,7 +156,7 @@
     <data>
         <display>
         <title>NEERC 2016-2017 Probelm G. Game on Graph</title>
-        <pubTime>2018-03-09T23:27:20.937Z</pubTime>
+        <pubTime>2018-03-10T01:47:12.321Z</pubTime>
         
         <tag>博弈论</tag>
          
@@ -100,7 +183,7 @@
     <data>
         <display>
         <title>博弈论总结</title>
-        <pubTime>2018-03-09T23:27:20.391Z</pubTime>
+        <pubTime>2018-03-10T01:47:12.128Z</pubTime>
         
         <tag>博弈论</tag>
          
@@ -111,33 +194,6 @@
           
              
               <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/bzoj2763/</loc>
-    <lastmod>2018-03-09T23:23:56.000Z</lastmod>
-    <data>
-        <display>
-        <title>BZOJ 2763 JLOI2011 飞行路线</title>
-        <pubTime>2018-03-09T23:22:02.000Z</pubTime>
-        
-        <tag>动态规划</tag>
-         
-        <tag>最短路</tag>
-         
-        <tag>拆点</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
           
         </display>
     </data>
@@ -558,20 +614,6 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/Knowledge/index.html</loc>
-    <lastmod>2018-02-28T00:15:26.000Z</lastmod>
-    <data>
-        <display>
-        <title>知识结构目录</title>
-        <pubTime>2018-02-27T11:37:01.000Z</pubTime>
-        
-         
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://aiyoupass.com/2018/p1463/</loc>
     <lastmod>2018-02-28T00:14:32.000Z</lastmod>
     <data>
@@ -579,13 +621,13 @@
         <title>P1463 [HAOI2007]反素数</title>
         <pubTime>2018-02-20T12:09:45.000Z</pubTime>
         
-        <tag>构造</tag>
-         
         <tag>数学</tag>
          
         <tag>搜索</tag>
          
         <tag>打表</tag>
+         
+        <tag>构造</tag>
          
          
            
@@ -1724,11 +1766,11 @@
         <title>CF897B Chtholly's request</title>
         <pubTime>2018-02-02T13:43:32.000Z</pubTime>
         
+        <tag>构造</tag>
+         
         <tag>字符串</tag>
          
         <tag>回文串</tag>
-         
-        <tag>构造</tag>
          
          
            
