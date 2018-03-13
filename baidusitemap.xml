@@ -4,13 +4,61 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/GraphExercise1/</loc>
+    <lastmod>2018-03-13T12:30:16.000Z</lastmod>
+    <data>
+        <display>
+        <title>图论题目</title>
+        <pubTime>2018-03-13T10:55:51.000Z</pubTime>
+        
+        <tag>图论</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/system-of-difference-constraints/</loc>
-    <lastmod>2018-03-11T10:02:40.000Z</lastmod>
+    <lastmod>2018-03-13T10:48:22.000Z</lastmod>
     <data>
         <display>
         <title>差分约束系统</title>
         <pubTime>2018-03-11T09:53:40.000Z</pubTime>
         
+        <tag>差分约束</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/p3275/</loc>
+    <lastmod>2018-03-13T10:45:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>P3275 SCOI2011 糖果</title>
+        <pubTime>2018-03-13T09:48:28.000Z</pubTime>
+        
+        <tag>最短路</tag>
+         
         <tag>差分约束</tag>
          
          
@@ -439,9 +487,9 @@
         
         <tag>博弈论</tag>
          
-        <tag>Trie</tag>
-         
         <tag>Multi-SG</tag>
+         
+        <tag>Trie</tag>
          
          
            
@@ -491,9 +539,9 @@
         <title>P1486 [NOI2004] 郁闷的出纳员</title>
         <pubTime>2018-02-20T11:38:16.000Z</pubTime>
         
-        <tag>平衡树</tag>
-         
         <tag>线段树</tag>
+         
+        <tag>平衡树</tag>
          
         <tag>pb_ds</tag>
          
@@ -1019,8 +1067,6 @@
         
         <tag>博弈论</tag>
          
-        <tag>规律</tag>
-         
         <tag>题目</tag>
          
         <tag>巴什博弈</tag>
@@ -1036,6 +1082,8 @@
         <tag>ICG</tag>
          
         <tag>nim</tag>
+         
+        <tag>规律</tag>
          
          
            
@@ -1060,9 +1108,9 @@
         
         <tag>博弈论</tag>
          
-        <tag>SG函数</tag>
-         
         <tag>规律</tag>
+         
+        <tag>SG函数</tag>
          
          
            
@@ -1133,9 +1181,9 @@
         <title>P2184 贪婪大陆</title>
         <pubTime>2018-02-06T00:56:36.000Z</pubTime>
         
-        <tag>线段树</tag>
-         
         <tag>前缀和</tag>
+         
+        <tag>线段树</tag>
          
         <tag>树状数组</tag>
          
@@ -1354,7 +1402,7 @@
     <data>
         <display>
         <title>HDU 4825 Xor Sum</title>
-        <pubTime>2018-02-10T16:10:00.000Z</pubTime>
+        <pubTime>2018-02-11T21:40:00.000Z</pubTime>
         
         <tag>Trie</tag>
          
