@@ -4,6 +4,49 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/p3195/</loc>
+    <lastmod>2018-03-13T13:50:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>Luogu P3195 HNOI2008 玩具装箱TOY</title>
+        <pubTime>2018-03-13T12:44:44.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>斜率优化</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/about/</loc>
+    <lastmod>2018-03-13T13:49:02.000Z</lastmod>
+    <data>
+        <display>
+        <title>[置顶]关于本博客</title>
+        <pubTime>2018-02-06T10:06:31.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="其他" url="http://aiyoupass.com/categories/%E5%85%B6%E4%BB%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/GraphExercise1/</loc>
     <lastmod>2018-03-13T12:30:16.000Z</lastmod>
     <data>
@@ -132,9 +175,9 @@
         
         <tag>模板</tag>
          
-        <tag>生成树</tag>
-         
         <tag>最小生成树</tag>
+         
+        <tag>生成树</tag>
          
          
            
@@ -539,9 +582,9 @@
         <title>P1486 [NOI2004] 郁闷的出纳员</title>
         <pubTime>2018-02-20T11:38:16.000Z</pubTime>
         
-        <tag>线段树</tag>
-         
         <tag>平衡树</tag>
+         
+        <tag>线段树</tag>
          
         <tag>pb_ds</tag>
          
@@ -1067,6 +1110,8 @@
         
         <tag>博弈论</tag>
          
+        <tag>规律</tag>
+         
         <tag>题目</tag>
          
         <tag>巴什博弈</tag>
@@ -1082,8 +1127,6 @@
         <tag>ICG</tag>
          
         <tag>nim</tag>
-         
-        <tag>规律</tag>
          
          
            
@@ -1108,9 +1151,9 @@
         
         <tag>博弈论</tag>
          
-        <tag>规律</tag>
-         
         <tag>SG函数</tag>
+         
+        <tag>规律</tag>
          
          
            
@@ -1181,9 +1224,9 @@
         <title>P2184 贪婪大陆</title>
         <pubTime>2018-02-06T00:56:36.000Z</pubTime>
         
-        <tag>前缀和</tag>
-         
         <tag>线段树</tag>
+         
+        <tag>前缀和</tag>
          
         <tag>树状数组</tag>
          
@@ -1532,9 +1575,9 @@
         <title>Every-SG</title>
         <pubTime>2018-02-27T02:47:51.000Z</pubTime>
         
-        <tag>博弈论</tag>
-         
         <tag>Every-SG</tag>
+         
+        <tag>博弈论</tag>
          
          
            
@@ -1612,9 +1655,9 @@
         <title>Anti-SG/Misère Games</title>
         <pubTime>2018-02-26T00:17:21.000Z</pubTime>
         
-        <tag>Anti-SG</tag>
-         
         <tag>博弈论</tag>
+         
+        <tag>Anti-SG</tag>
          
         <tag>Misère Games</tag>
          
@@ -1873,24 +1916,6 @@
           
              
               <breadCrumb title="模板" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/%E6%A8%A1%E6%9D%BF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/about/</loc>
-    <lastmod>2018-02-07T12:11:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>[置顶]关于本博客</title>
-        <pubTime>2018-02-06T10:06:31.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="其他" url="http://aiyoupass.com/categories/%E5%85%B6%E4%BB%96/"/>
           
         </display>
     </data>
