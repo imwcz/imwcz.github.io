@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="动态规划,斜率优化," />
+  <meta name="keywords" content="动态规划,斜率优化,决策单调性," />
 
 
 
@@ -95,7 +95,7 @@
 <meta property="og:url" content="http://aiyoupass.com/2018/p3195/index.html">
 <meta property="og:site_name" content="落花微雨">
 <meta property="og:description" content="P教授要去看奥运，但是他舍不下他的玩具，于是他决定把所有的玩具运到北京。他使用自己的压缩器进行压缩，其可以将任意物品变成一堆，再放到一种特殊的一维容器中。P教授有编号为1...N的N件玩具，第i件玩具经过压缩后变成一维长度为Ci.为了方便整理，P教授要求在一个一维容器中的玩具编号是连续的。同时如果一个一维容器中有多个玩具，那么两件玩具之间要加入一个单位长度的填充物，形式地说如果将第i件玩具到第j个">
-<meta property="og:updated_time" content="2018-03-13T13:50:26.000Z">
+<meta property="og:updated_time" content="2018-03-17T02:20:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Luogu P3195 HNOI2008 玩具装箱TOY">
 <meta name="twitter:description" content="P教授要去看奥运，但是他舍不下他的玩具，于是他决定把所有的玩具运到北京。他使用自己的压缩器进行压缩，其可以将任意物品变成一堆，再放到一种特殊的一维容器中。P教授有编号为1...N的N件玩具，第i件玩具经过压缩后变成一维长度为Ci.为了方便整理，P教授要求在一个一维容器中的玩具编号是连续的。同时如果一个一维容器中有多个玩具，那么两件玩具之间要加入一个单位长度的填充物，形式地说如果将第i件玩具到第j个">
@@ -354,8 +354,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-13T20:44:44+08:00">
-                2018-03-13
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-17T20:44:44+08:00">
+                2018-03-17
               </time>
             
 
@@ -424,7 +424,7 @@
 
           
               <div class="post-description">
-                  P教授要去看奥运，但是他舍不下他的玩具，于是他决定把所有的玩具运到北京。他使用自己的压缩器进行压缩，其可以将任意物品变成一堆，再放到一种特殊的一维容器中。P教授有编号为1...N的N件玩具，第i件玩具经过压缩后变成一维长度为Ci.为了方便整理，P教授要求在一个一维容器中的玩具编号是连续的。同时如果一个一维容器中有多个玩具，那么两件玩具之间要加入一个单位长度的填充物，形式地说如果将第i件玩具到第j个玩具放到一个容器中，那么容器的长度将为 x=j-i+Sigma(Ck) i<=K<=j 制作容器的费用与容器的长度有关，根据教授研究，如果容器长度为x,其制作费用为(X-L)^2.其中L是一个常量。P教授不关心容器的数目，他可以制作出任意长度的容器，甚至超过L。但他希望费用最小.
+                  P教授要去看奥运，但是他舍不下他的玩具，于是他决定把所有的玩具运到北京。他使用自己的压缩器进行压缩，其可以将任意物品变成一堆，再放到一种特殊的一维容器中。P教授有编号为1...N的N件玩具，第i件玩具经过压缩后变成一维长度为Ci.为了方便整理，P教授要求在一个一维容器中的玩具编号是连续的。同时如果一个一维容器中有多个玩具，那么两件玩具之间要加入一个单位长度的填充物，形式地说如果将第i件玩具到第j个玩具放到一个容器中，那么容器的长度将为 x=j-i+Sigma(Ck) $i\leq  K \leq j$ 制作容器的费用与容器的长度有关，根据教授研究，如果容器长度为x,其制作费用为(X-L)^2.其中L是一个常量。P教授不关心容器的数目，他可以制作出任意长度的容器，甚至超过L。但他希望费用最小.
               </div>
           
 
@@ -451,7 +451,20 @@
 1
 4
 </code></pre><h4 id="输出样例-1："><a href="#输出样例-1：" class="headerlink" title="输出样例#1："></a>输出样例#1：</h4><pre><code>1
-</code></pre><h3 id="做法"><a href="#做法" class="headerlink" title="做法:"></a>做法:</h3><p>　　首先可以想出一个朴素的dp.$f(i)$表示前$i$个数放到若干个盒子里(放满)的最小花费.转移方程为:<br>$$f(i)=\max{f(j)+\sum_{j+1}}^{i}+j-i,j&lt;i$$</p>
+</code></pre><h3 id="做法"><a href="#做法" class="headerlink" title="做法:"></a>做法:</h3><p>　　用$f(i)$表示前$i$个物品的长度加物品个数$s_n=\sum\limits_{i=1}^nc_i+j$, 那么第$i$到$j$个物品的长度加物品个数就为$s_j-s_{i-1}$.这就是题目要求的$(x-l)^2$中的x.<br>　　首先可以想出一个朴素的dp.$f(i)$表示前$i$个数放到若干个盒子里(放满)的最小花费.则$f(i)$为$j$个物品最小代价加上这个盒子的代价, 转移方程为:<br>$$f(i)=\max{f(j)+(s_i-s_j-l-1)^2},j&lt;i$$</p>
+<p>　　表示新加一个盒子装第$j+1$到$i$个物品.<br>　　优化这个$n^2$转移的方法主要有两种.</p>
+<ul>
+<li>斜率优化</li>
+<li>决策单调性</li>
+</ul>
+<p>　　斜率优化的复杂度较低, 为$O(n)$, 这是考虑到其单调队列复杂度为均摊$O(7n)$.而一次转移只需要取出单调队列中的一个最小值.<br>    .<br>　　在$N^2$转移中, 求$f(i)$需要枚举从$j,j&lt; i$转移的代价.可以通过维护一个单调队列来将这一过程优化到$O(1)$, 考虑从$k$转移到$i$比从$j$转移到$i$代价更低, 其满足这么一个不等式.</p>
+<p>$$f(j)+(s_j-s_i-l-1)^2&gt;f(k)+(s_k-s_i-l-1)^2$$<br>将这个式子展开可以得到如此的限制关系.</p>
+<p>$$s_i&gt;\frac{f_k-f_i+(s_k+1+1)^2-(s_j+1+1)^2}{s\cdot(s_k-s_j)}$$<br>将右边的式子记为$p(k,j)$, 可以发现求得最大的$p(k,j)$满足$s_i&gt;p(k,j)$, 则$f(i)$为$f(k)+(s_k-s_i-l)^2$.<br>　　通过维护一个单调递增队列,用$q_i$表示队列中的元素, $q_h, q_t$表示队头和队尾.单调队列中的元素是可以转移至答案的点, 答案从队首寻找.单调队列中元素的单调性是指满足$p(q_{i+1},q_{i})&lt;p(q_{i+2},q_{i+1})$,对于$f(1)$到$f(n)$的求值, 因为$s_i$为单调递增, 所以可以保证删除队列手元素不会影响答案.</p>
+<ul>
+<li>求$f(i)$时, 如果$p(q_{h+1},q_{h})\leq s_i$,就弹出队首.直到无法弹出时即从$q_h$其转移至当前点最优.</li>
+<li>每次将一个点$i$加入队列时, 为了保证队列的单调性, 依次弹出队尾直到满足单调递增.<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 100005</span></div><div class="line"></div><div class="line"><span class="keyword">long</span> <span class="keyword">long</span> sum[N];</div><div class="line"><span class="keyword">long</span> <span class="keyword">long</span> f[N];</div><div class="line"><span class="keyword">int</span> q[N];</div><div class="line"><span class="keyword">int</span> h,t;</div><div class="line"><span class="keyword">int</span> n,l;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">pow</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> s)</span></span>&#123;</div><div class="line"><span class="keyword">return</span> (<span class="keyword">long</span> <span class="keyword">long</span>)s*s;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</div><div class="line">	<span class="keyword">return</span> (<span class="keyword">double</span>)(f[j]-f[i]+<span class="built_in">pow</span>(sum[j]+l)-<span class="built_in">pow</span>(sum[i]+l))/(<span class="number">2</span>*(sum[j]-sum[i]));</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">long</span> <span class="keyword">long</span> temp;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;l);l+=<span class="number">1</span>;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;temp);</div><div class="line">		sum[i]=(<span class="keyword">long</span> <span class="keyword">long</span>)sum[i<span class="number">-1</span>]+<span class="number">1</span>+temp;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</div><div class="line">		<span class="keyword">while</span>(h&lt;t&amp;&amp;cmp(q[h],q[h+<span class="number">1</span>])&lt;=(<span class="keyword">double</span>)sum[i])++h;</div><div class="line">		f[i]=(<span class="keyword">long</span> <span class="keyword">long</span>)f[q[h]]+<span class="built_in">pow</span>(sum[i]-sum[q[h]]-l);</div><div class="line">		<span class="keyword">while</span>(h&lt;t&amp;&amp;cmp(q[t<span class="number">-1</span>],q[t])&gt;cmp(q[t],i))--t;</div><div class="line">		q[++t]=i;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%lld"</span>,f[n]);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
     </div>
@@ -476,8 +489,8 @@
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>本文标题:</span><a href="/2018/p3195/">Luogu P3195 HNOI2008 玩具装箱TOY</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 aiyoupass 的个人博客">aiyoupass</a></p>
-  <p><span>发布时间:</span>2018年03月13日 - 20:03</p>
-  <p><span>最后更新:</span>2018年03月13日 - 21:03</p>
+  <p><span>发布时间:</span>2018年03月17日 - 20:03</p>
+  <p><span>最后更新:</span>2018年03月17日 - 10:03</p>
   <p><span>原始链接:</span><a href="/2018/p3195/" title="Luogu P3195 HNOI2008 玩具装箱TOY">http://aiyoupass.com/2018/p3195/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://aiyoupass.com/2018/p3195/"  aria-label="复制成功！"></i></span>
   </p>
@@ -514,6 +527,8 @@
           
             <a href="/tags/斜率优化/" rel="tag"># 斜率优化</a>
           
+            <a href="/tags/决策单调性/" rel="tag"># 决策单调性</a>
+          
         </div>
       
 
@@ -525,8 +540,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/GraphExercise1/" rel="next" title="图论题目">
-                <i class="fa fa-chevron-left"></i> 图论题目
+              <a href="/2018/sbxbdsyhdp/" rel="next" title="四边形不等式优化">
+                <i class="fa fa-chevron-left"></i> 四边形不等式优化
               </a>
             
           </div>
@@ -619,7 +634,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">78</span>
+                  <span class="site-state-item-count">79</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -641,7 +656,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">94</span>
+                  <span class="site-state-item-count">97</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -716,7 +731,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输入输出格式"><span class="nav-number">2.</span> <span class="nav-text">输入输出格式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式："><span class="nav-number">2.1.</span> <span class="nav-text">输入格式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式："><span class="nav-number">2.2.</span> <span class="nav-text">输出格式：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输入输出样例"><span class="nav-number">3.</span> <span class="nav-text">输入输出样例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输入样例-1："><span class="nav-number">3.1.</span> <span class="nav-text">输入样例#1：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出样例-1："><span class="nav-number">3.2.</span> <span class="nav-text">输出样例#1：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#做法"><span class="nav-number">4.</span> <span class="nav-text">做法:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输入输出格式"><span class="nav-number">2.</span> <span class="nav-text">输入输出格式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输入格式："><span class="nav-number">2.1.</span> <span class="nav-text">输入格式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出格式："><span class="nav-number">2.2.</span> <span class="nav-text">输出格式：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输入输出样例"><span class="nav-number">3.</span> <span class="nav-text">输入输出样例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输入样例-1："><span class="nav-number">3.1.</span> <span class="nav-text">输入样例#1：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出样例-1："><span class="nav-number">3.2.</span> <span class="nav-text">输出样例#1：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#做法"><span class="nav-number">4.</span> <span class="nav-text">做法:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code"><span class="nav-number">5.</span> <span class="nav-text">Code</span></a></li></ol></div>
             
 
           </div>
