@@ -4,6 +4,21 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/bzoj2298/</loc>
+    <lastmod>2018-03-17T11:32:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>bzoj2298</title>
+        <pubTime>2018-03-17T11:32:24.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/p4322/</loc>
     <lastmod>2018-03-17T09:34:44.000Z</lastmod>
     <data>
@@ -634,9 +649,9 @@
         <title>UOJ266. 【清华集训2016】Alice和Bob又在玩游戏</title>
         <pubTime>2018-02-27T11:05:29.000Z</pubTime>
         
-        <tag>博弈论</tag>
-         
         <tag>Multi-SG</tag>
+         
+        <tag>博弈论</tag>
          
         <tag>Trie</tag>
          
@@ -842,9 +857,9 @@
         <title>pdfonline</title>
         <pubTime>2018-01-27T02:42:05.000Z</pubTime>
         
-        <tag>pdf</tag>
-         
         <tag>解决方案</tag>
+         
+        <tag>pdf</tag>
          
          
            
@@ -1475,9 +1490,9 @@
         <title>loj6277 数列分块入门 1</title>
         <pubTime>2018-02-12T13:46:15.000Z</pubTime>
         
-        <tag>分块</tag>
-         
         <tag>模板</tag>
+         
+        <tag>分块</tag>
          
          
            
@@ -1706,11 +1721,11 @@
         <title>Multi-SG</title>
         <pubTime>2018-02-26T03:12:19.000Z</pubTime>
         
-        <tag>博弈论</tag>
-         
         <tag>Multi-SG</tag>
          
         <tag>Lasker&#39;s Nim</tag>
+         
+        <tag>博弈论</tag>
          
          
            
@@ -1736,9 +1751,9 @@
         <title>Anti-SG/Misère Games</title>
         <pubTime>2018-02-26T00:17:21.000Z</pubTime>
         
-        <tag>Anti-SG</tag>
-         
         <tag>博弈论</tag>
+         
+        <tag>Anti-SG</tag>
          
         <tag>Misère Games</tag>
          
@@ -1788,9 +1803,9 @@
         <title>一份不普通的Dinic</title>
         <pubTime>2018-02-23T13:10:59.000Z</pubTime>
         
-        <tag>模板</tag>
-         
         <tag>指针</tag>
+         
+        <tag>模板</tag>
          
         <tag>网络流</tag>
          
@@ -1848,9 +1863,9 @@
         <title>P3373 线段树2</title>
         <pubTime>2018-02-09T08:16:19.000Z</pubTime>
         
-        <tag>模板</tag>
-         
         <tag>指针</tag>
+         
+        <tag>模板</tag>
          
         <tag>线段树</tag>
          
@@ -1979,9 +1994,9 @@
         <title>P3372 线段树1</title>
         <pubTime>2018-02-09T07:30:30.000Z</pubTime>
         
-        <tag>模板</tag>
-         
         <tag>指针</tag>
+         
+        <tag>模板</tag>
          
         <tag>线段树</tag>
          
