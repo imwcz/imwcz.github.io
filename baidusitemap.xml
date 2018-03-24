@@ -4,6 +4,100 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/noip2011d1/</loc>
+    <lastmod>2018-03-24T13:04:04.000Z</lastmod>
+    <data>
+        <display>
+        <title>NOIP 2011 Day 1</title>
+        <pubTime>2018-03-24T12:20:28.000Z</pubTime>
+        
+        <tag>NOIP</tag>
+         
+        <tag>搜索</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/noip2010/</loc>
+    <lastmod>2018-03-23T23:43:56.000Z</lastmod>
+    <data>
+        <display>
+        <title>NOIP 2010</title>
+        <pubTime>2018-03-24T13:04:24.449Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>NOIP</tag>
+         
+        <tag>并查集</tag>
+         
+        <tag>搜索</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/t24652/</loc>
+    <lastmod>2018-03-23T23:23:10.000Z</lastmod>
+    <data>
+        <display>
+        <title>t24652 lyq的水坑</title>
+        <pubTime>2018-03-18T09:06:53.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/p2607/</loc>
+    <lastmod>2018-03-18T09:15:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>P2607 ZJOI2008 骑士</title>
+        <pubTime>2018-03-18T08:52:04.000Z</pubTime>
+        
+        <tag>树形dp</tag>
+         
+        <tag>基环树</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/bzoj2298/</loc>
     <lastmod>2018-03-17T11:32:26.000Z</lastmod>
     <data>
@@ -28,9 +122,9 @@
         
         <tag>动态规划</tag>
          
-        <tag>分数规划</tag>
-         
         <tag>树形dp</tag>
+         
+        <tag>分数规划</tag>
          
          
            
@@ -649,9 +743,9 @@
         <title>UOJ266. 【清华集训2016】Alice和Bob又在玩游戏</title>
         <pubTime>2018-02-27T11:05:29.000Z</pubTime>
         
-        <tag>Multi-SG</tag>
-         
         <tag>博弈论</tag>
+         
+        <tag>Multi-SG</tag>
          
         <tag>Trie</tag>
          
@@ -857,9 +951,9 @@
         <title>pdfonline</title>
         <pubTime>2018-01-27T02:42:05.000Z</pubTime>
         
-        <tag>解决方案</tag>
-         
         <tag>pdf</tag>
+         
+        <tag>解决方案</tag>
          
          
            
@@ -986,9 +1080,9 @@
         
         <tag>构造</tag>
          
-        <tag>数学</tag>
-         
         <tag>搜索</tag>
+         
+        <tag>数学</tag>
          
         <tag>打表</tag>
          
@@ -1721,11 +1815,11 @@
         <title>Multi-SG</title>
         <pubTime>2018-02-26T03:12:19.000Z</pubTime>
         
+        <tag>博弈论</tag>
+         
         <tag>Multi-SG</tag>
          
         <tag>Lasker&#39;s Nim</tag>
-         
-        <tag>博弈论</tag>
          
          
            
@@ -1751,9 +1845,9 @@
         <title>Anti-SG/Misère Games</title>
         <pubTime>2018-02-26T00:17:21.000Z</pubTime>
         
-        <tag>博弈论</tag>
-         
         <tag>Anti-SG</tag>
+         
+        <tag>博弈论</tag>
          
         <tag>Misère Games</tag>
          
