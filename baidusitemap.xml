@@ -4,14 +4,43 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/noip2011d1/</loc>
-    <lastmod>2018-03-24T13:04:04.000Z</lastmod>
+    <loc>http://aiyoupass.com/2018/p1219/</loc>
+    <lastmod>2018-03-24T13:55:30.000Z</lastmod>
     <data>
         <display>
-        <title>NOIP 2011 Day 1</title>
-        <pubTime>2018-03-24T12:20:28.000Z</pubTime>
+        <title>Luogu P1219 八皇后</title>
+        <pubTime>2018-03-24T13:25:12.000Z</pubTime>
         
+        <tag>搜索</tag>
+         
+        <tag>位运算</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/noip2010/</loc>
+    <lastmod>2018-03-24T13:29:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>NOIP 2010</title>
+        <pubTime>2018-03-24T13:56:29.097Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
         <tag>NOIP</tag>
+         
+        <tag>并查集</tag>
          
         <tag>搜索</tag>
          
@@ -29,18 +58,14 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/noip2010/</loc>
-    <lastmod>2018-03-23T23:43:56.000Z</lastmod>
+    <loc>http://aiyoupass.com/2018/noip2011d1/</loc>
+    <lastmod>2018-03-24T13:29:18.000Z</lastmod>
     <data>
         <display>
-        <title>NOIP 2010</title>
-        <pubTime>2018-03-24T13:04:24.449Z</pubTime>
+        <title>NOIP 2011 Day 1</title>
+        <pubTime>2018-03-24T12:20:28.000Z</pubTime>
         
-        <tag>动态规划</tag>
-         
         <tag>NOIP</tag>
-         
-        <tag>并查集</tag>
          
         <tag>搜索</tag>
          
@@ -122,9 +147,9 @@
         
         <tag>动态规划</tag>
          
-        <tag>树形dp</tag>
-         
         <tag>分数规划</tag>
+         
+        <tag>树形dp</tag>
          
          
            
@@ -745,9 +770,9 @@
         
         <tag>博弈论</tag>
          
-        <tag>Multi-SG</tag>
-         
         <tag>Trie</tag>
+         
+        <tag>Multi-SG</tag>
          
          
            
