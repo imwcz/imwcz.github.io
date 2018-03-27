@@ -4,6 +4,35 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/p1439/</loc>
+    <lastmod>2018-03-27T11:23:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>Luogu P1439 【模板】最长公共子序列</title>
+        <pubTime>2018-03-24T13:25:12.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>模板</tag>
+         
+        <tag>最长上升子序列</tag>
+         
+        <tag>最长公共子序列</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/noip2012d1/</loc>
     <lastmod>2018-03-27T09:40:08.000Z</lastmod>
     <data>
@@ -1665,9 +1694,9 @@
         <title>loj6277 数列分块入门 1</title>
         <pubTime>2018-02-12T13:46:15.000Z</pubTime>
         
-        <tag>分块</tag>
-         
         <tag>模板</tag>
+         
+        <tag>分块</tag>
          
          
            
@@ -1846,9 +1875,9 @@
         <title>Every-SG</title>
         <pubTime>2018-02-27T02:47:51.000Z</pubTime>
         
-        <tag>博弈论</tag>
-         
         <tag>Every-SG</tag>
+         
+        <tag>博弈论</tag>
          
          
            
@@ -1978,9 +2007,9 @@
         <title>一份不普通的Dinic</title>
         <pubTime>2018-02-23T13:10:59.000Z</pubTime>
         
-        <tag>模板</tag>
-         
         <tag>指针</tag>
+         
+        <tag>模板</tag>
          
         <tag>网络流</tag>
          
@@ -2038,9 +2067,9 @@
         <title>P3373 线段树2</title>
         <pubTime>2018-02-09T08:16:19.000Z</pubTime>
         
-        <tag>模板</tag>
-         
         <tag>指针</tag>
+         
+        <tag>模板</tag>
          
         <tag>线段树</tag>
          
@@ -2169,9 +2198,9 @@
         <title>P3372 线段树1</title>
         <pubTime>2018-02-09T07:30:30.000Z</pubTime>
         
-        <tag>模板</tag>
-         
         <tag>指针</tag>
+         
+        <tag>模板</tag>
          
         <tag>线段树</tag>
          
