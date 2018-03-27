@@ -95,7 +95,7 @@
 <meta property="og:url" content="http://aiyoupass.com/2018/noip2012d1/index.html">
 <meta property="og:site_name" content="落花微雨">
 <meta property="og:description" content="NOIP 2012 Day1">
-<meta property="og:updated_time" content="2018-03-27T09:40:08.000Z">
+<meta property="og:updated_time" content="2018-03-27T13:41:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NOIP 2012 Day1">
 <meta name="twitter:description" content="NOIP 2012 Day1">
@@ -443,8 +443,8 @@
       
         <h2 id="Luogu-P1079-Vigenere-密码"><a href="#Luogu-P1079-Vigenere-密码" class="headerlink" title="Luogu P1079 Vigenère 密码"></a><a href="https://www.luogu.org/problemnew/show/P1079" target="_blank" rel="external">Luogu P1079 Vigenère 密码</a></h2><h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>　　表示并不是很懂其他人发的题解.</p>
 <p>　　我是这么想的, 既然是题目要求用<strong>密文转明文</strong>而且<strong>转换规则一定</strong>的, 所以就可以用明文转密文的<strong>逆过程</strong>来完成.</p>
-<p>　　首先要搞明白<strong>明文是怎么变成密文的</strong>, 通过这个表可以观察到, 如果明文的一个字符是 ch1 ,密钥为 ch2 , 那么密文 ch3 对应的就是 ch1 在字母表中偏移 |ch2| 位, 例如 　$\text{ch1=A,ch2=B, 那么ch3=ch1+|ch2|=A+B-A=B}$　, 如果偏移之后超过了 ‘Z’, 那么就从’A’继续开始, 相当于这是一个环, ‘Z’的后面是’A’.</p>
-<p>　　不难发现<strong>密文是明文在字母表中进行的偏移</strong>, 那么将密文转换为明文只需要将这个过程反过来就好了.只需要将密文减去一个密钥的偏移.例如　$\text{密文ch3=F,密钥ch2=C, 则明文ch1=ch3-|ch2|=F-(C-A)=D}$.</p>
+<p>　　首先要搞明白<strong>明文是怎么变成密文的</strong>, 通过这个表可以观察到, 如果明文的一个字符是 ch1 ,密钥为 ch2 , 那么密文 ch3 对应的就是 ch1 在字母表中偏移 |ch2| 位, 例如 　$\text{ch1=A,ch2=B, ch3=ch1+|ch2|=A+B-A=B}$　, 如果偏移之后超过了 ‘Z’, 那么就从’A’继续开始, 相当于这是一个环, ‘Z’的后面是’A’.</p>
+<p>　　不难发现<strong>密文是明文在字母表中进行的偏移</strong>, 那么将密文转换为明文只需要将这个过程反过来就好了.只需要将密文减去一个密钥的偏移.例如　$\text{ch3=F,ch2=C, ch1=ch3-|ch2|=F-(C-A)=D}$.</p>
 <p>　　知道了这个规则之后就不难写出程序了, 上面如果将其进行偏移出来比$\text{A}$小就利用<strong>取余</strong>来处理, 具体可以看代码</p>
 <pre><code>int cha=B-&apos;A&apos;;
     return &apos;A&apos;+(A-cha-&apos;A&apos;+26)%26;
@@ -495,7 +495,7 @@
   <p><span>本文标题:</span><a href="/2018/noip2012d1/">NOIP 2012 Day1</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 aiyoupass 的个人博客">aiyoupass</a></p>
   <p><span>发布时间:</span>2018年03月27日 - 15:03</p>
-  <p><span>最后更新:</span>2018年03月27日 - 17:03</p>
+  <p><span>最后更新:</span>2018年03月27日 - 21:03</p>
   <p><span>原始链接:</span><a href="/2018/noip2012d1/" title="NOIP 2012 Day1">http://aiyoupass.com/2018/noip2012d1/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://aiyoupass.com/2018/noip2012d1/"  aria-label="复制成功！"></i></span>
   </p>
@@ -643,7 +643,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">90</span>
+                  <span class="site-state-item-count">91</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1294,13 +1294,14 @@
   
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
-        "HTML-CSS": { scale: 100, linebreaks: { automatic: true } }, 
-        SVG: { linebreaks: { automatic:true } }, 
         tex2jax: {
           inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
 	        displayMath: [ ['$$','$$'], ["\\[","\\]"] ], 
           processEscapes: true,
           skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        },
+        "HTML-CSS": {
+            scale: 75,minScaleAdjust: 50
         }
       });
     </script>
