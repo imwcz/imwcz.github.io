@@ -89,16 +89,22 @@
     })();
 </script>
 
-<meta name="description" content="NOIP 2012 Day1">
+<meta name="description" content="Luogu P1079 Vigenère 密码Solution　　表示并不是很懂其他人发的题解.
+　　我是这么想的, 既然是题目要求用密文转明文而且转换规则一定的, 所以就可以用明文转密文的逆过程来完成.
+　　首先要搞明白明文是怎么变成密文的, 通过这个表可以观察到, 如果明文的一个字符是 ch1 ,密钥为 ch2 , 那么密文 ch3 对应的就是 ch1 在字母表中偏移 |ch2| 位, 例如">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NOIP 2012 Day1">
 <meta property="og:url" content="http://aiyoupass.com/2018/noip2012d1/index.html">
 <meta property="og:site_name" content="落花微雨">
-<meta property="og:description" content="NOIP 2012 Day1">
-<meta property="og:updated_time" content="2018-03-27T13:41:42.000Z">
+<meta property="og:description" content="Luogu P1079 Vigenère 密码Solution　　表示并不是很懂其他人发的题解.
+　　我是这么想的, 既然是题目要求用密文转明文而且转换规则一定的, 所以就可以用明文转密文的逆过程来完成.
+　　首先要搞明白明文是怎么变成密文的, 通过这个表可以观察到, 如果明文的一个字符是 ch1 ,密钥为 ch2 , 那么密文 ch3 对应的就是 ch1 在字母表中偏移 |ch2| 位, 例如">
+<meta property="og:updated_time" content="2018-03-31T08:38:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NOIP 2012 Day1">
-<meta name="twitter:description" content="NOIP 2012 Day1">
+<meta name="twitter:description" content="Luogu P1079 Vigenère 密码Solution　　表示并不是很懂其他人发的题解.
+　　我是这么想的, 既然是题目要求用密文转明文而且转换规则一定的, 所以就可以用明文转密文的逆过程来完成.
+　　首先要搞明白明文是怎么变成密文的, 通过这个表可以观察到, 如果明文的一个字符是 ch1 ,密钥为 ch2 , 那么密文 ch3 对应的就是 ch1 在字母表中偏移 |ch2| 位, 例如">
 
 
 
@@ -423,10 +429,6 @@
           
 
           
-              <div class="post-description">
-                  NOIP 2012 Day1
-              </div>
-          
 
         </div>
       </header>
@@ -452,10 +454,10 @@
 <ul>
 <li>明文和密文对应的大小写是一致的.</li>
 <li>最好一开始把密文和明文都变成是大写, 这样好转化, 最后转化回来.</li>
-<li>第$\text{ i }$位密文对应的密钥为第$\text{ i}\mod \text{len2}$位, 同样利用<strong>取余</strong>.</li>
+<li>第$\text{ i }$位密文对应的密钥为第$\text{i}\mod \text{len2}$位, 同样利用<strong>取余</strong>.</li>
 <li>cctype库中几个函数, $\text{islower(),tolower(),isupper(),islower()}$比较好用, 参数为<strong>一个字符</strong>.</li>
 </ul>
-<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cctype&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 1005</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">char</span> a[N],b[N];</div><div class="line"><span class="keyword">int</span> s,r,l;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">Change</span><span class="params">(<span class="keyword">char</span> A,<span class="keyword">char</span> B)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> cha=B-<span class="string">'A'</span>;</div><div class="line">    <span class="keyword">return</span> <span class="string">'A'</span>+(A-cha-<span class="string">'A'</span>+<span class="number">26</span>)%<span class="number">26</span>;<span class="comment">//将密文在字母表中进行一定偏移</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%s%s"</span>,a,b);</div><div class="line">    r=<span class="built_in">strlen</span>(a),l=<span class="built_in">strlen</span>(b);</div><div class="line">    <span class="keyword">int</span> flag=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;l;++i)&#123;</div><div class="line">        </div><div class="line">        <span class="keyword">if</span>(<span class="built_in">islower</span>(b[i]))flag=<span class="number">1</span>;</div><div class="line">        <span class="keyword">if</span>(<span class="built_in">isupper</span>(b[i]))flag=<span class="number">2</span>;<span class="comment">//记录一下密文一开始的大小写</span></div><div class="line">        </div><div class="line">        <span class="keyword">if</span>(<span class="built_in">islower</span>(b[i]))b[i]=<span class="built_in">toupper</span>(b[i]);<span class="comment">//将密文和密钥都转化为大写</span></div><div class="line">        <span class="keyword">if</span>(<span class="built_in">islower</span>(a[i%r]))a[i%r]=<span class="built_in">toupper</span>(a[i%r]);</div><div class="line">        </div><div class="line">        <span class="keyword">char</span> ch=Change(b[i],a[i%r]);<span class="comment">//得到明文的一个字符</span></div><div class="line">        </div><div class="line">        <span class="keyword">if</span>(flag==<span class="number">1</span>)ch=<span class="built_in">tolower</span>(ch);<span class="comment">//再明文将其转化为密文一开始的大小写</span></div><div class="line">        <span class="keyword">if</span>(flag==<span class="number">2</span>)ch=<span class="built_in">toupper</span>(ch);</div><div class="line">        </div><div class="line">        <span class="built_in">putchar</span>(ch);<span class="comment">//输出这个字符</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cctype&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 1005</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">char</span> a[N],b[N];</div><div class="line"><span class="keyword">int</span> s,r,l;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">Change</span><span class="params">(<span class="keyword">char</span> A,<span class="keyword">char</span> B)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> cha=B-<span class="string">'A'</span>;</div><div class="line">    <span class="keyword">return</span> <span class="string">'A'</span>+(A-cha-<span class="string">'A'</span>+<span class="number">26</span>)%<span class="number">26</span>;<span class="comment">//将密文在字母表中进行一定偏移</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%s%s"</span>,a,b);'</div><div class="line"></div><div class="line">    r=<span class="built_in">strlen</span>(a),l=<span class="built_in">strlen</span>(b);</div><div class="line">    <span class="keyword">int</span> flag=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;l;++i)&#123;</div><div class="line">        </div><div class="line">        <span class="keyword">if</span>(<span class="built_in">islower</span>(b[i]))flag=<span class="number">1</span>;</div><div class="line">        <span class="keyword">if</span>(<span class="built_in">isupper</span>(b[i]))flag=<span class="number">2</span>;<span class="comment">//记录一下密文一开始的大小写</span></div><div class="line">        </div><div class="line">        <span class="keyword">if</span>(<span class="built_in">islower</span>(b[i]))b[i]=<span class="built_in">toupper</span>(b[i]);<span class="comment">//将密文和密钥都转化为大写</span></div><div class="line">        <span class="keyword">if</span>(<span class="built_in">islower</span>(a[i%r]))a[i%r]=<span class="built_in">toupper</span>(a[i%r]);</div><div class="line">        </div><div class="line">        <span class="keyword">char</span> ch=Change(b[i],a[i%r]);<span class="comment">//得到明文的一个字符</span></div><div class="line">        </div><div class="line">        <span class="keyword">if</span>(flag==<span class="number">1</span>)ch=<span class="built_in">tolower</span>(ch);<span class="comment">//再明文将其转化为密文一开始的大小写</span></div><div class="line">        <span class="keyword">if</span>(flag==<span class="number">2</span>)ch=<span class="built_in">toupper</span>(ch);</div><div class="line">        </div><div class="line">        <span class="built_in">putchar</span>(ch);<span class="comment">//输出这个字符</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="Luogu-P1080-国王游戏"><a href="#Luogu-P1080-国王游戏" class="headerlink" title="Luogu P1080 国王游戏"></a><a href="https://www.luogu.org/problemnew/show/P1080" target="_blank" rel="external">Luogu P1080 国王游戏</a></h2><h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h3><p>　　首先题目我们需要对大臣进行一定的排序, 使得获得最多奖赏的大臣奖赏最少, 前面的题解已经写的很清楚了, 如果大臣 $\text{a,b}$ , $\text{a}$ 排在 $\text{b}$ 前面的条件是 $\text{a.left}\times \text{a.right}&lt;\text{b.left}\times \text{b.right}$.</p>
 <p>　　那么做法就比较显然了, 只需要对所有人的左右手乘起来排个序就好.然后统计答案, 最头疼的地方是需要用高精, 我自然是非常头疼, 但是可以不用c++啊, 可以用 <strong>Python</strong> 水一波啊, 毕竟人家最擅长的就是科学运算.</p>
 <p>　　但是在用 <strong>Python</strong> 开心的写了一波之后发现只得了<a href="https://www.luogu.org/record/show?rid=6431680" target="_blank" rel="external">60分</a>.竟然还 <strong>WA</strong> 了一个点, 真是没办法忍受, 然后想方设法得到了 <strong>RE</strong> 的数据, 发现了 <strong>RE</strong> 的原因.</p>
@@ -471,6 +473,7 @@
 <p>　　可以自己百度具体的使用方法.我使用的第二种方法, 实际上$\text{divmod(a,b)}$返回$\text{(int(a/b), a mod b)}$</p>
 <p>　　在通过上述艰难过程后, 终于通过了…</p>
 <h3 id="Code-1"><a href="#Code-1" class="headerlink" title="Code"></a>Code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">#表示Python的注释</div><div class="line">class Minister:#定义了一个类</div><div class="line">    def __init__(self, left, right, lefttimesright):#初始化函数</div><div class="line">            self.left = left</div><div class="line">            self.right = right</div><div class="line">            self.lefttimesright = lefttimesright</div><div class="line">    def __repr__(self):</div><div class="line">            return repr((self.left, self.right, self.lefttimesright))</div><div class="line"></div><div class="line">n=int(input());#input()读入一行</div><div class="line">wang=list(map(int,input().split()));#将读入的一行转化为[a,b,...], []为列表list</div><div class="line">s=[]</div><div class="line"></div><div class="line">for i in range(0,n):</div><div class="line">    guo=list(map(int,input().split()));</div><div class="line">    s.append(Minister(guo[0],guo[1],guo[0]*guo[1]));</div><div class="line"></div><div class="line">ss=sorted(s, key=lambda student: student.lefttimesright)#将排序后的结果赋值给ss</div><div class="line">lei=wang[0]</div><div class="line">i=0</div><div class="line">ans=0</div><div class="line">while i&lt;n:</div><div class="line">    jieguo=divmod(lei,ss[i].right)#jieguo=(a//b,a%b),jieguo[0]=a//b</div><div class="line">    #print(jieguo[0])</div><div class="line">    if jieguo[0]&gt;ans:</div><div class="line">        ans=jieguo[0];</div><div class="line">    lei*=ss[i].left;</div><div class="line">    i=i+1;</div><div class="line"></div><div class="line">print(ans)#输出</div></pre></td></tr></table></figure>
+<h2 id="开车旅行"><a href="#开车旅行" class="headerlink" title="开车旅行"></a><a href="https://www.luogu.org/problemnew/show/P1081" target="_blank" rel="external">开车旅行</a></h2><h3 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h3>
       
     </div>
     
@@ -495,7 +498,7 @@
   <p><span>本文标题:</span><a href="/2018/noip2012d1/">NOIP 2012 Day1</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 aiyoupass 的个人博客">aiyoupass</a></p>
   <p><span>发布时间:</span>2018年03月27日 - 15:03</p>
-  <p><span>最后更新:</span>2018年03月27日 - 21:03</p>
+  <p><span>最后更新:</span>2018年03月31日 - 16:03</p>
   <p><span>原始链接:</span><a href="/2018/noip2012d1/" title="NOIP 2012 Day1">http://aiyoupass.com/2018/noip2012d1/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://aiyoupass.com/2018/noip2012d1/"  aria-label="复制成功！"></i></span>
   </p>
@@ -558,6 +561,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/noip2012d2/" rel="prev" title="NOIP 2012 Day2">
+                NOIP 2012 Day2 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -643,7 +650,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">91</span>
+                  <span class="site-state-item-count">92</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -665,7 +672,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">106</span>
+                  <span class="site-state-item-count">108</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -740,7 +747,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Luogu-P1079-Vigenere-密码"><span class="nav-number">1.</span> <span class="nav-text">Luogu P1079 Vigenère 密码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">1.1.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code"><span class="nav-number">1.2.</span> <span class="nav-text">Code</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Luogu-P1080-国王游戏"><span class="nav-number">2.</span> <span class="nav-text">Luogu P1080 国王游戏</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution-1"><span class="nav-number">2.1.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code-1"><span class="nav-number">2.2.</span> <span class="nav-text">Code</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Luogu-P1079-Vigenere-密码"><span class="nav-number">1.</span> <span class="nav-text">Luogu P1079 Vigenère 密码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">1.1.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code"><span class="nav-number">1.2.</span> <span class="nav-text">Code</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Luogu-P1080-国王游戏"><span class="nav-number">2.</span> <span class="nav-text">Luogu P1080 国王游戏</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution-1"><span class="nav-number">2.1.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code-1"><span class="nav-number">2.2.</span> <span class="nav-text">Code</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开车旅行"><span class="nav-number">3.</span> <span class="nav-text">开车旅行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution-2"><span class="nav-number">3.1.</span> <span class="nav-text">Solution</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1301,7 +1308,7 @@
           skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
         },
         "HTML-CSS": {
-            scale: 75,minScaleAdjust: 50
+            scale: 85,minScaleAdjust: 80
         }
       });
     </script>
