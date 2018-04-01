@@ -4,6 +4,89 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/exam4-1/</loc>
+    <lastmod>2018-04-01T08:21:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>4月1日考试</title>
+        <pubTime>2018-04-01T07:21:10.000Z</pubTime>
+        
+        <tag>字符串</tag>
+         
+        <tag>考试</tag>
+         
+        <tag>贪心</tag>
+         
+        <tag>模拟</tag>
+         
+        <tag>树</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="考试" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E8%80%83%E8%AF%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/pdftest/</loc>
+    <lastmod>2018-04-01T08:19:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>Link-Cut-Tree</title>
+        <pubTime>2018-01-23T11:02:50.000Z</pubTime>
+        
+        <tag>pdf</tag>
+         
+        <tag>document</tag>
+         
+        <tag>Link-Cut-Tree</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="我的文档" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/pdfonline/</loc>
+    <lastmod>2018-04-01T07:24:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>pdfonline</title>
+        <pubTime>2018-01-27T02:42:05.000Z</pubTime>
+        
+        <tag>pdf</tag>
+         
+        <tag>解决方案</tag>
+         
+         
+           
+             
+              <breadCrumb title="解决方案" url="http://aiyoupass.com/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+          
+             
+              <breadCrumb title="Hexo" url="http://aiyoupass.com/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/Hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/noip2012d2/</loc>
     <lastmod>2018-03-31T09:26:08.000Z</lastmod>
     <data>
@@ -75,9 +158,9 @@
         <title>NOIP 2011 Day2</title>
         <pubTime>2018-03-25T06:39:24.000Z</pubTime>
         
-        <tag>模拟</tag>
-         
         <tag>贪心</tag>
+         
+        <tag>模拟</tag>
          
         <tag>NOIP</tag>
          
@@ -106,9 +189,9 @@
          
         <tag>NOIP</tag>
          
-        <tag>搜索</tag>
-         
         <tag>并查集</tag>
+         
+        <tag>搜索</tag>
          
          
            
@@ -142,33 +225,6 @@
           
              
               <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/pdftest/</loc>
-    <lastmod>2018-03-31T00:18:22.000Z</lastmod>
-    <data>
-        <display>
-        <title>Link-Cut-Tree</title>
-        <pubTime>2018-01-23T11:02:50.000Z</pubTime>
-        
-        <tag>pdf</tag>
-         
-        <tag>document</tag>
-         
-        <tag>Link-Cut-Tree</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="我的文档" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/"/>
           
         </display>
     </data>
@@ -1134,31 +1190,6 @@
           
              
               <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/pdfonline/</loc>
-    <lastmod>2018-02-28T00:19:22.000Z</lastmod>
-    <data>
-        <display>
-        <title>pdfonline</title>
-        <pubTime>2018-01-27T02:42:05.000Z</pubTime>
-        
-        <tag>pdf</tag>
-         
-        <tag>解决方案</tag>
-         
-         
-           
-             
-              <breadCrumb title="解决方案" url="http://aiyoupass.com/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-          
-             
-              <breadCrumb title="Hexo" url="http://aiyoupass.com/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/Hexo/"/>
           
         </display>
     </data>
