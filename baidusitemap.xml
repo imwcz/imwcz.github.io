@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://aiyoupass.com/2018/exam4-1/</loc>
-    <lastmod>2018-04-01T08:21:20.000Z</lastmod>
+    <lastmod>2018-04-01T08:39:14.000Z</lastmod>
     <data>
         <display>
         <title>4月1日考试</title>
@@ -28,6 +28,29 @@
           
              
               <breadCrumb title="考试" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E8%80%83%E8%AF%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/p3130/</loc>
+    <lastmod>2018-04-01T08:27:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>Luogu P3130 [USACO15DEC]计数haybalesCounting Haybales</title>
+        <pubTime>2018-03-31T02:24:09.000Z</pubTime>
+        
+        <tag>线段树</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
           
         </display>
     </data>
