@@ -4,6 +4,43 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/noip2013d1/</loc>
+    <lastmod>2018-04-03T09:39:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>noip 2013 day1</title>
+        <pubTime>2018-04-01T09:59:40.000Z</pubTime>
+        
+        <tag>模拟</tag>
+         
+        <tag>倍增</tag>
+         
+        <tag>快速幂</tag>
+         
+        <tag>逆序对</tag>
+         
+        <tag>树状数组</tag>
+         
+        <tag>归并排序</tag>
+         
+        <tag>最小生成树</tag>
+         
+        <tag>lca</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/exam4-1/</loc>
     <lastmod>2018-04-01T08:39:14.000Z</lastmod>
     <data>
@@ -1663,11 +1700,11 @@
         <title>P2184 贪婪大陆</title>
         <pubTime>2018-02-06T00:56:36.000Z</pubTime>
         
+        <tag>树状数组</tag>
+         
         <tag>线段树</tag>
          
         <tag>前缀和</tag>
-         
-        <tag>树状数组</tag>
          
          
            
