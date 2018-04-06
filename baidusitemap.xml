@@ -4,11 +4,94 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/noip2013d1/</loc>
-    <lastmod>2018-04-03T09:39:40.000Z</lastmod>
+    <loc>http://aiyoupass.com/2018/sdoi2016r1d1/</loc>
+    <lastmod>2018-04-06T13:54:00.000Z</lastmod>
     <data>
         <display>
-        <title>noip 2013 day1</title>
+        <title>SDOI 2016 Round 1 Day2</title>
+        <pubTime>2018-04-06T09:30:49.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>后缀数组</tag>
+         
+        <tag>斜率优化</tag>
+         
+        <tag>排列组合</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/SuffixArray/</loc>
+    <lastmod>2018-04-06T13:49:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>后缀数组</title>
+        <pubTime>2018-04-06T11:23:06.000Z</pubTime>
+        
+        <tag>字符串</tag>
+         
+        <tag>后缀数组</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/noip2013d2/</loc>
+    <lastmod>2018-04-06T12:57:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>NOIP 2013 day2</title>
+        <pubTime>2018-04-06T02:59:39.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>贪心</tag>
+         
+        <tag>模拟</tag>
+         
+        <tag>搜索</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/noip2013d1/</loc>
+    <lastmod>2018-04-06T01:50:46.000Z</lastmod>
+    <data>
+        <display>
+        <title>NOIP 2013 day1</title>
         <pubTime>2018-04-01T09:59:40.000Z</pubTime>
         
         <tag>模拟</tag>
@@ -34,6 +117,33 @@
           
              
               <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/prim/</loc>
+    <lastmod>2018-04-06T01:17:30.000Z</lastmod>
+    <data>
+        <display>
+        <title>最小生成树</title>
+        <pubTime>2018-04-03T13:57:26.000Z</pubTime>
+        
+        <tag>图论</tag>
+         
+        <tag>pdf</tag>
+         
+        <tag>生成树</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="我的文档" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/"/>
           
         </display>
     </data>
@@ -249,9 +359,9 @@
          
         <tag>NOIP</tag>
          
-        <tag>并查集</tag>
-         
         <tag>搜索</tag>
+         
+        <tag>并查集</tag>
          
          
            

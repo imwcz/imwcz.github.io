@@ -2,9 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://aiyoupass.com/2018/sdoi2016r1d1/</loc>
+    
+    <lastmod>2018-04-06T13:54:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://aiyoupass.com/2018/SuffixArray/</loc>
+    
+    <lastmod>2018-04-06T13:49:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://aiyoupass.com/2018/noip2013d2/</loc>
+    
+    <lastmod>2018-04-06T12:57:40.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://aiyoupass.com/2018/noip2013d1/</loc>
     
-    <lastmod>2018-04-03T09:39:40.000Z</lastmod>
+    <lastmod>2018-04-06T01:50:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://aiyoupass.com/2018/prim/</loc>
+    
+    <lastmod>2018-04-06T01:17:30.000Z</lastmod>
     
   </url>
   
