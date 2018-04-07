@@ -486,6 +486,197 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/noip2014d1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/noip2014d1/" itemprop="url">NOIP 2014 Day1</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-07T15:05:44+08:00">
+                2018-04-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
+                    <span itemprop="name">题目</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/noip2014d1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/noip2014d1/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://www.luogu.org/problemnew/show/P1328" target="_blank" rel="external">生活大爆炸版石头剪刀布</a><br><a href="https://www.luogu.org/problemnew/show/P1351" target="_blank" rel="external">联合权值</a><br><a href="https://www.luogu.org/problemnew/show/P1941" target="_blank" rel="external">飞扬的小鸟</a></p>
+<h3 id="生活大爆炸版石头剪刀布"><a href="#生活大爆炸版石头剪刀布" class="headerlink" title="生活大爆炸版石头剪刀布"></a>生活大爆炸版石头剪刀布</h3><h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>　　没有什么算法就是模拟, 然而题解区好多naive的程序.因为题解数量实在是很多, 导致我水不了题解了,233.</p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 205</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> g[<span class="number">5</span>][<span class="number">5</span>]=&#123;</div><div class="line">	&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>&#125;,</div><div class="line">	&#123;<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>&#125;,</div><div class="line">	&#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>&#125;,</div><div class="line">	&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>&#125;,</div><div class="line">	&#123;<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>&#125;,</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">int</span> A[N],B[N];</div><div class="line"><span class="keyword">int</span> n,m,k;</div><div class="line"><span class="keyword">int</span> a,b;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;k,&amp;n,&amp;m);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;++i)<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;A[i]);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;++i)<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;B[i]);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;k;++i)&#123;</div><div class="line">		a+=g[A[i%n]][B[i%m]];</div><div class="line">		b+=g[B[i%m]][A[i%n]];</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d %d"</span>,a,b);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="联合权值"><a href="#联合权值" class="headerlink" title="联合权值"></a>联合权值</h3><h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><h3 id="联合权值-1"><a href="#联合权值-1" class="headerlink" title="联合权值"></a>联合权值</h3><h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>　　一开始没有看见取模这回事, 幸好没有提交上去……233.</p>
+<h5 id="70分做法"><a href="#70分做法" class="headerlink" title="70分做法"></a>70分做法</h5><p>　　我们发现一个点$i$所连接的点相互之间的距离是2.然后就可以直接枚举求, 然后就只能得到70分.具体的步骤是:</p>
+<ol>
+<li>枚举每个点</li>
+<li>枚举每个点连接的另一个点$v_1$</li>
+<li>枚举每个点连接的另另一个点$v_2$</li>
+<li>只要$v_1\ne v_2$, 那么这两点之间的距离为$2$</li>
+<li>统计答案</li>
+</ol>
+<h5 id="100分做法"><a href="#100分做法" class="headerlink" title="100分做法"></a>100分做法</h5><ul>
+<li>当然最大联合权值比较好求, 只需要求出 $i$ 四周点的最大值和次大值, 关键是联合权值之和.</li>
+<li>对于联合全职之和, 假设点 $u$ 所连接的点的权值为$v_1,v_2,\cdots $,那么节点$i$对权值之和产生的贡献为:<br><img src="https://cdn.luogu.org/upload/pic/17000.png" alt=""></li>
+</ul>
+<p>　　那么这个只要在遍历的时候求一下$\sum\limits_{v_i}v_i$和$\sum\limits_{v_i}v_i^2$, 遍历树的复杂度为$\Theta(n)$, 可以通过.</p>
+<p>　　好像还有一种树形dp的做法可惜我没试过.</p>
+<h4 id="Code-1"><a href="#Code-1" class="headerlink" title="Code"></a>Code</h4><p>70分做法, 是比现在还要naive的时候写的.<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt; </span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt; </span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt; </span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> mod 10007 </span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 200005 </span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>; </div><div class="line">  </div><div class="line"><span class="keyword">int</span> n,maxl,sigma; </div><div class="line">  </div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">read</span><span class="params">(<span class="keyword">int</span>&amp; s)</span></span>&#123; </div><div class="line">    <span class="keyword">char</span> ch=getchar(); </div><div class="line">    <span class="keyword">for</span>(;!<span class="built_in">isdigit</span>(ch);ch=getchar()); </div><div class="line">    <span class="keyword">for</span>(s=<span class="number">0</span>;<span class="built_in">isdigit</span>(ch);s=s*<span class="number">10</span>+ch-<span class="string">'0'</span>,ch=getchar()); </div><div class="line">&#125; </div><div class="line">  </div><div class="line"><span class="keyword">struct</span> edge&#123; </div><div class="line">    <span class="keyword">int</span> to,nxt; </div><div class="line">&#125;edge[N&lt;&lt;<span class="number">2</span>]; </div><div class="line"><span class="keyword">int</span> w[N],head[N],tot; </div><div class="line">  </div><div class="line">  </div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123; </div><div class="line">    edge[++tot].to=b; </div><div class="line">    edge[tot].nxt=head[a]; </div><div class="line">    head[a]=tot; </div><div class="line">&#125; </div><div class="line">  </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123; </div><div class="line">    <span class="built_in">cin</span>&gt;&gt;n;<span class="keyword">int</span> a,b,c; </div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;++i)&#123; </div><div class="line">        read(a),read(b); </div><div class="line">        add(a,b),add(b,a); </div><div class="line">    &#125; </div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)read(w[i]); </div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i) <span class="comment">//枚举每个点</span></div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=head[i];j;j=edge[j].nxt) <span class="comment">//枚举它连接的两个点</span></div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> k=head[i];k;k=edge[k].nxt)&#123; </div><div class="line">                <span class="keyword">if</span>(j==k)<span class="keyword">continue</span>; <span class="comment">//不能是相同的点</span></div><div class="line">                maxl=max(maxl,w[edge[j].to]*w[edge[k].to]); <span class="comment">//统计最大值</span></div><div class="line">                sigma=(sigma+w[edge[j].to]*w[edge[k].to])%mod; <span class="comment">//统计和</span></div><div class="line">            &#125; </div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d %d"</span>,maxl,sigma); </div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>; </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>100分做法</p>
+<p>Tips:其实是不用写递归形式的遍历的, 速度会变慢, 不如直接像70分做法一样直接枚举<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 400005</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> mod 10007</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> int long long</span></div><div class="line"></div><div class="line"><span class="keyword">struct</span> Edge&#123;</div><div class="line">    <span class="keyword">int</span> v,nxt;</div><div class="line">&#125;e[N];</div><div class="line"><span class="keyword">int</span> head[N],tot;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">AddEdge</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v)</span></span>&#123;</div><div class="line">    e[++tot]=(Edge)&#123;v,head[u]&#125;;head[u]=tot;</div><div class="line">    e[++tot]=(Edge)&#123;u,head[v]&#125;;head[v]=tot;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">int</span> ans1,ans2;</div><div class="line"><span class="keyword">int</span> val[N];</div><div class="line"><span class="keyword">int</span> n;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> f)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(x&gt;n)<span class="keyword">return</span> ;</div><div class="line">    <span class="keyword">int</span> m1,m2;m1=m2=<span class="number">0</span>;<span class="comment">//x所连接的点的最大值和次大值</span></div><div class="line">    <span class="keyword">int</span> h1,h2;h1=h2=<span class="number">0</span>;<span class="comment">//x所连接的点为v, h1,h2为 v点权和 和 v的点权平方和.</span></div><div class="line"></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=head[x];i;i=e[i].nxt)&#123;</div><div class="line">        <span class="keyword">int</span> to=e[i].v;<span class="comment">//所连接的另一个点</span></div><div class="line">        <span class="keyword">if</span>(to!=f)dfs(to,x);</div><div class="line"></div><div class="line">        <span class="keyword">if</span>(val[to]&gt;m2)&#123;<span class="comment">//维护最大值和次大值</span></div><div class="line">            <span class="keyword">if</span>(val[to]&gt;m1)</div><div class="line">                m2=m1,m1=val[to];</div><div class="line">            <span class="keyword">else</span> m2=val[to];</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">		h1+=val[to],h2+=val[to]*val[to];<span class="comment">//更新h1,h2</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    ans2+=((h1%mod)*(h1%mod)-h2%mod)%mod;</div><div class="line">    ans2%=mod;</div><div class="line">    ans1=max(m1*m2,ans1);</div><div class="line">&#125;</div><div class="line"></div><div class="line">main()&#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;n);<span class="keyword">int</span> u,v;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;++i)&#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%lld%lld"</span>,&amp;u,&amp;v);</div><div class="line">        AddEdge(u,v);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;val[i]);</div><div class="line">    dfs(<span class="number">1</span>,<span class="number">0</span>);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%lld %lld"</span>,ans1,ans2);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="飞扬的小鸟"><a href="#飞扬的小鸟" class="headerlink" title="飞扬的小鸟"></a>飞扬的小鸟</h3><h4 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h4>
+          
+        
+      
+    </div>
+    
+    
+    
+    <div>
+    
+    </div>
+    <div>
+    
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/SuffixArray/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -661,7 +852,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/sdoi2016r1d1/">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/sdoi2016r1d2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="aiyoupass">
@@ -680,7 +871,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/sdoi2016r1d1/" itemprop="url">SDOI 2016 Round 1 Day2</a></h1>
+                <a class="post-title-link" href="/2018/sdoi2016r1d2/" itemprop="url">SDOI 2016 Round 1 Day2</a></h1>
         
 
         <div class="post-meta">
@@ -745,8 +936,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/sdoi2016r1d1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/sdoi2016r1d1/" itemprop="commentsCount"></span>
+                <a href="/2018/sdoi2016r1d2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/sdoi2016r1d2/" itemprop="commentsCount"></span>
                 </a>
               </span>
               <!--/noindex-->
@@ -874,7 +1065,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/noip2013d2/" itemprop="url">NOIP 2013 day2</a></h1>
+                <a class="post-title-link" href="/2018/noip2013d2/" itemprop="url">NOIP 2013 Day2</a></h1>
         
 
         <div class="post-meta">
@@ -1233,7 +1424,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/noip2013d1/" itemprop="url">NOIP 2013 day1</a></h1>
+                <a class="post-title-link" href="/2018/noip2013d1/" itemprop="url">NOIP 2013 Day1</a></h1>
         
 
         <div class="post-meta">
@@ -1914,206 +2105,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/noip2012d1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="aiyoupass">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/myjson/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="落花微雨">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/noip2012d1/" itemprop="url">NOIP 2012 Day1</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-27T15:10:05+08:00">
-                2018-03-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
-                    <span itemprop="name">信息学竞赛</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/总结/" itemprop="url" rel="index">
-                    <span itemprop="name">总结</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/noip2012d1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/noip2012d1/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Luogu-P1079-Vigenere-密码"><a href="#Luogu-P1079-Vigenere-密码" class="headerlink" title="Luogu P1079 Vigenère 密码"></a><a href="https://www.luogu.org/problemnew/show/P1079" target="_blank" rel="external">Luogu P1079 Vigenère 密码</a></h2><h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>　　表示并不是很懂其他人发的题解.</p>
-<p>　　我是这么想的, 既然是题目要求用<strong>密文转明文</strong>而且<strong>转换规则一定</strong>的, 所以就可以用明文转密文的<strong>逆过程</strong>来完成.</p>
-<p>　　首先要搞明白<strong>明文是怎么变成密文的</strong>, 通过这个表可以观察到, 如果明文的一个字符是 ch1 ,密钥为 ch2 , 那么密文 ch3 对应的就是 ch1 在字母表中偏移 |ch2| 位, 例如 　$\text{ch1=A,ch2=B, ch3=ch1+|ch2|=A+B-A=B}$　, 如果偏移之后超过了 ‘Z’, 那么就从’A’继续开始, 相当于这是一个环, ‘Z’的后面是’A’.</p>
-<p>　　不难发现<strong>密文是明文在字母表中进行的偏移</strong>, 那么将密文转换为明文只需要将这个过程反过来就好了.只需要将密文减去一个密钥的偏移.例如　$\text{ch3=F,ch2=C, ch1=ch3-|ch2|=F-(C-A)=D}$.</p>
-<p>　　知道了这个规则之后就不难写出程序了, 上面如果将其进行偏移出来比$\text{A}$小就利用<strong>取余</strong>来处理, 具体可以看代码</p>
-<pre><code>int cha=B-&apos;A&apos;;
-    return &apos;A&apos;+(A-cha-&apos;A&apos;+26)%26;
-</code></pre><p>还需要注意<strong>几个问题</strong>:</p>
-<ul>
-<li>明文和密文对应的大小写是一致的.</li>
-<li>最好一开始把密文和明文都变成是大写, 这样好转化, 最后转化回来.</li>
-<li>第$\text{ i }$位密文对应的密钥为第$\text{i}\mod \text{len2}$位, 同样利用<strong>取余</strong>.</li>
-<li>cctype库中几个函数, $\text{islower(),tolower(),isupper(),islower()}$比较好用, 参数为<strong>一个字符</strong>.</li>
-</ul>
-<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cctype&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 1005</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">char</span> a[N],b[N];</div><div class="line"><span class="keyword">int</span> s,r,l;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">Change</span><span class="params">(<span class="keyword">char</span> A,<span class="keyword">char</span> B)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> cha=B-<span class="string">'A'</span>;</div><div class="line">    <span class="keyword">return</span> <span class="string">'A'</span>+(A-cha-<span class="string">'A'</span>+<span class="number">26</span>)%<span class="number">26</span>;<span class="comment">//将密文在字母表中进行一定偏移</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%s%s"</span>,a,b);'</div><div class="line"></div><div class="line">    r=<span class="built_in">strlen</span>(a),l=<span class="built_in">strlen</span>(b);</div><div class="line">    <span class="keyword">int</span> flag=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;l;++i)&#123;</div><div class="line">        </div><div class="line">        <span class="keyword">if</span>(<span class="built_in">islower</span>(b[i]))flag=<span class="number">1</span>;</div><div class="line">        <span class="keyword">if</span>(<span class="built_in">isupper</span>(b[i]))flag=<span class="number">2</span>;<span class="comment">//记录一下密文一开始的大小写</span></div><div class="line">        </div><div class="line">        <span class="keyword">if</span>(<span class="built_in">islower</span>(b[i]))b[i]=<span class="built_in">toupper</span>(b[i]);<span class="comment">//将密文和密钥都转化为大写</span></div><div class="line">        <span class="keyword">if</span>(<span class="built_in">islower</span>(a[i%r]))a[i%r]=<span class="built_in">toupper</span>(a[i%r]);</div><div class="line">        </div><div class="line">        <span class="keyword">char</span> ch=Change(b[i],a[i%r]);<span class="comment">//得到明文的一个字符</span></div><div class="line">        </div><div class="line">        <span class="keyword">if</span>(flag==<span class="number">1</span>)ch=<span class="built_in">tolower</span>(ch);<span class="comment">//再明文将其转化为密文一开始的大小写</span></div><div class="line">        <span class="keyword">if</span>(flag==<span class="number">2</span>)ch=<span class="built_in">toupper</span>(ch);</div><div class="line">        </div><div class="line">        <span class="built_in">putchar</span>(ch);<span class="comment">//输出这个字符</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="Luogu-P1080-国王游戏"><a href="#Luogu-P1080-国王游戏" class="headerlink" title="Luogu P1080 国王游戏"></a><a href="https://www.luogu.org/problemnew/show/P1080" target="_blank" rel="external">Luogu P1080 国王游戏</a></h2><h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h3><p>　　首先题目我们需要对大臣进行一定的排序, 使得获得最多奖赏的大臣奖赏最少, 前面的题解已经写的很清楚了, 如果大臣 $\text{a,b}$ , $\text{a}$ 排在 $\text{b}$ 前面的条件是 $\text{a.left}\times \text{a.right}&lt;\text{b.left}\times \text{b.right}$.</p>
-<p>　　那么做法就比较显然了, 只需要对所有人的左右手乘起来排个序就好.然后统计答案, 最头疼的地方是需要用高精, 我自然是非常头疼, 但是可以不用c++啊, 可以用 <strong>Python</strong> 水一波啊, 毕竟人家最擅长的就是科学运算.</p>
-<p>　　但是在用 <strong>Python</strong> 开心的写了一波之后发现只得了<a href="https://www.luogu.org/record/show?rid=6431680" target="_blank" rel="external">60分</a>.竟然还 <strong>WA</strong> 了一个点, 真是没办法忍受, 然后想方设法得到了 <strong>RE</strong> 的数据, 发现了 <strong>RE</strong> 的原因.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">OverflowError: integer division result too large for a float</div></pre></td></tr></table></figure>
-<p>　　百度之后发现是因为<strong>Python</strong>的浮点数是<strong>c语言</strong>的<strong>float</strong>, 所以会出锅.<br>然后就想自己写一个<strong>整数</strong>除法, 先<strong>取余</strong>, 然后<strong>二分</strong>除法的结果.结果又出现了类似的问题.醉了.</p>
-<p>　　然后又百度, 好像是找到三种<strong>解决方案</strong></p>
-<ul>
-<li><strong>$\text{from __future__ import division}$</strong></li>
-<li><strong>$\text{divmod()}$函数</strong></li>
-<li><strong>$\text{decimal}$模块</strong></li>
-<li><strong>$\text{a//b}$</strong>, 等效于a整除b, 不会产生浮点运算, 但是不如第二种快, 不知道为什么.</li>
-</ul>
-<p>　　可以自己百度具体的使用方法.我使用的第二种方法, 实际上$\text{divmod(a,b)}$返回$\text{(int(a/b), a mod b)}$</p>
-<p>　　在通过上述艰难过程后, 终于通过了…</p>
-<h3 id="Code-1"><a href="#Code-1" class="headerlink" title="Code"></a>Code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">#表示Python的注释</div><div class="line">class Minister:#定义了一个类</div><div class="line">    def __init__(self, left, right, lefttimesright):#初始化函数</div><div class="line">            self.left = left</div><div class="line">            self.right = right</div><div class="line">            self.lefttimesright = lefttimesright</div><div class="line">    def __repr__(self):</div><div class="line">            return repr((self.left, self.right, self.lefttimesright))</div><div class="line"></div><div class="line">n=int(input());#input()读入一行</div><div class="line">wang=list(map(int,input().split()));#将读入的一行转化为[a,b,...], []为列表list</div><div class="line">s=[]</div><div class="line"></div><div class="line">for i in range(0,n):</div><div class="line">    guo=list(map(int,input().split()));</div><div class="line">    s.append(Minister(guo[0],guo[1],guo[0]*guo[1]));</div><div class="line"></div><div class="line">ss=sorted(s, key=lambda student: student.lefttimesright)#将排序后的结果赋值给ss</div><div class="line">lei=wang[0]</div><div class="line">i=0</div><div class="line">ans=0</div><div class="line">while i&lt;n:</div><div class="line">    jieguo=divmod(lei,ss[i].right)#jieguo=(a//b,a%b),jieguo[0]=a//b</div><div class="line">    #print(jieguo[0])</div><div class="line">    if jieguo[0]&gt;ans:</div><div class="line">        ans=jieguo[0];</div><div class="line">    lei*=ss[i].left;</div><div class="line">    i=i+1;</div><div class="line"></div><div class="line">print(ans)#输出</div></pre></td></tr></table></figure>
-<h2 id="开车旅行"><a href="#开车旅行" class="headerlink" title="开车旅行"></a><a href="https://www.luogu.org/problemnew/show/P1081" target="_blank" rel="external">开车旅行</a></h2><h3 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h3>
-          
-        
-      
-    </div>
-    
-    
-    
-    <div>
-    
-    </div>
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2168,7 +2159,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">99</span>
+                  <span class="site-state-item-count">100</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
