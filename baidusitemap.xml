@@ -3,6 +3,33 @@
 
 
     
+  <url>
+    <loc>http://aiyoupass.com/2018/dphigher/</loc>
+    <lastmod>2018-04-10T13:53:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>动态规划题目选做</title>
+        <pubTime>2018-04-10T12:15:02.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>字符串</tag>
+         
+        <tag>搜索</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://aiyoupass.com/2018/art2/</loc>
@@ -304,13 +331,13 @@
         
         <tag>动态规划</tag>
          
-        <tag>模拟</tag>
-         
         <tag>贪心</tag>
          
-        <tag>NOIP</tag>
+        <tag>模拟</tag>
          
         <tag>搜索</tag>
+         
+        <tag>NOIP</tag>
          
          
            
@@ -335,6 +362,8 @@
         
         <tag>动态规划</tag>
          
+        <tag>后缀数组</tag>
+         
         <tag>斜率优化</tag>
          
         <tag>排列组合</tag>
@@ -342,8 +371,6 @@
         <tag>错位排列数</tag>
          
         <tag>逆元</tag>
-         
-        <tag>后缀数组</tag>
          
         <tag>SDOI</tag>
          
@@ -422,11 +449,11 @@
         
         <tag>字符串</tag>
          
-        <tag>模拟</tag>
-         
         <tag>考试</tag>
          
         <tag>贪心</tag>
+         
+        <tag>模拟</tag>
          
         <tag>树</tag>
          
@@ -532,9 +559,9 @@
          
         <tag>倍增</tag>
          
-        <tag>二分答案</tag>
-         
         <tag>扩展欧几里得</tag>
+         
+        <tag>二分答案</tag>
          
         <tag>查分</tag>
          
@@ -590,9 +617,9 @@
         <title>NOIP 2011 Day2</title>
         <pubTime>2018-03-25T06:39:24.000Z</pubTime>
         
-        <tag>模拟</tag>
-         
         <tag>贪心</tag>
+         
+        <tag>模拟</tag>
          
         <tag>NOIP</tag>
          
@@ -619,11 +646,11 @@
         
         <tag>动态规划</tag>
          
+        <tag>搜索</tag>
+         
         <tag>NOIP</tag>
          
         <tag>并查集</tag>
-         
-        <tag>搜索</tag>
          
          
            
@@ -646,9 +673,9 @@
         <title>NOIP 2011 Day 1</title>
         <pubTime>2018-03-24T12:20:28.000Z</pubTime>
         
-        <tag>NOIP</tag>
-         
         <tag>搜索</tag>
+         
+        <tag>NOIP</tag>
          
          
            
@@ -1057,9 +1084,9 @@
         
         <tag>模板</tag>
          
-        <tag>最小生成树</tag>
-         
         <tag>生成树</tag>
+         
+        <tag>最小生成树</tag>
          
          
            
@@ -1222,11 +1249,11 @@
          
         <tag>倍增</tag>
          
+        <tag>二分答案</tag>
+         
         <tag>线段树</tag>
          
         <tag>Floyd</tag>
-         
-        <tag>二分答案</tag>
          
          
            
@@ -2180,7 +2207,7 @@
     <data>
         <display>
         <title>HDU 4825 Xor Sum</title>
-        <pubTime>2018-02-10T16:10:00.000Z</pubTime>
+        <pubTime>2018-02-11T21:40:00.000Z</pubTime>
         
         <tag>Trie</tag>
          
@@ -2284,9 +2311,9 @@
         <title>Every-SG</title>
         <pubTime>2018-02-27T02:47:51.000Z</pubTime>
         
-        <tag>博弈论</tag>
-         
         <tag>Every-SG</tag>
+         
+        <tag>博弈论</tag>
          
          
            
@@ -2364,9 +2391,9 @@
         <title>Anti-SG/Misère Games</title>
         <pubTime>2018-02-26T00:17:21.000Z</pubTime>
         
-        <tag>Anti-SG</tag>
-         
         <tag>博弈论</tag>
+         
+        <tag>Anti-SG</tag>
          
         <tag>Misère Games</tag>
          
