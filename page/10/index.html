@@ -1,462 +1,969 @@
 <!DOCTYPE html>
-<html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/page/10/index.html">
-<meta property="og:site_name" content="Hexo">
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="落花微雨">
+<meta property="og:url" content="http://aiyoupass.com/page/10/index.html">
+<meta property="og:site_name" content="落花微雨">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="落花微雨">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://aiyoupass.com/page/10/"/>
+
+
+
+
+
+  <title> 落花微雨 -  </title>
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <!--<link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">-->
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
+
+
+
+
+
+
+
 
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">落花微雨</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
       
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-dpeasy" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/02/03/dpeasy/" class="article-date">
-  <time datetime="2018-02-03T13:15:53.000Z" itemprop="datePublished">2018-02-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/信息学竞赛/">信息学竞赛</a>►<a class="article-category-link" href="/categories/信息学竞赛/我的文档/">我的文档</a>
+        <p class="site-subtitle">雨淋湿了天空,毁的很讲究.</p>
+      
   </div>
 
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
   </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/03/dpeasy/">动态规划基础</a>
-    </h1>
+</div>
+
+<nav class="site-nav">
   
 
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            Schedule
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-knowledge">
+          <a href="/Knowledge/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />
+            
+            Knowledge
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/title/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/title/" itemprop="url">动态规划基础</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-03T21:15:53+08:00">
+                2018-02-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/我的文档/" itemprop="url" rel="index">
+                    <span itemprop="name">我的文档</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/title/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/title/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <p>这是来自 MingqiHuang 和我的满满的一份爱心.当然我参与的部分只有几千余字.</p>
-<p><div id="my-contaniner"></div></p>
-<p><style><br>.pdfobject-container { height: 700px;}<br>.pdfobject { border: 1px solid #666; }<br>.margins { height: 700px;}<br></style></p>
-<script src="/js/pdfobject.js"></script>
-<script>PDFObject.embed("/pdf/dpeasy.pdf", "#my-contaniner" , {height: "700px"});</script>
+      
 
-
+      
+        
+          这是来自 MingqiHuang 和我的满满的一份爱心.当然我参与的部分只有几千余字.
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/title/">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/03/dpeasy/" data-id="cjftq8nva002ge0keafppaptt" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/document/">document</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pdf/">pdf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动态规划/">动态规划</a></li></ul>
+    
+    
+    
+    <div>
+    
+    </div>
+    <div>
+    
+    </div>
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
     </footer>
   </div>
   
-</article>
+  
+  
+  </article>
 
+
+    
+      
 
   
-    <article id="post-sourceoftikz" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/02/03/sourceoftikz/" class="article-date">
-  <time datetime="2018-02-03T09:58:51.000Z" itemprop="datePublished">2018-02-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/解决方案/">解决方案</a>►<a class="article-category-link" href="/categories/解决方案/LaTeX/">LaTeX</a>
-  </div>
 
-  </div>
-  <div class="article-inner">
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/title/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
     
-    
-      <header class="article-header">
+      <header class="post-header">
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/03/sourceoftikz/">关于 TikZ 的一些资源</a>
-    </h1>
-  
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/title/" itemprop="url">关于 TikZ 的一些资源</a></h1>
+        
 
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-03T17:58:51+08:00">
+                2018-02-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解决方案/" itemprop="url" rel="index">
+                    <span itemprop="name">解决方案</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解决方案/LaTeX/" itemprop="url" rel="index">
+                    <span itemprop="name">LaTeX</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/title/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/title/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="原地址"><a href="#原地址" class="headerlink" title="原地址"></a><a href="https://www.cnblogs.com/tsingke/p/6649800.html" target="_blank" rel="external">原地址</a></h4><h3 id="Latex–TikZ和PGF–高级文本绘图，思维绘图，想到–得到！"><a href="#Latex–TikZ和PGF–高级文本绘图，思维绘图，想到–得到！" class="headerlink" title="Latex–TikZ和PGF–高级文本绘图，思维绘图，想到–得到！"></a>Latex–TikZ和PGF–高级文本绘图，思维绘图，想到–得到！</h3><p>TikZ和PGF是一种用在TeX上的CLI绘图工具。CLI和GUI是两种常见的绘图方式，前者是所想即所得（WYTIWYG）的，通过类编程的思想实现绘图，这种方式往往能够生成精确控制的函数图，常见的有PostScript、PGF、Asymptote、PSTricks等。后者则是所见即所得（WYSIWYG）的，常见的有CorelDraw、Illustrator、Photoshop、GIMP、Office、Visio等。TikZ和PGF的关系则是高层和底层的关系，简单说来，TikZ基于PGF，它可以帮助我们用更易于理解的方式创建复杂的图形。PGF的全名是“portable graphics format”，或者“pretty, good, functional”，TikZ的命名更有趣，采用的是递归式的取名：“TikZ ist kein Zeichenprogramm”(TikZ is not a drawing program)，类似的取名最出名的恐怕就是GNU（GNU is Not Unix）了。</p>
-<ul>
-<li>教程<br>  TikZ and pgf Manual：官方指导教程。<br>  Graphics with Tikz：一份简单的TikZ教程slide。<br>  例学Tikz &amp; PGF：从具体例子入手学习TikZ和PGF。<br>  A TikZ mini course：一份介绍TikZ的简短的slide。<br>  A TikZ tutorial: Generating graphics in the spirit of TeX：TUG 2009视频教程。<br>  Commutative Diagrams using TikZ：一份介绍如何在( )中应用TikZ绘制交换图的教程。<br>  Graphics in LaTeX：一份对( )常见画图工具的综述，包含了对TikZ的有用的介绍。<br>  Graphics with PGF and TikZ：一篇发表在PracTeX杂志上的文章，包含了许多有用的图例。还有它的演示视频。<br>  Including TikZ pictures：介绍如何导入外部TikZ图案的文章。<br>  LaTeX Figures with PGF and TikZ：一份关于使用PGF和TikZ的利弊的讨论，发表于High Energy PhDs weblog。<br>  Statistiker-wg.de tutorials：收集了很多PP的TikZ实例，不过是德文的。<br>  Trace Diagram Codes &amp; Examples：展示如何绘制trance图。<ul>
-<li>相关论坛、博客以及邮件列表<br>comp.text.tex：最大并且是最活跃的( )相关的论坛。<br>LaTeX-Community.org：一个相对比较新的不过发展很迅速的( )论坛/社区。拥有很多友善并且活跃的用户，可以帮忙解决大部分( )相关的问题。<br>Beamer forums on SF：Beamer和PGF都是由同个作者写的，所以Sourceforge上的Beamer论坛上也有专门讨论PGF/Tikz的版块。<br>PGF and TikZ forums on Sourceforge：Sourceforge上的PGF/TikZ论坛。活跃度比较低。但如果你向PGF用户邮件列表提交问题，获取帮助的机会比较大。<br>LaTeX_Fun：介绍( )技术的博客。<br>The latex-beamer-users mailing list on SF：Sourceforge上的( )-Beamer用户邮件列表。在这个邮件列表中也能够找到关于PGF/TikZ的讨论。<br>CTeX论坛：里面有专门的( )绘图专区版块，不过介绍的内容比较杂，还可以找到Asymptote、PostScript等的资源。</li>
-</ul>
-</li>
-<li>实例<br>  TeXample.net：PGF/TikZ的官方gallery，要检索全部实例可以访问这里。<br>  Graph Theory in LaTeX：收集( )下的绘图工具绘制的图案；<br>  Altermundus.com：介绍TikZ相关的包和绘制出来的实例。<br>  简单流图（Simple flow chart）<br>  工作流图（The TeX work flow）<br>  UML时序图（UML sequence diagrams）<br>  类图（Class diagram）<br>  ER图（Entity-Relationship diagram）<br>  系统架构图（System Combination）<br>  基于数据流的系统架构图（Inertial navigation system）<br>  归并树（Merge sort recursion tree）<br>  Prim算法（Prim’s algorithm，用于生成最小生成树）<br>  神经网络（Neural network）<br>  有限状态机（state machine）<br>  正则表达式图（Putting a diagrams in chains）<br>  便签条图（Boxes with text and math）<br>  公式说明（Beamer Arrows）<br>  负反馈系统控制图（Control system principles）<br>  直线相交（Intersecting lines）<br>  函数图（Parabola plot）<br>  波形图（Parameterized plots）<br>  节点形状（Node shapes）<br>  连接文字和图形（Connecting text and graphics）<br>  韦恩图（Set operations illustrated with Venn diagrams）<br>  心智图（Computer science mindmap）<br>  太极图（Yin and yang）<br>  蛛网图（Spiderweb diagram）<br>  分散的点（Scatterplot）</li>
-<li>扩展宏包<br>  bclogo：一个用于创建带标题和logo的彩色盒子的宏包。支持TikZ和PSTricks。<br>  Beamer：用来创建精美的幻灯片的宏包，可能是( )下最简单易用的幻灯片制作工具了。它和PGF/TikZ出自同一个作者。<br>  Bodegraph：一个用来绘制Bode图、Nichols-Black图和Nyquist图的宏包。<br>  CircuiTikz for drawing electrical networks：一套用来在科学刊物中绘制电路图的( )宏包。PGF的电路图库就是根据这个包开发出来的。<br>  Pgfplots：提供一个非常友好的接口，用来完成普通或者对数尺度函数图的绘制。<br>  prerex：一个基于PGF的用来创建有节点相连的图表的工具。<br>  Schéma-blocs avec PGF/TIKZ：用于绘制block。<br>  sparklines：用于绘制波形图。<br>  tikz-qtree: Simple syntax and smarter layout for trees：用于在TikZ中绘制树，使用的是Alexis Dimitriadis’Qtree的创建语法。使用它绘制出来的树不会有树节点的碰撞问题，相比TikZ的标准绘制树的功能而言有了较大的改进。<br>  tikz-timing：用于绘制时序图。<br>  tkz-berge：一组用于绘制多种图形的宏包。<br>  tkz-graph：用于绘制基本图形。<br>  tkz-linknodes：用于连接两个节点元素。<br>  tkz-tab：用于绘制复杂的表格图案。</li>
-<li>实用工具<br>  extractpgf：一个perl脚本，可以直接由tikzpicture环境里的内容生成pdf文件。<br>  ktikz：一个小巧的KDE工具，可以可视化生成TikZ图表。<br>  TikZ2PDF：一个Python脚本工具，可以自动检测文件的改动并预览生成的图案效果。<br>  TikZIT：一个基于TikZ的跨平台GUI绘图工具。最初是针对TikZ快速绘制点状图而开发，现在也可以用来进行常规的图形绘制。<br>  Webgen::Tag::TikZ：一个用于生成静态的网站的工具。它支持使用TikZ标签直接在网页中自动生成基于TikZ的图形。<br>  Blend2TikZ：一个支持将blender曲线转换为TikZ路径的脚本。<br>  Convert Your VYM Mindmap to PGF/TikZ：一个小巧的C语言程序，可以将 VYM (View Your Mind)的Mindmap图导出的XML文件转换为TikZ的Mindmap图（查看示例文件）。<br>  Dia：基于GTK+的图形绘制程序。能够将图形保存成PGF代码。<br>  Dot2TeX：Graphviz转( )。<br>  dpic：一个类PIC语言的解释器，可以导出成PGF/TikZ等多种格式。它与circuit-macros一起使用，可以生成电路图。<br>  ePIX：一组命令行工具，能够生成精确控制的函数图，并支持TikZ、PSTricks、EEPIC等多种导出格式。<br>  Eps2pgf：将Eps图形转换为PGF/TikZ命令 。<br>  fig2tikz：一个优雅的工具，可以将XFig文件转换为TikZ命令。<br>  GeoGebra：一个支持几何、线性代数、微积分的数学图像软件，最新的预览版本pre-release version已经支持TikZ格式命令的导出。<br>  Gnuplot TikZ terminal：一个用Lua编写的Gnuplot终端。能够生成PGF和TikZ代码。<br>  Inkscape TikZ exporter：Inkscape的一个扩展工具，可以导出TikZ格式的SVG路径。目前还处在开发阶段。<br>  JFlap2TikZ：JFlap是一个用于有限状态机、图灵机和计算机理论探索实验的工具。JFlap2TikZ则是一个非常有用的脚本，用它可以将JFlap生成的包含图形信息的jff文件转换为包含了TikZ代码的( )文件。<br>  JpgfDraw：一个使用Java编写的线性图形工具。可以将插画导出为PGF格式命令、PNG以及SVG文件。一个有趣的特性是它可以生成flowfram和shapepar包需要的帧序列和图形信息<br>  JTikZ：一个基于Java AWT/Swing的PGF/TikZ可视化绘制工具。<br>  LaTeXPiX：一个GUI绘制工具，支持导出EEPIC和PGF代码，不过只支持Windows。<br>  Matfig2PGF：一个能够将Matlab图形脚本转换为PGF代码的工具。<br>  matlab2tikz：基于上面的Matfig2PGF，也是一个能将Matlab的图形转换为TikZ格式命令的工具。<br>  QtiPlot：一个用于二维/三维数据可视化及数据分析的程序。<br>  Sketch - A 3D Scene Description Translator：一个小巧而简单的系统，可以生成二维/三维的物体和场景草图。Sketch可生成PSTricks或者PGF/TikZ代码，并允许对绘制出来的三维物体进行标注。<br>  tikzDevice - TikZ output from R：提供一个针对R项目的全新的图形引擎，支持直接输出为TikZ命令。<br>  TpX drawing tool：一个轻量级的GUI图形绘制工具，可以绘制矢量图形。只支持Windows。</li>
-</ul>
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          TikZ
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/title/">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/03/sourceoftikz/" data-id="cjftq8ny6007me0kela6bxrsn" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LaTeX/">LaTeX</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TikZ/">TikZ</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pdf/">pdf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/source/">source</a></li></ul>
+    
+    
+    
+    <div>
+    
+    </div>
+    <div>
+    
+    </div>
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
     </footer>
   </div>
   
-</article>
+  
+  
+  </article>
 
+
+    
+      
 
   
-    <article id="post-problemsset" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/02/03/problemsset/" class="article-date">
-  <time datetime="2018-02-03T00:17:23.000Z" itemprop="datePublished">2018-02-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/信息学竞赛/">信息学竞赛</a>►<a class="article-category-link" href="/categories/信息学竞赛/题目/">题目</a>
-  </div>
 
-  </div>
-  <div class="article-inner">
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/title/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
     
-    
-      <header class="article-header">
+      <header class="post-header">
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/03/problemsset/">题表 1</a>
-    </h1>
-  
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/title/" itemprop="url">题表 1</a></h1>
+        
 
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-03T08:17:23+08:00">
+                2018-02-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
+                    <span itemprop="name">题目</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/title/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/title/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>HDU<ul>
-<li>HDU 4903</li>
-<li>HDU 1814</li>
-<li>HDU 5385</li>
-<li>HDU 5009</li>
-<li>HDU 2488</li>
-<li>HDU 3060</li>
-<li>HDU 2468</li>
-<li>HDU 4130</li>
-<li>HDU 5683</li>
-<li>HDU 5181</li>
-<li>HDU 5180</li>
-<li>HDU 5570</li>
-<li>HDU 4352</li>
-<li>HDU 2191</li>
-<li>HDU 1542</li>
-<li>HDU 1828</li>
-<li>HDU 2665</li>
-</ul>
-</li>
-<li>POJ<ul>
-<li>POJ 3683</li>
-<li>POJ 1743</li>
-<li>POJ 2391</li>
-<li>POJ 1149</li>
-<li>POJ 3281</li>
-<li>POJ 3415</li>
-<li>POJ 3294</li>
-<li>POJ 2774</li>
-<li>POJ 3267</li>
-<li>POJ 3734</li>
-<li>POJ 2373</li>
-</ul>
-</li>
-<li>BZOJ<ul>
-<li>BZOJ 2962</li>
-<li>BZOJ 2441</li>
-<li>BZOJ 2143</li>
-<li>BZOJ 4043</li>
-<li>BZOJ 2448</li>
-<li>BZOJ 3900</li>
-<li>BZOJ 2243</li>
-<li>BZOJ 3589</li>
-<li>BZOJ 1468</li>
-<li>BZOJ 1095</li>
-<li>BZOJ 1012</li>
-<li>BZOJ 3223</li>
-<li>BZOJ 3065</li>
-<li>BZOJ 2038</li>
-<li>BZOJ 2120</li>
-<li>BZOJ 1086</li>
-<li>BZOJ 4540</li>
-<li>BZOJ 4401</li>
-<li>BZOJ 3263</li>
-<li>BZOJ 3456</li>
-<li>BZOJ 1176</li>
-<li>BZOJ 2716</li>
-<li>BZOJ 3110</li>
-<li>BZOJ 2561</li>
-<li>BZOJ 1001</li>
-<li>BZOJ 3171</li>
-<li>BZOJ 3757</li>
-<li>BZOJ 2555</li>
-<li>BZOJ 2002</li>
-<li>BZOJ 3938</li>
-<li>BZOJ 2588</li>
-<li>BZOJ 3224</li>
-</ul>
-</li>
-<li>Luogu<ul>
-<li>Luogu 4146</li>
-<li>Luogu 2066</li>
-</ul>
-</li>
-<li>CF<ul>
-<li>CF 666B World Tour</li>
-<li>CF 543B Destroying Roads</li>
-<li>CF 295B Greg and Graph</li>
-<li>CF 314E Sereja and Squares</li>
-<li>CF 354D Transferring Pyramid</li>
-<li>CF 888E Maximum Subsequence</li>
-<li>CF 868F Yet Another Minimization Problem</li>
-<li>CF 311E Biologist</li>
-<li>CF 23D Tetragon</li>
-<li>CF 67E Save the City!</li>
-</ul>
-</li>
-<li>Gym<ul>
-<li>Gym 101208J</li>
-<li>Gym 100633D</li>
-<li>Gym 101205E</li>
-</ul>
-</li>
-<li>CC<ul>
-<li>CC BTREE</li>
-<li>CC COUNTARI</li>
-<li>CC FNCS</li>
-<li>CC METEORAK</li>
-<li>CC SHGAME</li>
-<li>CC BNGAME</li>
-<li>CC LEMOVIE</li>
-<li>CC RRTREE2</li>
-<li>CC FRBSUM</li>
-<li>CC MONOPLOY</li>
-<li>CC Chef and Graph Queries</li>
-</ul>
-</li>
-<li>Tsinsen<ul>
-<li>Tsinsen A1333</li>
-<li>Tsinsen A1385</li>
-</ul>
-</li>
-<li>SPOJ<ul>
-<li>SPOJ 694</li>
-<li>SPOJ 705</li>
-<li>SPOJ 8222</li>
-<li>SPOJ 7258</li>
-<li>SPOJ 1811</li>
-<li>SPOJ 1812</li>
-</ul>
-</li>
-<li>51nod<ul>
-<li>51nod 1684</li>
-</ul>
-</li>
-<li>UOJ <ul>
-<li>UOJ 207</li>
-</ul>
-</li>
-<li><p>URAl </p>
-<ul>
-<li>URAL 1297</li>
-<li>URAL 1517</li>
-</ul>
-</li>
-<li><p>NOIP2013 花匠<br>  NOIP2013 花匠</p>
-</li>
-<li>WC<ul>
-<li>WC2008 游览计划</li>
-<li>WC2007 剪刀石头布</li>
-</ul>
-</li>
-<li><p>JSOI</p>
-<ul>
-<li>JSOI2009 火星人prefix</li>
-<li>JSOI2009 等差数列</li>
-<li>JSOI2009 球队收益</li>
-<li>JSOI2008 Blue Mary开公司</li>
-<li>JSOI2007 合金</li>
-</ul>
-</li>
-<li><p>SCOI</p>
-<ul>
-<li>SCOI2011 棘手的操作</li>
-<li>SCOI2007 修车</li>
-</ul>
-</li>
-<li>HNOI<ul>
-<li>HNOI2011 括号修复</li>
-<li>HNOI2009 最小圈</li>
-<li>HNOI2013 切糕</li>
-</ul>
-</li>
-<li>HAOI<ul>
-<li>HAOI2015 T2</li>
-<li>HAOI2007 理想的正方形</li>
-</ul>
-</li>
-<li>CEOI<ul>
-<li>CEOI2008 Order</li>
-</ul>
-</li>
-<li>AHOI<ul>
-<li>AHOI2009 维护序列</li>
-</ul>
-</li>
-<li>SHOI<ul>
-<li>SHOI2008 堵塞的交通</li>
-<li>SHOI2002 滑雪</li>
-</ul>
-</li>
-<li>ZJOI<ul>
-<li>ZJOI2012 网络</li>
-<li>ZJOI2011 道馆之战</li>
-</ul>
-</li>
-<li>CQOI<ul>
-<li>CQOI2009 叶子的染色</li>
-</ul>
-</li>
-<li>HEOI<ul>
-<li>HEOI2015 最短不公共子串</li>
-</ul>
-</li>
-<li>APOI<ul>
-<li>APIO2013 机器人</li>
-<li>APIO2010 特别行动队</li>
-<li>APIO2014 序列分割</li>
-<li>APIO2015 巴厘岛的雕塑</li>
-</ul>
-</li>
-<li>NOI<ul>
-<li>NOI2005 瑰丽的华尔兹</li>
-<li>NOI2004 郁闷的出纳员</li>
-<li>NOI2005 维修数列</li>
-<li>NOI2014 起床困难综合征</li>
-<li>NOI2015 品酒大会</li>
-<li>NOI2007 货币兑换</li>
-<li>NOI2012 骑行川藏</li>
-<li>NOI2006 最大获利</li>
-<li>NOI2010 海拔</li>
-</ul>
-</li>
-<li>POI<ul>
-<li>POI2011 METEOR</li>
-</ul>
-</li>
-<li>CTSC<ul>
-<li>CTSC2009 移民站选址</li>
-</ul>
-</li>
-<li>IOI<ul>
-<li>IOI2011 Dancing Elephants</li>
-</ul>
-</li>
-</ul>
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          来自 HDU , POJ , BZOJ , CF ,NOI 等来源的壹佰五十余道题目.
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/title/">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/03/problemsset/" data-id="cjftq8ny5007ae0kegy0kixuw" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/计划/">计划</a></li></ul>
+    
+    
+    
+    <div>
+    
+    </div>
+    <div>
+    
+    </div>
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
     </footer>
   </div>
   
-</article>
+  
+  
+  </article>
 
+
+    
+      
 
   
-    <article id="post-xxjh1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/02/03/xxjh1/" class="article-date">
-  <time datetime="2018-02-02T23:41:08.000Z" itemprop="datePublished">2018-02-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/信息学竞赛/">信息学竞赛</a>►<a class="article-category-link" href="/categories/信息学竞赛/其它/">其它</a>
-  </div>
 
-  </div>
-  <div class="article-inner">
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/title/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
     
-    
-      <header class="article-header">
+      <header class="post-header">
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/03/xxjh1/">学习计划</a>
-    </h1>
-  
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/title/" itemprop="url">学习计划</a></h1>
+        
 
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-03T07:41:08+08:00">
+                2018-02-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/其它/" itemprop="url" rel="index">
+                    <span itemprop="name">其它</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/title/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/title/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <table>
+      
+
+      
+        
+          
+            <table>
 <thead>
 <tr>
 <th style="text-align:center">时间</th>
@@ -483,499 +990,1806 @@
 </tbody>
 </table>
 
+          
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/03/xxjh1/" data-id="cjftq8nym008oe0ke88pa1kwy" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/计划/">计划</a></li></ul>
+    
+    
+    
+    <div>
+    
+    </div>
+    <div>
+    
+    </div>
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
     </footer>
   </div>
   
-</article>
+  
+  
+  </article>
 
+
+    
+      
 
   
-    <article id="post-mathjaxormd" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/02/03/mathjaxormd/" class="article-date">
-  <time datetime="2018-02-02T23:39:03.000Z" itemprop="datePublished">2018-02-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/解决方案/">解决方案</a>►<a class="article-category-link" href="/categories/解决方案/Hexo/">Hexo</a>
-  </div>
 
-  </div>
-  <div class="article-inner">
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/title/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
     
-    
-      <header class="article-header">
+      <header class="post-header">
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/03/mathjaxormd/">处理 MathJax 与 Markdown 转义字符不能兼容的问题</a>
-    </h1>
-  
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/title/" itemprop="url">处理 MathJax 与 Markdown 转义字符不能兼容的问题</a></h1>
+        
 
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-03T07:39:03+08:00">
+                2018-02-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解决方案/" itemprop="url" rel="index">
+                    <span itemprop="name">解决方案</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解决方案/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/title/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/title/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>在使用 <strong><em>Hexo</em></strong> 写文章时,会遇到这样一个问题:<br>如果我们使用 MathJax 来渲染 Tex 公式并且使用到了 <strong><em>下标</em></strong> 例如<br><code>f(n)=\sum\limits_{i=1}^n\sum\limits_{j=1}^m\cdots</code><br>$$f(n)=\sum\limits_{i=1}^n\sum\limits_{j=1}^m\cdots$$就会发生两个<code>_</code>符号之间的内容变成了 <strong><em>斜体</em></strong> 并且公式不能正确渲染;而在一般的 Markdown 编辑器中就能正确渲染.相似情况的还有<code>\\</code>等字符.<br>这是因为在 Markdown 中,<strong>_ $\ldots$_</strong> 表示<strong>斜体</strong>,而 Hexo 默认的<strong>渲染引擎</strong>会自动将其<strong>转义</strong>,导致问题出现.</p>
-<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><ul>
-<li>更换渲染引擎, github 上有不少诸如此类优化过的渲染引擎,自行<code>uninstall</code>,<code>install</code>即可.</li>
-<li>[推荐]直接更改渲染引擎的脚本文件,取消其对<code>_..._</code>和’\\’的转义即可.</li>
-</ul>
-<p><strong><em>Tips:如果使用第二种解决方案,仍可使用`</em>…<em>`对目标处理产生斜体</em></strong></p>
-<h4 id="附件"><a href="#附件" class="headerlink" title="附件"></a>附件</h4><ul>
-<li>更改后的<code>/node_modules/kramed/lib/rules/inline.js</code>文件,只对其 11,20 行进行更改<br><a href="/myjson/inline.js">inline.js</a></li>
-<li>经过更改后的<code>nodes_modules/marked/lib/marked.js</code>.<br><a href="/myjson/marked.js">marked.js</a></li>
-</ul>
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          使用 MathJax 写公式时，下标`_`和换行'\\'会被 Hexo 的 Markdown 渲染引擎 转义,可以通过更改渲染引擎或者更改脚本的方式解决这一问题.
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/title/">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/03/mathjaxormd/" data-id="cjftq8nvs003ee0kelldeaw1d" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
+    
+    
+    
+    <div>
+    
+    </div>
+    <div>
+    
+    </div>
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
     </footer>
   </div>
   
-</article>
+  
+  
+  </article>
 
+
+    
+      
 
   
-    <article id="post-passwordtesta" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/02/03/passwordtesta/" class="article-date">
-  <time datetime="2018-02-02T23:36:39.000Z" itemprop="datePublished">2018-02-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/解决方案/">解决方案</a>►<a class="article-category-link" href="/categories/解决方案/Hexo/">Hexo</a>
-  </div>
 
-  </div>
-  <div class="article-inner">
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/title/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
     
-    
-      <header class="article-header">
+      <header class="post-header">
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/03/passwordtesta/">测试加密</a>
-    </h1>
-  
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/title/" itemprop="url">测试加密</a></h1>
+        
 
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-03T07:36:39+08:00">
+                2018-02-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解决方案/" itemprop="url" rel="index">
+                    <span itemprop="name">解决方案</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解决方案/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/title/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/title/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这个实现来自<a href="http://blog.csdn.net/Lancelot_Lewis/article/details/53422901" target="_blank" rel="external"> lancelot_lewis 的CSDN博客</a>.</p>
-<p>虽然实现基于的原理比较简单,但是阻拦住 60% 以上的电脑小白应该不是问题.</p>
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          文章的密码:password
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/title/">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/03/passwordtesta/" data-id="cjftq8nxw006ve0ken51uem43" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解决方案/">解决方案</a></li></ul>
+    
+    
+    
+    <div>
+    
+    </div>
+    <div>
+    
+    </div>
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
     </footer>
   </div>
   
-</article>
+  
+  
+  </article>
 
+
+    
+      
 
   
-    <article id="post-p3507a" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/02/03/p3507a/" class="article-date">
-  <time datetime="2018-02-02T23:34:34.000Z" itemprop="datePublished">2018-02-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/信息学竞赛/">信息学竞赛</a>►<a class="article-category-link" href="/categories/信息学竞赛/题目/">题目</a>
-  </div>
 
-  </div>
-  <div class="article-inner">
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/title/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
     
-    
-      <header class="article-header">
+      <header class="post-header">
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/03/p3507a/">P3507 [POI2010]GRA-The Minima Game</a>
-    </h1>
-  
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/title/" itemprop="url">P3507 [POI2010]GRA-The Minima Game</a></h1>
+        
 
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-03T07:34:34+08:00">
+                2018-02-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
+                    <span itemprop="name">题目</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/title/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/title/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p> Alice and Bob learned the minima game, which they like very much, recently.<br>The rules of the game are as follows.<br>A certain number of cards lies on a table, each inscribed with a positive integer.<br>The players make alternate moves, Alice making the first one.<br>A move consists in picking an arbitrary positive number of cards from the table.<br>For such move the player receives a number of points equal to the minimum of the numbers inscribed on the cards he collected.<br>The game ends when the last card is removed from the table.<br>The goal of each player is maximizing the difference between their and their opponent’s score.<br>Alice and Bob have duly noted that there is an optimal strategy in the game.<br>Thus they are asking you to write a program that, for a given set of cards, determines the outcome of the game when both players play optimally.<br>给出N个正整数，AB两个人轮流取数，A先取。每次可以取任意多个数，直到N个数都被取走。每次获得的得分为取的数中的最小值，A和B的策略都是尽可能使得自己的得分减去对手的得分更大。在这样的情况下，最终A的得分减去B的得分为多少。</p>
-<h3 id="输入输出格式"><a href="#输入输出格式" class="headerlink" title="输入输出格式"></a>输入输出格式</h3><h4 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h4><p>In the first line of the standard input there is one integer  () given, denoting the number of cards.</p>
-<p>The second line holds  positive integers  (), separated by single spaces, that are inscribed on the cards.</p>
-<h4 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h4><p>Your program should print out a single line with a single integer to the standard output - the number of points by which Alice wins over Bob, assuming they both play optimally; if it is Bob who has more points, the result should be negative.</p>
-<h3 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="输入样例-1："><a href="#输入样例-1：" class="headerlink" title="输入样例#1："></a>输入样例#1：</h4><p>3<br>1 3 1</p>
-<h4 id="输出样例-1："><a href="#输出样例-1：" class="headerlink" title="输出样例#1："></a>输出样例#1：</h4><p>2</p>
-<h3 id="做法"><a href="#做法" class="headerlink" title="做法:"></a>做法:</h3><p>可以看出一个<strong>结论</strong>:<br>即如果选择了数$i$,那么一定需要选择所以满足$j&gt;i$的数$j$.这样才能使得分尽可能大.</p>
-<p>设$f(i)$为取尽了前$i$个元素,先手得分-后手得分的最大值.</p>
-<p>$s_ {i}$表示从小到大排序后第<code>i</code>个元素.那么转移方程为 $$f(i)=\max\limits_{1\leq j\leq i}{a _ j-f(j-1)}$$</p>
-<p>而且维护函数$f$的前缀最大值非常容易,所以转移方程就可以变成这种形式.<br>$$f(i)=max{f_{i-1},a_i-f_{i-1}}$$</p>
-<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 1000005</span></div><div class="line"></div><div class="line"><span class="keyword">int</span> sum[N];</div><div class="line"><span class="keyword">int</span> f[N];</div><div class="line"><span class="keyword">int</span> ans;</div><div class="line"><span class="keyword">int</span> n;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;sum[i]);</div><div class="line">    sort(sum+<span class="number">1</span>,sum+n+<span class="number">1</span>);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</div><div class="line">        f[i]=max(f[i<span class="number">-1</span>],sum[i]-f[i<span class="number">-1</span>]);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>,f[n]);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          给出N个正整数，AB两个人轮流取数，A先取。每次可以取任意多个数，直到N个数都被取走。每次获得的得分为取的数中的最小值，A和B的策略都是尽可能使得自己的得分减去对手的得分更大。在这样的情况下，最终A的得分减去B的得分为多少。
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/title/">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/03/p3507a/" data-id="cjftq8nxs006ke0kejli4y7y5" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动态规划/">动态规划</a></li></ul>
+    
+    
+    
+    <div>
+    
+    </div>
+    <div>
+    
+    </div>
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
     </footer>
   </div>
   
-</article>
+  
+  
+  </article>
 
+
+    
+      
 
   
-    <article id="post-uoj180A" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/02/03/uoj180A/" class="article-date">
-  <time datetime="2018-02-02T23:33:11.000Z" itemprop="datePublished">2018-02-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/信息学竞赛/">信息学竞赛</a>►<a class="article-category-link" href="/categories/信息学竞赛/题目/">题目</a>
-  </div>
 
-  </div>
-  <div class="article-inner">
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/title/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
     
-    
-      <header class="article-header">
+      <header class="post-header">
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/03/uoj180A/">uoj180</a>
-    </h1>
-  
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/title/" itemprop="url">uoj180</a></h1>
+        
 
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-03T07:33:11+08:00">
+                2018-02-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
+                    <span itemprop="name">题目</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/title/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/title/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h4 id="时间限制：1s"><a href="#时间限制：1s" class="headerlink" title="时间限制：1s"></a>时间限制：1s</h4><h4 id="空间限制：256MB"><a href="#空间限制：256MB" class="headerlink" title="空间限制：256MB"></a>空间限制：256MB</h4><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>时针指向午夜十二点，约定的日子——2月28日终于到来了。随着一声枪响，伏特跳蚤国王率领着他的跳蚤大军们包围了 picks 博士所在的实验室。<br>当然，picks 博士不会坐以待毙，他早就率领着他的猴子们在实验室外修筑了许多的坚固防御工事。<br>经过跳蚤侦察兵的勘察，跳蚤国王发现 picks 博士的防御工事有着 nn 处薄弱点，于是他把他的跳蚤大军分成了 $n$ 支小队，并打算让它们分别进攻每一个薄弱点。但是因为战场混乱，这 $n$ 支小队的位置被打乱了，重新整队之后，跳蚤国王发现第 $i$ 个位置的小队编号为 $Ai$（显然 $A$ 是一个排列）。<br>经过计算，跳蚤国王发现，让第 $i$ 个位置的小队编号为 $Bi$时，他的军队可以发挥出最大的战斗力（保证 $B$ 也是一个排列）。<br>跳蚤国王可以发出指令来改变小队们的排列顺序，每一次，他都会报出一个整数 $i(1≤i&lt;n)$。如果排在第 $i$ 个位置的小队编号大于第 $i+1$ 个位置的小队，那么这两支小队会交换顺序，否则这一个命令将会被忽略。<br>现在跳蚤国王希望他的军队能够发挥出最强大的战斗力，于是他想要知道是否存在一种指令序列，使得小队们可以按照排列 $B$ 的方式排列。<br>但是因为小队数目实在是太多，跳蚤国王一时间也没有看出答案。于是他派跳蚤绑架来了你——这附近最著名的民间科学家来帮他计算这个问题的答案。</p>
-<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h3><p>输入数据第一行包含一个正整数 $n$。<br>接下来两行每行 $n$ 个正整数，分别描述排列 $A$ 和排列 $B$。</p>
-<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h3><p>对于每组数据，如果存在这样的指令序列，输出“YES”，否则输出“NO”(引号不输出，请注意大小写)。</p>
-<h3 id="样例一"><a href="#样例一" class="headerlink" title="样例一"></a>样例一</h3><h4 id="input"><a href="#input" class="headerlink" title="input"></a>input</h4><p>3<br>2 3 1<br>2 1 3</p>
-<h4 id="output"><a href="#output" class="headerlink" title="output"></a>output</h4><p>YES</p>
-<h4 id="explanation"><a href="#explanation" class="headerlink" title="explanation"></a>explanation</h4><p>只要报出2，也就是交换第2个位置和第3个位置的小队即可。</p>
-<h3 id="样例二"><a href="#样例二" class="headerlink" title="样例二"></a>样例二</h3><h4 id="input-1"><a href="#input-1" class="headerlink" title="input"></a>input</h4><p>3<br>2 1 3<br>3 1 2</p>
-<h4 id="output-1"><a href="#output-1" class="headerlink" title="output"></a>output</h4><p>NO</p>
-<h4 id="explanation-1"><a href="#explanation-1" class="headerlink" title="explanation"></a>explanation</h4><p>注意只有相邻的满足前一个数大于后一个数的情况下才可以交换。</p>
-<h3 id="样例三"><a href="#样例三" class="headerlink" title="样例三"></a>样例三</h3><h4 id="input-2"><a href="#input-2" class="headerlink" title="input"></a>input</h4><p>5<br>4 1 2 5 3<br>1 2 4 3 5</p>
-<h4 id="output-2"><a href="#output-2" class="headerlink" title="output"></a>output</h4><p>YES</p>
-<h4 id="explanation-2"><a href="#explanation-2" class="headerlink" title="explanation"></a>explanation</h4><p>步骤如下(每次交换的两个数加粗表示)：<br><strong>4 1</strong> 2 5 3<br>1 <strong>4 2</strong> 5 3<br>1 2 4 <strong>5 3</strong><br>1 2 4 3 5</p>
-<h4 id="样例四"><a href="#样例四" class="headerlink" title="样例四"></a>样例四</h4><h4 id="input-3"><a href="#input-3" class="headerlink" title="input"></a>input</h4><p>5<br>1 5 3 4 2<br>1 2 4 3 5</p>
-<h4 id="output-3"><a href="#output-3" class="headerlink" title="output"></a>output</h4><p>NO</p>
-<h3 id="样例五"><a href="#样例五" class="headerlink" title="样例五"></a>样例五</h3><h4 id="input-4"><a href="#input-4" class="headerlink" title="input"></a>input</h4><p>8<br>8 2 7 4 5 3 6 1<br>2 8 5 7 4 3 6 1 </p>
-<h4 id="output-4"><a href="#output-4" class="headerlink" title="output"></a>output</h4><p>NO</p>
-<h3 id="限制与约定"><a href="#限制与约定" class="headerlink" title="限制与约定"></a>限制与约定</h3><table>
-<thead>
-<tr>
-<th style="text-align:center">子任务</th>
-<th style="text-align:center">分值</th>
-<th style="text-align:center">限制与约定</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">24</td>
-<td style="text-align:center">n≤8n≤8</td>
-</tr>
-<tr>
-<td style="text-align:center">2</td>
-<td style="text-align:center">32</td>
-<td style="text-align:center">n≤1000n≤1000</td>
-</tr>
-<tr>
-<td style="text-align:center">3</td>
-<td style="text-align:center">44</td>
-<td style="text-align:center">n≤100000n≤100000</td>
-</tr>
-</tbody>
-</table>
-<p>对于所有数据，1≤n≤1000001≤n≤100000，保证输入的AA和BB均为一个排列。</p>
-<h3 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h3><h4 id="做法1"><a href="#做法1" class="headerlink" title="做法1"></a>做法1</h4><p>模拟冒泡排序从前往后比对$A$和$B$,当$A_i≠B_i$时，找到$B_i$在$A$中的位置$j$,</p>
-<ul>
-<li>若$\min{A_{i+1},A_{i+2},\cdots,A_{j-1}}&lt;A_j$,说明$A_j$无法交换到$i$，即目标序列不可达;</li>
-<li>反之，将$A_j$置为$inf$，继续比对.</li>
-</ul>
-<p>需要维护区间最小值，单点修改,使用线段树即可.</p>
-<h5 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 100005</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> inf 0x3f3f3f3f</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">read</span><span class="params">(<span class="keyword">int</span> &amp;s)</span></span>&#123;</div><div class="line">    <span class="keyword">char</span> ch=getchar();</div><div class="line">    <span class="keyword">for</span>(;!<span class="built_in">isdigit</span>(ch);ch=getchar());</div><div class="line">    <span class="keyword">for</span>(s=<span class="number">0</span>;<span class="built_in">isdigit</span>(ch);s=s*<span class="number">10</span>+ch-<span class="string">'0'</span>,ch=getchar());</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">int</span> a[N],b[N];</div><div class="line"><span class="keyword">int</span> pos[N];</div><div class="line"><span class="keyword">int</span> t[N&lt;&lt;<span class="number">2</span>];</div><div class="line"><span class="keyword">int</span> n;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> ret)</span></span>&#123;</div><div class="line">    t[ret]=min(t[ret&lt;&lt;<span class="number">1</span>],t[ret&lt;&lt;<span class="number">1</span>|<span class="number">1</span>]);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> ret)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(l==r)&#123;</div><div class="line">        t[ret]=a[l];<span class="keyword">return</span> ;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">int</span> mid=(l+r)&gt;&gt;<span class="number">1</span>;</div><div class="line">    build(l,mid,ret&lt;&lt;<span class="number">1</span>);</div><div class="line">    build(mid+<span class="number">1</span>,r,ret&lt;&lt;<span class="number">1</span>|<span class="number">1</span>);</div><div class="line">    merge(ret);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> ret,<span class="keyword">int</span> L,<span class="keyword">int</span> R)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(L&lt;=l&amp;&amp;R&gt;=r)</div><div class="line">        <span class="keyword">return</span> t[ret];</div><div class="line">    <span class="keyword">int</span> mid=(l+r)&gt;&gt;<span class="number">1</span>;</div><div class="line">    <span class="keyword">int</span> ans=inf;</div><div class="line">    <span class="keyword">if</span>(L&lt;=mid)ans=min(ans,query(l,mid,ret&lt;&lt;<span class="number">1</span>,L,R));</div><div class="line">    <span class="keyword">if</span>(R&gt;mid)ans=min(ans,query(mid+<span class="number">1</span>,r,ret&lt;&lt;<span class="number">1</span>|<span class="number">1</span>,L,R));</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">modify</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> ret,<span class="keyword">int</span> pos)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(l==r)&#123;</div><div class="line">        t[ret]=inf;</div><div class="line">        <span class="keyword">return</span> ;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">int</span> mid=(l+r)&gt;&gt;<span class="number">1</span>;</div><div class="line">    <span class="keyword">if</span>(mid&gt;=pos)modify(l,mid,ret&lt;&lt;<span class="number">1</span>,pos);</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(mid&lt;pos)modify(mid+<span class="number">1</span>,r,ret&lt;&lt;<span class="number">1</span>|<span class="number">1</span>,pos);</div><div class="line">    merge(ret);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    read(n);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)read(a[i]),pos[a[i]]=i;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)read(b[i]);</div><div class="line">    build(<span class="number">1</span>,n,<span class="number">1</span>);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</div><div class="line">        <span class="keyword">int</span> p=pos[b[i]];</div><div class="line">        <span class="keyword">int</span> tmp=query(<span class="number">1</span>,n,<span class="number">1</span>,<span class="number">1</span>,p);</div><div class="line">        <span class="keyword">if</span>(tmp&lt;b[i])&#123;</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"NO\n"</span>);</div><div class="line">            <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> modify(<span class="number">1</span>,n,<span class="number">1</span>,p);</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"YES\n"</span>);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="做法2"><a href="#做法2" class="headerlink" title="做法2"></a>做法2</h4>
+      
+
+      
+        
+          有一个长度为n的初始排列A,一个目标排列B,每次可以选定一个数(非最后一个),若它比它后一位的数大,则交换这两个数问是否能够达到目标排列(n<10^5+1)
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/title/">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/03/uoj180A/" data-id="cjftq8nym0088e0ke3gk8gd9s" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/线段树/">线段树</a></li></ul>
+    
+    
+    
+    <div>
+    
+    </div>
+    <div>
+    
+    </div>
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
     </footer>
   </div>
   
-</article>
+  
+  
+  </article>
 
+
+    
+      
 
   
-    <article id="post-cf897b" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/02/02/cf897b/" class="article-date">
-  <time datetime="2018-02-02T13:43:32.000Z" itemprop="datePublished">2018-02-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/信息学竞赛/">信息学竞赛</a>►<a class="article-category-link" href="/categories/信息学竞赛/题目/">题目</a>
-  </div>
 
-  </div>
-  <div class="article-inner">
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/title/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
     
-    
-      <header class="article-header">
+      <header class="post-header">
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/02/cf897b/">CF897B Chtholly&#39;s request</a>
-    </h1>
-  
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/title/" itemprop="url">CF897B Chtholly's request</a></h1>
+        
 
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-02T21:43:32+08:00">
+                2018-02-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
+                    <span itemprop="name">题目</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/title/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/title/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>CF897B Chtholly’s request</p>
-<h3 id="题意翻译"><a href="#题意翻译" class="headerlink" title="题意翻译"></a>题意翻译</h3><p>如果一个数字在十进制下没有前导零、长度为偶数且是一个回文数，那么它是一个zcy数<br>例如12321和1221是回文数，123和12451不是。 而且，1221是zcy数，12321不是。<br>给出整数k , p ，计算出前k小的zcy数的和并输出其模 p 后的结果 Translated by @保登心爱</p>
-<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>— Thanks a lot for today.— I experienced so many great things.<br>— You gave me memories like dreams… But I have to leave now…<br>— One last request, can you…<br>— Help me solve a Codeforces problem?<br>— ……<br>— What?<br>Chtholly has been thinking about a problem for days:<br>If a number is palindrome and length of its decimal representation without leading zeros is even, we call it a zcy number. A number is palindrome means when written in decimal representation, it contains no leading zeros and reads the same forwards and backwards. For example 12321 and 1221 are palindromes and 123 and 12451 are not. Moreover, 1221 is zcy number and 12321 is not.<br>Given integers k and p , calculate the sum of the k k smallest zcy numbers and output this sum modulo p .<br>Unfortunately, Willem isn’t good at solving this kind of problems, so he asks you for help!</p>
-<h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>The first line contains two integers $k$ and $p$ ($1&lt;=k&lt;=10^{5}$,$1&lt;=p&lt;=10^{9}$)</p>
-<h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>Output single integer — answer to the problem.</p>
-<h4 id="输入样例-1："><a href="#输入样例-1：" class="headerlink" title="输入样例#1："></a>输入样例#1：</h4><p>2 100</p>
-<h4 id="输出样例-1："><a href="#输出样例-1：" class="headerlink" title="输出样例#1："></a>输出样例#1：</h4><p>33</p>
-<h4 id="输入样例-2："><a href="#输入样例-2：" class="headerlink" title="输入样例#2："></a>输入样例#2：</h4><p>5 30</p>
-<h4 id="输出样例-2："><a href="#输出样例-2：" class="headerlink" title="输出样例#2："></a>输出样例#2：</h4><p>15</p>
-<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>In the first example, the smallest zcy number is 11 11 , and the second smallest zcy number is 22 .</p>
-<p>In the second example.</p>
-<h3 id="做法"><a href="#做法" class="headerlink" title="做法:"></a>做法:</h3><p>考虑前$k$个回文数,不是很好处理,需要用<strong>马拉车算法</strong>处理,考虑长度为偶数的回文串,同样不是很好处理.<br>但是这两个条件一加起来就很容易发现<strong>这正是前$k$个数反向重复一遍加和</strong>.<br>就像数$123$经过处理之后变成$123321$，容易证明前这正是答案.</p>
-<p>学会几个新技能:</p>
-<ul>
-<li>c++11新标准 _to_string_ 函数,将<strong>整数</strong>转化为<strong>字符串</strong>.</li>
-<li>将<strong>字符串</strong>转化为<strong>整数</strong>函数<code>atoi()</code></li>
-<li>将<strong>字符串</strong>输出到<strong>流</strong>,并从流中以<strong>整数</strong>形式读入,支持<code>long long</code>.</li>
-</ul>
-<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;sstream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> K 10005</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="built_in">string</span> str1,str2;</div><div class="line"><span class="keyword">long</span> <span class="keyword">long</span> sigma;</div><div class="line"><span class="keyword">int</span> k,p;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">stoll</span><span class="params">(<span class="built_in">string</span> &amp;str)</span></span>&#123;  </div><div class="line">    <span class="keyword">long</span> <span class="keyword">long</span> result;  </div><div class="line">    <span class="function"><span class="built_in">istringstream</span> <span class="title">is</span><span class="params">(str)</span></span>;  </div><div class="line">    is&gt;&gt;result;  </div><div class="line">    <span class="keyword">return</span> result%p;  </div><div class="line">&#125;  </div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;k,&amp;p);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=k;++i)&#123;</div><div class="line">        str1=str2=to_string(i);</div><div class="line">        reverse(str2.begin(),str2.end());</div><div class="line">        str1+=str2;</div><div class="line">        sigma=(sigma+stoll(str1))%p;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%lld"</span>,sigma);</div><div class="line">    system(<span class="string">"pause"</span>);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>洛谷最近支持<code>cf</code>了,只是速度感人;</p>
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          求前 k 个没有前导零长度为偶数的一个回文数在 mod p 下的和.
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/title/">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/02/cf897b/" data-id="cjftq8nur001ke0ketinjl24o" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/回文串/">回文串</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/字符串/">字符串</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/构造/">构造</a></li></ul>
+    
+    
+    
+    <div>
+    
+    </div>
+    <div>
+    
+    </div>
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
     </footer>
   </div>
   
-</article>
+  
+  
+  </article>
 
+
+    
+      
 
   
-    <article id="post-gcctest-md" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/01/27/gcctest-md/" class="article-date">
-  <time datetime="2018-01-27T11:25:59.000Z" itemprop="datePublished">2018-01-27</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/解决方案/">解决方案</a>►<a class="article-category-link" href="/categories/解决方案/VSCode/">VSCode</a>
-  </div>
 
-  </div>
-  <div class="article-inner">
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/title/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
     
-    
-      <header class="article-header">
+      <header class="post-header">
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/27/gcctest-md/">在 VSCode 上使用 C++11</a>
-    </h1>
-  
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/title/" itemprop="url">在 VSCode 上使用 C++11</a></h1>
+        
 
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-27T19:25:59+08:00">
+                2018-01-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解决方案/" itemprop="url" rel="index">
+                    <span itemprop="name">解决方案</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解决方案/VSCode/" itemprop="url" rel="index">
+                    <span itemprop="name">VSCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/title/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/title/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="文本编辑器编译源代码的原理"><a href="#文本编辑器编译源代码的原理" class="headerlink" title="文本编辑器编译源代码的原理"></a>文本编辑器编译源代码的原理</h3><p>对任何文本编辑器的设置使其能编译 <code>c/c++</code> 文件都是基于同样的原理.尝试用终端完成这一工作.</p>
-<ul>
-<li><p>首先得确认你的电脑上存在一套 <code>c/c++</code> 的编辑环境 (_Linux_预装,_windows_需要自己装).我使用的是<code>MinGW</code>,当然还有微软的编译环境 _伴随<strong>Visual Studio</strong>_ .<br>下面的内容适用于<code>GCC</code>和<code>Linux</code>用户.</p>
-<p>  Tips:需要介绍<code>MinGW</code>和<code>GCC</code>的关系,<code>GCC</code>是来自<code>GNU</code>的一套编译器.<code>MinGw</code>是其在<code>Windows</code>环境的移植.<br>  而微软的<code>MSVC</code>就与此不同,它是<code>VS</code>的编译器,编译速度更快.</p>
-</li>
-<li><p>打开<strong>cmd</strong> _（如果是<strong>Linux</strong>就是<strong>终端</strong>）_<br>输入<code>g++</code>，如果出现<code>g++: fatal error: no input files</code>的命令说明电脑中存在编译环境.<strong>（或者需要将其加入路径）</strong><br>接下来跳转到目标文件所在文件夹.</p>
-</li>
-</ul>
-<p>例如下面这段代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">C:\Users\Frank&gt;cd E:</div><div class="line">E:\</div><div class="line"></div><div class="line">C:\Users\Frank&gt;E:</div><div class="line"></div><div class="line">E:\&gt;cd Work</div><div class="line"></div><div class="line">E:\Work&gt;g++ -g 2327.cpp -o 2327.cpp.exe</div><div class="line"></div><div class="line">E:\Work&gt;</div></pre></td></tr></table></figure></p>
-<p>然后在文件夹里会出现一个新文件<code>2327.cpp.exe</code>.</p>
-<ul>
-<li>然后就可以运行这个可执行文件了.</li>
-<li>对其进行调试需要用到调试器,我一般使用<code>GDB</code>(这个同样在<code>MinGW</code>)中存在.</li>
-</ul>
-<p>这个其实就是所有文本编辑器编译<strong>源代码</strong>的工作原理.文本编辑器们做的就是将这一过程自动化,使其可以通过一个命令像<code>&lt;F5&gt;</code>完成上述所有工作.</p>
-<h3 id="使用-VSCode"><a href="#使用-VSCode" class="headerlink" title="使用 VSCode"></a>使用 VSCode</h3><h4 id="插件cpptools"><a href="#插件cpptools" class="headerlink" title="插件cpptools"></a>插件<code>cpptools</code></h4><p><img src="http://i4.bvimg.com/629981/fc0597e0d7dddc5c.png" alt="Markdown"><br>这个插件能帮助完成一些类似于<strong>代码高亮,语法分析</strong>一些工作.</p>
-<ul>
-<li>在<code>VSCode</code>中打开一个文件夹,创建一个<code>cpp</code>文件.</li>
-<li>然后开始调试<br><img src="http://i4.bvimg.com/629981/e9d5c60f87dc881b.png" alt="Markdown"></li>
-<li>随后会自动创建一个<code>Launch.json</code>的文件，路径在<code>文件夹\.vscode</code><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    "version": "0.2.0",</div><div class="line">    "configurations": [&#123;</div><div class="line">        "name": "C++ Launch (GDB)", </div><div class="line">        "type": "cppdbg",</div><div class="line">        "request": "launch", </div><div class="line">        "launchOptionType": "Local", </div><div class="line">        "targetArchitecture": "x86",</div><div class="line">        "program": "$&#123;file&#125;.exe",</div><div class="line">        "miDebuggerPath":"gdb32.exe", </div><div class="line">        //"args": [""], </div><div class="line">        "stopAtEntry": false, </div><div class="line">        "cwd": "$&#123;workspaceRoot&#125;", </div><div class="line">        "externalConsole": true, </div><div class="line">        "preLaunchTask": "g++.exe"　</div><div class="line">    &#125;]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>随后配置任务<code>tasks.json</code><br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"version"</span>: <span class="string">"0.1.0"</span>,</div><div class="line">    <span class="attr">"command"</span>: <span class="string">"g++.exe"</span>,</div><div class="line">    <span class="attr">"args"</span>: [<span class="string">"-g"</span>,<span class="string">"-std=c++11"</span>,<span class="string">"$&#123;file&#125;"</span>,<span class="string">"-o"</span>,<span class="string">"$&#123;fileBasename&#125;.exe"</span>],</div><div class="line">    <span class="attr">"problemMatcher"</span>: &#123;</div><div class="line">        <span class="attr">"owner"</span>: <span class="string">"cpp"</span>,</div><div class="line">        <span class="attr">"fileLocation"</span>: [<span class="string">"relative"</span>, <span class="string">"$&#123;workspaceRoot&#125;"</span>],</div><div class="line">        <span class="attr">"pattern"</span>: &#123;</div><div class="line">            <span class="attr">"regexp"</span>: <span class="string">"^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$"</span>,</div><div class="line">            <span class="attr">"file"</span>: <span class="number">1</span>,</div><div class="line">            <span class="attr">"line"</span>: <span class="number">2</span>,</div><div class="line">            <span class="attr">"column"</span>: <span class="number">3</span>,</div><div class="line">            <span class="attr">"severity"</span>: <span class="number">4</span>,</div><div class="line">            <span class="attr">"message"</span>: <span class="number">5</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          有时候会用到`c++11`的一些新特性,这时候就需要对常用的编辑器进行一些设置,这里对 VSCode 进行设置.
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/title/">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/27/gcctest-md/" data-id="cjftq8nx0004ze0ke8ohtysco" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/测试/">测试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/解决方案/">解决方案</a></li></ul>
+    
+    
+    
+    <div>
+    
+    </div>
+    <div>
+    
+    </div>
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
     </footer>
   </div>
   
-</article>
+  
+  
+  </article>
 
+
+    
+  </section>
 
   
-
-
-  <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/page/9/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/11/">__('next') &raquo;</a>
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/11/"><i class="fa fa-angle-right"></i></a>
   </nav>
-</section>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
         
-          <aside id="sidebar">
+          
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/信息学竞赛/">信息学竞赛</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/信息学竞赛/其它/">其它</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/信息学竞赛/总结/">总结</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/信息学竞赛/我的文档/">我的文档</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/信息学竞赛/考试/">考试</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/信息学竞赛/题目/">题目</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/信息学竞赛/题目/模板/">模板</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/其它/">其它</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/数学/">数学</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/数学/线性代数/">线性代数</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/解决方案/">解决方案</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/解决方案/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/解决方案/LaTeX/">LaTeX</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/解决方案/VSCode/">VSCode</a></li></ul></li></ul>
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
     </div>
   </div>
 
-
-  
+  <aside id="sidebar" class="sidebar">
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2-SAT/">2-SAT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Anti-SG/">Anti-SG</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Beatty定理/">Beatty定理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CDQ分治/">CDQ分治</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CodeForces/">CodeForces</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Debug/">Debug</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Every-SG/">Every-SG</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Floyd/">Floyd</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ICG/">ICG</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LaTeX/">LaTeX</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lasker-s-Nim/">Lasker's Nim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Link-Cut-Tree/">Link-Cut-Tree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Matrix-Tree/">Matrix-Tree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Misere-Games/">Misère Games</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Multi-SG/">Multi-SG</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NOIP/">NOIP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SDOI/">SDOI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SG函数/">SG函数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tarjan/">Tarjan</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TikZ/">TikZ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Trie/">Trie</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Zeckendorf定理/">Zeckendorf定理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bfs/">bfs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/copyright/">copyright</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/document/">document</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lca/">lca</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nim/">nim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pb-ds/">pb_ds</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pdf/">pdf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/source/">source</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/with-draw/">with draw</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/一堆简单题/">一堆简单题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/三维偏序/">三维偏序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二分/">二分</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二分答案/">二分答案</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二维前缀和/">二维前缀和</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二维线段树/">二维线段树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二进制拆分/">二进制拆分</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/位运算/">位运算</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/倍增/">倍增</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/内存池/">内存池</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/决策单调性/">决策单调性</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分块/">分块</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分数规划/">分数规划</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前缀和/">前缀和</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动态规划/">动态规划</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区间dp/">区间dp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/单调栈/">单调栈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/单调队列/">单调队列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博弈论/">博弈论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/后缀数组/">后缀数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/四边形不等式优化/">四边形不等式优化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/回文串/">回文串</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图论/">图论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/基环树/">基环树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/堆优化Dijkstra/">堆优化Dijkstra</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/多重标记/">多重标记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/多重背包/">多重背包</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/威佐夫博弈/">威佐夫博弈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/字符串/">字符串</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/差分约束/">差分约束</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/巴什博弈/">巴什博弈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/带权并查集/">带权并查集</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/平衡树/">平衡树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/并查集/">并查集</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/异或/">异或</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/强制在线/">强制在线</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/强联通分量/">强联通分量</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/归并排序/">归并排序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/快速幂/">快速幂</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/打表/">打表</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/扩展欧几里得/">扩展欧几里得</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/拆点/">拆点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/拓扑排序/">拓扑排序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/指针/">指针</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排列组合/">排列组合</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/搜索/">搜索</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数学/">数学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数论/">数论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/斐波那契博弈/">斐波那契博弈</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/斐波那契数列/">斐波那契数列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/斜率优化/">斜率优化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/无限/">无限</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最大公约数/">最大公约数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最大流/">最大流</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最小生成树/">最小生成树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最短路/">最短路</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最长上升子序列/">最长上升子序列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最长公共子序列/">最长公共子序列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/构造/">构造</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/查分/">查分</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/树/">树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/树形dp/">树形dp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/树状数组/">树状数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模拟/">模拟</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模板/">模板</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/欧拉函数/">欧拉函数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试/">测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/版权信息/">版权信息</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生成树/">生成树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/矩阵快速幂/">矩阵快速幂</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/秦九韶算法/">秦九韶算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/等差数列/">等差数列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/线性代数/">线性代数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/线段树/">线段树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络流/">网络流</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/考试/">考试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/背包/">背包</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/艺术/">艺术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/莫比乌斯反演/">莫比乌斯反演</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/规律/">规律</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/解决方案/">解决方案</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计划/">计划</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/贪心/">贪心</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/逆元/">逆元</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/逆序对/">逆序对</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/错位排列数/">错位排列数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/题目/">题目</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/高精/">高精</a></li></ul>
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/myjson/head.jpg"
+                alt="aiyoupass" />
+            
+              <p class="site-author-name" itemprop="name">aiyoupass</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">103</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">121</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/imwcz" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:aiyoupass@outlook.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://plus.google.com/" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://stackoverflow.com/" target="_blank" title="StackOverflow">
+                      
+                        <i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://attack204.com/" title="attack" target="_blank" rel="external nofollow">attack</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
     </div>
-  </div>
+  </aside>
 
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/2-SAT/" style="font-size: 10px;">2-SAT</a> <a href="/tags/Anti-SG/" style="font-size: 10px;">Anti-SG</a> <a href="/tags/Beatty定理/" style="font-size: 11.25px;">Beatty定理</a> <a href="/tags/CDQ分治/" style="font-size: 10px;">CDQ分治</a> <a href="/tags/CodeForces/" style="font-size: 10px;">CodeForces</a> <a href="/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/tags/Every-SG/" style="font-size: 10px;">Every-SG</a> <a href="/tags/Floyd/" style="font-size: 10px;">Floyd</a> <a href="/tags/Hexo/" style="font-size: 12.5px;">Hexo</a> <a href="/tags/ICG/" style="font-size: 11.25px;">ICG</a> <a href="/tags/LaTeX/" style="font-size: 10px;">LaTeX</a> <a href="/tags/Lasker-s-Nim/" style="font-size: 10px;">Lasker's Nim</a> <a href="/tags/Link-Cut-Tree/" style="font-size: 10px;">Link-Cut-Tree</a> <a href="/tags/Matrix-Tree/" style="font-size: 10px;">Matrix-Tree</a> <a href="/tags/Misere-Games/" style="font-size: 10px;">Misère Games</a> <a href="/tags/Multi-SG/" style="font-size: 11.25px;">Multi-SG</a> <a href="/tags/NOIP/" style="font-size: 17.5px;">NOIP</a> <a href="/tags/Python/" style="font-size: 11.25px;">Python</a> <a href="/tags/SDOI/" style="font-size: 10px;">SDOI</a> <a href="/tags/SG函数/" style="font-size: 10px;">SG函数</a> <a href="/tags/Tarjan/" style="font-size: 10px;">Tarjan</a> <a href="/tags/TikZ/" style="font-size: 10px;">TikZ</a> <a href="/tags/Trie/" style="font-size: 12.5px;">Trie</a> <a href="/tags/Zeckendorf定理/" style="font-size: 10px;">Zeckendorf定理</a> <a href="/tags/bfs/" style="font-size: 10px;">bfs</a> <a href="/tags/copyright/" style="font-size: 10px;">copyright</a> <a href="/tags/document/" style="font-size: 12.5px;">document</a> <a href="/tags/lca/" style="font-size: 10px;">lca</a> <a href="/tags/nim/" style="font-size: 11.25px;">nim</a> <a href="/tags/pb-ds/" style="font-size: 10px;">pb_ds</a> <a href="/tags/pdf/" style="font-size: 16.25px;">pdf</a> <a href="/tags/source/" style="font-size: 10px;">source</a> <a href="/tags/with-draw/" style="font-size: 11.25px;">with draw</a> <a href="/tags/一堆简单题/" style="font-size: 10px;">一堆简单题</a> <a href="/tags/三维偏序/" style="font-size: 10px;">三维偏序</a> <a href="/tags/二分/" style="font-size: 10px;">二分</a> <a href="/tags/二分答案/" style="font-size: 11.25px;">二分答案</a> <a href="/tags/二维前缀和/" style="font-size: 10px;">二维前缀和</a> <a href="/tags/二维线段树/" style="font-size: 10px;">二维线段树</a> <a href="/tags/二进制拆分/" style="font-size: 10px;">二进制拆分</a> <a href="/tags/位运算/" style="font-size: 10px;">位运算</a> <a href="/tags/倍增/" style="font-size: 13.75px;">倍增</a> <a href="/tags/内存池/" style="font-size: 11.25px;">内存池</a> <a href="/tags/决策单调性/" style="font-size: 10px;">决策单调性</a> <a href="/tags/分块/" style="font-size: 11.25px;">分块</a> <a href="/tags/分数规划/" style="font-size: 11.25px;">分数规划</a> <a href="/tags/前缀和/" style="font-size: 10px;">前缀和</a> <a href="/tags/动态规划/" style="font-size: 20px;">动态规划</a> <a href="/tags/区间dp/" style="font-size: 10px;">区间dp</a> <a href="/tags/单调栈/" style="font-size: 10px;">单调栈</a> <a href="/tags/单调队列/" style="font-size: 11.25px;">单调队列</a> <a href="/tags/博弈论/" style="font-size: 18.75px;">博弈论</a> <a href="/tags/后缀数组/" style="font-size: 11.25px;">后缀数组</a> <a href="/tags/四边形不等式优化/" style="font-size: 10px;">四边形不等式优化</a> <a href="/tags/回文串/" style="font-size: 10px;">回文串</a> <a href="/tags/图论/" style="font-size: 13.75px;">图论</a> <a href="/tags/基环树/" style="font-size: 10px;">基环树</a> <a href="/tags/堆优化Dijkstra/" style="font-size: 10px;">堆优化Dijkstra</a> <a href="/tags/多重标记/" style="font-size: 10px;">多重标记</a> <a href="/tags/多重背包/" style="font-size: 10px;">多重背包</a> <a href="/tags/威佐夫博弈/" style="font-size: 11.25px;">威佐夫博弈</a> <a href="/tags/字符串/" style="font-size: 15px;">字符串</a> <a href="/tags/差分约束/" style="font-size: 11.25px;">差分约束</a> <a href="/tags/巴什博弈/" style="font-size: 10px;">巴什博弈</a> <a href="/tags/带权并查集/" style="font-size: 10px;">带权并查集</a> <a href="/tags/平衡树/" style="font-size: 11.25px;">平衡树</a> <a href="/tags/并查集/" style="font-size: 10px;">并查集</a> <a href="/tags/异或/" style="font-size: 11.25px;">异或</a> <a href="/tags/强制在线/" style="font-size: 10px;">强制在线</a> <a href="/tags/强联通分量/" style="font-size: 10px;">强联通分量</a> <a href="/tags/归并排序/" style="font-size: 10px;">归并排序</a> <a href="/tags/快速幂/" style="font-size: 10px;">快速幂</a> <a href="/tags/打表/" style="font-size: 10px;">打表</a> <a href="/tags/扩展欧几里得/" style="font-size: 10px;">扩展欧几里得</a> <a href="/tags/拆点/" style="font-size: 10px;">拆点</a> <a href="/tags/拓扑排序/" style="font-size: 10px;">拓扑排序</a> <a href="/tags/指针/" style="font-size: 12.5px;">指针</a> <a href="/tags/排列组合/" style="font-size: 10px;">排列组合</a> <a href="/tags/搜索/" style="font-size: 16.25px;">搜索</a> <a href="/tags/数学/" style="font-size: 10px;">数学</a> <a href="/tags/数论/" style="font-size: 10px;">数论</a> <a href="/tags/斐波那契博弈/" style="font-size: 10px;">斐波那契博弈</a> <a href="/tags/斐波那契数列/" style="font-size: 10px;">斐波那契数列</a> <a href="/tags/斜率优化/" style="font-size: 11.25px;">斜率优化</a> <a href="/tags/无限/" style="font-size: 10px;">无限</a> <a href="/tags/最大公约数/" style="font-size: 10px;">最大公约数</a> <a href="/tags/最大流/" style="font-size: 10px;">最大流</a> <a href="/tags/最小生成树/" style="font-size: 11.25px;">最小生成树</a> <a href="/tags/最短路/" style="font-size: 16.25px;">最短路</a> <a href="/tags/最长上升子序列/" style="font-size: 11.25px;">最长上升子序列</a> <a href="/tags/最长公共子序列/" style="font-size: 10px;">最长公共子序列</a> <a href="/tags/构造/" style="font-size: 11.25px;">构造</a> <a href="/tags/查分/" style="font-size: 10px;">查分</a> <a href="/tags/树/" style="font-size: 10px;">树</a> <a href="/tags/树形dp/" style="font-size: 16.25px;">树形dp</a> <a href="/tags/树状数组/" style="font-size: 11.25px;">树状数组</a> <a href="/tags/模拟/" style="font-size: 17.5px;">模拟</a> <a href="/tags/模板/" style="font-size: 16.25px;">模板</a> <a href="/tags/欧拉函数/" style="font-size: 10px;">欧拉函数</a> <a href="/tags/测试/" style="font-size: 11.25px;">测试</a> <a href="/tags/版权信息/" style="font-size: 10px;">版权信息</a> <a href="/tags/生成树/" style="font-size: 13.75px;">生成树</a> <a href="/tags/矩阵快速幂/" style="font-size: 11.25px;">矩阵快速幂</a> <a href="/tags/秦九韶算法/" style="font-size: 10px;">秦九韶算法</a> <a href="/tags/等差数列/" style="font-size: 10px;">等差数列</a> <a href="/tags/线性代数/" style="font-size: 11.25px;">线性代数</a> <a href="/tags/线段树/" style="font-size: 17.5px;">线段树</a> <a href="/tags/网络流/" style="font-size: 10px;">网络流</a> <a href="/tags/考试/" style="font-size: 10px;">考试</a> <a href="/tags/背包/" style="font-size: 11.25px;">背包</a> <a href="/tags/艺术/" style="font-size: 11.25px;">艺术</a> <a href="/tags/莫比乌斯反演/" style="font-size: 11.25px;">莫比乌斯反演</a> <a href="/tags/规律/" style="font-size: 11.25px;">规律</a> <a href="/tags/解决方案/" style="font-size: 15px;">解决方案</a> <a href="/tags/计划/" style="font-size: 13.75px;">计划</a> <a href="/tags/贪心/" style="font-size: 15px;">贪心</a> <a href="/tags/逆元/" style="font-size: 10px;">逆元</a> <a href="/tags/逆序对/" style="font-size: 10px;">逆序对</a> <a href="/tags/错位排列数/" style="font-size: 10px;">错位排列数</a> <a href="/tags/题目/" style="font-size: 10px;">题目</a> <a href="/tags/高精/" style="font-size: 11.25px;">高精</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2018/04/10/dphigher/">动态规划题目选做</a>
-          </li>
-        
-          <li>
-            <a href="/2018/04/10/dpeasypros/">历年NOIP简单动态规划题目选做</a>
-          </li>
-        
-          <li>
-            <a href="/2018/04/07/noip2014d2/">NOIP 2014 Day1</a>
-          </li>
-        
-          <li>
-            <a href="/2018/04/07/noip2014d1/">NOIP 2014 Day1</a>
-          </li>
-        
-          <li>
-            <a href="/2018/04/06/SuffixArray/">后缀数组</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
         
       </div>
-      <footer id="footer">
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">aiyoupass</span>
+
   
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2018 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" href="http://hexo.io" rel="external nofollow">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
     
 
-<script src="/js/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
+    
 
   </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+		<script type="text/javascript">
+		_hcwp = window._hcwp || [];
+
+		_hcwp.push({widget:"Bloggerstream", widget_id: 100323, selector:".hc-comment-count", label: "{\%COUNT%\}" });
+
+		
+
+		(function() {
+		if("HC_LOAD_INIT" in window)return;
+		HC_LOAD_INIT = true;
+		var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
+		var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
+		hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://w.hypercomments.com/widget/hc/100323/"+lang+"/widget.js";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hcc, s.nextSibling);
+		})();
+		</script>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+	        displayMath: [ ['$$','$$'], ["\\[","\\]"] ], 
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        },
+        "HTML-CSS": {
+            scale: 85,minScaleAdjust: 80
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
 </body>
 </html>
