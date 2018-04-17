@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="博弈论,Multi-SG,Lasker's Nim," />
+
+
+
+
+
+
+
+
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+<meta name="description" content="两个人做游戏, 有很多堆石子, 两个人依次行动, 每次任意一堆中任意多个石子取出或者将一堆分成两堆.问谁会获胜? 这个问题在 Bormal Nim 的基础上增加了 可以将一堆分成两堆的操作, 该如何处理呢?">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Multi-SG">
+<meta property="og:url" content="http://aiyoupass.com/2018/Multi-SG/index.html">
+<meta property="og:site_name" content="落花微雨">
+<meta property="og:description" content="两个人做游戏, 有很多堆石子, 两个人依次行动, 每次任意一堆中任意多个石子取出或者将一堆分成两堆.问谁会获胜? 这个问题在 Bormal Nim 的基础上增加了 可以将一堆分成两堆的操作, 该如何处理呢?">
+<meta property="og:updated_time" content="2018-02-27T02:41:46.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Multi-SG">
+<meta name="twitter:description" content="两个人做游戏, 有很多堆石子, 两个人依次行动, 每次任意一堆中任意多个石子取出或者将一堆分成两堆.问谁会获胜? 这个问题在 Bormal Nim 的基础上增加了 可以将一堆分成两堆的操作, 该如何处理呢?">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://aiyoupass.com/2018/Multi-SG/"/>
+
+
+
+
+
+  <title>Multi-SG | 落花微雨</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">落花微雨</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">雨淋湿了天空,毁的很讲究.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            Schedule
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-knowledge">
+          <a href="/Knowledge/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />
+            
+            Knowledge
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/Multi-SG/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Multi-SG</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-26T11:12:19+08:00">
+                2018-02-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/总结/" itemprop="url" rel="index">
+                    <span itemprop="name">总结</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/Multi-SG/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/Multi-SG/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  两个人做游戏, 有很多堆石子, 两个人依次行动, 每次任意一堆中任意多个石子取出或者将一堆分成两堆.问谁会获胜? 这个问题在 Bormal Nim 的基础上增加了 可以将一堆分成两堆的操作, 该如何处理呢?
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="放在前面"><a href="#放在前面" class="headerlink" title="放在前面"></a>放在前面</h3><p>　　对于 Multi SG 这个名称我依然比较疑惑, 为什么要这么叫呢?大概是我太较真了.<br>　　不知道为啥, 关于 Multi-SG 的题目虽然不少, 但是都涉及到其它的一些东西, 所以偏难,因为这个东西理论上没什么可以讲的, 所以本文主要讲题.<br>　　下面这道题实际上是 Lasker’s Nim. A special Nim.</p>
+<h3 id="HDU-3032-Nim-or-not-Nim"><a href="#HDU-3032-Nim-or-not-Nim" class="headerlink" title="HDU 3032 Nim or not Nim?"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=3032" target="_blank" rel="external">HDU 3032 Nim or not Nim?</a></h3><h4 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h4><p>　　Nim is a two-player mathematic game of strategy in which players take turns removing objects from distinct heaps. On each turn, a player must remove at least one object, and may remove any number of objects provided they all come from the same heap.</p>
+<p>　　Nim is usually played as a misere game, in which the player to take the last object loses. Nim can also be played as a normal play game, which means that the person who makes the last move (i.e., who takes the last object) wins. This is called normal play because most games follow this convention, even though Nim usually does not.</p>
+<p>　　Alice and Bob is tired of playing Nim under the standard rule, so they make a difference by also allowing the player to separate one of the heaps into two smaller ones. That is, each turn the player may either remove any number of objects from a heap or separate a heap into two smaller ones, and the one who takes the last object wins.</p>
+<h4 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h4><p>　　Input contains multiple test cases. The first line is an integer 1 ≤ T ≤ 100, the number of test cases. Each case begins with an integer N, indicating the number of the heaps, the next line contains N integers s[0], s[1], …., s[N-1], representing heaps with s[0], s[1], …, s[N-1] objects respectively.(1 ≤ N ≤ 10^6, 1 ≤ S[i] ≤ 2^31 - 1)</p>
+<h4 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h4><p>　　For each test case, output a line which contains either “Alice” or “Bob”, which is the winner of this game. Alice will play first. You may asume they never make mistakes.</p>
+<h4 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h4><p>2<br>3<br>2 2 3<br>2<br>3 3</p>
+<h4 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h4><p>Alice<br>Bob</p>
+<h4 id="做法"><a href="#做法" class="headerlink" title="做法:"></a>做法:</h4><p>　　好了让我们忽略那写奇怪的大的吓人的数据范围, 只要想出一种可行的方案就可以.<br>　　其实非常好想是吧, 根本一点思考都不需要.如果在一个操作中将有 $n$ 堆石子的局面 $i$ 变成了 有 $n+1$ 堆的局面 $i’$, 那么 $SG(i’)$ 相比于 $SG(i)$ 发生的变化只不过是:<br>$$SG(i)=SG(1)\oplus SG(2)\oplus \cdots \oplus SG(n)\longrightarrow \ SG(i’)=SG(1)\oplus SG(2)\oplus \cdots \oplus SG(n+1)$$<br>　　它实际上并没有发生什么实质性的变化对吧.最大的不同是它不能像 Normal Nim 一样有那么简洁的做法.它需要递推 SG 函数, 所以可以给出一段可以做这件事情的代码.<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 1000005</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n;</div><div class="line"><span class="keyword">int</span> sg[N];</div><div class="line"><span class="keyword">int</span> stone;</div><div class="line"><span class="keyword">int</span> append[N];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="built_in">cin</span>&gt;&gt;n;</div><div class="line">	<span class="keyword">int</span> ans=<span class="number">0</span>;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;++j)&#123;</div><div class="line">		<span class="built_in">memset</span>(append,<span class="literal">false</span>,<span class="keyword">sizeof</span>(append));</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;j;++i)</div><div class="line">			append[sg[i]]=<span class="number">1</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;j;++i)</div><div class="line">			append[sg[i]^sg[j-i]]=<span class="number">1</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;;++i)</div><div class="line">			<span class="keyword">if</span>(!append[i])&#123;</div><div class="line">				sg[j]=i;</div><div class="line">				<span class="keyword">break</span>;</div><div class="line">			&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</div><div class="line">		<span class="built_in">cin</span>&gt;&gt;stone;</div><div class="line">		ans^=sg[stone];</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span>(ans)</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"Alice\n"</span>);</div><div class="line">	<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"Bob\n"</span>);	</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>　　但是很遗憾, 它不能通过这道题目.但是它可以很好的作为一个打表的程序帮助我们发现规律.(一脸黑线).而且关于下面的规律实在是找不到一个证明, 估计不是很好证明.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line">sg(0)=  0</div><div class="line">sg(1)=  1</div><div class="line">sg(2)=  2</div><div class="line">sg(3)=  4</div><div class="line">sg(4)=  3</div><div class="line">sg(5)=  5</div><div class="line">sg(6)=  6</div><div class="line">sg(7)=  8</div><div class="line">sg(8)=  7</div><div class="line">sg(9)=  9</div><div class="line">sg(10)= 10</div><div class="line">sg(11)= 12</div><div class="line">sg(12)= 11</div><div class="line">sg(13)= 13</div><div class="line">sg(14)= 14</div><div class="line">sg(15)= 16</div><div class="line">sg(16)= 15</div><div class="line">sg(17)= 17</div><div class="line">sg(18)= 18</div><div class="line">sg(19)= 20</div><div class="line">sg(20)= 19</div><div class="line">sg(21)= 21</div><div class="line">sg(22)= 22</div><div class="line">sg(23)= 24</div><div class="line">sg(24)= 23</div><div class="line">sg(25)= 25</div><div class="line">sg(26)= 26</div><div class="line">sg(27)= 28</div><div class="line">sg(28)= 27</div><div class="line">sg(29)= 29</div><div class="line">sg(30)= 30</div><div class="line">sg(31)= 32</div><div class="line">sg(32)= 31</div><div class="line">sg(33)= 33</div><div class="line">sg(34)= 34</div><div class="line">sg(35)= 36</div><div class="line">sg(36)= 35</div><div class="line">sg(37)= 37</div><div class="line">sg(38)= 38</div><div class="line">sg(39)= 40</div><div class="line">sg(40)= 39</div><div class="line">sg(41)= 41</div><div class="line">sg(42)= 42</div><div class="line">sg(43)= 44</div><div class="line">sg(44)= 43</div><div class="line">sg(45)= 45</div><div class="line">sg(46)= 46</div><div class="line">sg(47)= 48</div><div class="line">sg(48)= 47</div><div class="line">sg(49)= 49</div><div class="line">sg(50)= 50</div></pre></td></tr></table></figure></p>
+<p>　　这是 1-100 的SG函数, 我们可以明显的发现一个事实, $|i-sg(i)|\leq 2$.更进一步, 如果我们将 $i-sg(i)$ 看作 $f(i)$, 那么 $f(i)$ 在 前50个数的取值为:<br>　　我们很容易可以发现, 它以 -1,0,0,1 为最小循环节, 那么这道题目就可以轻松解决了.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 1000005</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n,T;</div><div class="line"><span class="keyword">int</span> sg[N];</div><div class="line"><span class="keyword">int</span> stone;</div><div class="line"><span class="keyword">int</span> table[N]=&#123;<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="built_in">cin</span>&gt;&gt;T;</div><div class="line">	<span class="keyword">while</span>(T--)&#123;</div><div class="line">		<span class="built_in">cin</span>&gt;&gt;n;</div><div class="line">		<span class="keyword">int</span> ans=<span class="number">0</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</div><div class="line">			<span class="built_in">cin</span>&gt;&gt;stone;</div><div class="line">			ans^=stone+table[stone%<span class="number">4</span>];</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span>(ans)<span class="built_in">printf</span>(<span class="string">"Alice\n"</span>);</div><div class="line">		<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"Bob\n"</span>);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="POJ-2311-Cutting-Game"><a href="#POJ-2311-Cutting-Game" class="headerlink" title="POJ 2311 Cutting Game"></a><a href="http://poj.org/problem?id=2311" target="_blank" rel="external">POJ 2311 Cutting Game</a></h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>　　Urej loves to play various types of dull games. He usually asks other people to play with him. He says that playing those games can show his extraordinary wit. Recently Urej takes a great interest in a new game, and Erif Nezorf becomes the victim. To get away from suffering playing such a dull game, Erif Nezorf requests your help. The game uses a rectangular paper that consists of W*H grids. Two players cut the paper into two pieces of rectangular sections in turn. In each turn the player can cut either horizontally or vertically, keeping every grids unbroken. After N turns the paper will be broken into N+1 pieces, and in the later turn the players can choose any piece to cut. If one player cuts out a piece of paper with a single grid, he wins the game. If these two people are both quite clear, you should write a problem to tell whether the one who cut first can win or not.</p>
+<h4 id="Input-1"><a href="#Input-1" class="headerlink" title="Input"></a>Input</h4><p>　　The input contains multiple test cases. Each test case contains only two integers W and H (2 &lt;= W, H &lt;= 200) in one line, which are the width and height of the original paper.</p>
+<h4 id="Output-1"><a href="#Output-1" class="headerlink" title="Output"></a>Output</h4><p>　　For each test case, only one line should be printed. If the one who cut first can win the game, print “WIN”, otherwise, print “LOSE”.</p>
+<h4 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input"></a>Sample Input</h4><p>2 2<br>3 2<br>4 2</p>
+<h4 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output"></a>Sample Output</h4><p>LOSE<br>LOSE<br>WIN</p>
+<h4 id="做法-1"><a href="#做法-1" class="headerlink" title="做法:"></a>做法:</h4><p>　　这道题目相对于上一道题目并没有什么不一样的地方, 唯一是它的状态是以两维表示的, 比如说一个 $a\times b$ 的纸片, 而上一道题是一堆 $m$ 个石子.所以这一道题和上一道题的做法一样, 只需要求出所有可能的子游戏的 SG 函数, 游戏的 SG 值就是这些子游戏 SG 值的异或和.<br>　　Tips: 题目说当游戏说出现了 $1\times 1$ 的纸片时结束, 也就是说$1\times $<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 205</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n,T;</div><div class="line"><span class="keyword">int</span> Set[N];</div><div class="line"><span class="keyword">int</span> sg[N][N];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=<span class="number">200</span>;++i)</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">2</span>;j&lt;=<span class="number">200</span>;++j)&#123;</div><div class="line">		<span class="built_in">memset</span>(Set,<span class="number">0</span>,<span class="keyword">sizeof</span>(Set));</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">2</span>;k&lt;=i<span class="number">-2</span>;++k)</div><div class="line">			Set[sg[k][j]^sg[i-k][j]]=<span class="number">1</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">2</span>;k&lt;=j<span class="number">-2</span>;++k)</div><div class="line">			Set[sg[i][k]^sg[i][j-k]]=<span class="number">1</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;;++k)</div><div class="line">			<span class="keyword">if</span>(!Set[k])&#123;</div><div class="line">				sg[i][j]=k;</div><div class="line">				<span class="keyword">break</span>;</div><div class="line">			&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">int</span> n,m;</div><div class="line">	<span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m)==<span class="number">2</span>)&#123;</div><div class="line">		<span class="keyword">if</span>(sg[n][m])</div><div class="line">			<span class="built_in">printf</span>(<span class="string">"WIN\n"</span>);</div><div class="line">		<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"LOSE\n"</span>);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="POJ-3537-BZOJ-2940"><a href="#POJ-3537-BZOJ-2940" class="headerlink" title="POJ 3537/BZOJ 2940"></a>POJ 3537/BZOJ 2940</h3><p>　　对于这两道题目, 我们都可以抽象出这么一个模型, 给出 n 个石子, 将其中一些连续的拿走, 最后无法继续行动游戏结束.<br>　　所以这道题大概是比上面那一道题目还要简单一些, 只需要递推一维状态.但是成功从题面中提取出问题的模型还是一个非常重要的能力.<br>　　但是有些细节方面还需要斟酌.所以这两道题目可以当成是练习题.</p>
+<h3 id="BZOJ-1188-HNOI2007-分裂游戏"><a href="#BZOJ-1188-HNOI2007-分裂游戏" class="headerlink" title="BZOJ 1188 [HNOI2007] 分裂游戏"></a>BZOJ 1188 [HNOI2007] 分裂游戏</h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>　　聪聪和睿睿最近迷上了一款叫做分裂的游戏。该游戏的规则试：共有n个瓶子，标号为0,1,2…..n-1,第i个瓶子中装有p[i]颗巧克力豆，两个人轮流取豆子，每一轮每人选择3个瓶子。标号为i,j,k,并要保证i&lt;j,j&lt;=k且第i个瓶子中至少要有1颗巧克力豆，随后这个人从第i个瓶子中拿走一颗豆子并在j,k中各放入一粒豆子（j可能等于k）。如果轮到某人而他无法按规则取豆子，那么他将输掉比赛。胜利者可以拿走所有的巧克力豆！两人最后决定由聪聪先取豆子，为了能够得到最终的巧克力豆，聪聪自然希望赢得比赛。他思考了一下，发现在有的情况下，先拿的人一定有办法取胜，但是他不知道对于其他情况是否有必胜策略，更不知道第一步该如何取。他决定偷偷请教聪明的你，希望你能告诉他，在给定每个瓶子中的最初豆子数后是否能让自己得到所有巧克力豆，他还希望你告诉他第一步该如何取，并且为了必胜，第一步有多少种取法？假定 1 &lt; n &lt; = 21,p[i] &lt; = 10000</p>
+<h4 id="Input-2"><a href="#Input-2" class="headerlink" title="Input"></a>Input</h4><p>　　输入文件第一行是一个整数t表示测试数据的组数，接下来为t组测试数据（t&lt;=10）。每组测试数据的第一行是瓶子的个数n，接下来的一行有n个由空格隔开的非负整数，表示每个瓶子中的豆子数。</p>
+<h4 id="Output-2"><a href="#Output-2" class="headerlink" title="Output"></a>Output</h4><p>　　对于每组测试数据，输出包括两行，第一行为用一个空格两两隔开的三个整数，表示要想赢得游戏，第一步应该选取的3个瓶子的编号i,j,k，如果有多组符合要求的解，那么输出字典序最小的一组。如果无论如何都无法赢得游戏，那么输出用一个空格两两隔开的三个-1。第二行表示要想确保赢得比赛，第一步有多少种不同的取法。</p>
+<h4 id="Sample-Input-2"><a href="#Sample-Input-2" class="headerlink" title="Sample Input"></a>Sample Input</h4><p>2<br>4<br>1 0 1 5000<br>3<br>0 0 1</p>
+<h4 id="Sample-Output-2"><a href="#Sample-Output-2" class="headerlink" title="Sample Output"></a>Sample Output</h4><p>0 2 3<br>1<br>-1 -1 -1<br>0</p>
+<h4 id="做法-2"><a href="#做法-2" class="headerlink" title="做法:"></a>做法:</h4><p>　　这道题目和前面几道题目难度要高.但是仍然是 Multi-SG 的基本应用, 难度在于分析于建模.<br>　　我们可以观察出这样的性质, 如果当前位置有偶数个豆子, 那么一个人总能抵消掉一个人的的操作, 因此我们只需要考虑个数为奇数的即可.而且完全可以将奇数个看成1个, 所以序列就变成了01串.<br>　　接下来用 Multi-SG 的方法做就可以了, 最后输出方案就见仁见智了.<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 1001</span></div><div class="line"></div><div class="line"><span class="keyword">int</span> n,S[N],SG[N];</div><div class="line"><span class="keyword">int</span> a[N];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> now)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(SG[now]!=<span class="number">-1</span>) <span class="keyword">return</span> SG[now];</div><div class="line">    <span class="built_in">memset</span>(S,<span class="number">0</span>,<span class="keyword">sizeof</span>(S));</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=now+<span class="number">1</span>;i&lt;=N;i++)</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=i;j&lt;=N;j++)</div><div class="line">            S[ (dfs(i)^dfs(j)) ] = <span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;;i++) <span class="keyword">if</span>(!S[i]) &#123;SG[now]=i;<span class="keyword">break</span>;&#125;</div><div class="line">    <span class="keyword">return</span> SG[now];</div><div class="line">&#125; </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> T;<span class="built_in">cin</span>&gt;&gt;T;</div><div class="line">    <span class="keyword">while</span>(T--)&#123;</div><div class="line">        <span class="built_in">memset</span>(SG,<span class="number">-1</span>,<span class="keyword">sizeof</span>(SG));</div><div class="line">        <span class="built_in">cin</span>&gt;&gt;n;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;i++) a[i]=read();</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;i++) </div><div class="line">                <span class="keyword">if</span>(a[i]&amp;<span class="number">1</span>) dfs(i);    </div><div class="line">        <span class="keyword">int</span> ans=<span class="number">0</span>,tot=<span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;i++) <span class="keyword">if</span>(a[i]&amp;<span class="number">1</span>)ans=(ans^dfs(i));</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;i++)</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;=N;j++)</div><div class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> k=j;k&lt;=N;k++)</div><div class="line">                &#123;</div><div class="line">                    <span class="keyword">if</span>( (ans^dfs(i)^dfs(j)^dfs(k) )!=<span class="number">0</span>) <span class="keyword">continue</span>;</div><div class="line">                    tot++;</div><div class="line">                    <span class="keyword">if</span>(tot==<span class="number">1</span>) <span class="built_in">printf</span>(<span class="string">"%d %d %d\n"</span>,i<span class="number">-1</span>,j<span class="number">-1</span>,k<span class="number">-1</span>);</div><div class="line">                &#125;</div><div class="line">        <span class="keyword">if</span>(tot==<span class="number">0</span>) <span class="built_in">printf</span>(<span class="string">"-1 -1 -1\n"</span>);</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,tot);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="Luogu-P3235-HNOI2014-江南乐"><a href="#Luogu-P3235-HNOI2014-江南乐" class="headerlink" title="Luogu P3235 [HNOI2014]江南乐"></a><a href="https://www.luogu.org/problemnew/show/P3235" target="_blank" rel="external">Luogu P3235 [HNOI2014]江南乐</a></h3><h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>　　小A是一个名副其实的狂热的回合制游戏玩家。在获得了许多回合制游戏的世界级奖项之后，小A有一天突然想起了他小时候在江南玩过的一个回合制游戏。</p>
+<p>　　游戏的规则是这样的，首先给定一个数F，然后游戏系统会产生T组游戏。每一组游戏包含N堆石子，小A和他的对手轮流操作。每次操作时，操作者先选定一个不小于2的正整数M (M是操作者自行选定的，而且每次操作时可不一样)，然后将任意一堆数量不小于F的石子分成M堆，并且满足这M堆石子中石子数最多的一堆至多比石子数最少的一堆多1（即分的尽量平均，事实上按照这样的分石子万法，选定M和一堆石子后，它分出来的状态是固定的）。当一个玩家不能操作的时候，也就是当每一堆石子的数量都严格小于F时，他就输掉。(补充：先手从N堆石子中选择一堆数量不小于F的石子分成M堆后，此时共有N+M-1)堆石子，接下来小A从这N+M-1堆石子中选择一堆数量不小于F的石子，依此类推。</p>
+<p>　　小A从小就是个有风度的男生，他邀请他的对手作为先手。小A现在想要知道，面对给定的一组游戏，而且他的对手也和他一样聪明绝顶的话，究竟谁能够获得胜利？</p>
+<h4 id="输入输出格式"><a href="#输入输出格式" class="headerlink" title="输入输出格式"></a>输入输出格式</h4><h5 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h5><p>　　输入第一行包含两个正整数T和F，分别表示游戏组数与给定的数。 接下来T行，每行第一个数N表示该组游戏初始状态下有多少堆石子。之后N个正整数，表示这N堆石子分别有多少个。</p>
+<h5 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h5><p>　　输出一行，包含T个用空格隔开的0或1的数，其中0代表此时小A（后手）会胜利，而1代表小A的对手（先手）会胜利。</p>
+<h4 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例</h4><h5 id="输入样例-1："><a href="#输入样例-1：" class="headerlink" title="输入样例#1："></a>输入样例#1：</h5><p>4 3<br>1 1<br>1 2<br>1 3<br>1 5</p>
+<h5 id="输出样例-1："><a href="#输出样例-1：" class="headerlink" title="输出样例#1："></a>输出样例#1：</h5><p>0 0 1 1</p>
+<h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p>对于100%的数据，T&lt;100，N&lt;100，F&lt;100000，每堆石子数量&lt;100000。<br>以上所有数均为正整数。</p>
+<h4 id="做法-3"><a href="#做法-3" class="headerlink" title="做法:"></a>做法:</h4><p>　　这道题目的题意是, 给出 n 堆石子, 每次可以选择将大于某个数一堆平均分成多个堆, 最后不能操作的失败.<br>　　根据我们处理这类题目的一般思路, 先求出每一堆石子也就是每一个子游戏的 $SG$ 值, 然后异或起来求出游戏的 $SG$ 值.<br>　　分析这道题可以发现, 如果将数量为 $m$ 的一堆划分成 $i$ 堆, 那么将会划分出 $\lfloor \frac{x}{i}\rfloor\times i$ 堆个数为 $\lfloor\frac{m}{i}\rfloor$ 的堆, 和 $m-\lfloor\frac{m}{i}\rfloor\times i$ 堆个数为 $\lfloor\frac{m}{i}\rfloor+1$ 的堆.<br>　　这样我们一个常规的思路是枚举 $i$, 求出划分成 $i$ 堆的 $SG$ 函数.然后求解 $SG(m)$.然而这样效率会很低, 于是需要简化这个过程.<br>　　观察到如果一种划分方案为 $j,j,j,\cdots ,j+1,j+1,\cdots $, 那么在异或的过程中 $SG(j)\oplus SG(j)=0,SG(j+1)\oplus SG(j+1)=0$, 于是在这个过程中起关键作用的是 $j$ 和 $j+1$ 的个数是否为奇数, 如果是奇数它将会对答案产生 $SG(j)$ 或 $SG(j+1)$ 的贡献.<br>　　但是这样还是不够的, 我们自然而然的想到, 如果将石子堆划分为 $i$ 堆 或者是 $k$ 堆而且 $\lfloor\frac{m}{i}\rfloor=\lfloor\frac{m}{k}\rfloor$ , 它们的后继状态都是 $SG(\lfloor\frac{m}{i}\rfloor)$ 或者是 $SG(\lfloor\frac{m}{i}\rfloor+1)$, 它们对答案的贡献可能是相同的, 根据上一段的论述, 这取决于 $m-\lfloor\frac{m}{i}\rfloor\times i$ 和 $\lfloor \frac{x}{i}\rfloor\times i$ 的奇偶性. 如果我们手推一下, 就会发现如果<br>$$\lfloor\frac{m}{i}\rfloor=\lfloor\frac{m}{i+1}\rfloor=\lfloor\frac{m}{i+2}\rfloor=\cdots $$,<br>　　那么 $i$ 和 $i+1$ 对答案的贡献是相同的, $i+1$ 和 $i+2$ 堆答案的贡献相同, 相同的状态我们只需要计算一次, 对于$\frac{m}{i}$相同的所有 $i$, 我们只需要计算最小的 $i$ 和 $i+1$ 即可.<br>　　问题又来了, 我们如何跳过 $i+2,i+3,\cdots$ 呢? 如果你数学学的不错或者是做过莫比乌斯反演, 就会知道一个常用技巧, $m/(m/i)$ 是 $\frac{m}{i}$ 值相同的 $i$ 的最大值. </p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><h5 id="The-Normal"><a href="#The-Normal" class="headerlink" title="The Normal"></a>The Normal</h5><p>　　虽然通过此题但是几乎到了时间上限, 缺点是需要大量的开栈空间和初始化数组, 效率非常低.<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 100005</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">char</span> ch=getchar();</div><div class="line">    <span class="keyword">int</span> s=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(;!<span class="built_in">isdigit</span>(ch);ch=getchar());</div><div class="line">    <span class="keyword">for</span>(s=<span class="number">0</span>;<span class="built_in">isdigit</span>(ch);s=s*<span class="number">10</span>+ch-<span class="string">'0'</span>,ch=getchar());</div><div class="line">    <span class="keyword">return</span> s;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">int</span> sg[N];</div><div class="line"><span class="keyword">int</span> f;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(sg[x]&gt;<span class="number">-1</span>)<span class="keyword">return</span> sg[x];</div><div class="line">    <span class="keyword">if</span>(x&lt;f)<span class="keyword">return</span> sg[x]=<span class="number">0</span>;</div><div class="line">    sg[x]=<span class="number">0</span>;<span class="keyword">int</span> ans;</div><div class="line">    <span class="keyword">int</span> s[N];</div><div class="line">    <span class="built_in">memset</span>(s,<span class="literal">false</span>,<span class="keyword">sizeof</span>(s));</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=x;i=x/(x/i)+<span class="number">1</span>)</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=i;j&lt;=min(i+<span class="number">1</span>,x);++j)&#123;</div><div class="line">            ans=<span class="number">0</span>;</div><div class="line">            <span class="keyword">if</span>((x%j)&amp;<span class="number">1</span>)</div><div class="line">                ans^=find(x/j+<span class="number">1</span>);</div><div class="line">            <span class="keyword">if</span>((j-x%j)&amp;<span class="number">1</span>)</div><div class="line">                ans^=find(x/j);</div><div class="line">            s[ans]=<span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;;i++)</div><div class="line">        <span class="keyword">if</span>(!s[i])&#123;</div><div class="line">            sg[x]=i;</div><div class="line">            <span class="keyword">return</span> i;</div><div class="line">        &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> T;</div><div class="line">    <span class="built_in">cin</span>&gt;&gt;T&gt;&gt;f;</div><div class="line">    <span class="built_in">memset</span>(sg,<span class="number">-1</span>,<span class="keyword">sizeof</span>(sg));</div><div class="line">    <span class="keyword">while</span>(T--)&#123;</div><div class="line">        <span class="keyword">int</span> ans=<span class="number">0</span>,n,get;</div><div class="line">        n=read();</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</div><div class="line">            ans^=find(read());</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>,ans?<span class="number">1</span>:<span class="number">0</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h6 id="The-Better"><a href="#The-Better" class="headerlink" title="The Better"></a>The Better</h6><p>　　将上述代码中的<code>find()</code>替换成下述代码.<br>　　用到了一个比较巧妙的思路避免了上述问题, 效率提高了至少三倍.<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(sg[x]&gt;<span class="number">-1</span>)<span class="keyword">return</span> sg[x];</div><div class="line">    <span class="keyword">if</span>(x&lt;f)<span class="keyword">return</span> sg[x]=<span class="number">0</span>;</div><div class="line">    sg[x]=<span class="number">0</span>;<span class="keyword">int</span> ans;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=x;i=x/(x/i)+<span class="number">1</span>)</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=i;j&lt;=min(i+<span class="number">1</span>,x);++j)&#123;</div><div class="line">            ans=<span class="number">0</span>;</div><div class="line">            <span class="keyword">if</span>((x%j)&amp;<span class="number">1</span>)</div><div class="line">                ans^=find(x/j+<span class="number">1</span>);</div><div class="line">            <span class="keyword">if</span>((j-x%j)&amp;<span class="number">1</span>)</div><div class="line">                ans^=find(x/j);</div><div class="line">            s[ans]=x;</div><div class="line">        &#125;</div><div class="line">    <span class="keyword">while</span>(s[sg[x]]==x)sg[x]++;</div><div class="line">    <span class="keyword">return</span> sg[x];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    
+    
+    <div>
+    
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+    
+    </div>
+    <div>
+    
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2018/Multi-SG/">Multi-SG</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 aiyoupass 的个人博客">aiyoupass</a></p>
+  <p><span>发布时间:</span>2018年02月26日 - 11:02</p>
+  <p><span>最后更新:</span>2018年02月27日 - 10:02</p>
+  <p><span>原始链接:</span><a href="/2018/Multi-SG/" title="Multi-SG">http://aiyoupass.com/2018/Multi-SG/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://aiyoupass.com/2018/Multi-SG/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/博弈论/" rel="tag"># 博弈论</a>
+          
+            <a href="/tags/Multi-SG/" rel="tag"># Multi-SG</a>
+          
+            <a href="/tags/Lasker-s-Nim/" rel="tag"># Lasker's Nim</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/Anti-SG/" rel="next" title="Anti-SG/Misère Games">
+                <i class="fa fa-chevron-left"></i> Anti-SG/Misère Games
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/Every-SG/" rel="prev" title="Every-SG">
+                Every-SG <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="hypercomments_widget"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/myjson/head.jpg"
+                alt="aiyoupass" />
+            
+              <p class="site-author-name" itemprop="name">aiyoupass</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">103</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">121</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/imwcz" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:aiyoupass@outlook.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://plus.google.com/" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://stackoverflow.com/" target="_blank" title="StackOverflow">
+                      
+                        <i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://attack204.com/" title="attack" target="_blank" rel="external nofollow">attack</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#放在前面"><span class="nav-number">1.</span> <span class="nav-text">放在前面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDU-3032-Nim-or-not-Nim"><span class="nav-number">2.</span> <span class="nav-text">HDU 3032 Nim or not Nim?</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Problem-Description"><span class="nav-number">2.1.</span> <span class="nav-text">Problem Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Input"><span class="nav-number">2.2.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Output"><span class="nav-number">2.3.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Input"><span class="nav-number">2.4.</span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Output"><span class="nav-number">2.5.</span> <span class="nav-text">Sample Output</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#做法"><span class="nav-number">2.6.</span> <span class="nav-text">做法:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#POJ-2311-Cutting-Game"><span class="nav-number">3.</span> <span class="nav-text">POJ 2311 Cutting Game</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description"><span class="nav-number">3.1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Input-1"><span class="nav-number">3.2.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Output-1"><span class="nav-number">3.3.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Input-1"><span class="nav-number">3.4.</span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Output-1"><span class="nav-number">3.5.</span> <span class="nav-text">Sample Output</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#做法-1"><span class="nav-number">3.6.</span> <span class="nav-text">做法:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#POJ-3537-BZOJ-2940"><span class="nav-number">4.</span> <span class="nav-text">POJ 3537/BZOJ 2940</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BZOJ-1188-HNOI2007-分裂游戏"><span class="nav-number">5.</span> <span class="nav-text">BZOJ 1188 [HNOI2007] 分裂游戏</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description-1"><span class="nav-number">5.1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Input-2"><span class="nav-number">5.2.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Output-2"><span class="nav-number">5.3.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Input-2"><span class="nav-number">5.4.</span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Output-2"><span class="nav-number">5.5.</span> <span class="nav-text">Sample Output</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#做法-2"><span class="nav-number">5.6.</span> <span class="nav-text">做法:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Luogu-P3235-HNOI2014-江南乐"><span class="nav-number">6.</span> <span class="nav-text">Luogu P3235 [HNOI2014]江南乐</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目描述"><span class="nav-number">6.1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入输出格式"><span class="nav-number">6.2.</span> <span class="nav-text">输入输出格式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#输入格式："><span class="nav-number">6.2.1.</span> <span class="nav-text">输入格式：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#输出格式："><span class="nav-number">6.2.2.</span> <span class="nav-text">输出格式：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输入输出样例"><span class="nav-number">6.3.</span> <span class="nav-text">输入输出样例</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#输入样例-1："><span class="nav-number">6.3.1.</span> <span class="nav-text">输入样例#1：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#输出样例-1："><span class="nav-number">6.3.2.</span> <span class="nav-text">输出样例#1：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#说明"><span class="nav-number">6.4.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#做法-3"><span class="nav-number">6.5.</span> <span class="nav-text">做法:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number">6.6.</span> <span class="nav-text">Code</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#The-Normal"><span class="nav-number">6.6.1.</span> <span class="nav-text">The Normal</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#The-Better"><span class="nav-number">6.6.1.1.</span> <span class="nav-text">The Better</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">aiyoupass</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" href="http://hexo.io" rel="external nofollow">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+		<script type="text/javascript">
+		_hcwp = window._hcwp || [];
+
+		_hcwp.push({widget:"Bloggerstream", widget_id: 100323, selector:".hc-comment-count", label: "{\%COUNT%\}" });
+
+		
+		_hcwp.push({widget:"Stream", widget_id: 100323, xid: "2018/Multi-SG/"});
+		
+
+		(function() {
+		if("HC_LOAD_INIT" in window)return;
+		HC_LOAD_INIT = true;
+		var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
+		var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
+		hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://w.hypercomments.com/widget/hc/100323/"+lang+"/widget.js";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hcc, s.nextSibling);
+		})();
+		</script>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+	        displayMath: [ ['$$','$$'], ["\\[","\\]"] ], 
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        },
+        "HTML-CSS": {
+            scale: 85,minScaleAdjust: 80
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
