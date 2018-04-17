@@ -4,6 +4,31 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/cf1/</loc>
+    <lastmod>2018-04-17T13:45:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>Codeforces 1</title>
+        <pubTime>2018-04-17T13:35:18.000Z</pubTime>
+        
+        <tag>模拟</tag>
+         
+        <tag>计算几何</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="Codeforces" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/Codeforces/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/noip2014d2/</loc>
     <lastmod>2018-04-17T09:31:30.000Z</lastmod>
     <data>
@@ -275,9 +300,9 @@
          
         <tag>NOIP</tag>
          
-        <tag>树形dp</tag>
-         
         <tag>背包</tag>
+         
+        <tag>树形dp</tag>
          
          
            
@@ -325,9 +350,9 @@
         
         <tag>模拟</tag>
          
-        <tag>NOIP</tag>
-         
         <tag>倍增</tag>
+         
+        <tag>NOIP</tag>
          
         <tag>快速幂</tag>
          
@@ -364,11 +389,11 @@
         
         <tag>动态规划</tag>
          
-        <tag>贪心</tag>
-         
         <tag>模拟</tag>
          
         <tag>搜索</tag>
+         
+        <tag>贪心</tag>
          
         <tag>NOIP</tag>
          
@@ -482,11 +507,11 @@
         
         <tag>字符串</tag>
          
+        <tag>模拟</tag>
+         
         <tag>考试</tag>
          
         <tag>贪心</tag>
-         
-        <tag>模拟</tag>
          
         <tag>树</tag>
          
@@ -561,9 +586,9 @@
         <title>pdfonline</title>
         <pubTime>2018-01-27T02:42:05.000Z</pubTime>
         
-        <tag>pdf</tag>
-         
         <tag>解决方案</tag>
+         
+        <tag>pdf</tag>
          
          
            
@@ -588,15 +613,15 @@
         
         <tag>贪心</tag>
          
-        <tag>NOIP</tag>
-         
-        <tag>倍增</tag>
-         
         <tag>扩展欧几里得</tag>
          
         <tag>二分答案</tag>
          
         <tag>查分</tag>
+         
+        <tag>倍增</tag>
+         
+        <tag>NOIP</tag>
          
          
            
@@ -621,9 +646,9 @@
         
         <tag>模拟</tag>
          
-        <tag>NOIP</tag>
-         
         <tag>倍增</tag>
+         
+        <tag>NOIP</tag>
          
         <tag>高精</tag>
          
@@ -650,9 +675,9 @@
         <title>NOIP 2011 Day2</title>
         <pubTime>2018-03-25T06:39:24.000Z</pubTime>
         
-        <tag>贪心</tag>
-         
         <tag>模拟</tag>
+         
+        <tag>贪心</tag>
          
         <tag>NOIP</tag>
          
@@ -1280,9 +1305,9 @@
          
         <tag>贪心</tag>
          
-        <tag>倍增</tag>
-         
         <tag>二分答案</tag>
+         
+        <tag>倍增</tag>
          
         <tag>线段树</tag>
          
