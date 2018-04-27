@@ -4,8 +4,58 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/noip2015d1/</loc>
+    <lastmod>2018-04-27T12:40:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>NOIP2015 Day1</title>
+        <pubTime>2018-04-27T12:36:28.000Z</pubTime>
+        
+        <tag>模拟</tag>
+         
+        <tag>搜索</tag>
+         
+        <tag>并查集</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/dpsome1/</loc>
+    <lastmod>2018-04-27T12:34:50.000Z</lastmod>
+    <data>
+        <display>
+        <title>简单动态规划</title>
+        <pubTime>2018-04-27T12:26:40.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/cf1/</loc>
-    <lastmod>2018-04-27T09:25:08.000Z</lastmod>
+    <lastmod>2018-04-27T09:27:32.000Z</lastmod>
     <data>
         <display>
         <title>Codeforces 1</title>
@@ -300,9 +350,9 @@
          
         <tag>NOIP</tag>
          
-        <tag>背包</tag>
-         
         <tag>树形dp</tag>
+         
+        <tag>背包</tag>
          
          
            
@@ -350,9 +400,9 @@
         
         <tag>模拟</tag>
          
-        <tag>倍增</tag>
-         
         <tag>NOIP</tag>
+         
+        <tag>倍增</tag>
          
         <tag>快速幂</tag>
          
@@ -586,9 +636,9 @@
         <title>pdfonline</title>
         <pubTime>2018-01-27T02:42:05.000Z</pubTime>
         
-        <tag>解决方案</tag>
-         
         <tag>pdf</tag>
+         
+        <tag>解决方案</tag>
          
          
            
@@ -613,15 +663,15 @@
         
         <tag>贪心</tag>
          
+        <tag>NOIP</tag>
+         
+        <tag>倍增</tag>
+         
         <tag>扩展欧几里得</tag>
          
         <tag>二分答案</tag>
          
         <tag>查分</tag>
-         
-        <tag>倍增</tag>
-         
-        <tag>NOIP</tag>
          
          
            
@@ -646,9 +696,9 @@
         
         <tag>模拟</tag>
          
-        <tag>倍增</tag>
-         
         <tag>NOIP</tag>
+         
+        <tag>倍增</tag>
          
         <tag>高精</tag>
          
@@ -1142,9 +1192,9 @@
         
         <tag>模板</tag>
          
-        <tag>生成树</tag>
-         
         <tag>最小生成树</tag>
+         
+        <tag>生成树</tag>
          
          
            
@@ -1305,9 +1355,9 @@
          
         <tag>贪心</tag>
          
-        <tag>二分答案</tag>
-         
         <tag>倍增</tag>
+         
+        <tag>二分答案</tag>
          
         <tag>线段树</tag>
          
@@ -1781,9 +1831,9 @@
         <title>P1463 [HAOI2007]反素数</title>
         <pubTime>2018-02-20T12:09:45.000Z</pubTime>
         
-        <tag>构造</tag>
-         
         <tag>搜索</tag>
+         
+        <tag>构造</tag>
          
         <tag>数学</tag>
          
