@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="动态规划,树上差分,贪心,二分答案,最近公共祖先," />
+  <meta name="keywords" content="动态规划,树上差分,贪心,NOIP,二分答案,最近公共祖先," />
 
 
 
@@ -89,16 +89,22 @@
     })();
 </script>
 
-<meta name="description" content="跳石头子串运输计划跳石头子串运输计划">
+<meta name="description" content="跳石头子串运输计划
+跳石头Solution　　典型的二分答案题, 答案为最短跳跃距离的最大值, 记为$\textbf{ans}$, 那么对于任意$l,l&amp;lt;\textbf{ans}$, 以其为最短跳跃距离都能移走不超$m$个石子跳过河; 对于任意$l,l&amp;gt;\textbf{ans}$, 以其为最短跳跃距离不能移走不超$m$个石子跳过河, 也就是说如果以$f(l)$表示以$l$为最短距离能不">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NOIP2015 Day2">
+<meta property="og:title" content="NOIP 2015 Day2">
 <meta property="og:url" content="http://aiyoupass.com/2018/noip2015d2/index.html">
 <meta property="og:site_name" content="落花微雨">
-<meta property="og:description" content="跳石头子串运输计划跳石头子串运输计划">
-<meta property="og:updated_time" content="2018-04-28T03:26:34.000Z">
+<meta property="og:description" content="跳石头子串运输计划
+跳石头Solution　　典型的二分答案题, 答案为最短跳跃距离的最大值, 记为$\textbf{ans}$, 那么对于任意$l,l&amp;lt;\textbf{ans}$, 以其为最短跳跃距离都能移走不超$m$个石子跳过河; 对于任意$l,l&amp;gt;\textbf{ans}$, 以其为最短跳跃距离不能移走不超$m$个石子跳过河, 也就是说如果以$f(l)$表示以$l$为最短距离能不">
+<meta property="og:image" content="https://cdn.luogu.org/upload/pic/18182.png">
+<meta property="og:image" content="https://cdn.luogu.org/upload/pic/18183.png">
+<meta property="og:updated_time" content="2018-04-28T13:43:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="NOIP2015 Day2">
-<meta name="twitter:description" content="跳石头子串运输计划跳石头子串运输计划">
+<meta name="twitter:title" content="NOIP 2015 Day2">
+<meta name="twitter:description" content="跳石头子串运输计划
+跳石头Solution　　典型的二分答案题, 答案为最短跳跃距离的最大值, 记为$\textbf{ans}$, 那么对于任意$l,l&amp;lt;\textbf{ans}$, 以其为最短跳跃距离都能移走不超$m$个石子跳过河; 对于任意$l,l&amp;gt;\textbf{ans}$, 以其为最短跳跃距离不能移走不超$m$个石子跳过河, 也就是说如果以$f(l)$表示以$l$为最短距离能不">
+<meta name="twitter:image" content="https://cdn.luogu.org/upload/pic/18182.png">
 
 
 
@@ -134,7 +140,7 @@
 
 
 
-  <title>NOIP2015 Day2 | 落花微雨</title>
+  <title>NOIP 2015 Day2 | 落花微雨</title>
   
 
 
@@ -342,7 +348,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">NOIP2015 Day2</h1>
+          <h1 class="post-title" itemprop="name headline">NOIP 2015 Day2</h1>
         
 
         <div class="post-meta">
@@ -437,7 +443,21 @@
       
 
       
-        <h3 id="跳石头"><a href="#跳石头" class="headerlink" title="跳石头"></a><a href="https://www.luogu.org/problemnew/show/P2678" target="_blank" rel="external">跳石头</a></h3><h3 id="子串"><a href="#子串" class="headerlink" title="子串"></a><a href="https://www.luogu.org/problemnew/show/P2679" target="_blank" rel="external">子串</a></h3><h3 id="运输计划"><a href="#运输计划" class="headerlink" title="运输计划"></a><a href="https://www.luogu.org/problemnew/show/P2680" target="_blank" rel="external">运输计划</a></h3><h3 id="跳石头-1"><a href="#跳石头-1" class="headerlink" title="跳石头"></a>跳石头</h3><h3 id="子串-1"><a href="#子串-1" class="headerlink" title="子串"></a>子串</h3><h3 id="运输计划-1"><a href="#运输计划-1" class="headerlink" title="运输计划"></a>运输计划</h3>
+        <p><a href="https://www.luogu.org/problemnew/show/P2678" target="_blank" rel="external">跳石头</a><br><a href="https://www.luogu.org/problemnew/show/P2679" target="_blank" rel="external">子串</a><br><a href="https://www.luogu.org/problemnew/show/P2680" target="_blank" rel="external">运输计划</a></p>
+<h3 id="跳石头"><a href="#跳石头" class="headerlink" title="跳石头"></a>跳石头</h3><h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>　　典型的二分答案题, 答案为<strong>最短跳跃距离的最大值</strong>, 记为$\textbf{ans}$, 那么对于任意$l,l&lt;\textbf{ans}$, 以其为最短跳跃距离都能移走不超$m$个石子跳过河; 对于任意$l,l&gt;\textbf{ans}$, 以其为最短跳跃距离不能移走不超$m$个石子跳过河, 也就是说如果以$f(l)$表示以$l$为最短距离能不能过河, $f(l),l\in \textbf{N}\text{且}0&lt; l\leq l$ 具有单调性.</p>
+<p>　　所以对于任意$l$, 所需要找到的就是这么一个点$u$使得$f(u)=1$的最大值, 也就是本题的答案.</p>
+<p>　　也就是说需要二分这个答案的点的位置, 通过<strong>二分答案</strong>.</p>
+<p><img src="https://cdn.luogu.org/upload/pic/18182.png" alt="e"><br>　　<strong>如何判断$f(l)$的值呢?</strong></p>
+<p>　　发现如果<strong>两个点之间距离小于最小跳跃距离</strong>, 那么就必须将其中一个石子移去.假设这<strong>两个点之前所有石子已经满足要求</strong>了, 发现如果移去前一个石子, 可是前一个石子与它前面的石子本来就大于最短距离, 移去后后面的石子与再后面的石子可能还是大于最短距离;　　<br>如果移走后面的石子, 不会改变前面石子, 那么它前面石子与后面的石子的距离减小了, 也就是.</p>
+<p><img src="https://cdn.luogu.org/upload/pic/18183.png" alt=""></p>
+<p>　　<strong><em>Tips:</em></strong></p>
+<ul>
+<li>二分会出诡异的问题, 有三个测试点输出比答案大一, 所以我特判了…</li>
+</ul>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">int</span> k,n,m;</div><div class="line"><span class="keyword">int</span> pos[<span class="number">50005</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> mid)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> ans=<span class="number">0</span>,st=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</div><div class="line">        <span class="keyword">if</span>(pos[i]-st&lt;mid)</div><div class="line">            ans=ans+<span class="number">1</span>;</div><div class="line">        <span class="keyword">else</span> st=pos[i];</div><div class="line">    <span class="keyword">return</span> ans&lt;=m;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;k,&amp;n,&amp;m);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;pos[i]);</div><div class="line">    <span class="keyword">int</span> l=<span class="number">0</span>,r=k,mid;</div><div class="line">    <span class="keyword">while</span>(l&lt;r)&#123;</div><div class="line">        mid=(l+r)&gt;&gt;<span class="number">1</span>;</div><div class="line">        <span class="keyword">if</span>(check(mid))l=mid+<span class="number">1</span>;</div><div class="line">        <span class="keyword">else</span> r=mid<span class="number">-1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span>(!check(l))l-=<span class="number">1</span>;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,l);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="子串"><a href="#子串" class="headerlink" title="子串"></a>子串</h3><p>　　非常普通的一个动态规划题.需要用到滚动数组.<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> mod 1000000007</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 1005</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> M 205</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n,m,k;</div><div class="line"><span class="keyword">int</span> f[<span class="number">3</span>][N][M][<span class="number">2</span>];</div><div class="line"><span class="keyword">char</span> a[N];</div><div class="line"><span class="keyword">char</span> b[N];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m&gt;&gt;k;</div><div class="line">    <span class="keyword">int</span> h;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%s%s"</span>,a+<span class="number">1</span>,b+<span class="number">1</span>);</div><div class="line">    f[<span class="number">1</span>][<span class="number">0</span>][<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i,h=!h)&#123;</div><div class="line">        f[h][<span class="number">0</span>][<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;++j)</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> t=<span class="number">1</span>;t&lt;=k;++t)&#123;</div><div class="line">                <span class="keyword">if</span>(a[i]==b[j])</div><div class="line">                    f[h][j][t][<span class="number">1</span>]=(f[!h][j<span class="number">-1</span>][t][<span class="number">1</span>]+f[!h][j<span class="number">-1</span>][t<span class="number">-1</span>][<span class="number">0</span>])%mod;</div><div class="line">                <span class="keyword">else</span> f[h][j][t][<span class="number">1</span>]=<span class="number">0</span>;</div><div class="line">                f[h][j][t][<span class="number">0</span>]=(f[!h][j][t][<span class="number">0</span>]+f[h][j][t][<span class="number">1</span>])%mod;</div><div class="line">            &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>,f[!h][m][k][<span class="number">0</span>]);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="运输计划"><a href="#运输计划" class="headerlink" title="运输计划"></a>运输计划</h3><p>　　二分答案加树上差分, 代码写到一大半突然蓝了……啊啊啊</p>
+
       
     </div>
     
@@ -459,11 +479,11 @@
   <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2018/noip2015d2/">NOIP2015 Day2</a></p>
+  <p><span>本文标题:</span><a href="/2018/noip2015d2/">NOIP 2015 Day2</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 aiyoupass 的个人博客">aiyoupass</a></p>
   <p><span>发布时间:</span>2018年04月28日 - 11:04</p>
-  <p><span>最后更新:</span>2018年04月28日 - 11:04</p>
-  <p><span>原始链接:</span><a href="/2018/noip2015d2/" title="NOIP2015 Day2">http://aiyoupass.com/2018/noip2015d2/</a>
+  <p><span>最后更新:</span>2018年04月28日 - 21:04</p>
+  <p><span>原始链接:</span><a href="/2018/noip2015d2/" title="NOIP 2015 Day2">http://aiyoupass.com/2018/noip2015d2/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://aiyoupass.com/2018/noip2015d2/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
@@ -501,6 +521,8 @@
           
             <a href="/tags/贪心/" rel="tag"># 贪心</a>
           
+            <a href="/tags/NOIP/" rel="tag"># NOIP</a>
+          
             <a href="/tags/二分答案/" rel="tag"># 二分答案</a>
           
             <a href="/tags/最近公共祖先/" rel="tag"># 最近公共祖先</a>
@@ -525,6 +547,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/cf2/" rel="prev" title="Codeforces 2">
+                Codeforces 2 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -610,7 +636,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">108</span>
+                  <span class="site-state-item-count">109</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -621,7 +647,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -707,7 +733,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#跳石头"><span class="nav-number">1.</span> <span class="nav-text">跳石头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子串"><span class="nav-number">2.</span> <span class="nav-text">子串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运输计划"><span class="nav-number">3.</span> <span class="nav-text">运输计划</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#跳石头-1"><span class="nav-number">4.</span> <span class="nav-text">跳石头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子串-1"><span class="nav-number">5.</span> <span class="nav-text">子串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运输计划-1"><span class="nav-number">6.</span> <span class="nav-text">运输计划</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#跳石头"><span class="nav-number">1.</span> <span class="nav-text">跳石头</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution"><span class="nav-number">1.1.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number">1.2.</span> <span class="nav-text">Code</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子串"><span class="nav-number">2.</span> <span class="nav-text">子串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运输计划"><span class="nav-number">3.</span> <span class="nav-text">运输计划</span></a></li></ol></div>
             
 
           </div>
