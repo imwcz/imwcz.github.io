@@ -95,7 +95,7 @@
 <meta property="og:url" content="http://aiyoupass.com/2018/dphigher/index.html">
 <meta property="og:site_name" content="落花微雨">
 <meta property="og:description" content="一些不算太简单的动态规划题目.">
-<meta property="og:updated_time" content="2018-04-10T13:53:52.000Z">
+<meta property="og:updated_time" content="2018-04-29T02:31:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="动态规划题目选做">
 <meta name="twitter:description" content="一些不算太简单的动态规划题目.">
@@ -441,7 +441,7 @@
       
 
       
-        <h3 id="NOIP-2001-统计单词个数-https-www-luogu-org-problemnew-show-P1026"><a href="#NOIP-2001-统计单词个数-https-www-luogu-org-problemnew-show-P1026" class="headerlink" title="(NOIP 2001 统计单词个数)[https://www.luogu.org/problemnew/show/P1026]"></a>(NOIP 2001 统计单词个数)[<a href="https://www.luogu.org/problemnew/show/P1026" target="_blank" rel="external">https://www.luogu.org/problemnew/show/P1026</a>]</h3><h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>　　$f(i,j)$表示前$i$个字符划分成$j$份得到的最多的单词数.然后就需要预处理出一段区间$[l,r]$之内的单词数.这个也可以用dp来提前预处理.<br>　　题意比较不清楚的地方在于一个单词的首字母只能存在于这个单词中, 也就是说一段字符可以是多个单词的一部分, 但是这些单词首字母不能相同.</p>
+        <h3 id="NOIP-2001-统计单词个数"><a href="#NOIP-2001-统计单词个数" class="headerlink" title="NOIP 2001 统计单词个数"></a><a href="https://www.luogu.org/problemnew/show/P1026" target="_blank" rel="external">NOIP 2001 统计单词个数</a></h3><h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>　　$f(i,j)$表示前$i$个字符划分成$j$份得到的最多的单词数.然后就需要预处理出一段区间$[l,r]$之内的单词数.这个也可以用dp来提前预处理.<br>　　题意比较不清楚的地方在于一个单词的首字母只能存在于这个单词中, 也就是说一段字符可以是多个单词的一部分, 但是这些单词首字母不能相同.</p>
 <ul>
 <li>用$g(i,j)$表示$[i,j]$中的单词数.用$c(i,j)$表示$[i,j]$中是否存在$i$为首字母的单词, 所以:<br>$$<br>g(i,j)=g(i+1,j)+c(i,j)<br>$$</li>
 <li>$f(i,j)$表示前$i$个字符划分成$j$份得到的最多的单词数.所以:<br>$$<br>f(i,j)=f(i,k)+g(k+1,j),k&lt; j<br>$$</li>
@@ -479,7 +479,7 @@
   <p><span>本文标题:</span><a href="/2018/dphigher/">动态规划题目选做</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 aiyoupass 的个人博客">aiyoupass</a></p>
   <p><span>发布时间:</span>2018年04月10日 - 20:04</p>
-  <p><span>最后更新:</span>2018年04月10日 - 21:04</p>
+  <p><span>最后更新:</span>2018年04月29日 - 10:04</p>
   <p><span>原始链接:</span><a href="/2018/dphigher/" title="动态规划题目选做">http://aiyoupass.com/2018/dphigher/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://aiyoupass.com/2018/dphigher/"  aria-label="复制成功！"></i></span>
   </p>
@@ -627,7 +627,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">109</span>
+                  <span class="site-state-item-count">111</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -649,7 +649,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">124</span>
+                  <span class="site-state-item-count">127</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -724,7 +724,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#NOIP-2001-统计单词个数-https-www-luogu-org-problemnew-show-P1026"><span class="nav-number">1.</span> <span class="nav-text">(NOIP 2001 统计单词个数)[https://www.luogu.org/problemnew/show/P1026]</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution"><span class="nav-number">1.1.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number">1.2.</span> <span class="nav-text">Code</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#矩形嵌套"><span class="nav-number">2.</span> <span class="nav-text">矩形嵌套</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-1"><span class="nav-number">2.1.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code-1"><span class="nav-number">2.2.</span> <span class="nav-text">Code</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SHOI2002滑雪"><span class="nav-number">3.</span> <span class="nav-text">SHOI2002滑雪</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-2"><span class="nav-number">3.1.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code-2"><span class="nav-number">3.2.</span> <span class="nav-text">Code</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#NOIP-2001-统计单词个数"><span class="nav-number">1.</span> <span class="nav-text">NOIP 2001 统计单词个数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution"><span class="nav-number">1.1.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number">1.2.</span> <span class="nav-text">Code</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#矩形嵌套"><span class="nav-number">2.</span> <span class="nav-text">矩形嵌套</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-1"><span class="nav-number">2.1.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code-1"><span class="nav-number">2.2.</span> <span class="nav-text">Code</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SHOI2002滑雪"><span class="nav-number">3.</span> <span class="nav-text">SHOI2002滑雪</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-2"><span class="nav-number">3.1.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code-2"><span class="nav-number">3.2.</span> <span class="nav-text">Code</span></a></li></ol></li></ol></div>
             
 
           </div>
