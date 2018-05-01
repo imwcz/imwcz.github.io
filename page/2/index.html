@@ -322,6 +322,211 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/cf1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/cf1/" itemprop="url">Codeforces 1</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-17T21:35:18+08:00">
+                2018-04-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/Codeforces/" itemprop="url" rel="index">
+                    <span itemprop="name">Codeforces</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/cf1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/cf1/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>　　感受到了来自Codeforces的深深的恶意.即使这三道题我一眼就能看出做法来, 可还是无情的一哇再哇.我还是太弱了.</p>
+<h3 id="A"><a href="#A" class="headerlink" title="A"></a>A</h3><p>　　这个题目我就不想说什么了, 可是竟然交了四次才通过.<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> int long long</span></div><div class="line"><span class="keyword">int</span> n,m,a;</div><div class="line"></div><div class="line">main()&#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%lld%lld%lld"</span>,&amp;n,&amp;m,&amp;a);</div><div class="line">    <span class="keyword">int</span> b=n/a,c=m/a;</div><div class="line">    <span class="keyword">int</span> e=n%a,f=m%a;</div><div class="line">    <span class="keyword">if</span>(e)b++;<span class="keyword">if</span>(f)c++;</div><div class="line">    <span class="keyword">int</span> ans=(<span class="keyword">long</span> <span class="keyword">long</span>)b*c;</div><div class="line">    b=n%a;c=m%a;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,ans);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="B"><a href="#B" class="headerlink" title="B"></a>B</h3><p>　　做法就是简单的模拟, 可以涉及到了一个细节我没想到怎么好的处理.就是十进制转化为A-Z,不过不存在0, 只有1-26;<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">string</span>;</div><div class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cin</span>;</div><div class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cout</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n;</div><div class="line"><span class="built_in">string</span> oth;</div><div class="line"><span class="keyword">int</span> h,l;</div><div class="line"><span class="keyword">int</span> a1,a2;</div><div class="line"><span class="keyword">int</span> b;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">convert1</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">string</span> b1=<span class="string">""</span>;</div><div class="line">    <span class="keyword">for</span>(;a2;a2=a2/<span class="number">26</span>-!(a2%<span class="number">26</span>))</div><div class="line">        <span class="keyword">if</span>(a2%<span class="number">26</span>)b1+=<span class="string">'A'</span>+a2%<span class="number">26</span><span class="number">-1</span>;</div><div class="line">        <span class="keyword">else</span> b1+=<span class="string">'Z'</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=b1.size()<span class="number">-1</span>;i&gt;<span class="number">-1</span>;--i)</div><div class="line">        <span class="built_in">cout</span>&lt;&lt;b1[i];</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,a1);</div><div class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">convert2</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"R%dC%d\n"</span>,a1,h);</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">panding</span><span class="params">()</span></span>&#123;</div><div class="line">    l=h=a1=a2=<span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> len=oth.size();</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;++i)&#123;</div><div class="line">        <span class="keyword">if</span>(!h&amp;&amp;<span class="built_in">isupper</span>(oth[i]))</div><div class="line">        <span class="keyword">for</span>(;<span class="built_in">isupper</span>(oth[i]);++i)</div><div class="line">            h=h*<span class="number">26</span>+oth[i]-<span class="string">'A'</span>+<span class="number">1</span>;</div><div class="line">        <span class="keyword">if</span>(!a1&amp;&amp;<span class="built_in">isdigit</span>(oth[i]))</div><div class="line">        <span class="keyword">for</span>(;<span class="built_in">isdigit</span>(oth[i]);++i)</div><div class="line">            a1=a1*<span class="number">10</span>+oth[i]-<span class="string">'0'</span>;</div><div class="line">        <span class="keyword">if</span>(h&amp;&amp;<span class="built_in">isupper</span>(oth[i]))</div><div class="line">        <span class="keyword">for</span>(;<span class="built_in">isupper</span>(oth[i]);++i)</div><div class="line">            l=l*<span class="number">26</span>+oth[i]-<span class="string">'A'</span>+<span class="number">1</span>;</div><div class="line">        <span class="keyword">if</span>(a1&amp;&amp;<span class="built_in">isdigit</span>(oth[i]))</div><div class="line">        <span class="keyword">for</span>(;<span class="built_in">isdigit</span>(oth[i]);++i)</div><div class="line">            a2=a2*<span class="number">10</span>+oth[i]-<span class="string">'0'</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span>(a2)<span class="keyword">return</span> convert1();</div><div class="line">    <span class="keyword">else</span> <span class="keyword">return</span> convert2();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</div><div class="line">    <span class="keyword">while</span>(n--)&#123;</div><div class="line">        <span class="built_in">cin</span>&gt;&gt;oth;</div><div class="line">        panding();</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="text-Cf1c-Ancient-Berland-Circus"><a href="#text-Cf1c-Ancient-Berland-Circus" class="headerlink" title="$$\text{Cf1c Ancient Berland Circus}$$"></a>$$\text{Cf1c Ancient Berland Circus}$$</h3><h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>　　4:17日:一开始看到这道题还是很有想法的: 找出任意两个点连线的垂直平分线, 多边形的中心就存在在这条线上, 找到中心后根据两个柱子到中心的角度$\alpha$, 多边形相邻两顶点到中心的角度$\beta$, 满足$\beta|\alpha$.</p>
+<p> 　　4:27日: 做了这道题, 利用的就是上面这个思路.然后写了好长时间, 码力好弱, 加上自己非常零碎的一点计算几何和解析几何的知识, 最终还是写完了, 然后写了很多函数, 其实根本用不到这么多.具体的介绍一下各个函数的作用吧.</p>
+<p>　　这道题细节有点多.所以我是分布写的, 每写完一个函数就用数据检查, 因此花在调试上的精力反而不多.</p>
+<ul>
+<li>gcd(), 求两个浮点数的最小公约数</li>
+<li>Point::<strong><em>用x,y两个值表示一个点(矢量)</em></strong><ul>
+<li>input(), 输入点的坐标</li>
+<li>print(), 打印点的坐标(x,y)</li>
+<li>operator+(Point), 矢量的加法</li>
+<li>operator-(Point), 矢量的减法</li>
+<li>operator*(int), 矢量的放大与缩小</li>
+<li>operator*(Point), 矢量的数量积(点乘)</li>
+</ul>
+</li>
+<li>Line::<strong><em>用两个点(Point)表示一条直线/线段/矢量</em></strong><ul>
+<li>print(), 同Point</li>
+<li>Length(), 矢量的模长</li>
+</ul>
+</li>
+<li>Lineo::<strong><em>用直线的一般式表示一条直线</em></strong><ul>
+<li>Convert(Line), 将两点式的直线转化为一般式</li>
+</ul>
+</li>
+<li>angle(Line), 一条直线的斜率(直线与x轴的夹角的tan值)</li>
+<li>MidPoint(Line), 线段的中点</li>
+<li>MidPlumd(Line), 一条直线的垂直平分线</li>
+<li>InterPoint(Line,Line), 两直线的交点</li>
+<li>CenterPoint(Point,Point,Point), 三个点形成的多边形的几何中心</li>
+<li>TanLine(Point a,Point b,Point c), a与b形成直线与b与c形成直线的夹角的余切值.</li>
+<li>Angle(Point a,Point b,Point c), a与b形成直线与b与c形成直线的夹角.</li>
+</ul>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> Phi 3.141592653589793</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> eps 1E-2</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">gcd</span><span class="params">(<span class="keyword">double</span> a,<span class="keyword">double</span> b)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(<span class="built_in">fabs</span>(b)&lt;eps)<span class="keyword">return</span> a;</div><div class="line">    <span class="keyword">if</span>(<span class="built_in">fabs</span>(a)&lt;eps)<span class="keyword">return</span> b;</div><div class="line">    <span class="keyword">return</span> gcd(b,<span class="built_in">fmod</span>(a,b));</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">struct</span> Point&#123;</div><div class="line">	<span class="keyword">double</span> x,y;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">input</span><span class="params">()</span></span>&#123;<span class="built_in">cin</span>&gt;&gt;x&gt;&gt;y;&#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span>&#123;<span class="built_in">cout</span>&lt;&lt;x&lt;&lt;<span class="string">' '</span>&lt;&lt;y&lt;&lt;<span class="string">'\n'</span>;&#125;</div><div class="line">	Point <span class="keyword">operator</span>+(<span class="keyword">const</span> Point &amp;a)<span class="keyword">const</span>&#123;</div><div class="line">		<span class="keyword">return</span> (Point)&#123;x+a.x,y+a.y&#125;;</div><div class="line">	&#125;</div><div class="line">	Point <span class="keyword">operator</span>-(<span class="keyword">const</span> Point &amp;a)<span class="keyword">const</span>&#123;</div><div class="line">		<span class="keyword">return</span> (Point)&#123;x-a.x,y-a.y&#125;;</div><div class="line">	&#125;</div><div class="line">	Point <span class="keyword">operator</span>*(<span class="keyword">const</span> <span class="keyword">double</span>&amp; a)<span class="keyword">const</span>&#123;</div><div class="line">		<span class="keyword">return</span> (Point)&#123;x*a,y*a&#125;;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">double</span> <span class="keyword">operator</span>*(<span class="keyword">const</span> Point &amp;a)<span class="keyword">const</span>&#123;</div><div class="line">		<span class="keyword">return</span> x*a.x+y*a.y;</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">typedef</span> Point Vector;</div><div class="line"><span class="keyword">struct</span> Line&#123;</div><div class="line">	Point a,b;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span>&#123;a.print();b.print();&#125;</div><div class="line">	<span class="function"><span class="keyword">double</span> <span class="title">Length</span><span class="params">()</span></span>&#123;</div><div class="line">		Vector c=b-a;</div><div class="line">		<span class="keyword">return</span> <span class="built_in">sqrt</span>(c.x*c.x+c.y*c.y);</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">struct</span> Lineo&#123;</div><div class="line">	<span class="keyword">double</span> a,b,c;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">Convert</span><span class="params">(Line s)</span></span>&#123;</div><div class="line">		a=s.b.y-s.a.y,b=s.a.x-s.b.x,c=-a*s.a.x-b*s.a.y;</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">angle</span><span class="params">(Line a)</span></span>&#123;</div><div class="line">	Lineo s;s.Convert(a);</div><div class="line">	<span class="keyword">return</span> s.a/s.b;</div><div class="line">&#125;</div><div class="line"><span class="function">Point <span class="title">MidPoint</span><span class="params">(Line l)</span></span>&#123;</div><div class="line">	Point ans;ans=l.a+l.b,ans=ans*<span class="number">0.5</span>;</div><div class="line">	<span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function">Line <span class="title">MidPlumd</span><span class="params">(Line l)</span></span>&#123;</div><div class="line">	Point mid=MidPoint(l);</div><div class="line">	Vector delta=l.b-l.a;</div><div class="line">	Point z=(Point)&#123;mid.x+delta.y,mid.y-delta.x&#125;;</div><div class="line">	<span class="keyword">return</span> (Line)&#123;mid,z&#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function">Point <span class="title">InterPoint</span><span class="params">(Line a,Line b)</span></span>&#123;</div><div class="line">	Lineo l1,l2;l1.Convert(a),l2.Convert(b);</div><div class="line">	<span class="keyword">return</span> (Point)&#123;(l1.b*l2.c-l2.b*l1.c)/(l1.a*l2.b-l2.a*l1.b),(l2.a*l1.c-l1.a*l2.c)/(l1.a*l2.b-l2.a*l1.b)&#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function">Point <span class="title">CenterPoint</span><span class="params">(Point a,Point b,Point c)</span></span>&#123;</div><div class="line">	Line l1=(Line)&#123;a,b&#125;;Line l2=(Line)&#123;b,c&#125;;</div><div class="line">	Line l3=MidPlumd(l1),l4=MidPlumd(l2);</div><div class="line">	<span class="keyword">return</span> InterPoint(l3,l4);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">TanLine</span><span class="params">(Point a,Point b,Point c)</span></span>&#123;</div><div class="line">	Line l1=(Line)&#123;a,b&#125;,l2=(Line)&#123;b,c&#125;;</div><div class="line">	<span class="keyword">double</span> a1=angle(l1),a2=angle(l2);</div><div class="line">	<span class="keyword">return</span> <span class="built_in">abs</span>((a1-a2)/(<span class="number">1</span>+a1*a2));</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">Angle</span><span class="params">(Point a,Point b,Point c)</span></span>&#123;</div><div class="line">	<span class="keyword">double</span> as=TanLine(a,b,c);</div><div class="line">	as=<span class="built_in">atan</span>(as);Vector aa=a-b,bb=c-b;</div><div class="line">	<span class="keyword">if</span>(aa*bb&lt;<span class="number">0</span>)as=<span class="number">3.1415926</span>-as;</div><div class="line">	<span class="keyword">return</span> as;</div><div class="line">&#125;</div><div class="line"></div><div class="line">Point a,b,c;</div><div class="line">Point root;</div><div class="line"><span class="keyword">double</span> lon;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	a.input(),b.input(),c.input();</div><div class="line">	root=CenterPoint(a,b,c);</div><div class="line">	<span class="keyword">double</span> a1=Angle(a,root,c),a2=Angle(a,root,b),a3;</div><div class="line">	a3=<span class="number">2</span>*Phi-a1-a2;</div><div class="line">	<span class="keyword">double</span> ans=gcd(a1,gcd(a2,a3));</div><div class="line">	ans=<span class="number">2</span>*Phi/ans;</div><div class="line">	Line bian=(Line)&#123;a,root&#125;;</div><div class="line">	lon=bian.Length();</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%.7f"</span>,ans*<span class="built_in">cos</span>(Phi/ans)*<span class="built_in">sin</span>(Phi/ans)*lon*lon);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+    <div>
+    
+    </div>
+    <div>
+    
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/noip2014d2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1957,181 +2162,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/exam4-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="aiyoupass">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/myjson/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="落花微雨">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/exam4-1/" itemprop="url">4月1日考试</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-01T15:21:10+08:00">
-                2018-04-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
-                    <span itemprop="name">信息学竞赛</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/考试/" itemprop="url" rel="index">
-                    <span itemprop="name">考试</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/exam4-1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/exam4-1/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          人生苦短, 考试真累.
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/exam4-1/">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    <div>
-    
-    </div>
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2186,7 +2216,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">112</span>
+                  <span class="site-state-item-count">113</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2208,7 +2238,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">127</span>
+                  <span class="site-state-item-count">131</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
