@@ -4,6 +4,63 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/BIT/</loc>
+    <lastmod>2018-05-03T09:44:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>BIT</title>
+        <pubTime>2018-05-03T03:12:48.000Z</pubTime>
+        
+        <tag>树状数组</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/noip2016d2/</loc>
+    <lastmod>2018-05-03T09:44:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>NOIP 2016 Day2</title>
+        <pubTime>2018-05-01T03:12:44.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>搜索</tag>
+         
+        <tag>记忆化搜索</tag>
+         
+        <tag>状压dp</tag>
+         
+        <tag>组合数</tag>
+         
+        <tag>堆</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
     <loc>http://aiyoupass.com/2018/noip2017d2/</loc>
     <lastmod>2018-05-03T03:27:02.000Z</lastmod>
     <data>
@@ -74,29 +131,6 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/BIT/</loc>
-    <lastmod>2018-05-03T03:14:06.000Z</lastmod>
-    <data>
-        <display>
-        <title>BIT</title>
-        <pubTime>2018-05-03T03:12:48.000Z</pubTime>
-        
-        <tag>树状数组</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://aiyoupass.com/2018/theshortestload/</loc>
     <lastmod>2018-05-02T13:58:26.000Z</lastmod>
     <data>
@@ -138,39 +172,6 @@
           
              
               <breadCrumb title="线性代数" url="http://aiyoupass.com/categories/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/noip2016d2/</loc>
-    <lastmod>2018-05-01T13:37:52.000Z</lastmod>
-    <data>
-        <display>
-        <title>NOIP 2016 Day2</title>
-        <pubTime>2018-05-01T03:12:44.000Z</pubTime>
-        
-        <tag>动态规划</tag>
-         
-        <tag>搜索</tag>
-         
-        <tag>记忆化搜索</tag>
-         
-        <tag>状压dp</tag>
-         
-        <tag>组合数</tag>
-         
-        <tag>堆</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
           
         </display>
     </data>
