@@ -3,6 +3,67 @@
 
 
     
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/dpsome2/</loc>
+    <lastmod>2018-05-03T13:20:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>动态规划题目</title>
+        <pubTime>2018-05-03T13:18:49.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2017/oneword/</loc>
+    <lastmod>2018-05-03T12:06:04.000Z</lastmod>
+    <data>
+        <display>
+        <title>一言</title>
+        <pubTime>2017-12-12T04:00:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="其它" url="http://aiyoupass.com/categories/%E5%85%B6%E5%AE%83/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/about/</loc>
+    <lastmod>2018-05-03T12:04:32.000Z</lastmod>
+    <data>
+        <display>
+        <title>关于本博客</title>
+        <pubTime>2018-02-06T10:06:31.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="其它" url="http://aiyoupass.com/categories/%E5%85%B6%E5%AE%83/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
   <url>
     <loc>http://aiyoupass.com/2018/cf3/</loc>
     <lastmod>2018-05-03T11:51:10.000Z</lastmod>
@@ -119,6 +180,8 @@
          
         <tag>NOIP</tag>
          
+        <tag>倍增</tag>
+         
         <tag>快速幂</tag>
          
         <tag>逆序对</tag>
@@ -128,8 +191,6 @@
         <tag>最小生成树</tag>
          
         <tag>lca</tag>
-         
-        <tag>倍增</tag>
          
          
            
@@ -344,13 +405,13 @@
          
         <tag>搜索</tag>
          
-        <tag>记忆化搜索</tag>
-         
-        <tag>状压dp</tag>
-         
         <tag>组合数</tag>
          
         <tag>堆</tag>
+         
+        <tag>状压dp</tag>
+         
+        <tag>记忆化搜索</tag>
          
          
            
@@ -379,13 +440,13 @@
          
         <tag>模拟</tag>
          
-        <tag>拓扑排序</tag>
-         
         <tag>NOIP</tag>
          
-        <tag>数论</tag>
+        <tag>拓扑排序</tag>
          
         <tag>记忆化搜索</tag>
+         
+        <tag>数论</tag>
          
          
            
@@ -416,9 +477,9 @@
          
         <tag>并查集</tag>
          
-        <tag>记忆化搜索</tag>
-         
         <tag>状压dp</tag>
+         
+        <tag>记忆化搜索</tag>
          
         <tag>平衡树</tag>
          
@@ -429,25 +490,6 @@
           
              
               <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/about/</loc>
-    <lastmod>2018-05-03T11:18:10.000Z</lastmod>
-    <data>
-        <display>
-        <title>[置顶]关于本博客</title>
-        <pubTime>2018-02-06T10:06:31.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="其它" url="http://aiyoupass.com/categories/%E5%85%B6%E5%AE%83/"/>
           
         </display>
     </data>
@@ -1012,13 +1054,13 @@
          
         <tag>NOIP</tag>
          
-        <tag>倍增</tag>
-         
         <tag>扩展欧几里得</tag>
          
         <tag>二分答案</tag>
          
         <tag>查分</tag>
+         
+        <tag>倍增</tag>
          
          
            
@@ -1702,9 +1744,9 @@
          
         <tag>贪心</tag>
          
-        <tag>倍增</tag>
-         
         <tag>二分答案</tag>
+         
+        <tag>倍增</tag>
          
         <tag>线段树</tag>
          
@@ -3112,7 +3154,6 @@
     </data>
     </url>
 
-    
     
     
 </urlset>
