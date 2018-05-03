@@ -89,23 +89,23 @@
     })();
 </script>
 
-<meta name="description" content="生活大爆炸版石头剪刀布联合权值飞扬的小鸟
-生活大爆炸版石头剪刀布Solution　　没有什么算法就是模拟, 然而题解区好多naive的程序.因为题解数量实在是很多, 导致我水不了题解了,233.
-Code1234567891011121314151617181920212223242526272829#include&amp;lt;algorithm&amp;gt;#include&amp;lt;iostream&amp;gt;">
+<meta name="description" content="生活大爆炸版石头剪刀布
+联合权值
+飞扬的小鸟">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NOIP 2014 Day1">
 <meta property="og:url" content="http://aiyoupass.com/2018/noip2014d1/index.html">
 <meta property="og:site_name" content="落花微雨">
-<meta property="og:description" content="生活大爆炸版石头剪刀布联合权值飞扬的小鸟
-生活大爆炸版石头剪刀布Solution　　没有什么算法就是模拟, 然而题解区好多naive的程序.因为题解数量实在是很多, 导致我水不了题解了,233.
-Code1234567891011121314151617181920212223242526272829#include&amp;lt;algorithm&amp;gt;#include&amp;lt;iostream&amp;gt;">
+<meta property="og:description" content="生活大爆炸版石头剪刀布
+联合权值
+飞扬的小鸟">
 <meta property="og:image" content="https://cdn.luogu.org/upload/pic/17000.png">
-<meta property="og:updated_time" content="2018-04-10T09:37:14.000Z">
+<meta property="og:updated_time" content="2018-05-03T11:46:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NOIP 2014 Day1">
-<meta name="twitter:description" content="生活大爆炸版石头剪刀布联合权值飞扬的小鸟
-生活大爆炸版石头剪刀布Solution　　没有什么算法就是模拟, 然而题解区好多naive的程序.因为题解数量实在是很多, 导致我水不了题解了,233.
-Code1234567891011121314151617181920212223242526272829#include&amp;lt;algorithm&amp;gt;#include&amp;lt;iostream&amp;gt;">
+<meta name="twitter:description" content="生活大爆炸版石头剪刀布
+联合权值
+飞扬的小鸟">
 <meta name="twitter:image" content="https://cdn.luogu.org/upload/pic/17000.png">
 
 
@@ -445,7 +445,12 @@ Code1234567891011121314151617181920212223242526272829#include&amp;lt;algorithm&a
       
 
       
-        <p><a href="https://www.luogu.org/problemnew/show/P1328" target="_blank" rel="external">生活大爆炸版石头剪刀布</a><br><a href="https://www.luogu.org/problemnew/show/P1351" target="_blank" rel="external">联合权值</a><br><a href="https://www.luogu.org/problemnew/show/P1941" target="_blank" rel="external">飞扬的小鸟</a></p>
+        <ul>
+<li><a href="https://www.luogu.org/problemnew/show/P1328" target="_blank" rel="external">生活大爆炸版石头剪刀布</a></li>
+<li><a href="https://www.luogu.org/problemnew/show/P1351" target="_blank" rel="external">联合权值</a></li>
+<li><a href="https://www.luogu.org/problemnew/show/P1941" target="_blank" rel="external">飞扬的小鸟</a></li>
+</ul>
+<a id="more"></a>
 <h3 id="生活大爆炸版石头剪刀布"><a href="#生活大爆炸版石头剪刀布" class="headerlink" title="生活大爆炸版石头剪刀布"></a>生活大爆炸版石头剪刀布</h3><h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>　　没有什么算法就是模拟, 然而题解区好多naive的程序.因为题解数量实在是很多, 导致我水不了题解了,233.</p>
 <h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 205</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> g[<span class="number">5</span>][<span class="number">5</span>]=&#123;</div><div class="line">	&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>&#125;,</div><div class="line">	&#123;<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>&#125;,</div><div class="line">	&#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>&#125;,</div><div class="line">	&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>&#125;,</div><div class="line">	&#123;<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>&#125;,</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">int</span> A[N],B[N];</div><div class="line"><span class="keyword">int</span> n,m,k;</div><div class="line"><span class="keyword">int</span> a,b;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;k,&amp;n,&amp;m);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;++i)<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;A[i]);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;++i)<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;B[i]);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;k;++i)&#123;</div><div class="line">		a+=g[A[i%n]][B[i%m]];</div><div class="line">		b+=g[B[i%m]][A[i%n]];</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d %d"</span>,a,b);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="联合权值"><a href="#联合权值" class="headerlink" title="联合权值"></a>联合权值</h3><h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>　　一开始没有看见取模这回事, 幸好没有提交上去……233.</p>
@@ -492,7 +497,7 @@ Code1234567891011121314151617181920212223242526272829#include&amp;lt;algorithm&a
   <p><span>本文标题:</span><a href="/2018/noip2014d1/">NOIP 2014 Day1</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 aiyoupass 的个人博客">aiyoupass</a></p>
   <p><span>发布时间:</span>2018年04月07日 - 15:04</p>
-  <p><span>最后更新:</span>2018年04月10日 - 17:04</p>
+  <p><span>最后更新:</span>2018年05月03日 - 19:05</p>
   <p><span>原始链接:</span><a href="/2018/noip2014d1/" title="NOIP 2014 Day1">http://aiyoupass.com/2018/noip2014d1/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://aiyoupass.com/2018/noip2014d1/"  aria-label="复制成功！"></i></span>
   </p>

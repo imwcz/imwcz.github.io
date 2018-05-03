@@ -89,22 +89,25 @@
     })();
 </script>
 
-<meta name="description" content="tex live 2017.iso转圈游戏火柴排队货车运输
-转圈游戏solution　　就是要求让一个人在一个圈上走一定步数, 问最后在哪里.例如走$10^k$次, 一次走$\text{m}$步, 初始时在$\text{x}$, 圈长$\text{n}$, 那么它最后的位置就是:$$x+m10^k\mod n$$那么直接用快速幂暴力求出这个式子的值.
-code1234567891011121314">
+<meta name="description" content="tex live 2017.iso
+转圈游戏
+火柴排队
+货车运输">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NOIP 2013 Day1">
 <meta property="og:url" content="http://aiyoupass.com/2018/noip2013d1/index.html">
 <meta property="og:site_name" content="落花微雨">
-<meta property="og:description" content="tex live 2017.iso转圈游戏火柴排队货车运输
-转圈游戏solution　　就是要求让一个人在一个圈上走一定步数, 问最后在哪里.例如走$10^k$次, 一次走$\text{m}$步, 初始时在$\text{x}$, 圈长$\text{n}$, 那么它最后的位置就是:$$x+m10^k\mod n$$那么直接用快速幂暴力求出这个式子的值.
-code1234567891011121314">
-<meta property="og:updated_time" content="2018-04-07T08:20:20.000Z">
+<meta property="og:description" content="tex live 2017.iso
+转圈游戏
+火柴排队
+货车运输">
+<meta property="og:updated_time" content="2018-05-03T11:47:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NOIP 2013 Day1">
-<meta name="twitter:description" content="tex live 2017.iso转圈游戏火柴排队货车运输
-转圈游戏solution　　就是要求让一个人在一个圈上走一定步数, 问最后在哪里.例如走$10^k$次, 一次走$\text{m}$步, 初始时在$\text{x}$, 圈长$\text{n}$, 那么它最后的位置就是:$$x+m10^k\mod n$$那么直接用快速幂暴力求出这个式子的值.
-code1234567891011121314">
+<meta name="twitter:description" content="tex live 2017.iso
+转圈游戏
+火柴排队
+货车运输">
 
 
 
@@ -443,7 +446,13 @@ code1234567891011121314">
       
 
       
-        <p><a href="https://mirrors.tuna.tsinghua.edu.cn/ctan/systems/texlive/images/texlive2017.iso" target="_blank" rel="external">tex live 2017.iso</a><br><a href="https://www.luogu.org/problemnew/show/p1965" target="_blank" rel="external">转圈游戏</a><br><a href="https://www.luogu.org/problemnew/show/p1966" target="_blank" rel="external">火柴排队</a><br><a href="https://www.luogu.org/problemnew/show/p1967" target="_blank" rel="external">货车运输</a></p>
+        <ul>
+<li><a href="https://mirrors.tuna.tsinghua.edu.cn/ctan/systems/texlive/images/texlive2017.iso" target="_blank" rel="external">tex live 2017.iso</a></li>
+<li><a href="https://www.luogu.org/problemnew/show/p1965" target="_blank" rel="external">转圈游戏</a></li>
+<li><a href="https://www.luogu.org/problemnew/show/p1966" target="_blank" rel="external">火柴排队</a></li>
+<li><a href="https://www.luogu.org/problemnew/show/p1967" target="_blank" rel="external">货车运输</a></li>
+</ul>
+<a id="more"></a>
 <h3 id="转圈游戏"><a href="#转圈游戏" class="headerlink" title="转圈游戏"></a>转圈游戏</h3><h4 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h4><p>　　就是要求让一个人在一个圈上走一定步数, 问最后在哪里.例如走$10^k$次, 一次走$\text{m}$步, 初始时在$\text{x}$, 圈长$\text{n}$, 那么它最后的位置就是:<br>$$<br>x+m10^k\mod n<br>$$<br>那么直接用<strong>快速幂</strong>暴力求出这个式子的值.</p>
 <h4 id="code"><a href="#code" class="headerlink" title="code"></a>code</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="keyword">int</span> n,m,k,x;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">pow</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</div><div class="line">    <span class="keyword">long</span> <span class="keyword">long</span> ans=<span class="number">1l</span>l,bas=a;</div><div class="line">    <span class="keyword">while</span>(b)&#123;</div><div class="line">        <span class="keyword">if</span>(b&amp;<span class="number">1</span>)ans*=bas;</div><div class="line">        ans%=n;</div><div class="line">        <span class="keyword">if</span>(!bas)<span class="keyword">return</span> ans;</div><div class="line">        bas*=bas;bas%=n;</div><div class="line">        <span class="keyword">if</span>(!bas)<span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">        b&gt;&gt;=<span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d%d%d"</span>,&amp;n,&amp;m,&amp;k,&amp;x);</div><div class="line">    <span class="keyword">long</span> <span class="keyword">long</span> ans=x,mm=<span class="built_in">pow</span>(<span class="number">10</span>,k);</div><div class="line">    ans+=m*mm%n;</div><div class="line">    ans%=n;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,ans);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="火柴排队"><a href="#火柴排队" class="headerlink" title="火柴排队"></a>火柴排队</h3><h4 id="solution-1"><a href="#solution-1" class="headerlink" title="solution"></a>solution</h4><p>　　其实就是将其中一个通过交换两个相邻的元素使得变化后的序列与另一个序列最相近, 问操作次数.<br>　　其实就是使得两个序列中最大的元素位置相同, 第二大的元素位置也相同, 第三大的元素位置相同……那么元素的具体大小其实根本无所谓, 只需要知道元素之间的大小关系, 所以可以先将两个序列离散化, 然后找到其中一个的元素在另一个中的位置, 记为序列$\text{c}$, 经离散后的序列记为$\text{a,b}$, 那么我们进行的交换操作, 实际上就是将$\text{c}$变为序列$1,2,\cdots ,n$, 这样其实就是将$\text{b}$变成$\text{a}$.</p>
@@ -481,7 +490,7 @@ code1234567891011121314">
   <p><span>本文标题:</span><a href="/2018/noip2013d1/">NOIP 2013 Day1</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 aiyoupass 的个人博客">aiyoupass</a></p>
   <p><span>发布时间:</span>2018年04月01日 - 17:04</p>
-  <p><span>最后更新:</span>2018年04月07日 - 16:04</p>
+  <p><span>最后更新:</span>2018年05月03日 - 19:05</p>
   <p><span>原始链接:</span><a href="/2018/noip2013d1/" title="NOIP 2013 Day1">http://aiyoupass.com/2018/noip2013d1/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://aiyoupass.com/2018/noip2013d1/"  aria-label="复制成功！"></i></span>
   </p>

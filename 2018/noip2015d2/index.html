@@ -89,21 +89,24 @@
     })();
 </script>
 
-<meta name="description" content="跳石头子串运输计划
-跳石头Solution　　典型的二分答案题, 答案为最短跳跃距离的最大值, 记为$\textbf{ans}$, 那么对于任意$l,l&amp;lt;\textbf{ans}$, 以其为最短跳跃距离都能移走不超$m$个石子跳过河; 对于任意$l,l&amp;gt;\textbf{ans}$, 以其为最短跳跃距离不能移走不超$m$个石子跳过河, 也就是说如果以$f(l)$表示以$l$为最短距离能不">
+<meta name="description" content="跳石头
+子串
+运输计划">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NOIP 2015 Day2">
 <meta property="og:url" content="http://aiyoupass.com/2018/noip2015d2/index.html">
 <meta property="og:site_name" content="落花微雨">
-<meta property="og:description" content="跳石头子串运输计划
-跳石头Solution　　典型的二分答案题, 答案为最短跳跃距离的最大值, 记为$\textbf{ans}$, 那么对于任意$l,l&amp;lt;\textbf{ans}$, 以其为最短跳跃距离都能移走不超$m$个石子跳过河; 对于任意$l,l&amp;gt;\textbf{ans}$, 以其为最短跳跃距离不能移走不超$m$个石子跳过河, 也就是说如果以$f(l)$表示以$l$为最短距离能不">
+<meta property="og:description" content="跳石头
+子串
+运输计划">
 <meta property="og:image" content="https://cdn.luogu.org/upload/pic/18182.png">
 <meta property="og:image" content="https://cdn.luogu.org/upload/pic/18183.png">
-<meta property="og:updated_time" content="2018-04-29T02:25:02.000Z">
+<meta property="og:updated_time" content="2018-05-03T11:46:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NOIP 2015 Day2">
-<meta name="twitter:description" content="跳石头子串运输计划
-跳石头Solution　　典型的二分答案题, 答案为最短跳跃距离的最大值, 记为$\textbf{ans}$, 那么对于任意$l,l&amp;lt;\textbf{ans}$, 以其为最短跳跃距离都能移走不超$m$个石子跳过河; 对于任意$l,l&amp;gt;\textbf{ans}$, 以其为最短跳跃距离不能移走不超$m$个石子跳过河, 也就是说如果以$f(l)$表示以$l$为最短距离能不">
+<meta name="twitter:description" content="跳石头
+子串
+运输计划">
 <meta name="twitter:image" content="https://cdn.luogu.org/upload/pic/18182.png">
 
 
@@ -443,7 +446,12 @@
       
 
       
-        <p><a href="https://www.luogu.org/problemnew/show/P2678" target="_blank" rel="external">跳石头</a><br><a href="https://www.luogu.org/problemnew/show/P2679" target="_blank" rel="external">子串</a><br><a href="https://www.luogu.org/problemnew/show/P2680" target="_blank" rel="external">运输计划</a></p>
+        <ul>
+<li><a href="https://www.luogu.org/problemnew/show/P2678" target="_blank" rel="external">跳石头</a></li>
+<li><a href="https://www.luogu.org/problemnew/show/P2679" target="_blank" rel="external">子串</a></li>
+<li><a href="https://www.luogu.org/problemnew/show/P2680" target="_blank" rel="external">运输计划</a></li>
+</ul>
+<a id="more"></a>
 <h3 id="跳石头"><a href="#跳石头" class="headerlink" title="跳石头"></a>跳石头</h3><h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>　　典型的二分答案题, 答案为<strong>最短跳跃距离的最大值</strong>, 记为$\textbf{ans}$, 那么对于任意$l,l&lt;\textbf{ans}$, 以其为最短跳跃距离都能移走不超$m$个石子跳过河; 对于任意$l,l&gt;\textbf{ans}$, 以其为最短跳跃距离不能移走不超$m$个石子跳过河, 也就是说如果以$f(l)$表示以$l$为最短距离能不能过河, $f(l),l\in \textbf{N}\text{且}0&lt; l\leq l$ 具有单调性.</p>
 <p>　　所以对于任意$l$, 所需要找到的就是这么一个点$u$使得$f(u)=1$的最大值, 也就是本题的答案.</p>
 <p>　　也就是说需要二分这个答案的点的位置, 通过<strong>二分答案</strong>.</p>
@@ -488,7 +496,7 @@
   <p><span>本文标题:</span><a href="/2018/noip2015d2/">NOIP 2015 Day2</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 aiyoupass 的个人博客">aiyoupass</a></p>
   <p><span>发布时间:</span>2018年04月29日 - 11:04</p>
-  <p><span>最后更新:</span>2018年04月29日 - 10:04</p>
+  <p><span>最后更新:</span>2018年05月03日 - 19:05</p>
   <p><span>原始链接:</span><a href="/2018/noip2015d2/" title="NOIP 2015 Day2">http://aiyoupass.com/2018/noip2015d2/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://aiyoupass.com/2018/noip2015d2/"  aria-label="复制成功！"></i></span>
   </p>
