@@ -4,8 +4,43 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/noip2017d2/</loc>
+    <lastmod>2018-05-03T03:27:02.000Z</lastmod>
+    <data>
+        <display>
+        <title>NOIP 2017 Day2</title>
+        <pubTime>2018-05-03T03:14:42.000Z</pubTime>
+        
+        <tag>树状数组</tag>
+         
+        <tag>搜索</tag>
+         
+        <tag>NOIP</tag>
+         
+        <tag>并查集</tag>
+         
+        <tag>记忆化搜索</tag>
+         
+        <tag>状压dp</tag>
+         
+        <tag>平衡树</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/noip2017d1/</loc>
-    <lastmod>2018-05-02T13:43:24.000Z</lastmod>
+    <lastmod>2018-05-03T03:14:46.000Z</lastmod>
     <data>
         <display>
         <title>NOIP 2017 Day1</title>
@@ -19,9 +54,59 @@
          
         <tag>拓扑排序</tag>
          
+        <tag>NOIP</tag>
+         
         <tag>数论</tag>
          
         <tag>记忆化搜索</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/BIT/</loc>
+    <lastmod>2018-05-03T03:14:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>BIT</title>
+        <pubTime>2018-05-03T03:12:48.000Z</pubTime>
+        
+        <tag>树状数组</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/theshortestload/</loc>
+    <lastmod>2018-05-02T13:58:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>最短路计数问题</title>
+        <pubTime>2018-05-02T07:04:59.000Z</pubTime>
+        
+        <tag>图论</tag>
+         
+        <tag>最短路</tag>
          
          
            
@@ -60,31 +145,6 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/theshortestload/</loc>
-    <lastmod>2018-05-02T07:24:12.000Z</lastmod>
-    <data>
-        <display>
-        <title>最短路计数问题</title>
-        <pubTime>2018-05-02T07:04:59.000Z</pubTime>
-        
-        <tag>图论</tag>
-         
-        <tag>最短路</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://aiyoupass.com/2018/noip2016d2/</loc>
     <lastmod>2018-05-01T13:37:52.000Z</lastmod>
     <data>
@@ -98,11 +158,11 @@
          
         <tag>记忆化搜索</tag>
          
+        <tag>状压dp</tag>
+         
         <tag>组合数</tag>
          
         <tag>堆</tag>
-         
-        <tag>状压dp</tag>
          
          
            
@@ -684,23 +744,23 @@
         <title>NOIP 2013 Day1</title>
         <pubTime>2018-04-01T09:59:40.000Z</pubTime>
         
+        <tag>树状数组</tag>
+         
         <tag>模拟</tag>
          
         <tag>NOIP</tag>
          
-        <tag>倍增</tag>
-         
         <tag>快速幂</tag>
          
         <tag>逆序对</tag>
-         
-        <tag>树状数组</tag>
          
         <tag>归并排序</tag>
          
         <tag>最小生成树</tag>
          
         <tag>lca</tag>
+         
+        <tag>倍增</tag>
          
          
            
@@ -2705,9 +2765,9 @@
         <title>Every-SG</title>
         <pubTime>2018-02-27T02:47:51.000Z</pubTime>
         
-        <tag>Every-SG</tag>
-         
         <tag>博弈论</tag>
+         
+        <tag>Every-SG</tag>
          
          
            
@@ -2785,9 +2845,9 @@
         <title>Anti-SG/Misère Games</title>
         <pubTime>2018-02-26T00:17:21.000Z</pubTime>
         
-        <tag>博弈论</tag>
-         
         <tag>Anti-SG</tag>
+         
+        <tag>博弈论</tag>
          
         <tag>Misère Games</tag>
          
