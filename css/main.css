@@ -1874,7 +1874,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #30f22b;
+  background: #3bc4a2;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3041,4 +3041,25 @@ pre .javascript .function {
   .post-body {
     text-align: justify;
   }
+}
+.bg_content {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+body {
+  background: url("https://i.loli.net/2018/05/04/5aeb9d90c40d0.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-position: calc(x) calc(y);
+}
+#canvas {
+  width: 100%;
+  height: 100%;
+}
+.header {
+  background: transparent;
 }
