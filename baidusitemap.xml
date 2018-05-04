@@ -4,6 +4,71 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/bzoj2288/</loc>
+    <lastmod>2018-05-04T13:38:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>bzoj 2288【POJ Challenge】生日礼物</title>
+        <pubTime>2018-05-04T13:14:24.000Z</pubTime>
+        
+        <tag>链表</tag>
+         
+        <tag>堆</tag>
+         
+        <tag>贪心</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/bzoj1854/</loc>
+    <lastmod>2018-05-04T12:53:56.000Z</lastmod>
+    <data>
+        <display>
+        <title>bzoj1854</title>
+        <pubTime>2018-05-04T12:53:54.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/unkown1/</loc>
+    <lastmod>2018-05-04T12:37:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>noip 模拟赛 数列</title>
+        <pubTime>2018-05-04T12:11:43.000Z</pubTime>
+        
+        <tag>矩阵快速幂</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/exam5-4/</loc>
     <lastmod>2018-05-04T12:16:52.000Z</lastmod>
     <data>
@@ -22,29 +87,6 @@
           
              
               <breadCrumb title="考试" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E8%80%83%E8%AF%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/unkown1/</loc>
-    <lastmod>2018-05-04T12:16:24.000Z</lastmod>
-    <data>
-        <display>
-        <title>noip 模拟赛 数列</title>
-        <pubTime>2018-05-04T12:11:43.000Z</pubTime>
-        
-        <tag>矩阵快速幂</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
           
         </display>
     </data>
@@ -124,9 +166,9 @@
          
         <tag>字符串</tag>
          
-        <tag>模拟</tag>
-         
         <tag>贪心</tag>
+         
+        <tag>模拟</tag>
          
          
            
@@ -263,9 +305,9 @@
         
         <tag>动态规划</tag>
          
-        <tag>模拟</tag>
-         
         <tag>贪心</tag>
+         
+        <tag>模拟</tag>
          
         <tag>搜索</tag>
          
@@ -451,11 +493,11 @@
         
         <tag>动态规划</tag>
          
+        <tag>堆</tag>
+         
         <tag>搜索</tag>
          
         <tag>组合数</tag>
-         
-        <tag>堆</tag>
          
         <tag>状压dp</tag>
          
@@ -994,9 +1036,9 @@
         
         <tag>字符串</tag>
          
-        <tag>模拟</tag>
-         
         <tag>贪心</tag>
+         
+        <tag>模拟</tag>
          
         <tag>考试</tag>
          
@@ -1162,9 +1204,9 @@
         <title>NOIP 2011 Day2</title>
         <pubTime>2018-03-25T06:39:24.000Z</pubTime>
         
-        <tag>模拟</tag>
-         
         <tag>贪心</tag>
+         
+        <tag>模拟</tag>
          
         <tag>NOIP</tag>
          
@@ -1788,9 +1830,9 @@
         
         <tag>图论</tag>
          
-        <tag>最短路</tag>
-         
         <tag>贪心</tag>
+         
+        <tag>最短路</tag>
          
         <tag>倍增</tag>
          
