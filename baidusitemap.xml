@@ -4,6 +4,77 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/bzoj1787/</loc>
+    <lastmod>2018-05-05T03:22:32.000Z</lastmod>
+    <data>
+        <display>
+        <title>bzoj 1787 [Ahoi2008 Meet 紧急集合]</title>
+        <pubTime>2018-05-05T02:30:30.000Z</pubTime>
+        
+        <tag>最近公共祖先</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/bzoj3293/</loc>
+    <lastmod>2018-05-05T03:20:48.000Z</lastmod>
+    <data>
+        <display>
+        <title></title>
+        <pubTime>2018-05-05T03:30:00.000Z</pubTime>
+        
+        <tag>数学</tag>
+         
+        <tag>费用流</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/bzoj1854/</loc>
+    <lastmod>2018-05-04T13:52:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>bzoj 1854 [scoi2010]游戏</title>
+        <pubTime>2018-05-04T12:53:54.000Z</pubTime>
+        
+        <tag>并查集</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/bzoj2288/</loc>
     <lastmod>2018-05-04T13:38:42.000Z</lastmod>
     <data>
@@ -25,21 +96,6 @@
              
               <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/bzoj1854/</loc>
-    <lastmod>2018-05-04T12:53:56.000Z</lastmod>
-    <data>
-        <display>
-        <title>bzoj1854</title>
-        <pubTime>2018-05-04T12:53:54.000Z</pubTime>
-        
-         
-           
         </display>
     </data>
     </url>
