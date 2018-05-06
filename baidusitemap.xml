@@ -4,6 +4,60 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/bzoj1878/</loc>
+    <lastmod>2018-05-06T10:56:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>bzoj 1878 [SDOI2009]HH的项链</title>
+        <pubTime>2018-05-06T10:28:00.000Z</pubTime>
+        
+        <tag>树状数组</tag>
+         
+        <tag>链表</tag>
+         
+        <tag>离散化</tag>
+         
+        <tag>离线</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/joyoi1520/</loc>
+    <lastmod>2018-05-06T07:18:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>JoyOI 1520 树的直径</title>
+        <pubTime>2018-05-06T07:08:00.000Z</pubTime>
+        
+        <tag>树形dp</tag>
+         
+        <tag>遍历</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/bzoj1037/</loc>
     <lastmod>2018-05-05T13:37:10.000Z</lastmod>
     <data>
@@ -668,11 +722,11 @@
          
         <tag>搜索</tag>
          
+        <tag>记忆化搜索</tag>
+         
         <tag>组合数</tag>
          
         <tag>状压dp</tag>
-         
-        <tag>记忆化搜索</tag>
          
          
            
@@ -705,9 +759,9 @@
          
         <tag>NOIP</tag>
          
-        <tag>记忆化搜索</tag>
-         
         <tag>数论</tag>
+         
+        <tag>记忆化搜索</tag>
          
          
            
@@ -738,9 +792,9 @@
          
         <tag>NOIP</tag>
          
-        <tag>状压dp</tag>
-         
         <tag>记忆化搜索</tag>
+         
+        <tag>状压dp</tag>
          
         <tag>平衡树</tag>
          
