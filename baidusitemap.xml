@@ -4,12 +4,35 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/bzoj1800/</loc>
+    <lastmod>2018-05-07T13:35:32.000Z</lastmod>
+    <data>
+        <display>
+        <title>bzoj 1800 飞行棋</title>
+        <pubTime>2018-05-05T07:39:21.000Z</pubTime>
+        
+        <tag>排列组合</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/bzoj1593/</loc>
-    <lastmod>2018-05-07T09:42:56.000Z</lastmod>
+    <lastmod>2018-05-07T13:27:20.000Z</lastmod>
     <data>
         <display>
         <title>bzoj 1593 [Usaco2008 Feb]Hotel 旅馆</title>
-        <pubTime>2018-05-05T13:41:46.000Z</pubTime>
+        <pubTime>2018-05-06T09:41:46.000Z</pubTime>
         
         <tag>指针</tag>
          
@@ -29,8 +52,46 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/bzoj1876/</loc>
+    <lastmod>2018-05-07T12:27:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>bzoj1876</title>
+        <pubTime>2018-05-07T12:27:20.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/bzoj3505/</loc>
+    <lastmod>2018-05-07T12:04:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>bzoj 3505 [Cqoi2014]数三角形</title>
+        <pubTime>2018-05-07T12:02:01.000Z</pubTime>
+        
+        <tag>排列组合</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/bzoj2208/</loc>
-    <lastmod>2018-05-07T09:42:44.000Z</lastmod>
+    <lastmod>2018-05-07T11:07:04.000Z</lastmod>
     <data>
         <display>
         <title>bzoj 2208 [Jsoi2010]连通数</title>
@@ -145,29 +206,6 @@
         <pubTime>2018-05-05T13:36:32.000Z</pubTime>
         
         <tag>动态规划</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/bzoj1800/</loc>
-    <lastmod>2018-05-05T13:24:18.000Z</lastmod>
-    <data>
-        <display>
-        <title>bzoj 1800 飞行棋</title>
-        <pubTime>2018-05-05T07:39:21.000Z</pubTime>
-        
-        <tag>排列组合</tag>
          
          
            
@@ -1450,9 +1488,9 @@
          
         <tag>倍增</tag>
          
-        <tag>二分答案</tag>
-         
         <tag>扩展欧几里得</tag>
+         
+        <tag>二分答案</tag>
          
         <tag>查分</tag>
          
@@ -2055,11 +2093,11 @@
         
         <tag>博弈论</tag>
          
-        <tag>with draw</tag>
-         
         <tag>bfs</tag>
          
         <tag>无限</tag>
+         
+        <tag>with draw</tag>
          
          
            
@@ -3202,9 +3240,9 @@
         <title>Every-SG</title>
         <pubTime>2018-02-27T02:47:51.000Z</pubTime>
         
-        <tag>Every-SG</tag>
-         
         <tag>博弈论</tag>
+         
+        <tag>Every-SG</tag>
          
          
            
@@ -3282,9 +3320,9 @@
         <title>Anti-SG/Misère Games</title>
         <pubTime>2018-02-26T00:17:21.000Z</pubTime>
         
-        <tag>博弈论</tag>
-         
         <tag>Anti-SG</tag>
+         
+        <tag>博弈论</tag>
          
         <tag>Misère Games</tag>
          
