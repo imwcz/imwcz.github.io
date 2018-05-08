@@ -325,7 +325,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/bzoj1898/">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/Lagrange multiplier/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="aiyoupass">
@@ -344,7 +344,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/bzoj1898/" itemprop="url">bzoj 1898 [Zjoi2005]Swamp 沼泽鳄鱼</a></h1>
+                <a class="post-title-link" href="/2018/Lagrange multiplier/" itemprop="url">拉格朗日乘数法</a></h1>
         
 
         <div class="post-meta">
@@ -356,7 +356,218 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-08T08:36:32+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-08T20:52:20+08:00">
+                2018-05-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/总结/" itemprop="url" rel="index">
+                    <span itemprop="name">总结</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/Lagrange multiplier/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/Lagrange multiplier/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>看这个东西完全是凭借着形象的物理想象和几何想象去理解, 数学语言还是不会的.</p>
+<p><a href="https://www.luogu.org/problemnew/show/P2179" target="_blank" rel="external">NOI2012骑行川藏</a>小学弟问我这道题, 他们的qbxt基础班讲了这道题(二分答案).所以因为这道题看了一晚上的拉格朗日乘数法, 以后得好好学点数学了.虽然这道题基本上看懂了, 但是还没写代码.改天做一下这道题.</p>
+<ul>
+<li>高中数学</li>
+<li>线性代数</li>
+<li>高等代数</li>
+<li>数学分析</li>
+<li>复变函数</li>
+<li>微积分</li>
+<li>抽象代数</li>
+<li>泛函分析</li>
+<li>拓扑学</li>
+</ul>
+<p><a href="https://www.zhihu.com/question/38586401" target="_blank" rel="external">Zhihu</a><br><a href="http://www.cnblogs.com/maybe2030/p/4946256.html#undefined" target="_blank" rel="external">cnblogs</a></p>
+<p>一开始看的下面那个, 不过很多地方不是很明白<br>然后去看知乎上的回答, 很多地方搞明白了.<br>然后看下面那个显然开心很多.然后差不多看明白一点这个东西的推导以及作用.<br>大概是知道其在三维空间中二维流形一维流形的用处了, 至于更高维的空间我也无法形象的理解了.<br>我太蒟蒻了.</p>
+<ul>
+<li>梯度算子</li>
+<li>法向量</li>
+<li>偏导数</li>
+<li>偏微分</li>
+<li>自由度</li>
+<li>梯度场</li>
+<li>流形</li>
+</ul>
+<h3 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h3><p>约束优化问题.<br>引入拉格朗日乘子将具有n个变量和k个约束条件的约束优化问题转化为含有(n+k)个变量的无约束优化问题.<br>数学意义:约束方程梯度线性组合中每个向量的系数.</p>
+<p>引入拉格朗日乘子建立极值条件.对n个变量分别求偏导建立了n个方程加上k个约束条件构成了(n+k)个方程的方程组问题.</p>
+<p>$$<br>\min/\max \text{a function f(x,y,z), where x,y,z are not indepedent and g(x,y,z)=0.}\\<br>\min/\max f(x,y,z)\\<br>s.t. g(x,y,z)=0<br>$$</p>
+<h3 id="数学实例"><a href="#数学实例" class="headerlink" title="数学实例:"></a>数学实例:</h3><p>给定椭球<br>$$<br>\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1<br>$$<br>求其内接长方体的最大体积.<br>$$<br>\max f(x,y,z)=8xyz\\<br>s.t. \frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1<br>$$<br>转化为<br>$$<br>\begin{align}<br>F(x,y,z,\lambda)=&amp;f(x,y,z)+\lambda\phi(x,y,z)\\<br>=&amp;8xyz+\lambda(\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}-1)<br>\end{align}<br>$$<br>对其分别求偏导得到<br>$$<br>\begin{align}<br>\frac{\partial F(x,y,z,\lambda)}{\partial x}=&amp;8yz+\frac{2\lambda x}{a^2}=0\\<br>\frac{\partial F(x,y,z,\lambda)}{\partial x}=&amp;8xz+\frac{2\lambda x}{a^2}=0\\<br>\frac{\partial F(x,y,z,\lambda)}{\partial x}=&amp;8xy+\frac{2\lambda x}{c^2}=0\\<br>\frac{\partial F(x,y,z,\lambda)}{\partial x}=&amp;\lambda(\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}-1)=0<br>\end{align}<br>$$</p>
+<h3 id="zhihu"><a href="#zhihu" class="headerlink" title="zhihu"></a>zhihu</h3><p><a href="link">https://www.zhihu.com/question/38586401</a></p>
+<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><p>极大极小值的必要条件: 梯度场与切空间垂直.<br>函数$f(x,y,z)=z$<br>希望$z$足够大.</p>
+<p>一个人在一座山上走, 希望走到山顶.根据周围的地形判断是往上走还是往下走.</p>
+<p>那么梯度$\nabla f=(0,0,1)$这是一个类似向量的东西, 一个点处的梯度为从周围标量场的最小处指向最大处.</p>
+<p>那么沿梯度方向$f$增长最快, 反方向增长最慢.</p>
+<p>我们可以移动的方向叫做这点的切空间.</p>
+<p>如果某处切空间某个方向与梯度方向夹角为锐角.那么往这移动$f$会增加, 因此这里不是山顶.实际上是说山顶处的切空间只能与梯度方向垂直.</p>
+<p>利用流形的信息可以得到切空间的方程.从而确定于切空间垂直的所有方向(法向).</p>
+<p>利用函数的信息可以得到梯度场的方向.</p>
+<p>梯度场方向与切空间垂直, 所以梯度场可以表示成一些特定的法向的线性组合.<br>系数记为$\lambda_1,\cdots,\lambda_k$.</p>
+<h4 id="一般形式"><a href="#一般形式" class="headerlink" title="一般形式"></a>一般形式</h4><p>一组约束条件$F(x)=0, F=(F_1,\cdots, F_k)$<br>约束条件下所有点为<br>$M={x\in \mathbf{R}^n|F(x)=0}$<br>$p$为$f$的局部极大值或者局部极小值.<br>那么$\nabla f\in (T_p M)^{\bot}$</p>
+<p>$M={x\in \mathbf{R}^n|F(x)=0}$, 所以法向量由$\nabla F_1,\nabla F_2,\cdots $张成.</p>
+<p>存在一组系数$\lambda_1,\cdots,lambda_k$使得<br>$\nabla f=\lambda_1 \nabla F_1+\cdots $</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+    <div>
+    
+    </div>
+    <div>
+    
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/SomePhysicsProblemsInOi/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/SomePhysicsProblemsInOi/" itemprop="url">浅谈信息学竞赛中的物理问题论文学习</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-08T17:06:30+08:00">
                 2018-05-08
               </time>
             
@@ -409,8 +620,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/bzoj1898/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/bzoj1898/" itemprop="commentsCount"></span>
+                <a href="/2018/SomePhysicsProblemsInOi/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/SomePhysicsProblemsInOi/" itemprop="commentsCount"></span>
                 </a>
               </span>
               <!--/noindex-->
@@ -440,14 +651,15 @@
 
       
         
-          <h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>　　潘塔纳尔沼泽地号称世界上最大的一块湿地，它地位于巴西中部马托格罗索州的南部地区。每当雨季来临，这里碧波荡漾、生机盎然，引来不少游客。为了让游玩更有情趣，人们在池塘的中央建设了几座石墩和石桥，每座石桥连接着两座石墩，且每两座石墩之间至多只有一座石桥。这个景点造好之后一直没敢对外开放，原因是池塘里有不少危险的食人鱼。豆豆先生酷爱冒险，他一听说这个消息，立马赶到了池塘，想做第一个在桥上旅游的人。虽说豆豆爱冒险，但也不敢拿自己的性命开玩笑，于是他开始了仔细的实地勘察，并得到了一些惊人的结论：食人鱼的行进路线有周期性，这个周期只可能是2，3或者4个单位时间。每个单位时间里，食人鱼可以从一个石墩游到另一个石墩。每到一个石墩，如果上面有人它就会实施攻击，否则继续它的周期运动。如果没有到石墩，它是不会攻击人的。借助先进的仪器，豆豆很快就摸清了所有食人鱼的运动规律，他要开始设计自己的行动路线了。每个单位时间里，他只可以沿着石桥从一个石墩走到另一个石墩，而不可以停在某座石墩上不动，因为站着不动还会有其它危险。如果豆豆和某条食人鱼在同一时刻到达了某座石墩，就会遭到食人鱼的袭击，他当然不希望发生这样的事情。现在豆豆已经选好了两座石墩Start和End，他想从Start出发，经过K个单位时间后恰好站在石墩End上。假设石墩可以重复经过（包括Start和End），他想请你帮忙算算，这样的路线共有多少种（当然不能遭到食人鱼的攻击）。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/bzoj1898/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <p><div id="my-contaniner"></div></p>
+<p><style><br>.pdfobject-container { height: 700px;}<br>.pdfobject { border: 1px solid #666; }<br>.margins { height: 700px;}<br></style></p>
+<script src="/js/pdfobject.js"></script>
+<script>PDFObject.embed("/pdf/2015paper.pdf", "#my-contaniner" , {height: "700px"});</script>
+
+<p>看到这篇论文, emm……我应该是会点, 于是就心血来潮看了看, 有的题目挺简单, emm……做做吧.</p>
+
+          
         
       
     </div>
@@ -619,6 +831,181 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/bzoj1529./#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+    
+    </div>
+    <div>
+    
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/bzoj1898/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/bzoj1898/" itemprop="url">bzoj 1898 [Zjoi2005]Swamp 沼泽鳄鱼</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-08T08:36:32+08:00">
+                2018-05-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
+                    <span itemprop="name">题目</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/bzoj1898/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/bzoj1898/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>　　潘塔纳尔沼泽地号称世界上最大的一块湿地，它地位于巴西中部马托格罗索州的南部地区。每当雨季来临，这里碧波荡漾、生机盎然，引来不少游客。为了让游玩更有情趣，人们在池塘的中央建设了几座石墩和石桥，每座石桥连接着两座石墩，且每两座石墩之间至多只有一座石桥。这个景点造好之后一直没敢对外开放，原因是池塘里有不少危险的食人鱼。豆豆先生酷爱冒险，他一听说这个消息，立马赶到了池塘，想做第一个在桥上旅游的人。虽说豆豆爱冒险，但也不敢拿自己的性命开玩笑，于是他开始了仔细的实地勘察，并得到了一些惊人的结论：食人鱼的行进路线有周期性，这个周期只可能是2，3或者4个单位时间。每个单位时间里，食人鱼可以从一个石墩游到另一个石墩。每到一个石墩，如果上面有人它就会实施攻击，否则继续它的周期运动。如果没有到石墩，它是不会攻击人的。借助先进的仪器，豆豆很快就摸清了所有食人鱼的运动规律，他要开始设计自己的行动路线了。每个单位时间里，他只可以沿着石桥从一个石墩走到另一个石墩，而不可以停在某座石墩上不动，因为站着不动还会有其它危险。如果豆豆和某条食人鱼在同一时刻到达了某座石墩，就会遭到食人鱼的袭击，他当然不希望发生这样的事情。现在豆豆已经选好了两座石墩Start和End，他想从Start出发，经过K个单位时间后恰好站在石墩End上。假设石墩可以重复经过（包括Start和End），他想请你帮忙算算，这样的路线共有多少种（当然不能遭到食人鱼的攻击）。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/bzoj1898/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1677,361 +2064,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/joyoi1520/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="aiyoupass">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/myjson/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="落花微雨">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/joyoi1520/" itemprop="url">JoyOI 1520 树的直径</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-06T15:08:00+08:00">
-                2018-05-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
-                    <span itemprop="name">信息学竞赛</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
-                    <span itemprop="name">题目</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/joyoi1520/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/joyoi1520/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="JoyOI-1520-树的直径"><a href="#JoyOI-1520-树的直径" class="headerlink" title="JoyOI 1520 树的直径"></a>JoyOI 1520 树的直径</h3><h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>　　树的直径，即这棵树中距离最远的两个结点的距离。每两个相邻的结点的距离为1，即父亲结点与儿子结点或儿子结点与父子结点之间的距离为1.有趣的是，从树的任意一个结点a出发，走到距离最远的结点b，再从结点b出发，能够走的最远距离，就是树的直径。树中相邻两个结点的距离为1。你的任务是：给定一棵树，求这棵树中距离最远的两个结点的距离。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/joyoi1520/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    <div>
-    
-    </div>
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/bzoj1037/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="aiyoupass">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/myjson/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="落花微雨">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/bzoj1037/" itemprop="url">bzoj1037 [ZJOI2008]生日聚会Party</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-05T21:36:32+08:00">
-                2018-05-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
-                    <span itemprop="name">信息学竞赛</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
-                    <span itemprop="name">题目</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/bzoj1037/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/bzoj1037/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="1037-ZJOI2008-生日聚会Party"><a href="#1037-ZJOI2008-生日聚会Party" class="headerlink" title="1037: [ZJOI2008]生日聚会Party"></a>1037: [ZJOI2008]生日聚会Party</h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>　　今天是hidadz小朋友的生日，她邀请了许多朋友来参加她的生日party。 hidadz带着朋友们来到花园中，打算坐成一排玩游戏。为了游戏不至于无聊，就座的方案应满足如下条件：对于任意连续的一段，男孩与女孩的数目之差不超过k。很快，小朋友便找到了一种方案坐了下来开始游戏。hidadz的好朋友Susie发现，这样的就座方案其实是很多的，所以大家很快就找到了一种，那么到底有多少种呢？热爱数学的hidadz和她的朋友们开始思考这个问题…… 假设参加party的人中共有n个男孩与m个女孩，你是否能解答Susie和hidadz的疑问呢？由于这个数目可能很多，他们只想知道这个数目除以12345678的余数。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/bzoj1037/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    <div>
-    
-    </div>
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2081,7 +2118,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">140</span>
+                  <span class="site-state-item-count">142</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2103,7 +2140,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">145</span>
+                  <span class="site-state-item-count">148</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
