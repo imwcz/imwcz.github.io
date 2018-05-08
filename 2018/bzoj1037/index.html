@@ -95,7 +95,7 @@
 <meta property="og:url" content="http://aiyoupass.com/2018/bzoj1037/index.html">
 <meta property="og:site_name" content="落花微雨">
 <meta property="og:description" content="1037: [ZJOI2008]生日聚会PartyDescription　　今天是hidadz小朋友的生日，她邀请了许多朋友来参加她的生日party。 hidadz带着朋友们来到花园中，打算坐成一排玩游戏。为了游戏不至于无聊，就座的方案应满足如下条件：对于任意连续的一段，男孩与女孩的数目之差不超过k。很快，小朋友便找到了一种方案坐了下来开始游戏。hidadz的好朋友Susie发现，这样的就座方案其">
-<meta property="og:updated_time" content="2018-05-05T13:37:10.000Z">
+<meta property="og:updated_time" content="2018-05-08T03:28:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="bzoj1037 [ZJOI2008]生日聚会Party">
 <meta name="twitter:description" content="1037: [ZJOI2008]生日聚会PartyDescription　　今天是hidadz小朋友的生日，她邀请了许多朋友来参加她的生日party。 hidadz带着朋友们来到花园中，打算坐成一排玩游戏。为了游戏不至于无聊，就座的方案应满足如下条件：对于任意连续的一段，男孩与女孩的数目之差不超过k。很快，小朋友便找到了一种方案坐了下来开始游戏。hidadz的好朋友Susie发现，这样的就座方案其">
@@ -438,6 +438,7 @@
 
       
         <h3 id="1037-ZJOI2008-生日聚会Party"><a href="#1037-ZJOI2008-生日聚会Party" class="headerlink" title="1037: [ZJOI2008]生日聚会Party"></a>1037: [ZJOI2008]生日聚会Party</h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>　　今天是hidadz小朋友的生日，她邀请了许多朋友来参加她的生日party。 hidadz带着朋友们来到花园中，打算坐成一排玩游戏。为了游戏不至于无聊，就座的方案应满足如下条件：对于任意连续的一段，男孩与女孩的数目之差不超过k。很快，小朋友便找到了一种方案坐了下来开始游戏。hidadz的好朋友Susie发现，这样的就座方案其实是很多的，所以大家很快就找到了一种，那么到底有多少种呢？热爱数学的hidadz和她的朋友们开始思考这个问题…… 假设参加party的人中共有n个男孩与m个女孩，你是否能解答Susie和hidadz的疑问呢？由于这个数目可能很多，他们只想知道这个数目除以12345678的余数。</p>
+<a id="more"></a>
 <h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>　　这个题目最关键的是<strong>状态设计</strong>, 因为看着非常棘手, 怎么保证<strong>任意连续的一段都满足</strong>呢?<br>　　设$f(i,j,k,l)$表示一共有$i$人, 男生有$j$人且男生最多比女生多$k$个, 女生最多比男生多$l$个的方案数, 然后数据范围非常小就可以暴力转移了.</p>
 <h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 305</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> mod 12345678</span></div><div class="line"></div><div class="line"><span class="keyword">int</span> n,m,k,f[N][<span class="number">155</span>][<span class="number">25</span>][<span class="number">25</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;n,&amp;m,&amp;k);</div><div class="line">    f[<span class="number">0</span>][<span class="number">0</span>][<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n+m;++i)</div><div class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=n;++j)</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> x=<span class="number">0</span>;x&lt;=k;++x)</div><div class="line">          <span class="keyword">for</span>(<span class="keyword">int</span> y=<span class="number">0</span>;y&lt;=k;++y)</div><div class="line">            <span class="keyword">if</span>(f[i][j][x][y])&#123;</div><div class="line">              <span class="keyword">if</span>(x+<span class="number">1</span>&lt;=k&amp;&amp;j+<span class="number">1</span>&lt;=n)</div><div class="line">                f[i+<span class="number">1</span>][j+<span class="number">1</span>][x+<span class="number">1</span>][max(y<span class="number">-1</span>,<span class="number">0</span>)]+=f[i][j][x][y],f[i+<span class="number">1</span>][j+<span class="number">1</span>][x+<span class="number">1</span>][max(y<span class="number">-1</span>,<span class="number">0</span>)]%=mod;</div><div class="line">              <span class="keyword">if</span>(y+<span class="number">1</span>&lt;=k&amp;&amp;i+<span class="number">1</span>-j&lt;=m)</div><div class="line">                f[i+<span class="number">1</span>][j][max(x<span class="number">-1</span>,<span class="number">0</span>)][y+<span class="number">1</span>]+=f[i][j][x][y],f[i+<span class="number">1</span>][j][max(x<span class="number">-1</span>,<span class="number">0</span>)][y+<span class="number">1</span>]%=mod;</div><div class="line">            &#125;</div><div class="line">    <span class="keyword">int</span> ans=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n;++i)</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> x=<span class="number">0</span>;x&lt;=k;++x)</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> y=<span class="number">0</span>;y&lt;=k;++y)</div><div class="line">                ans+=f[n+m][i][x][y],ans%=mod;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
@@ -465,7 +466,7 @@
   <p><span>本文标题:</span><a href="/2018/bzoj1037/">bzoj1037 [ZJOI2008]生日聚会Party</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 aiyoupass 的个人博客">aiyoupass</a></p>
   <p><span>发布时间:</span>2018年05月05日 - 21:05</p>
-  <p><span>最后更新:</span>2018年05月05日 - 21:05</p>
+  <p><span>最后更新:</span>2018年05月08日 - 11:05</p>
   <p><span>原始链接:</span><a href="/2018/bzoj1037/" title="bzoj1037 [ZJOI2008]生日聚会Party">http://aiyoupass.com/2018/bzoj1037/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://aiyoupass.com/2018/bzoj1037/"  aria-label="复制成功！"></i></span>
   </p>
@@ -609,7 +610,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">138</span>
+                  <span class="site-state-item-count">140</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -631,7 +632,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">143</span>
+                  <span class="site-state-item-count">145</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
