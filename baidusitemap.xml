@@ -4,14 +4,16 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/bzoj1800/</loc>
-    <lastmod>2018-05-07T13:35:32.000Z</lastmod>
+    <loc>http://aiyoupass.com/2018/bzoj1593/</loc>
+    <lastmod>2018-05-08T00:38:52.000Z</lastmod>
     <data>
         <display>
-        <title>bzoj 1800 飞行棋</title>
-        <pubTime>2018-05-05T07:39:21.000Z</pubTime>
+        <title>bzoj 1593 [Usaco2008 Feb]Hotel 旅馆</title>
+        <pubTime>2018-05-06T09:41:46.000Z</pubTime>
         
-        <tag>排列组合</tag>
+        <tag>指针</tag>
+         
+        <tag>线段树</tag>
          
          
            
@@ -27,16 +29,14 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/bzoj1593/</loc>
-    <lastmod>2018-05-07T13:27:20.000Z</lastmod>
+    <loc>http://aiyoupass.com/2018/bzoj1800/</loc>
+    <lastmod>2018-05-07T13:35:32.000Z</lastmod>
     <data>
         <display>
-        <title>bzoj 1593 [Usaco2008 Feb]Hotel 旅馆</title>
-        <pubTime>2018-05-06T09:41:46.000Z</pubTime>
+        <title>bzoj 1800 飞行棋</title>
+        <pubTime>2018-05-05T07:39:21.000Z</pubTime>
         
-        <tag>指针</tag>
-         
-        <tag>线段树</tag>
+        <tag>排列组合</tag>
          
          
            
@@ -2174,9 +2174,9 @@
          
         <tag>线段树</tag>
          
-        <tag>Floyd</tag>
-         
         <tag>贪心</tag>
+         
+        <tag>Floyd</tag>
          
         <tag>最短路</tag>
          
@@ -2753,9 +2753,9 @@
         <title>T21776 子序列</title>
         <pubTime>2018-02-09T12:42:19.000Z</pubTime>
         
-        <tag>矩阵快速幂</tag>
-         
         <tag>线段树</tag>
+         
+        <tag>矩阵快速幂</tag>
          
          
            
@@ -3136,7 +3136,7 @@
     <data>
         <display>
         <title>HDU 4825 Xor Sum</title>
-        <pubTime>2018-02-10T16:10:00.000Z</pubTime>
+        <pubTime>2018-02-11T21:40:00.000Z</pubTime>
         
         <tag>Trie</tag>
          
