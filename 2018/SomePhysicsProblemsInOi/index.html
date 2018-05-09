@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="pdf,物理问题," />
+  <meta name="keywords" content="物理,pdf," />
 
 
 
@@ -95,7 +95,7 @@ PDFObject.embed(&quot;/pdf/2015paper.pdf&quot;, &quot;#my-contaniner&quot; , {he
 
 看到这篇论文, emm……我应该是">
 <meta property="og:type" content="article">
-<meta property="og:title" content="浅谈信息学竞赛中的物理问题论文学习">
+<meta property="og:title" content="浅谈信息学竞赛中的物理问题">
 <meta property="og:url" content="http://aiyoupass.com/2018/SomePhysicsProblemsInOi/index.html">
 <meta property="og:site_name" content="落花微雨">
 <meta property="og:description" content=".pdfobject-container { height: 700px;}.pdfobject { border: 1px solid #666; }.margins { height: 700px;}
@@ -103,14 +103,18 @@ PDFObject.embed(&quot;/pdf/2015paper.pdf&quot;, &quot;#my-contaniner&quot; , {he
 PDFObject.embed(&quot;/pdf/2015paper.pdf&quot;, &quot;#my-contaniner&quot; , {height: &quot;700px&quot;});
 
 看到这篇论文, emm……我应该是">
-<meta property="og:updated_time" content="2018-05-08T13:59:48.000Z">
+<meta property="og:image" content="http://aiyoupass.com/wy.svg">
+<meta property="og:image" content="http://aiyoupass.com/2.svg">
+<meta property="og:image" content="http://aiyoupass.com/3.svg">
+<meta property="og:updated_time" content="2018-05-09T13:39:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="浅谈信息学竞赛中的物理问题论文学习">
+<meta name="twitter:title" content="浅谈信息学竞赛中的物理问题">
 <meta name="twitter:description" content=".pdfobject-container { height: 700px;}.pdfobject { border: 1px solid #666; }.margins { height: 700px;}
 
 PDFObject.embed(&quot;/pdf/2015paper.pdf&quot;, &quot;#my-contaniner&quot; , {height: &quot;700px&quot;});
 
 看到这篇论文, emm……我应该是">
+<meta name="twitter:image" content="http://aiyoupass.com/wy.svg">
 
 
 
@@ -146,7 +150,7 @@ PDFObject.embed(&quot;/pdf/2015paper.pdf&quot;, &quot;#my-contaniner&quot; , {he
 
 
 
-  <title>浅谈信息学竞赛中的物理问题论文学习 | 落花微雨</title>
+  <title>浅谈信息学竞赛中的物理问题 | 落花微雨</title>
   
 
 
@@ -354,7 +358,7 @@ PDFObject.embed(&quot;/pdf/2015paper.pdf&quot;, &quot;#my-contaniner&quot; , {he
 
         
         
-          <h1 class="post-title" itemprop="name headline">浅谈信息学竞赛中的物理问题论文学习</h1>
+          <h1 class="post-title" itemprop="name headline">浅谈信息学竞赛中的物理问题</h1>
         
 
         <div class="post-meta">
@@ -454,7 +458,27 @@ PDFObject.embed(&quot;/pdf/2015paper.pdf&quot;, &quot;#my-contaniner&quot; , {he
 <script src="/js/pdfobject.js"></script>
 <script>PDFObject.embed("/pdf/2015paper.pdf", "#my-contaniner" , {height: "700px"});</script>
 
-<p>看到这篇论文, emm……我应该是会点, 于是就心血来潮看了看, 有的题目挺简单, emm……做做吧.</p>
+<p>看到这篇论文, emm……我应该是会点, 于是就心血来潮看了看.</p>
+<p>值得一提的是这里的题思维难度并不是很大, 而且都是物理上比较套路的题目.</p>
+<a id="more"></a>
+<p><strong><em>注意下文所有的矢量都不一定用黑体表示.可能会有遗漏请注意甄别</em></strong></p>
+<h3 id="运动学"><a href="#运动学" class="headerlink" title="运动学"></a>运动学</h3><h4 id="平面运动"><a href="#平面运动" class="headerlink" title="平面运动"></a>平面运动</h4><p>可在二位坐标系上表示.<br><img src="wy.svg" alt="位移"><br>　　其中用$\mathbf{r}$表示某时刻的位置的矢量.$\mathbf{r}$是位置关于$t$的函数$\mathbf{r}(t)$.$\Delta r=r’-r$, 表示位移的变化.$\Delta r=r(t+\Delta)-r(t)$.<br>其中某一段时间内的平均速度$\bar v$为<br>$$\bar v=\frac{\Delta r}{\Delta t}$$<br>某一时刻瞬时速度(简称速度)表示位移相对于时间的变化率.是位置的一阶导数.<br>$$\boldsymbol{v}=\lim_{\Delta t\rightarrow 0}\frac{\Delta r}{\Delta t}=\frac{dr}{dt}$$<br>速度是关于时间的函数, 表示为$v(t)$<br>其中平均加速度$\bar a$为<br>$$\bar a=\frac{\Delta v}{\Delta t}$$<br>瞬时加速度(简称加速度)可表示为<br>$$\boldsymbol{a}=\lim_{\Delta t\rightarrow 0}\frac{\Delta v}{\Delta t}=\frac{dv}{dt}=\frac{d^2r}{dt^2}.$$<br>可以看出加速度为速度关于时间的一阶导数, 位置关于时间的二阶导数.</p>
+<p>其中每个矢量都可以被位移的分解为平面内一组基的线性组合.例如矢量$\alpha $可表示为<br>$$\boldsymbol{\alpha} =\alpha_xi+\alpha_yi$$<br>其中$i,j$为$x,y$正半轴的单位矢量.然后可以对其分量进行运算, 这样就把矢量运算转化为标量运算了.</p>
+<p>　　根据矢量在同一组基下的唯一分解性, 可以将位移,速度,加速度分别表示成$x,y$轴分量的形式.如<br>$$\boldsymbol{v}=v_xi+x_yj$$<br>其中$\boldsymbol{v} v$为矢量, $v_x,v_y$是$v$在$x,y$轴上的分量.<br>$$|\boldsymbol{v}|=\sqrt{v_x^2+v_y^2}$$</p>
+<h4 id="平面曲线运动"><a href="#平面曲线运动" class="headerlink" title="平面曲线运动"></a>平面曲线运动</h4><p>　　曲线运动一般由多个运动合成.因此可以研究各个分运动来求解.<br>　　一个运动可以由各个分运动合成.如一个初速度为$v_0$的斜抛运动可以表示成一下三个运动的和.<br>$$<br>\begin{cases}<br>v_1(t)=\sin\alpha v_0 j\\<br>v_2(t)=\cos\alpha v_0 i\\<br>v_3(t)=gt<br>\end{cases}<br>$$其中$\alpha$表示初速度与$x$轴的夹角.</p>
+<h4 id="圆周运动"><a href="#圆周运动" class="headerlink" title="圆周运动"></a>圆周运动</h4><p>　　圆周运动是曲线运动的一种.质点在一个转动平面上转动, 因此可以用极坐标系来表示一个圆周运动.$\theta(t) , r(t)$分别表示角位置和距离转动中心的位置.<br>根据$\theta $和$r$可以引入角位移$\Delta \theta $, 角速度$\omega$, 角加速度$\beta$的概念.<br>$$<br>\begin{cases}<br>\Delta \theta=\theta-\theta_0\\<br>\boldsymbol \omega =\frac{d\boldsymbol\theta}{dt}\\<br>\boldsymbol{\beta} =\frac{d\boldsymbol \omega }{dt}=\frac{d^2\theta}{dt^2}<br>\end{cases}<br>$$<br>可以发现描述质点的角速度, 角位移, 角加速度只需要一个量$\theta$</p>
+<p>　　然后在根据质点位置的变化引入位移和速度的概念, 这里的位移不是角位移而和上面讲到的一样, 记为$dl$.分析质点速度.<br>　　因为质点位置的变化有两方面, 切向上的和法向上的.法向上的运动会引起转动半径发生改变.<br>　　可以先认为质点做转动半径相同的圆周运动, 这样的话$dl=dl_\tau$.至于速度的法向分量, 可以一会再考虑.<br><img src="2.svg" alt="r"><br>那么$dl=rd\theta$, 那么$$\Delta l_\tau=\int_{\theta_0}^\theta rd\theta =r\Delta \theta$$<br>根据$v_\tau=\frac{\boldsymbol{dl}}{dt}$, 可得到$\boldsymbol v_\tau=r\omega$, 根据$\boldsymbol{v}=\boldsymbol v_\tau+\boldsymbol v_\bot$可以得到法相分量.</p>
+<h4 id="Just-a-joke"><a href="#Just-a-joke" class="headerlink" title="Just a joke"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=4969" target="_blank" rel="external">Just a joke</a></h4><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><p>　　一个人在圆形操场上以匀速率$v_1$做圆周运动, 另一个人在圆心开始以恒定的速率$v_2$向第一个人追赶.且两个人始终与圆心共线, 问追上经过的路程.</p>
+<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>　　因为两个人始终与圆形共线, 所以第一个人做圆周运动的角速度$\omega$始终与第二个人运动的角速度相同, 所以$$v_\tau =r\omega=r\frac{V_1}{R}$$所以$$v_\bot =\sqrt{v_2^2-v_\tau^2}.$$即$$t=\int_{0}^R \frac{dr}{v_\bot}$$解得$d=v_2\cdot t=\frac{Rv_2\arcsin (\frac{v_1}{v_2})}{v_1}$.</p>
+<p><em>值得一提的是我只能做到积分那一步, 三角函数的化简对我来说是个难题(曾好几节自习去刚三角函数)</em><br>我怀疑它出这个题有什么意义, 因为就算手算也不是很复杂的题, 而且也没有利用到计算机的优势.</p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">double</span> v1,v2,R,d;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> T;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;T);</div><div class="line">    <span class="keyword">while</span>(T--)&#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%lf%lf%lf%lf"</span>,&amp;v1,&amp;v2,&amp;R,&amp;d);</div><div class="line">        <span class="keyword">double</span> ans;</div><div class="line">        ans=v2*R*<span class="built_in">asin</span>((<span class="keyword">double</span>)v1/v2)/v1;</div><div class="line">        <span class="keyword">if</span>(ans&gt;d)<span class="built_in">printf</span>(<span class="string">"Why give up treatment\n"</span>);</div><div class="line">        <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"Wake up to code\n"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Magic"><a href="#Magic" class="headerlink" title="Magic"></a><a href="http://poj.openjudge.cn/challenge5/A/" target="_blank" rel="external">Magic</a></h3><h4 id="Description-1"><a href="#Description-1" class="headerlink" title="Description"></a>Description</h4><p>　　有$n$个人分别站在正n边形的$n$个顶点上, 他们分别朝着自己逆时针方向的下一个人的方向匀速率运动, 问什么时候到达正多边形的中心.</p>
+<h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>　　看了这场比赛的题目, 怎么出了两道物理题?woc, 不亏是大浙江, 而且还是绍兴, 真是厉害.</p>
+<h5 id="Solution1"><a href="#Solution1" class="headerlink" title="Solution1"></a>Solution1</h5><p>　　分析这个问题.发现相邻的两个人在他们连线方向的速率是不变的, 也就是说这个问题相当于是两个人在一条直线上以匀速率追赶.<br><img src="3.svg" alt="v"><br>所以追上所花时间为$$\frac{l}{v-v\cos \frac{2\pi}{n}}=\frac{l}{v(1-\cos \frac{2\pi}{n})}$$</p>
+<h5 id="Solution2"><a href="#Solution2" class="headerlink" title="Solution2"></a>Solution2</h5><p>　　发现四个人虽然距离一直在变短, 但是四个人一直会存在于一个正多边形的顶点上, 考虑通过一个简单的证明说明这是对的.因为这$n$个人的运动具有对称性, 也就是他们任意两个相邻的人之间的相互运动都是相同的.所以距离相同, 夹角相同.因而仍然是一个正多边形.<br>　　所以每个人相对于中心的运动速度是恒定不变的. 也就是每个人的速度在与中心连线的分量是不变的.即<br>$$t=\frac{\frac{l}{2\sin \frac{\pi}{n}}}{v\sin\frac{\pi}{n}}=\frac{l}{2v\cdot \sin^2\left(\frac{\pi}{n}\right)}=\frac{l}{v-v\cos \frac{2\pi}{n}}=\frac{l}{v(1-\cos \frac{2\pi}{n})}$$</p>
+<p>所以对于这个$O(1)$的算法我还是比较疑惑,它是在考察我们怎么用程序求三角函数吗?</p>
+<h4 id="Code-1"><a href="#Code-1" class="headerlink" title="Code"></a>Code</h4><h3 id="滑行"><a href="#滑行" class="headerlink" title="滑行"></a><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=3695" target="_blank" rel="external">滑行</a></h3><h4 id="Description-2"><a href="#Description-2" class="headerlink" title="Description:"></a>Description:</h4><p>　　首长NOI惨跪，于是去念文化课了。现在，他面对一道物理题。现在有一个小滑块可以在地面上滑行，地面上被划分成不同的区域，使得小滑块在不同的区域内部有一个不同的速度上限。小滑块在(0，0)点，我们现在要推动小滑块到目标点（x,y）。地面上有N层区域，每层区域都是矩形，现在给你一个序列{Hi}表示每层区域的高度，覆盖的地面横坐标范围是0～X，第i个区域的限速是vi。注： Y=Sigma(Hi) 其中i从1到N其它的地方小滑块不允许进入。现在我们要设计一个路线使得小滑块滑到目标点的用时最小。</p>
+<h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>　　</p>
 
       
     </div>
@@ -486,9 +510,9 @@ PDFObject.embed(&quot;/pdf/2015paper.pdf&quot;, &quot;#my-contaniner&quot; , {he
       
         <div class="post-tags">
           
-            <a href="/tags/pdf/" rel="tag"># pdf</a>
+            <a href="/tags/物理/" rel="tag"># 物理</a>
           
-            <a href="/tags/物理问题/" rel="tag"># 物理问题</a>
+            <a href="/tags/pdf/" rel="tag"># pdf</a>
           
         </div>
       
@@ -501,8 +525,8 @@ PDFObject.embed(&quot;/pdf/2015paper.pdf&quot;, &quot;#my-contaniner&quot; , {he
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/bzoj1898/" rel="next" title="bzoj 1898 [Zjoi2005]Swamp 沼泽鳄鱼">
-                <i class="fa fa-chevron-left"></i> bzoj 1898 [Zjoi2005]Swamp 沼泽鳄鱼
+              <a href="/2018/bzoj1529./" rel="next" title="bzoj 1529 [POI2005]ska Piggy banks">
+                <i class="fa fa-chevron-left"></i> bzoj 1529 [POI2005]ska Piggy banks
               </a>
             
           </div>
@@ -570,8 +594,17 @@ PDFObject.embed(&quot;/pdf/2015paper.pdf&quot;, &quot;#my-contaniner&quot; , {he
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -590,7 +623,7 @@ PDFObject.embed(&quot;/pdf/2015paper.pdf&quot;, &quot;#my-contaniner&quot; , {he
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">142</span>
+                  <span class="site-state-item-count">143</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -677,6 +710,22 @@ PDFObject.embed(&quot;/pdf/2015paper.pdf&quot;, &quot;#my-contaniner&quot; , {he
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#运动学"><span class="nav-number">1.</span> <span class="nav-text">运动学</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#平面运动"><span class="nav-number">1.1.</span> <span class="nav-text">平面运动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#平面曲线运动"><span class="nav-number">1.2.</span> <span class="nav-text">平面曲线运动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#圆周运动"><span class="nav-number">1.3.</span> <span class="nav-text">圆周运动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Just-a-joke"><span class="nav-number">1.4.</span> <span class="nav-text">Just a joke</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Description"><span class="nav-number">1.5.</span> <span class="nav-text">Description:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution"><span class="nav-number">1.6.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number">1.7.</span> <span class="nav-text">Code</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Magic"><span class="nav-number">2.</span> <span class="nav-text">Magic</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description-1"><span class="nav-number">2.1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-1"><span class="nav-number">2.2.</span> <span class="nav-text">Solution</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Solution1"><span class="nav-number">2.2.1.</span> <span class="nav-text">Solution1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Solution2"><span class="nav-number">2.2.2.</span> <span class="nav-text">Solution2</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code-1"><span class="nav-number">2.3.</span> <span class="nav-text">Code</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#滑行"><span class="nav-number">3.</span> <span class="nav-text">滑行</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description-2"><span class="nav-number">3.1.</span> <span class="nav-text">Description:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-2"><span class="nav-number">3.2.</span> <span class="nav-text">Solution</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

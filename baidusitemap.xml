@@ -4,8 +4,58 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/SomePhysicsProblemsInOi/</loc>
+    <lastmod>2018-05-09T13:39:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>浅谈信息学竞赛中的物理问题</title>
+        <pubTime>2018-05-08T09:06:30.000Z</pubTime>
+        
+        <tag>物理</tag>
+         
+        <tag>pdf</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/joyoi1608/</loc>
+    <lastmod>2018-05-09T08:59:56.000Z</lastmod>
+    <data>
+        <display>
+        <title>JoyOi 1608 小熊分糖</title>
+        <pubTime>2018-05-09T08:53:38.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>背包</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/Lagrange%20multiplier/</loc>
-    <lastmod>2018-05-09T08:30:38.000Z</lastmod>
+    <lastmod>2018-05-09T08:53:00.000Z</lastmod>
     <data>
         <display>
         <title>拉格朗日乘数法</title>
@@ -22,31 +72,6 @@
           
              
               <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/SomePhysicsProblemsInOi/</loc>
-    <lastmod>2018-05-08T13:59:48.000Z</lastmod>
-    <data>
-        <display>
-        <title>浅谈信息学竞赛中的物理问题论文学习</title>
-        <pubTime>2018-05-08T09:06:30.000Z</pubTime>
-        
-        <tag>pdf</tag>
-         
-        <tag>物理问题</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
           
         </display>
     </data>
@@ -90,11 +115,11 @@
          
         <tag>Tarjan</tag>
          
-        <tag>并查集</tag>
+        <tag>强连通分量</tag>
          
         <tag>遍历</tag>
          
-        <tag>强连通分量</tag>
+        <tag>并查集</tag>
          
          
            
@@ -140,9 +165,9 @@
         <title>bzoj 1876 [SDOI2009]SuperGCD</title>
         <pubTime>2018-05-07T12:27:20.000Z</pubTime>
         
-        <tag>Python</tag>
-         
         <tag>高精度</tag>
+         
+        <tag>Python</tag>
          
          
            
@@ -165,9 +190,9 @@
         <title>bzoj 1593 [Usaco2008 Feb]Hotel 旅馆</title>
         <pubTime>2018-05-06T09:41:46.000Z</pubTime>
         
-        <tag>指针</tag>
-         
         <tag>线段树</tag>
+         
+        <tag>指针</tag>
          
          
            
@@ -319,9 +344,9 @@
         <title>JoyOI 1520 树的直径</title>
         <pubTime>2018-05-06T07:08:00.000Z</pubTime>
         
-        <tag>树形dp</tag>
-         
         <tag>遍历</tag>
+         
+        <tag>树形dp</tag>
          
          
            
@@ -798,9 +823,9 @@
          
         <tag>树形dp</tag>
          
-        <tag>NOIP</tag>
-         
         <tag>背包</tag>
+         
+        <tag>NOIP</tag>
          
          
            
@@ -823,6 +848,8 @@
         <title>NOIP 2014 Day2</title>
         <pubTime>2018-04-17T07:05:44.000Z</pubTime>
         
+        <tag>Python</tag>
+         
         <tag>最短路</tag>
          
         <tag>模拟</tag>
@@ -830,8 +857,6 @@
         <tag>NOIP</tag>
          
         <tag>高精</tag>
-         
-        <tag>Python</tag>
          
         <tag>二维前缀和</tag>
          
@@ -1105,11 +1130,11 @@
         
         <tag>动态规划</tag>
          
-        <tag>模拟</tag>
-         
         <tag>随机化算法</tag>
          
         <tag>模拟退火</tag>
+         
+        <tag>模拟</tag>
          
          
            
@@ -1631,6 +1656,8 @@
         <title>NOIP 2012 Day1</title>
         <pubTime>2018-03-27T07:10:05.000Z</pubTime>
         
+        <tag>Python</tag>
+         
         <tag>模拟</tag>
          
         <tag>NOIP</tag>
@@ -1638,8 +1665,6 @@
         <tag>倍增</tag>
          
         <tag>高精</tag>
-         
-        <tag>Python</tag>
          
          
            
@@ -2290,9 +2315,9 @@
          
         <tag>线段树</tag>
          
-        <tag>贪心</tag>
-         
         <tag>Floyd</tag>
+         
+        <tag>贪心</tag>
          
         <tag>最短路</tag>
          
@@ -3201,9 +3226,9 @@
         <title>loj6277 数列分块入门 1</title>
         <pubTime>2018-02-12T13:46:15.000Z</pubTime>
         
-        <tag>模板</tag>
-         
         <tag>分块</tag>
+         
+        <tag>模板</tag>
          
          
            
@@ -3548,11 +3573,11 @@
         <title>P3373 线段树2</title>
         <pubTime>2018-02-09T08:16:19.000Z</pubTime>
         
+        <tag>线段树</tag>
+         
         <tag>指针</tag>
          
         <tag>模板</tag>
-         
-        <tag>线段树</tag>
          
         <tag>内存池</tag>
          
@@ -3679,11 +3704,11 @@
         <title>P3372 线段树1</title>
         <pubTime>2018-02-09T07:30:30.000Z</pubTime>
         
+        <tag>线段树</tag>
+         
         <tag>指针</tag>
          
         <tag>模板</tag>
-         
-        <tag>线段树</tag>
          
         <tag>内存池</tag>
          
