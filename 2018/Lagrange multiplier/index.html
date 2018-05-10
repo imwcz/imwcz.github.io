@@ -113,7 +113,7 @@ Baike
 
 知乎上讲的比较形象; cnblogs上例子比较多; 百科上比较全面; 文库上的比较专业.
 做法$\nabla f$大概是标量场$f$在某一点的梯度.也就是这一">
-<meta property="og:updated_time" content="2018-05-09T08:53:00.000Z">
+<meta property="og:updated_time" content="2018-05-10T00:39:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="拉格朗日乘数法">
 <meta name="twitter:description" content="NOI2012骑行川藏qbxt的基础班讲到了这道题, ……王老师你确定真的合适?然后gzy问我,我表示不会.然后看了一晚上加一上午的分析和微积分, 表示革新了我的时间观.
@@ -478,7 +478,7 @@ Baike
 <p>引入拉格朗日乘子建立极值条件.对n个变量分别求偏导建立了n个方程加上k个约束条件构成了(n+k)个方程的方程组问题.</p>
 <p>$$<br>\begin{align}<br>\min/\max \text{a function f(x,y,z), where x,y,z are not indepedent and g(x,y,z)=0.}<br>\end{align}<br>$$<br>$$\begin{align}<br>\min/\max f(x,y,z)\\<br>s.t. g(x,y,z)=0<br>\end{align}<br>$$</p>
 <h3 id="物化附录"><a href="#物化附录" class="headerlink" title="物化附录"></a>物化附录</h3><p><strong><em>以下内容凭借回忆</em></strong><br><strong>详见物理化学课本附录: 拉格朗日乘数子法</strong></p>
-<p>对一个函数$f(x_1,x_2,\cdots,x_n)$求极值为<br>$$<br>df=0<br>$$<br>$$<br>\begin{align}<br>\Rrightarrow \frac{\partial f}{x_1}=&amp;0\\<br>\frac{\partial f}{x_2}=&amp;0\\<br>\cdots \cdots\\<br>\frac{\partial f}{x_n}=&amp;0\\<br>\end{align}<br>$$<br>如果给出多组限制条件<br>$$<br>g_1(x_1,x_2,\cdots ,x_n)=c_1\\<br>g_2(x_1,x_2,\cdots ,x_n)=c_2\\<br>\cdots \cdots\\<br>g_k(x_1,x_2,\cdots ,x_n)=c_3\\<br>$$<br>再求极值就不能那么求了, 那么就可以用一个函数<br>$$<br>F(x_1,\cdots,x_n,\lambda_1,\cdots,\lambda_k)=f(x_1,\cdots ,x_n)+\lambda_1 (g_1-c_1)+\cdots+\lambda_k(g_k-c_k)<br>$$<br>这个函数的极值和$f$的极值相同.其极值为<br>$$dF=0$$<br>$$<br>\begin{align}<br>\Rightarrow \frac{\partial F}{\partial x_1}=&amp;0\\<br>\cdots \cdots\\<br>\frac{\partial F}{\partial x_n}=&amp;0\\<br>\frac{\partial F}{\partial \lambda_1}=&amp;0\\<br>\cdots \cdots \\<br>\frac{\partial F}{\partial \lambda_k}=&amp;0<br>\end{align}<br>$$<br>也就说解这$n+k$组方程会得到解.</p>
+<p>对一个函数$f(x_1,x_2,\cdots,x_n)$求极值为<br>$$<br>df=0/\nabla f=0<br>$$<br>$$<br>\begin{align}<br>\Rrightarrow \frac{\partial f}{x_1}=&amp;0\\<br>\frac{\partial f}{x_2}=&amp;0\\<br>\cdots \cdots\\<br>\frac{\partial f}{x_n}=&amp;0\\<br>\end{align}<br>$$<br>如果给出多组限制条件<br>$$<br>g_1(x_1,x_2,\cdots ,x_n)=c_1\\<br>g_2(x_1,x_2,\cdots ,x_n)=c_2\\<br>\cdots \cdots\\<br>g_k(x_1,x_2,\cdots ,x_n)=c_3\\<br>$$<br>再求极值就不能那么求了, 那么就可以用一个函数<br>$$<br>F(x_1,\cdots,x_n,\lambda_1,\cdots,\lambda_k)=f(x_1,\cdots ,x_n)+\lambda_1 (g_1-c_1)+\cdots+\lambda_k(g_k-c_k)<br>$$<br>这个函数的极值和$f$的极值相同.其极值为<br>$$dF=0$$<br>$$<br>\begin{align}<br>\Rightarrow \frac{\partial F}{\partial x_1}=&amp;0\\<br>\cdots \cdots\\<br>\frac{\partial F}{\partial x_n}=&amp;0\\<br>\frac{\partial F}{\partial \lambda_1}=&amp;0\\<br>\cdots \cdots \\<br>\frac{\partial F}{\partial \lambda_k}=&amp;0<br>\end{align}<br>$$<br>也就说解这$n+k$组方程会得到解.</p>
 <h3 id="数学实例"><a href="#数学实例" class="headerlink" title="数学实例:"></a>数学实例:</h3><p>给定椭球<br>$$<br>\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1<br>$$<br>求其内接长方体的最大体积.<br>$$<br>\max f(x,y,z)=8xyz\\<br>s.t. \frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1<br>$$<br>$F(x,y,z)$极值和$f(x,y,z)$相同.<br>转化为<br>$$<br>\begin{align}<br>F(x,y,z,\lambda)=&amp;f(x,y,z)+\lambda\phi(x,y,z)\\<br>=&amp;8xyz+\lambda(\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}-1)<br>\end{align}<br>$$<br>对其分别求偏导得到<br>$$<br>\begin{align}<br>\frac{\partial F(x,y,z,\lambda)}{\partial x}=&amp;8yz+\frac{2\lambda x}{a^2}=0\\<br>\frac{\partial F(x,y,z,\lambda)}{\partial x}=&amp;8xz+\frac{2\lambda x}{a^2}=0\\<br>\frac{\partial F(x,y,z,\lambda)}{\partial x}=&amp;8xy+\frac{2\lambda x}{c^2}=0\\<br>\frac{\partial F(x,y,z,\lambda)}{\partial \lambda }=&amp;\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}-1=0<br>\end{align}<br>$$<br>然后可以求得$x,y,z,\lambda$的值.</p>
 <h3 id="zhihu"><a href="#zhihu" class="headerlink" title="zhihu"></a>zhihu</h3><p><a href="link">https://www.zhihu.com/question/38586401</a></p>
 <h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><p>极大极小值的必要条件: 梯度场与切空间垂直.<br>函数$f(x,y,z)=z$<br>希望$z$足够大.</p>
@@ -570,8 +570,8 @@ Baike
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/joyoi1608/" rel="prev" title="JoyOi 1608 小熊分糖">
-                JoyOi 1608 小熊分糖 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/bzoj2318/" rel="prev" title="bzoj 2318 Spoj4060 game with probability Problem">
+                bzoj 2318 Spoj4060 game with probability Problem <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -658,7 +658,7 @@ Baike
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">143</span>
+                  <span class="site-state-item-count">146</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -680,7 +680,7 @@ Baike
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">148</span>
+                  <span class="site-state-item-count">150</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

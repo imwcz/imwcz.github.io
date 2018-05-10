@@ -4,6 +4,106 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/p2982/</loc>
+    <lastmod>2018-05-10T03:34:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>p2982 USACO10FEB 慢下来Slowing down</title>
+        <pubTime>2018-05-10T03:16:30.000Z</pubTime>
+        
+        <tag>线段树</tag>
+         
+        <tag>dfs序</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/p2900/</loc>
+    <lastmod>2018-05-10T02:43:32.000Z</lastmod>
+    <data>
+        <display>
+        <title>p2900 USACO08MAR 土地征用Land Acquisition</title>
+        <pubTime>2018-05-10T01:37:40.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>斜率优化</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/bzoj2318/</loc>
+    <lastmod>2018-05-10T01:35:30.000Z</lastmod>
+    <data>
+        <display>
+        <title>bzoj 2318 Spoj4060 game with probability Problem</title>
+        <pubTime>2018-05-08T12:52:20.000Z</pubTime>
+        
+        <tag>博弈论</tag>
+         
+        <tag>概率</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/Lagrange%20multiplier/</loc>
+    <lastmod>2018-05-10T00:39:12.000Z</lastmod>
+    <data>
+        <display>
+        <title>拉格朗日乘数法</title>
+        <pubTime>2018-05-08T12:52:20.000Z</pubTime>
+        
+        <tag>拉格朗日乘数法</tag>
+         
+        <tag>数学分析</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/SomePhysicsProblemsInOi/</loc>
     <lastmod>2018-05-09T13:39:42.000Z</lastmod>
     <data>
@@ -47,31 +147,6 @@
           
              
               <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/Lagrange%20multiplier/</loc>
-    <lastmod>2018-05-09T08:53:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>拉格朗日乘数法</title>
-        <pubTime>2018-05-08T12:52:20.000Z</pubTime>
-        
-        <tag>拉格朗日乘数法</tag>
-         
-        <tag>数学分析</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
           
         </display>
     </data>
