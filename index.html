@@ -325,6 +325,889 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/p2986/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/p2986/" itemprop="url">P2986 [Usaco2010 Mar]gather 奶牛大集会</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-10T17:18:00+08:00">
+                2018-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
+                    <span itemprop="name">题目</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/p2986/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/p2986/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><p>　　Bessie正在计划一年一度的奶牛大集会，来自全国各地的奶牛将来参加这一次集会。当然，她会选择最方便的地点来举办这次集会。每个奶牛居住在 N(1&lt;=N&lt;=100,000) 个农场中的一个，这些农场由N-1条道路连接，并且从任意一个农场都能够到达另外一个农场。道路i连接农场A_i和B_i(1 &lt;= A_i &lt;=N; 1 &lt;= B_i &lt;= N),长度为L_i(1 &lt;= L_i &lt;= 1,000)。集会可以在N个农场中的任意一个举行。另外，每个牛棚中居住者C_i(0 &lt;= C_i &lt;= 1,000)只奶牛。在选择集会的地点的时候，Bessie希望最大化方便的程度(也就是最小化不方便程度)。比如选择第X个农场作为集会地点，它的不方便程度是其它牛棚中每只奶牛去参加集会所走的路程之和，(比如，农场i到达农场X的距离是20，那么总路程就是C_i*20)。帮助Bessie找出最方便的地点来举行大集会。 考虑一个由五个农场组成的国家，分别由长度各异的道路连接起来。在所有农场中，3号和4号没有奶牛居住。 </p>
+<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>做法太多了.</p>
+<ul>
+<li>(我想到的)让集合点在树上移动, 利用上一次的不方便值.</li>
+<li>树形dp</li>
+<li>树形dp, 容斥原理.</li>
+<li>树的重心</li>
+</ul>
+<p>　　分析发现如果此时集合点在$u$处并且不方便值为$c$, 那么将集合点向某个方向移动一下, 有的点到新集合点的距离增大了, 有的减小了, 发现如果是从$u$移动到$v$, 那么与$v$相连的部分到集合点的路程都会减少, 与$u$相连的部分到集合点的路程会增加.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+    <div>
+    
+    </div>
+    <div>
+    
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/p2915/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/p2915/" itemprop="url">P2915 [USACO08NOV]奶牛混合起来Mixed Up Cows</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-10T17:03:40+08:00">
+                2018-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
+                    <span itemprop="name">题目</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/p2915/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/p2915/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><p>　　约翰家有N头奶牛，第i头奶牛的编号是Si，每头奶牛的编号都是唯一的。这些奶牛最近 在闹脾气，为表达不满的情绪，她们在挤奶的时候一定要排成混乱的队伍。在一只混乱的队 伍中，相邻奶牛的编号之差均超过K。比如当K = 1时，1, 3, 5, 2, 6, 4就是一支混乱的队伍， 而1, 3, 6, 5, 2, 4不是，因为6和5只差1。请数一数，有多少种队形是混乱的呢？</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/p2915/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+    
+    </div>
+    <div>
+    
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/p1212/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/p1212/" itemprop="url">P2872 [USACO07DEC]道路建设Building Roads</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-10T16:30:30+08:00">
+                2018-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
+                    <span itemprop="name">题目</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/p1212/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/p1212/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>Farmer John最近得到了一些新的农场，他想新修一些道路使得他的所有农场可以经过原有的或是新修的道路互达（也就是说，从任一个农场都可以经过一些首尾相连道路到达剩下的所有农场）。有些农场之间原本就有道路相连。 所有N(1 &lt;= N &lt;= 1,000)个农场（用1..N顺次编号）在地图上都表示为坐标为(X_i, Y_i)的点(0 &lt;= X_i &lt;= 1,000,000；0 &lt;= Y_i &lt;= 1,000,000)，两个农场间道路的长度自然就是代表它们的点之间的距离。现在Farmer John也告诉了你农场间原有的M(1 &lt;= M &lt;= 1,000)条路分别连接了哪两个农场，他希望你计算一下，为了使得所有农场连通，他所需建造道路的最小总长是多少。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/p1212/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+    
+    </div>
+    <div>
+    
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/p2504/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/p2504/" itemprop="url">P2504 [HAOI2006]聪明的猴子</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-10T15:46:30+08:00">
+                2018-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
+                    <span itemprop="name">题目</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/p2504/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/p2504/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="P2504-HAOI2006-聪明的猴子"><a href="#P2504-HAOI2006-聪明的猴子" class="headerlink" title="P2504 [HAOI2006]聪明的猴子"></a>P2504 [HAOI2006]聪明的猴子</h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><p>在一个热带雨林中生存着一群猴子，它们以树上的果子为生。昨天下了一场大雨，现在雨过天晴，但整个雨林的地表还是被大水淹没着，部分植物的树冠露在水面上。猴子不会游泳，但跳跃能力比较强，它们仍然可以在露出水面的不同树冠上来回穿梭，以找到喜欢吃的果实。</p>
+<p>现在，在这个地区露出水面的有N棵树，假设每棵树本身的直径都很小，可以忽略不计。我们在这块区域上建立直角坐标系，则每一棵树的位置由其所对应的坐标表示(任意两棵树的坐标都不相同)。</p>
+<p>在这个地区住着的猴子有M个，下雨时，它们都躲到了茂密高大的树冠中，没有被大水冲走。由于各个猴子的年龄不同、身体素质不同，它们跳跃的能力不同。有的猴子跳跃的距离比较远(当然也可以跳到较近的树上)，而有些猴子跳跃的距离就比较近。这些猴子非常聪明，它们通过目测就可以准确地判断出自己能否跳到对面的树上。</p>
+<p>【问题】现已知猴子的数量及每一个猴子的最大跳跃距离，还知道露出水面的每一棵树的坐标，你的任务是统计有多少个猴子可以在这个地区露出水面的所有树冠上觅食。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/p2504/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+    
+    </div>
+    <div>
+    
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/bzoj1911/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/bzoj1911/" itemprop="url">bzoj 1911 [APIO2010]特别行动队</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-10T14:43:20+08:00">
+                2018-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
+                    <span itemprop="name">题目</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/bzoj1911/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/bzoj1911/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="P3628-APIO2010-特别行动队"><a href="#P3628-APIO2010-特别行动队" class="headerlink" title="P3628 [APIO2010]特别行动队"></a>P3628 [APIO2010]特别行动队</h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>　　你有一支由 n 名预备役士兵组成的部队，士兵从 1 到 n 编号，要将他们拆分 成若干特别行动队调入战场。出于默契的考虑，同一支特别行动队中队员的编号 应该连续，即为形如$(i,i+1,\cdots,i+k)$ 的序列。 编号为 i 的士兵的初始战斗力为 $x_i$ ，一支特别行动队的初始战斗力 x 为队内 士兵初始战斗力之和，即 $x = x_i + x_{i+1} + … + x_{i+k}$<br>通过长期的观察，你总结出一支特别行动队的初始战斗力 $x$ 将按如下经验公 式修正为 $x’:x’= ax^2+bx+c$，其中 $a, b, c$ 是已知的系数（$a &lt; 0$）。 作为部队统帅，现在你要为这支部队进行编队，使得所有特别行动队修正后 战斗力之和最大。试求出这个最大和。</p>
+<p>　　例如，你有 4 名士兵， $x_1 = 2, x_2 = 2, x_3 = 3, x_4 = 4$.经验公式中的参数为 $a = –1, b = 10, c = –20$.此时，最佳方案是将士兵组成 3 个特别行动队：第一队包含士兵 $1$ 和士兵 $2$，第二队包含士兵 $3$，第三队包含士兵 $4$。特别行动队的初始战斗力分 别为 $4, 3, 4$，修正后的战斗力分别为 $4, 1, 4$。修正后的战斗力和为 $9$，没有其它 方案能使修正后的战斗力和更大。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/bzoj1911/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+    
+    </div>
+    <div>
+    
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/p2982/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -440,15 +1323,16 @@
 
       
         
-          
-            <h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>每天Farmer John的N头奶牛(1 &lt;= N &lt;= 100000，编号1…N)从粮仓走向他的自己的牧场。牧场构成了一棵树，粮仓在1号牧场。恰好有N-1条道路直接连接着牧场，使得牧场之间都恰好有一条路径相连。第i条路连接着A_i，B_i，(1 &lt;= A_i &lt;= N; 1 &lt;= B_i &lt;= N)。 奶牛们每人有一个私人牧场P_i (1 &lt;= P_i &lt;= N)。粮仓的门每次只能让一只奶牛离开。耐心的奶牛们会等到他们的前面的朋友们到达了自己的私人牧场后才离开。首先奶牛1离开，前往P_1；然后是奶牛2，以此类推。</p>
+          <h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>每天Farmer John的N头奶牛(1 &lt;= N &lt;= 100000，编号1…N)从粮仓走向他的自己的牧场。牧场构成了一棵树，粮仓在1号牧场。恰好有N-1条道路直接连接着牧场，使得牧场之间都恰好有一条路径相连。第i条路连接着A_i，B_i，(1 &lt;= A_i &lt;= N; 1 &lt;= B_i &lt;= N)。 奶牛们每人有一个私人牧场P_i (1 &lt;= P_i &lt;= N)。粮仓的门每次只能让一只奶牛离开。耐心的奶牛们会等到他们的前面的朋友们到达了自己的私人牧场后才离开。首先奶牛1离开，前往P_1；然后是奶牛2，以此类推。</p>
 <p>当奶牛i走向牧场P_i时候，他可能会经过正在吃草的同伴旁。当路过已经有奶牛的牧场时，奶牛i会放慢自己的速度，防止打扰他的朋友。</p>
 <p>FJ想要知道奶牛们总共要放慢多少次速度。</p>
-<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>　　本来想到树链剖分, 好像dfs序也可以.</p>
-<p>　　这么考虑, 如果一个节点有一头牛, 那么它所在的<strong>子树</strong>上所有牛通过这个节点时必定会放慢速度.因此整个子树的答案加一.而<strong>dfs序</strong>产生的序列比较神奇.它满足一个点的子树在dfs序中必定是<strong>连续的一段区间</strong>.这样就可以利用<strong>线段树</strong>进行<strong>区间加</strong>操作.</p>
-<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><p>基本上是这么写吧, 改天再调试吧.<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 100005</span></div><div class="line"></div><div class="line"><span class="keyword">int</span> n;</div><div class="line"><span class="keyword">int</span> xx[N];</div><div class="line"><span class="keyword">int</span> end[N],l[N],r[N];</div><div class="line"></div><div class="line"><span class="keyword">namespace</span> BIT&#123;</div><div class="line">    <span class="keyword">int</span> t[N];</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">lowbit</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;</div><div class="line">        <span class="keyword">return</span> i&amp;(-i);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> p,<span class="keyword">int</span> k)</span></span>&#123;</div><div class="line">        <span class="keyword">int</span> i=p;<span class="keyword">while</span>(p&lt;=n)t[p]+=k,p+=lowbit(p);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">mod</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</div><div class="line">        add(l,<span class="number">1</span>),add(r+<span class="number">1</span>,<span class="number">-1</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> p)</span></span>&#123;</div><div class="line">        <span class="keyword">int</span> i=p,ans=<span class="number">0</span>;<span class="keyword">while</span>(i)ans+=t[i],i+=lowbit(i);<span class="keyword">return</span> ans;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">namespace</span> Graph&#123;</div><div class="line">    <span class="keyword">struct</span> Edge&#123;</div><div class="line">        <span class="keyword">int</span> v,nxt;</div><div class="line">    &#125;e[N&lt;&lt;<span class="number">1</span>];</div><div class="line">    <span class="keyword">int</span> num;</div><div class="line">    <span class="keyword">int</span> head[N],tot;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">AddEdge</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v)</span></span>&#123;</div><div class="line">        e[++tot]=(Edge)&#123;v,head[u]&#125;;head[u]=tot;</div><div class="line">        e[++tot]=(Edge)&#123;u,head[v]&#125;;head[v]=tot;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> fa)</span></span>&#123;</div><div class="line">        l[x]=++num;xx[num]=x;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=head[x];i;i=e[i].nxt)</div><div class="line">            <span class="keyword">if</span>(e[i].v!=fa)dfs(e[i].v,x);</div><div class="line">        r[x]=num;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</div><div class="line">        <span class="keyword">int</span> u,v;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;++i)&#123;</div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;u,&amp;v);</div><div class="line">            AddEdge(u,v);</div><div class="line">        &#125;</div><div class="line">        dfs(<span class="number">1</span>,<span class="number">0</span>);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</div><div class="line">    Graph::init(n);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;end[i]);</div><div class="line">        <span class="keyword">int</span> ans;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</div><div class="line">        ans+=BIT::query(l[end[i]]);</div><div class="line">        BIT::mod(l[end[i]],r[end[i]]);</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/p2982/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -616,15 +1500,14 @@
 
       
         
-          
-            <h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>　　约翰准备扩大他的农场，眼前他正在考虑购买N块长方形的土地。如果约翰单买一块土 地，价格就是土地的面积。但他可以选择并购一组土地，并购的价格为这些土地中最大的长 乘以最大的宽。比如约翰并购一块3 × 5和一块5 × 3的土地，他只需要支付5 × 5 = 25元， 比单买合算。 约翰希望买下所有的土地。他发现，将这些土地分成不同的小组来并购可以节省经费。 给定每份土地的尺寸，请你帮助他计算购买所有土地所需的最小费用。</p>
-<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>　　发现如果两块土地$a,b$满足$w_a\le w_b$并且$h_a\le h_b$.那么a完全是不需要的单独购买的.所以对于这样的$a$完全可以去掉因为不会对答案产生影响.</p>
-<p>　　考虑怎么去掉这些$a$, 我们可以这么做, 将所有土地按长度排序, 若有一土地$i$满足$w_i\le w_{i-1}$, 因为按长度排序后$h_i\le h_{i-1}$.</p>
-<p>　　将剩下的按长度或宽度从大到小排序会发现一件有趣的事情.<br><img src="233.svg" alt=""><br>发现我们购买所有土地需要做的就是将排序后相邻的几块土地一起购买.所以就可以列出这样一个状态转移方程.<br>$$f(i)=\min f(j)+h_{j+1}\cdot w_{i},j&lt;i$$<br>然而$n$太大以至于我们就只能开心的<strong>斜率优化</strong>了.</p>
-<p>$$f(j)+h_{j+1}w_i&gt;f(k)+h_{k+1}w_i$$<br>$$\Rightarrow w_i&gt;\frac{f(k)-f(j)}{h_{j+1}-h_{k+1}}$$</p>
-<p>然后开心的写完代码就开心的通过了这道题.所以这还是一个套路化的题目.<br>不会斜率优化的同学可以先看一下<a href="https://www.luogu.org/blog/aiyoupass/solution-p3195" target="_blank" rel="external">斜率优化</a>.</p>
-<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 50005</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> int long long<span class="comment">//这个题1e6*1e6会爆int</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n,m;</div><div class="line"><span class="keyword">struct</span> Node&#123;</div><div class="line">    <span class="keyword">int</span> h,w;<span class="comment">//长度和宽度</span></div><div class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(<span class="keyword">const</span> Node &amp;s)<span class="keyword">const</span>&#123;</div><div class="line">        <span class="keyword">return</span> h&gt;s.h;</div><div class="line">    &#125;</div><div class="line">&#125;a[N],b[N];</div><div class="line"><span class="keyword">namespace</span> Sort&#123;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;<span class="comment">//用来去除无用的土地</span></div><div class="line">        m=<span class="number">0</span>;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;n);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%lld%lld"</span>,&amp;a[i].h,&amp;a[i].w);</div><div class="line">        sort(a+<span class="number">1</span>,a+n+<span class="number">1</span>);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</div><div class="line">            <span class="keyword">if</span>(a[i].w&gt;b[m].w)</div><div class="line">                b[++m]=(Node)&#123;a[i].h,a[i].w&#125;;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">int</span> q[N],f[N];</div><div class="line"><span class="keyword">int</span> h,t;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">slope</span><span class="params">(<span class="keyword">int</span> j,<span class="keyword">int</span> k)</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> (<span class="keyword">double</span>)(f[k]-f[j])/(<span class="keyword">double</span>)(b[j+<span class="number">1</span>].h-b[k+<span class="number">1</span>].h);</div><div class="line">&#125;</div><div class="line"></div><div class="line">main()&#123;</div><div class="line">    Sort::init();</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)&#123;</div><div class="line">        <span class="keyword">while</span>(h&lt;t&amp;&amp;slope(q[h],q[h+<span class="number">1</span>])&lt;=b[i].w)h++;<span class="comment">//将不满足式子w_i&gt;balabala的剔除</span></div><div class="line">        f[i]=f[q[h]]+b[i].w*b[q[h]+<span class="number">1</span>].h;<span class="comment">//计算当前答案</span></div><div class="line">        <span class="keyword">while</span>(h&lt;t&amp;&amp;slope(q[t<span class="number">-1</span>],q[t])&gt;=slope(q[t],i))t--;<span class="comment">//将当前状态插入</span></div><div class="line">        q[++t]=i;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,f[m]);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-          
+          <h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>　　约翰准备扩大他的农场，眼前他正在考虑购买N块长方形的土地。如果约翰单买一块土 地，价格就是土地的面积。但他可以选择并购一组土地，并购的价格为这些土地中最大的长 乘以最大的宽。比如约翰并购一块3 × 5和一块5 × 3的土地，他只需要支付5 × 5 = 25元， 比单买合算。 约翰希望买下所有的土地。他发现，将这些土地分成不同的小组来并购可以节省经费。 给定每份土地的尺寸，请你帮助他计算购买所有土地所需的最小费用。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/p2900/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -967,15 +1850,14 @@
 
       
         
-          
-            <h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>　　Alice和Bob在玩一个游戏。有n个石子在这里，Alice和Bob轮流投掷硬币，如果正面朝上，则从n个石子中取出一个石子，否则不做任何事。取到最后一颗石子的人胜利。Alice在投掷硬币时有p的概率投掷出他想投的一面，同样，Bob有q的概率投掷出他相投的一面。<br>　　现在Alice先手投掷硬币，假设他们都想赢得游戏，问你Alice胜利的概率为多少。</p>
-<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>　　用$f_i$表示还剩$i$个石头时Alice先手的获胜概率, 用$g_i$表示还剩$i$个石头时Alice后手的获胜概率$_1$.<br>　　那么当还剩$i$个石子且Alice先手的时候, Alice有一定的概率拿走石子成为后手, 也有一定概率不拿走石子成为后手.所以设$a$为拿走石子的概率, $b$为不拿走石子的概率, 即$$f_i=ag_{i-1}+bg_{i}$$<br>相似的, $$g_i=cf_{i-1}+df_{i}$$</p>
-<p>　　分析Alice拿到石子的概率, 因为她会以$p$的概率拿到她想要的石子.所以她想要什么石子决定她拿不拿到石子的概率.发现当$f_{i-1}&gt;g_{i-1}$时, 两个人都不想要拿石子, 因而拿到石子的概率分别为$1-p,1-q$;$f_{i-1}&lt;g_{i-1}$时, 两个人都想拿到石子, 因此拿到石子的分别为$p,q$.</p>
-<p>　　然后就可以递推了, 然而因为$n$太大而且因为每次转移状态不同不能进行矩阵乘<br>法, 因此可以将$n$变小, 因为$n$非常大的时候概率变化就非常小了.</p>
-<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 85</span></div><div class="line"></div><div class="line"><span class="keyword">int</span> n;</div><div class="line"><span class="keyword">double</span> f[N],g[N];</div><div class="line"><span class="keyword">double</span> p,q;</div><div class="line"><span class="keyword">double</span> a,b;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> T;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;T);</div><div class="line">    <span class="keyword">while</span>(T--)&#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%lf%lf"</span>,&amp;n,&amp;p,&amp;q);</div><div class="line">        <span class="keyword">if</span>(n&gt;<span class="number">80</span>)n=<span class="number">80</span>;f[<span class="number">0</span>]=<span class="number">0.0</span>,g[<span class="number">0</span>]=<span class="number">1.0</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</div><div class="line">            <span class="keyword">if</span>(f[i<span class="number">-1</span>]&gt;g[i<span class="number">-1</span>])a=<span class="number">1</span>-p,b=<span class="number">1</span>-q;<span class="keyword">else</span> a=p,b=q;</div><div class="line">            f[i]=(a*g[i<span class="number">-1</span>]+(<span class="number">1</span>-a)*b*f[i<span class="number">-1</span>])/(<span class="number">1</span>-(<span class="number">1</span>-a)*(<span class="number">1</span>-b));</div><div class="line">            g[i]=(b*f[i<span class="number">-1</span>]+(<span class="number">1</span>-b)*a*g[i<span class="number">-1</span>])/(<span class="number">1</span>-(<span class="number">1</span>-a)*(<span class="number">1</span>-b));</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%.6f\n"</span>,f[n]);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="text-footnote"><a href="#text-footnote" class="headerlink" title="$\text{footnote}$"></a>$\text{footnote}$</h4><p>$_1.$先手指的是此时操作的人, 后手指的是等待操作的人.</p>
-
-          
+          <h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>　　Alice和Bob在玩一个游戏。有n个石子在这里，Alice和Bob轮流投掷硬币，如果正面朝上，则从n个石子中取出一个石子，否则不做任何事。取到最后一颗石子的人胜利。Alice在投掷硬币时有p的概率投掷出他想投的一面，同样，Bob有q的概率投掷出他相投的一面。<br>　　现在Alice先手投掷硬币，假设他们都想赢得游戏，问你Alice胜利的概率为多少。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/bzoj2318/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1235,890 +2117,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/SomePhysicsProblemsInOi/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="aiyoupass">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/myjson/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="落花微雨">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/SomePhysicsProblemsInOi/" itemprop="url">浅谈信息学竞赛中的物理问题</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-08T17:06:30+08:00">
-                2018-05-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
-                    <span itemprop="name">信息学竞赛</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
-                    <span itemprop="name">题目</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/SomePhysicsProblemsInOi/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/SomePhysicsProblemsInOi/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><div id="my-contaniner"></div></p>
-<p><style><br>.pdfobject-container { height: 700px;}<br>.pdfobject { border: 1px solid #666; }<br>.margins { height: 700px;}<br></style></p>
-<script src="/js/pdfobject.js"></script>
-<script>PDFObject.embed("/pdf/2015paper.pdf", "#my-contaniner" , {height: "700px"});</script>
-
-<p>看到这篇论文, emm……我应该是会点, 于是就心血来潮看了看.</p>
-<p>值得一提的是这里的题思维难度并不是很大, 而且都是物理上比较套路的题目.</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/SomePhysicsProblemsInOi/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    <div>
-    
-    </div>
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/bzoj1898/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="aiyoupass">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/myjson/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="落花微雨">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/bzoj1898/" itemprop="url">bzoj 1898 [Zjoi2005]Swamp 沼泽鳄鱼</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-08T08:36:32+08:00">
-                2018-05-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
-                    <span itemprop="name">信息学竞赛</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
-                    <span itemprop="name">题目</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/bzoj1898/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/bzoj1898/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>　　潘塔纳尔沼泽地号称世界上最大的一块湿地，它地位于巴西中部马托格罗索州的南部地区。每当雨季来临，这里碧波荡漾、生机盎然，引来不少游客。为了让游玩更有情趣，人们在池塘的中央建设了几座石墩和石桥，每座石桥连接着两座石墩，且每两座石墩之间至多只有一座石桥。这个景点造好之后一直没敢对外开放，原因是池塘里有不少危险的食人鱼。豆豆先生酷爱冒险，他一听说这个消息，立马赶到了池塘，想做第一个在桥上旅游的人。虽说豆豆爱冒险，但也不敢拿自己的性命开玩笑，于是他开始了仔细的实地勘察，并得到了一些惊人的结论：食人鱼的行进路线有周期性，这个周期只可能是2，3或者4个单位时间。每个单位时间里，食人鱼可以从一个石墩游到另一个石墩。每到一个石墩，如果上面有人它就会实施攻击，否则继续它的周期运动。如果没有到石墩，它是不会攻击人的。借助先进的仪器，豆豆很快就摸清了所有食人鱼的运动规律，他要开始设计自己的行动路线了。每个单位时间里，他只可以沿着石桥从一个石墩走到另一个石墩，而不可以停在某座石墩上不动，因为站着不动还会有其它危险。如果豆豆和某条食人鱼在同一时刻到达了某座石墩，就会遭到食人鱼的袭击，他当然不希望发生这样的事情。现在豆豆已经选好了两座石墩Start和End，他想从Start出发，经过K个单位时间后恰好站在石墩End上。假设石墩可以重复经过（包括Start和End），他想请你帮忙算算，这样的路线共有多少种（当然不能遭到食人鱼的攻击）。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/bzoj1898/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    <div>
-    
-    </div>
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/bzoj1529./">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="aiyoupass">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/myjson/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="落花微雨">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/bzoj1529./" itemprop="url">bzoj 1529 [POI2005]ska Piggy banks</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-08T08:36:32+08:00">
-                2018-05-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
-                    <span itemprop="name">信息学竞赛</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
-                    <span itemprop="name">题目</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/bzoj1529./#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/bzoj1529./" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>　　Byteazar 有 N 个小猪存钱罐. 每个存钱罐只能用钥匙打开或者砸开. Byteazar 已经把每个存钱罐的钥匙放到了某些存钱罐里. Byteazar 现在想买一台汽车于是要把所有的钱都取出来. 他想尽量少的打破存钱罐取出所有的钱,问最少要打破多少个存钱罐.</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/bzoj1529./#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    <div>
-    
-    </div>
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/bzoj1876/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="aiyoupass">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/myjson/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="落花微雨">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/bzoj1876/" itemprop="url">bzoj 1876 [SDOI2009]SuperGCD</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-07T20:27:20+08:00">
-                2018-05-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
-                    <span itemprop="name">信息学竞赛</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
-                    <span itemprop="name">题目</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/bzoj1876/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/bzoj1876/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>　　其实如果不需要高精度是很好做的, 就是需要注意递归会爆栈(递归层数太多), 需要用循环模拟.<del>这个题提醒我们尽量少写函数和递归</del></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/bzoj1876/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    <div>
-    
-    </div>
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/bzoj3505/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="aiyoupass">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/myjson/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="落花微雨">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/bzoj3505/" itemprop="url">bzoj 3505 [Cqoi2014]数三角形</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-07T20:02:01+08:00">
-                2018-05-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
-                    <span itemprop="name">信息学竞赛</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
-                    <span itemprop="name">题目</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/bzoj3505/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/bzoj3505/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>给定一个nxm的网格，请计算三点都在格点上的三角形共有多少个。下图为4x4的网格上的一个三角形。<br>注意三角形的三点不能共线。</p>
-<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>　　网格上共有$s=(n+1)(m+1)$个点.第一个点任取, 第二个点取处第一个之外的一个, 这两个点取的方案为$s\times (s-1)$ 个, 第三个点除了不能取这两个点之外, 也不能取这两个点所在的直线上的点.<br>　　问题转化为在网格图中一条直线上有几个点.发现一条直线上点的斜率$t=\frac{y}{x}$确定, 而一个点的$x,y$都必须为整数, 设$d=(a,b)$, 所以直线上$\frac{y}{d}$单位个纵坐标和$\frac{x}{d}$单位个横坐标对应一个网格上一个点.所以一条直线上网格上的点数为$$\min{\frac{y}{\frac{y}{d}}+1,\frac{x}{\frac{x}{d}}+1}=d+1$$.<br>　　所以可以枚举每一条直线, 然而枚举一条直线不如枚举一条线段, 这样只需要让线段起点为$(0,0)$, 枚举线段的终点$(x,y)$, 而与其完全相同的线段有$(n+1-y)(m+1-x)$条, 这是斜率大于0的线段, 还有斜率小于0的线段, 一条斜率大于0的线段和一条斜率小于0的线段是一一对应的.综上所述, 答案可以表示为<br>　　$$C_{nm}^3-mC_n^3-nC_m^3-2\sum_{y=1}^n\sum_{x=1}^m\left( (x,y)-2\right) \times(n+1-y)(m+1-x)$$</p>
-<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> int long long</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;<span class="keyword">return</span> (!b)?a:gcd(b,a%b);&#125;</div><div class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">C3</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</div><div class="line">	<span class="keyword">return</span> (<span class="keyword">long</span> <span class="keyword">long</span>)n*(n<span class="number">-1</span>)*(n<span class="number">-2</span>)/<span class="number">6</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n,m;</div><div class="line"></div><div class="line">main()&#123;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%lld%lld"</span>,&amp;n,&amp;m);</div><div class="line">	<span class="keyword">long</span> <span class="keyword">long</span> ans=C3((n+<span class="number">1</span>)*(m+<span class="number">1</span>))-(m+<span class="number">1</span>)*C3(n+<span class="number">1</span>)-(n+<span class="number">1</span>)*C3(m+<span class="number">1</span>);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;++j)</div><div class="line">			ans-=<span class="number">2</span>*(gcd(i,j)<span class="number">-1</span>)*(n+<span class="number">1</span>-i)*(m+<span class="number">1</span>-j);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,ans);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-    <div>
-    
-    </div>
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2168,7 +2171,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">146</span>
+                  <span class="site-state-item-count">151</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

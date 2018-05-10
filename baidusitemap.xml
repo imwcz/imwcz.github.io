@@ -4,8 +4,33 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/bzoj2318/</loc>
+    <lastmod>2018-05-10T23:39:46.000Z</lastmod>
+    <data>
+        <display>
+        <title>bzoj 2318 Spoj4060 game with probability Problem</title>
+        <pubTime>2018-05-08T12:52:20.000Z</pubTime>
+        
+        <tag>博弈论</tag>
+         
+        <tag>概率</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/p2982/</loc>
-    <lastmod>2018-05-10T03:34:20.000Z</lastmod>
+    <lastmod>2018-05-10T23:39:34.000Z</lastmod>
     <data>
         <display>
         <title>p2982 USACO10FEB 慢下来Slowing down</title>
@@ -30,7 +55,7 @@
     
   <url>
     <loc>http://aiyoupass.com/2018/p2900/</loc>
-    <lastmod>2018-05-10T02:43:32.000Z</lastmod>
+    <lastmod>2018-05-10T23:39:22.000Z</lastmod>
     <data>
         <display>
         <title>p2900 USACO08MAR 土地征用Land Acquisition</title>
@@ -54,16 +79,137 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/bzoj2318/</loc>
-    <lastmod>2018-05-10T01:35:30.000Z</lastmod>
+    <loc>http://aiyoupass.com/2018/SomePhysicsProblemsInOi/</loc>
+    <lastmod>2018-05-10T23:37:26.000Z</lastmod>
     <data>
         <display>
-        <title>bzoj 2318 Spoj4060 game with probability Problem</title>
-        <pubTime>2018-05-08T12:52:20.000Z</pubTime>
+        <title>浅谈信息学竞赛中的物理问题</title>
+        <pubTime>2018-05-08T09:06:30.000Z</pubTime>
         
-        <tag>博弈论</tag>
+        <tag>物理</tag>
          
-        <tag>概率</tag>
+        <tag>pdf</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/p2986/</loc>
+    <lastmod>2018-05-10T09:45:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>P2986 [Usaco2010 Mar]gather 奶牛大集会</title>
+        <pubTime>2018-05-10T09:18:00.000Z</pubTime>
+        
+        <tag>贪心</tag>
+         
+        <tag>树形dp</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/bzoj1911/</loc>
+    <lastmod>2018-05-10T09:20:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>bzoj 1911 [APIO2010]特别行动队</title>
+        <pubTime>2018-05-10T06:43:20.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>斜率优化</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/p1212/</loc>
+    <lastmod>2018-05-10T09:20:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>P2872 [USACO07DEC]道路建设Building Roads</title>
+        <pubTime>2018-05-10T08:30:30.000Z</pubTime>
+        
+        <tag>最小生成树</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/p2504/</loc>
+    <lastmod>2018-05-10T09:19:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>P2504 [HAOI2006]聪明的猴子</title>
+        <pubTime>2018-05-10T07:46:30.000Z</pubTime>
+        
+        <tag>最小生成树</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/p2915/</loc>
+    <lastmod>2018-05-10T09:19:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>P2915 [USACO08NOV]奶牛混合起来Mixed Up Cows</title>
+        <pubTime>2018-05-10T09:03:40.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>状压dp</tag>
          
          
            
@@ -97,31 +243,6 @@
           
              
               <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/SomePhysicsProblemsInOi/</loc>
-    <lastmod>2018-05-09T13:39:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>浅谈信息学竞赛中的物理问题</title>
-        <pubTime>2018-05-08T09:06:30.000Z</pubTime>
-        
-        <tag>物理</tag>
-         
-        <tag>pdf</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
           
         </display>
     </data>
