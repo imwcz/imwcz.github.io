@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="线性代数,高斯消元," />
 
 
 
@@ -91,13 +91,13 @@
 
 <meta name="description" content="高斯消元线性方程组对于一组线性方程组, 例如$$\begin{cases}a_{11}x_1+a_{12}x_2=b_1\\a_{21}x_1+a_{22}x_2=b_2\\\end{cases}$$其通常解法如下, 消去其中一个式子的一个未知数, 令方程二减去方程一的$\frac{a_{22}}{a_{12}}$倍, 得到$$\left(a_{21}-\frac{a_{22}a_{11}}{a_">
 <meta property="og:type" content="article">
-<meta property="og:title" content="落花微雨">
+<meta property="og:title" content="高斯消元">
 <meta property="og:url" content="http://aiyoupass.com/2018/gauss/index.html">
 <meta property="og:site_name" content="落花微雨">
 <meta property="og:description" content="高斯消元线性方程组对于一组线性方程组, 例如$$\begin{cases}a_{11}x_1+a_{12}x_2=b_1\\a_{21}x_1+a_{22}x_2=b_2\\\end{cases}$$其通常解法如下, 消去其中一个式子的一个未知数, 令方程二减去方程一的$\frac{a_{22}}{a_{12}}$倍, 得到$$\left(a_{21}-\frac{a_{22}a_{11}}{a_">
-<meta property="og:updated_time" content="2018-05-15T12:54:34.000Z">
+<meta property="og:updated_time" content="2018-05-20T03:03:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="落花微雨">
+<meta name="twitter:title" content="高斯消元">
 <meta name="twitter:description" content="高斯消元线性方程组对于一组线性方程组, 例如$$\begin{cases}a_{11}x_1+a_{12}x_2=b_1\\a_{21}x_1+a_{22}x_2=b_2\\\end{cases}$$其通常解法如下, 消去其中一个式子的一个未知数, 令方程二减去方程一的$\frac{a_{22}}{a_{12}}$倍, 得到$$\left(a_{21}-\frac{a_{22}a_{11}}{a_">
 
 
@@ -134,7 +134,7 @@
 
 
 
-  <title> | 落花微雨</title>
+  <title>高斯消元 | 落花微雨</title>
   
 
 
@@ -342,7 +342,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">高斯消元</h1>
         
 
         <div class="post-meta">
@@ -354,8 +354,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-20T10:16:54+08:00">
-                2018-05-20
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-15T15:30:30+08:00">
+                2018-05-15
               </time>
             
 
@@ -364,6 +364,39 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/总结/" itemprop="url" rel="index">
+                    <span itemprop="name">总结</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -404,13 +437,12 @@
       
 
       
-        <h3 id="高斯消元"><a href="#高斯消元" class="headerlink" title="高斯消元"></a>高斯消元</h3><h4 id="线性方程组"><a href="#线性方程组" class="headerlink" title="线性方程组"></a>线性方程组</h4><p>对于一组线性方程组, 例如<br>$$<br>\begin{cases}<br>a_{11}x_1+a_{12}x_2=b_1\\<br>a_{21}x_1+a_{22}x_2=b_2\\<br>\end{cases}<br>$$<br>其通常解法如下, 消去其中一个式子的一个未知数, 令方程二减去方程一的$\frac{a_{22}}{a_{12}}$倍, 得到<br>$$\left(a_{21}-\frac{a_{22}a_{11}}{a_{12}}\right)x_1=b_2-b_1\frac{a_{22}a_{11}}{a_{12}}$$<br>此式只有一个未知数$x_1$, 可以解得$x_1$, 从而将其带入方程一求出$x_2$.<br>　　我们可以将这种方法推广开来, 给出$n$组$n$元线性方程组, 每次可以消去一个未知数, 得到一组新方程, 然后再消去其中一个未知数直到仅剩一个未知数.这样我们便可以解出方程组的解.<br>　　而高斯消元就是来进行这个过程的.只是其借助的是矩阵的初等变换.将第$i$个方程的所有系数和常数项$a_{i1},a_{i2},\cdots,a_{in}, b_i$排列在第$i$行,这样便形成了一个$n$行$n+1$列的数表, 称之为矩阵.然后模仿上述消元的过程, 可以消去某一行的若干个$0$.矩阵的初等变换主要有以下几种.</p>
+        <h3 id="高斯消元"><a href="#高斯消元" class="headerlink" title="高斯消元"></a>高斯消元</h3><h4 id="线性方程组"><a href="#线性方程组" class="headerlink" title="线性方程组"></a>线性方程组</h4><p>对于一组线性方程组, 例如<br>$$<br>\begin{cases}<br>a_{11}x_1+a_{12}x_2=b_1\\<br>a_{21}x_1+a_{22}x_2=b_2\\<br>\end{cases}<br>$$<br>其通常解法如下, 消去其中一个式子的一个未知数, 令方程二减去方程一的$\frac{a_{22}}{a_{12}}$倍, 得到<br>$$\left(a_{21}-\frac{a_{22}a_{11}}{a_{12}}\right)x_1=b_2-b_1\frac{a_{22}a_{11}}{a_{12}}$$<br>此式只有一个未知数$x_1$, 可以解得$x_1$, 从而将其带入方程一求出$x_2$.<br>　　我们可以将这种方法推广开来, 给出$n$组$n$元线性方程组, 每次可以消去一个未知数, 得到一组新方程, 然后再消去其中一个未知数直到仅剩一个未知数.这样我们便可以解出方程组的解.<br>　　而高斯消元就是来进行这个过程的.只是其借助的是矩阵的初等变换.将第$i$个方程的所有系数和常数项$a_{i1},a_{i2},\cdots,a_{in}, b_i$排列在第$i$行,这样便形成了一个$n$行$n+1$列的数表, 称之为矩阵.然后模仿上述消元的过程, 可以消去某一行的若干个$0$.矩阵的初等变换主要有初等行变换和初等列变换, 两者等价.</p>
 <ul>
-<li>初等行变换, 将某两行交换.</li>
-<li>初等列变换, 将某两列交换.</li>
+<li>将某两行或两列交换.</li>
 <li>将某一行或某一列乘以某一常数加到另外一行或者一列.</li>
 </ul>
-<p>利用这些, 可以将这个矩阵变成一种特殊的矩阵, 即上三角或下三角矩阵.例如下面这种形式<br>$$\begin{bmatrix}<br>a_{11} a_{12} a_{13} b_1\\<br>0 a_{22} a_{23} b_2\\<br>0 0 a_{33} b_3<br>\end{bmatrix}$$<br>发现利用最后一行可以得到$x_3$的值, 然后利用第2行可以得到$x_2$的值, 以此类推.</p>
+<p>利用这些, 可以将这个矩阵变成一种特殊的矩阵, 即上三角或下三角矩阵.例如下面这种形式<br>$$\begin{bmatrix}<br>a_{11}&amp;\text{ }a_{12}&amp;\text{ }a_{13}&amp;\text{ } b_1\\<br>0&amp;\text{ }a_{22}&amp;\text{ }a_{23}&amp;\text{ }b_2\\<br>0&amp;\text{ }0&amp;\text{ }a_{33}&amp;\text{ }b_3<br>\end{bmatrix}$$<br>发现利用最后一行可以得到$x_3$的值, 然后利用第2行可以得到$x_2$的值, 以此类推.</p>
 <p>其实这些结论都是利用线性变换得到的.</p>
 
       
@@ -441,6 +473,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/线性代数/" rel="tag"># 线性代数</a>
+          
+            <a href="/tags/高斯消元/" rel="tag"># 高斯消元</a>
+          
+        </div>
+      
 
       
       
@@ -450,8 +490,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/exgcd/" rel="next" title="">
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2018/vim1/" rel="next" title="Vim 基本配置">
+                <i class="fa fa-chevron-left"></i> Vim 基本配置
               </a>
             
           </div>
@@ -459,6 +499,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/exam 5-13/" rel="prev" title="五月十五日NOIP模拟赛简要题解">
+                五月十五日NOIP模拟赛简要题解 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -544,7 +588,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">159</span>
+                  <span class="site-state-item-count">157</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -566,7 +610,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">152</span>
+                  <span class="site-state-item-count">155</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -1189,7 +1233,7 @@
           skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
         },
         "HTML-CSS": {
-            scale: 85,minScaleAdjust: 80
+            scale: 90,minScaleAdjust: 85
         }
       });
     </script>

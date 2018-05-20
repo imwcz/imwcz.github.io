@@ -91,38 +91,32 @@
 
 <meta name="description" content="比赛地址
 吐槽
-前5道简单题提交了很多次, 题目有毒.
+前6道题提交了很多次, 题目有毒.
 网站速度太慢了, 中文pdf题面经常出现网络错误.
 代码都不长, 喜欢.
 仅仅是div. 2难度.
-
-Mininum DeletionsSolution　　$n$个数的最大公约数不会因为删去一个数而变小, 因此要么需要删去所有的数要么最大公约数本来就是1.
-Code12345678910111213141516171819202122#inc">
+目前做了前六道题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CodeChef May Challenge">
 <meta property="og:url" content="http://aiyoupass.com/2018/codechef may Challenge/index.html">
 <meta property="og:site_name" content="落花微雨">
 <meta property="og:description" content="比赛地址
 吐槽
-前5道简单题提交了很多次, 题目有毒.
+前6道题提交了很多次, 题目有毒.
 网站速度太慢了, 中文pdf题面经常出现网络错误.
 代码都不长, 喜欢.
 仅仅是div. 2难度.
-
-Mininum DeletionsSolution　　$n$个数的最大公约数不会因为删去一个数而变小, 因此要么需要删去所有的数要么最大公约数本来就是1.
-Code12345678910111213141516171819202122#inc">
-<meta property="og:updated_time" content="2018-05-19T10:54:26.000Z">
+目前做了前六道题">
+<meta property="og:updated_time" content="2018-05-20T02:58:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CodeChef May Challenge">
 <meta name="twitter:description" content="比赛地址
 吐槽
-前5道简单题提交了很多次, 题目有毒.
+前6道题提交了很多次, 题目有毒.
 网站速度太慢了, 中文pdf题面经常出现网络错误.
 代码都不长, 喜欢.
 仅仅是div. 2难度.
-
-Mininum DeletionsSolution　　$n$个数的最大公约数不会因为删去一个数而变小, 因此要么需要删去所有的数要么最大公约数本来就是1.
-Code12345678910111213141516171819202122#inc">
+目前做了前六道题">
 
 
 
@@ -463,11 +457,13 @@ Code12345678910111213141516171819202122#inc">
       
         <p><a href="https://www.codechef.com/MAY18B" target="_blank" rel="external">比赛地址</a></p>
 <h3 id="吐槽"><a href="#吐槽" class="headerlink" title="吐槽"></a>吐槽</h3><ul>
-<li>前5道简单题提交了很多次, 题目有毒.</li>
+<li>前6道题提交了很多次, 题目有毒.</li>
 <li>网站速度太慢了, 中文pdf题面经常出现网络错误.</li>
 <li>代码都不长, 喜欢.</li>
 <li>仅仅是div. 2难度.</li>
+<li>目前做了前六道题</li>
 </ul>
+<a id="more"></a>
 <h3 id="Mininum-Deletions"><a href="#Mininum-Deletions" class="headerlink" title="Mininum Deletions"></a>Mininum Deletions</h3><h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>　　$n$个数的最大公约数不会因为删去一个数而变小, 因此要么需要删去所有的数要么最大公约数本来就是1.</p>
 <h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</div><div class="line">	<span class="keyword">return</span> b?gcd(b,a%b):a;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	<span class="keyword">int</span> T,n,tmp,m;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;T);</div><div class="line">	<span class="keyword">while</span>(T--)&#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;++i)&#123;</div><div class="line">			<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;tmp);</div><div class="line">			m=gcd(tmp,m);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span>(m&gt;<span class="number">1</span>)<span class="built_in">printf</span>(<span class="string">"-1\n"</span>);</div><div class="line">		<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"0\n"</span>);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="Xor-Again"><a href="#Xor-Again" class="headerlink" title="Xor Again"></a>Xor Again</h3><h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>　　发现当$i\ne j$时$A_i+A_j$会被算入到Xor中两次, 抵消, 因此答案为$2A_i\oplus \cdots\2A_n$.</p>
@@ -524,8 +520,8 @@ Code12345678910111213141516171819202122#inc">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/vim1/" rel="next" title="Vim 基本配置">
-                <i class="fa fa-chevron-left"></i> Vim 基本配置
+              <a href="/2018/exam 5-13/" rel="next" title="五月十五日NOIP模拟赛简要题解">
+                <i class="fa fa-chevron-left"></i> 五月十五日NOIP模拟赛简要题解
               </a>
             
           </div>
@@ -622,7 +618,7 @@ Code12345678910111213141516171819202122#inc">
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">159</span>
+                  <span class="site-state-item-count">157</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -644,7 +640,7 @@ Code12345678910111213141516171819202122#inc">
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">152</span>
+                  <span class="site-state-item-count">155</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -1267,7 +1263,7 @@ Code12345678910111213141516171819202122#inc">
           skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
         },
         "HTML-CSS": {
-            scale: 85,minScaleAdjust: 80
+            scale: 90,minScaleAdjust: 85
         }
       });
     </script>

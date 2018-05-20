@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="模拟,线性代数,高斯消元,最大权闭合子图,最小割模型," />
 
 
 
@@ -89,16 +89,19 @@
     })();
 </script>
 
-<meta name="description" content="五月十五日NOIP模拟赛简要题解equation　　对于每一组线性方程组, 可以表示成一个线性变换的形式, 即$$AX=B$$其意义为一个向量$X=\left(x_1,x_2,\cdots,x_n\right)$经过一个函数$A: \mathbb{R}^n\rightarrow \mathbb{R}^n$变为$B={b_1,b_2,\cdots,b_n}$, 其中$x_i,i\in{1,\cdot">
+<meta name="description" content="虽然试题我没做.而且这套题给他们做太不合适了, 很多知识都没学(高斯消元最小割).
+equation　　对于每一组线性方程组, 可以表示成一个线性变换的形式, 即$$AX=B$$其意义为一个向量$X=\left(x_1,x_2,\cdots,x_n\right)$经过一个函数$A: \mathbb{R}^n\rightarrow \mathbb{R}^n$变为$B={b_1,b_2,\cdots,">
 <meta property="og:type" content="article">
-<meta property="og:title" content="落花微雨">
-<meta property="og:url" content="http://aiyoupass.com/2018/Solution/index.html">
+<meta property="og:title" content="五月十五日NOIP模拟赛简要题解">
+<meta property="og:url" content="http://aiyoupass.com/2018/exam 5-13/index.html">
 <meta property="og:site_name" content="落花微雨">
-<meta property="og:description" content="五月十五日NOIP模拟赛简要题解equation　　对于每一组线性方程组, 可以表示成一个线性变换的形式, 即$$AX=B$$其意义为一个向量$X=\left(x_1,x_2,\cdots,x_n\right)$经过一个函数$A: \mathbb{R}^n\rightarrow \mathbb{R}^n$变为$B={b_1,b_2,\cdots,b_n}$, 其中$x_i,i\in{1,\cdot">
-<meta property="og:updated_time" content="2018-05-15T12:10:58.000Z">
+<meta property="og:description" content="虽然试题我没做.而且这套题给他们做太不合适了, 很多知识都没学(高斯消元最小割).
+equation　　对于每一组线性方程组, 可以表示成一个线性变换的形式, 即$$AX=B$$其意义为一个向量$X=\left(x_1,x_2,\cdots,x_n\right)$经过一个函数$A: \mathbb{R}^n\rightarrow \mathbb{R}^n$变为$B={b_1,b_2,\cdots,">
+<meta property="og:updated_time" content="2018-05-20T02:37:30.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="落花微雨">
-<meta name="twitter:description" content="五月十五日NOIP模拟赛简要题解equation　　对于每一组线性方程组, 可以表示成一个线性变换的形式, 即$$AX=B$$其意义为一个向量$X=\left(x_1,x_2,\cdots,x_n\right)$经过一个函数$A: \mathbb{R}^n\rightarrow \mathbb{R}^n$变为$B={b_1,b_2,\cdots,b_n}$, 其中$x_i,i\in{1,\cdot">
+<meta name="twitter:title" content="五月十五日NOIP模拟赛简要题解">
+<meta name="twitter:description" content="虽然试题我没做.而且这套题给他们做太不合适了, 很多知识都没学(高斯消元最小割).
+equation　　对于每一组线性方程组, 可以表示成一个线性变换的形式, 即$$AX=B$$其意义为一个向量$X=\left(x_1,x_2,\cdots,x_n\right)$经过一个函数$A: \mathbb{R}^n\rightarrow \mathbb{R}^n$变为$B={b_1,b_2,\cdots,">
 
 
 
@@ -128,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://aiyoupass.com/2018/Solution/"/>
+  <link rel="canonical" href="http://aiyoupass.com/2018/exam 5-13/"/>
 
 
 
 
 
-  <title> | 落花微雨</title>
+  <title>五月十五日NOIP模拟赛简要题解 | 落花微雨</title>
   
 
 
@@ -325,7 +328,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/Solution/">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/exam 5-13/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="aiyoupass">
@@ -342,7 +345,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">五月十五日NOIP模拟赛简要题解</h1>
         
 
         <div class="post-meta">
@@ -354,8 +357,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-20T10:16:54+08:00">
-                2018-05-20
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-15T15:30:30+08:00">
+                2018-05-15
               </time>
             
 
@@ -364,6 +367,39 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/考试/" itemprop="url" rel="index">
+                    <span itemprop="name">考试</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -374,8 +410,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/Solution/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/Solution/" itemprop="commentsCount"></span>
+                <a href="/2018/exam 5-13/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/exam 5-13/" itemprop="commentsCount"></span>
                 </a>
               </span>
               <!--/noindex-->
@@ -404,7 +440,8 @@
       
 
       
-        <h3 id="五月十五日NOIP模拟赛简要题解"><a href="#五月十五日NOIP模拟赛简要题解" class="headerlink" title="五月十五日NOIP模拟赛简要题解"></a>五月十五日NOIP模拟赛简要题解</h3><h4 id="equation"><a href="#equation" class="headerlink" title="equation"></a>equation</h4><p>　　对于每一组线性方程组, 可以表示成一个线性变换的形式, 即<br>$$AX=B$$<br>其意义为一个向量$X=\left(x_1,x_2,\cdots,x_n\right)$经过一个函数$A: \mathbb{R}^n\rightarrow \mathbb{R}^n$变为$B={b_1,b_2,\cdots,b_n}$, 其中$x_i,i\in{1,\cdots,n}$为方程组的第$i$个自变量, $b_i,i\in{1,\cdots,n}$表示方程组的常数项, $A$称为系数矩阵.</p>
+        <p>虽然试题我没做.而且这套题给他们做太不合适了, 很多知识都没学(高斯消元最小割).</p>
+<h4 id="equation"><a href="#equation" class="headerlink" title="equation"></a>equation</h4><p>　　对于每一组线性方程组, 可以表示成一个线性变换的形式, 即<br>$$AX=B$$<br>其意义为一个向量$X=\left(x_1,x_2,\cdots,x_n\right)$经过一个函数$A: \mathbb{R}^n\rightarrow \mathbb{R}^n$变为$B={b_1,b_2,\cdots,b_n}$, 其中$x_i,i\in{1,\cdots,n}$为方程组的第$i$个自变量, $b_i,i\in{1,\cdots,n}$表示方程组的常数项, $A$称为系数矩阵.</p>
 <p>　　那么如果每次给出$B$, 我们要求的便是$X$, 即所有自变量的值, 便可以通过高斯消元以$O(n^3)$的复杂度求解.每次求解复杂度$O(n^3)$, 一共有$m$组数据, 总复杂度为$O(n^3m)$, 不能通过.<br>　　可是数据明显能达到$10^9$的规模, 这时候这么做就不行了, 但是发现如果每一次都需要对系数矩阵进行一次初等变换以形成上三角矩阵或下三角矩阵, 对于每组不同的常数项这个过程都是相同的, 于是只需进行一次这个过程就行了, 总复杂度为$O(n^3+n^2m)$.<br>　　也可以通过求系数矩阵的逆矩阵从而每次进行一次线性变换(矩阵乘法)的方式求解.</p>
 <h4 id="divide"><a href="#divide" class="headerlink" title="divide"></a>divide</h4><p>　　这个题目放在第一题大概是比较合适.<br>　　引用:设d=gcd(a1,a2,…,an)可以证明若m=2^k<em>d则问题有解，否则问题无解。令a1=b1</em>d,a2=b2<em>d,…,an=bn</em>d,找出所有bi为奇数的i,两两配对进行逆操作,如此所有的bi将变为偶数,d的值将会倍增,直到等于m为止。倍增的次数为O(logm),配对的时间复杂度为O(n),故总时间复杂度O(nlogm)。</p>
 <h4 id="wifi"><a href="#wifi" class="headerlink" title="wifi"></a>wifi</h4><p>　　需要最小割的一个不怎么常见的模型: 最大权闭合子图, 是网络流的内容.用到这个这种类型的题不是很常见.我认为放在这套题里面让你们做极其不合适.实在想做这个题的, 我有一个xxy学姐的课件, 第107页开始讲到这个知识.</p>
@@ -437,6 +474,20 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/模拟/" rel="tag"># 模拟</a>
+          
+            <a href="/tags/线性代数/" rel="tag"># 线性代数</a>
+          
+            <a href="/tags/高斯消元/" rel="tag"># 高斯消元</a>
+          
+            <a href="/tags/最大权闭合子图/" rel="tag"># 最大权闭合子图</a>
+          
+            <a href="/tags/最小割模型/" rel="tag"># 最小割模型</a>
+          
+        </div>
+      
 
       
       
@@ -446,8 +497,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/Linear3a/" rel="next" title="">
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2018/gauss/" rel="next" title="高斯消元">
+                <i class="fa fa-chevron-left"></i> 高斯消元
               </a>
             
           </div>
@@ -456,8 +507,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/exgcd/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/codechef may Challenge/" rel="prev" title="CodeChef May Challenge">
+                CodeChef May Challenge <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -544,7 +595,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">159</span>
+                  <span class="site-state-item-count">157</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -566,7 +617,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">152</span>
+                  <span class="site-state-item-count">155</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -641,7 +692,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#五月十五日NOIP模拟赛简要题解"><span class="nav-number">1.</span> <span class="nav-text">五月十五日NOIP模拟赛简要题解</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#equation"><span class="nav-number">1.1.</span> <span class="nav-text">equation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#divide"><span class="nav-number">1.2.</span> <span class="nav-text">divide</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#wifi"><span class="nav-number">1.3.</span> <span class="nav-text">wifi</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#equation"><span class="nav-number">1.</span> <span class="nav-text">equation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#divide"><span class="nav-number">2.</span> <span class="nav-text">divide</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#wifi"><span class="nav-number">3.</span> <span class="nav-text">wifi</span></a></li></ol></div>
             
 
           </div>
@@ -815,7 +866,7 @@
 		_hcwp.push({widget:"Bloggerstream", widget_id: 100323, selector:".hc-comment-count", label: "{\%COUNT%\}" });
 
 		
-		_hcwp.push({widget:"Stream", widget_id: 100323, xid: "2018/Solution/"});
+		_hcwp.push({widget:"Stream", widget_id: 100323, xid: "2018/exam 5-13/"});
 		
 
 		(function() {
@@ -1189,7 +1240,7 @@
           skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
         },
         "HTML-CSS": {
-            scale: 85,minScaleAdjust: 80
+            scale: 90,minScaleAdjust: 85
         }
       });
     </script>

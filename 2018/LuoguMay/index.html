@@ -91,38 +91,29 @@
 
 <meta name="description" content="比赛地址做题情况
 
-所有的时间都浪费在了前两个题上
+所有的时间都花在了前两个题上
 第一题没考虑清楚提交了两遍.
 第二题更是出极其zz的错误.
-有部分分的话大概第四题贪心能拿到不少.
-
-取石子Solution　　每次只能取一个石子……做法比较固定
-Code1234567891011121314#include&amp;lt;cstdio&amp;gt;using namespace std;int main()&amp;#123;    int n,t">
+有部分分的话大概第四题贪心能拿到不少.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="洛谷五月月赛">
 <meta property="og:url" content="http://aiyoupass.com/2018/LuoguMay/index.html">
 <meta property="og:site_name" content="落花微雨">
 <meta property="og:description" content="比赛地址做题情况
 
-所有的时间都浪费在了前两个题上
+所有的时间都花在了前两个题上
 第一题没考虑清楚提交了两遍.
 第二题更是出极其zz的错误.
-有部分分的话大概第四题贪心能拿到不少.
-
-取石子Solution　　每次只能取一个石子……做法比较固定
-Code1234567891011121314#include&amp;lt;cstdio&amp;gt;using namespace std;int main()&amp;#123;    int n,t">
-<meta property="og:updated_time" content="2018-05-20T02:14:32.000Z">
+有部分分的话大概第四题贪心能拿到不少.">
+<meta property="og:updated_time" content="2018-05-20T02:57:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="洛谷五月月赛">
 <meta name="twitter:description" content="比赛地址做题情况
 
-所有的时间都浪费在了前两个题上
+所有的时间都花在了前两个题上
 第一题没考虑清楚提交了两遍.
 第二题更是出极其zz的错误.
-有部分分的话大概第四题贪心能拿到不少.
-
-取石子Solution　　每次只能取一个石子……做法比较固定
-Code1234567891011121314#include&amp;lt;cstdio&amp;gt;using namespace std;int main()&amp;#123;    int n,t">
+有部分分的话大概第四题贪心能拿到不少.">
 
 
 
@@ -463,11 +454,12 @@ Code1234567891011121314#include&amp;lt;cstdio&amp;gt;using namespace std;int mai
       
         <p><a href="https://www.luogu.org/contestnew/show/7000" target="_blank" rel="external">比赛地址</a><br>做题情况</p>
 <ul>
-<li>所有的时间都浪费在了前两个题上</li>
+<li>所有的时间都花在了前两个题上</li>
 <li>第一题没考虑清楚提交了两遍.</li>
 <li>第二题更是出极其zz的错误.</li>
 <li>有部分分的话大概第四题贪心能拿到不少.</li>
 </ul>
+<a id="more"></a>
 <h3 id="取石子"><a href="#取石子" class="headerlink" title="取石子"></a>取石子</h3><h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>　　每次只能取一个石子……做法比较固定</p>
 <h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> n,tmp;<span class="keyword">long</span> <span class="keyword">long</span> ans=<span class="number">0l</span>l;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;tmp);</div><div class="line">        ans+=tmp;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span>(ans&amp;<span class="number">1</span>)<span class="built_in">printf</span>(<span class="string">"Alice\n"</span>);</div><div class="line">    <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"Bob\n"</span>);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="偷上网"><a href="#偷上网" class="headerlink" title="偷上网"></a>偷上网</h3><h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>　　感觉这个题并不是很简单, 骗分貌似不是很可行, 于是考虑距离两个点最远的点一定在其垂直平分线上, 于是可以找到任意两个点的垂直平分线, 那么在某两条垂直平分线上应该会存在答案, 于是码码码, 写了3-4KB, 发现处理不了1-2个点的情况, 于是写了特判.<br>　　很开心的一交, RE+AC. 然后使劲找错误, 找找找就是找不到, 第二天完整数据得到了78分, <a href="https://www.luogu.org/record/show?rid=7404923" target="_blank" rel="external">提交记录</a>.看到那些Re我的内心很崩溃.<br>　　突然灵光一现, 找到错误了, 原来是1-2个点的情况我的<code>main()</code>函数返回值是<code>true</code>（<strong><em>c++程序正常退出主函数返回值应该是<code>false</code></em></strong>）.woc, 我也太智障了吧, 原来这个错误是我自己造成的……然后重新写了1-2个点的特判.终于过了.</p>
@@ -530,10 +522,6 @@ Code1234567891011121314#include&amp;lt;cstdio&amp;gt;using namespace std;int mai
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/Linear3a/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -619,7 +607,7 @@ Code1234567891011121314#include&amp;lt;cstdio&amp;gt;using namespace std;int mai
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">159</span>
+                  <span class="site-state-item-count">157</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -641,7 +629,7 @@ Code1234567891011121314#include&amp;lt;cstdio&amp;gt;using namespace std;int mai
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">152</span>
+                  <span class="site-state-item-count">155</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -1264,7 +1252,7 @@ Code1234567891011121314#include&amp;lt;cstdio&amp;gt;using namespace std;int mai
           skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
         },
         "HTML-CSS": {
-            scale: 85,minScaleAdjust: 80
+            scale: 90,minScaleAdjust: 85
         }
       });
     </script>
