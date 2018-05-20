@@ -4,6 +4,58 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/leftisttree/</loc>
+    <lastmod>2018-05-20T10:08:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>左偏树</title>
+        <pubTime>2018-05-20T07:22:50.000Z</pubTime>
+        
+        <tag>可并堆</tag>
+         
+        <tag>左偏树</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/codechef%20march%20cook-off/</loc>
+    <lastmod>2018-05-20T07:21:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>CodeChef March Cook off div.2</title>
+        <pubTime>2018-05-20T07:10:49.000Z</pubTime>
+        
+        <tag>贪心</tag>
+         
+        <tag>模拟</tag>
+         
+        <tag>二分查找</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="比赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%AF%94%E8%B5%9B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/exam%205-11/</loc>
     <lastmod>2018-05-20T03:04:08.000Z</lastmod>
     <data>
@@ -13,9 +65,9 @@
         
         <tag>动态规划</tag>
          
-        <tag>离线</tag>
-         
         <tag>计算几何</tag>
+         
+        <tag>离线</tag>
          
         <tag>倍增</tag>
          
@@ -40,9 +92,9 @@
         <title>高斯消元</title>
         <pubTime>2018-05-15T07:30:30.000Z</pubTime>
         
-        <tag>线性代数</tag>
-         
         <tag>高斯消元</tag>
+         
+        <tag>线性代数</tag>
          
          
            
@@ -140,9 +192,9 @@
         
         <tag>模拟</tag>
          
-        <tag>线性代数</tag>
-         
         <tag>高斯消元</tag>
+         
+        <tag>线性代数</tag>
          
         <tag>最大权闭合子图</tag>
          
@@ -469,11 +521,11 @@
          
         <tag>Tarjan</tag>
          
+        <tag>并查集</tag>
+         
         <tag>强连通分量</tag>
          
         <tag>遍历</tag>
-         
-        <tag>并查集</tag>
          
          
            
@@ -544,9 +596,9 @@
         <title>bzoj 1593 [Usaco2008 Feb]Hotel 旅馆</title>
         <pubTime>2018-05-06T09:41:46.000Z</pubTime>
         
-        <tag>线段树</tag>
-         
         <tag>指针</tag>
+         
+        <tag>线段树</tag>
          
          
            
@@ -1105,9 +1157,9 @@
          
         <tag>模拟</tag>
          
-        <tag>NOIP</tag>
-         
         <tag>倍增</tag>
+         
+        <tag>NOIP</tag>
          
         <tag>快速幂</tag>
          
@@ -1557,9 +1609,9 @@
         <title>Codeforces 1</title>
         <pubTime>2018-04-17T13:35:18.000Z</pubTime>
         
-        <tag>模拟</tag>
-         
         <tag>计算几何</tag>
+         
+        <tag>模拟</tag>
          
          
            
@@ -1979,9 +2031,9 @@
         
         <tag>贪心</tag>
          
-        <tag>NOIP</tag>
-         
         <tag>倍增</tag>
+         
+        <tag>NOIP</tag>
          
         <tag>扩展欧几里得</tag>
          
@@ -2014,9 +2066,9 @@
          
         <tag>模拟</tag>
          
-        <tag>NOIP</tag>
-         
         <tag>倍增</tag>
+         
+        <tag>NOIP</tag>
          
         <tag>高精</tag>
          
@@ -2671,9 +2723,9 @@
          
         <tag>Floyd</tag>
          
-        <tag>贪心</tag>
-         
         <tag>最短路</tag>
+         
+        <tag>贪心</tag>
          
         <tag>倍增</tag>
          
@@ -3248,9 +3300,9 @@
         <title>T21776 子序列</title>
         <pubTime>2018-02-09T12:42:19.000Z</pubTime>
         
-        <tag>线段树</tag>
-         
         <tag>矩阵快速幂</tag>
+         
+        <tag>线段树</tag>
          
          
            
@@ -3580,9 +3632,9 @@
         <title>loj6277 数列分块入门 1</title>
         <pubTime>2018-02-12T13:46:15.000Z</pubTime>
         
-        <tag>分块</tag>
-         
         <tag>模板</tag>
+         
+        <tag>分块</tag>
          
          
            
@@ -3631,7 +3683,7 @@
     <data>
         <display>
         <title>HDU 4825 Xor Sum</title>
-        <pubTime>2018-02-11T21:40:00.000Z</pubTime>
+        <pubTime>2018-02-10T16:10:00.000Z</pubTime>
         
         <tag>Trie</tag>
          
@@ -3927,11 +3979,11 @@
         <title>P3373 线段树2</title>
         <pubTime>2018-02-09T08:16:19.000Z</pubTime>
         
-        <tag>线段树</tag>
-         
         <tag>指针</tag>
          
         <tag>模板</tag>
+         
+        <tag>线段树</tag>
          
         <tag>内存池</tag>
          
@@ -4058,11 +4110,11 @@
         <title>P3372 线段树1</title>
         <pubTime>2018-02-09T07:30:30.000Z</pubTime>
         
-        <tag>线段树</tag>
-         
         <tag>指针</tag>
          
         <tag>模板</tag>
+         
+        <tag>线段树</tag>
          
         <tag>内存池</tag>
          
