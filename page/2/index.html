@@ -325,7 +325,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/gauss/">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/LuoguMay/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="aiyoupass">
@@ -344,7 +344,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/gauss/" itemprop="url">高斯消元</a></h1>
+                <a class="post-title-link" href="/2018/LuoguMay/" itemprop="url">洛谷五月月赛</a></h1>
         
 
         <div class="post-meta">
@@ -356,8 +356,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-15T15:30:30+08:00">
-                2018-05-15
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-20T09:30:30+08:00">
+                2018-05-20
               </time>
             
 
@@ -390,8 +390,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/总结/" itemprop="url" rel="index">
-                    <span itemprop="name">总结</span>
+                  <a href="/categories/信息学竞赛/比赛/" itemprop="url" rel="index">
+                    <span itemprop="name">比赛</span>
                   </a>
                 </span>
 
@@ -409,8 +409,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/gauss/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/gauss/" itemprop="commentsCount"></span>
+                <a href="/2018/LuoguMay/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/LuoguMay/" itemprop="commentsCount"></span>
                 </a>
               </span>
               <!--/noindex-->
@@ -440,16 +440,202 @@
 
       
         
-          
-            <h3 id="高斯消元"><a href="#高斯消元" class="headerlink" title="高斯消元"></a>高斯消元</h3><h4 id="线性方程组"><a href="#线性方程组" class="headerlink" title="线性方程组"></a>线性方程组</h4><p>对于一组线性方程组, 例如<br>$$<br>\begin{cases}<br>a_{11}x_1+a_{12}x_2=b_1\\<br>a_{21}x_1+a_{22}x_2=b_2\\<br>\end{cases}<br>$$<br>其通常解法如下, 消去其中一个式子的一个未知数, 令方程二减去方程一的$\frac{a_{22}}{a_{12}}$倍, 得到<br>$$\left(a_{21}-\frac{a_{22}a_{11}}{a_{12}}\right)x_1=b_2-b_1\frac{a_{22}a_{11}}{a_{12}}$$<br>此式只有一个未知数$x_1$, 可以解得$x_1$, 从而将其带入方程一求出$x_2$.<br>　　我们可以将这种方法推广开来, 给出$n$组$n$元线性方程组, 每次可以消去一个未知数, 得到一组新方程, 然后再消去其中一个未知数直到仅剩一个未知数.这样我们便可以解出方程组的解.<br>　　而高斯消元就是来进行这个过程的.只是其借助的是矩阵的初等变换.将第$i$个方程的所有系数和常数项$a_{i1},a_{i2},\cdots,a_{in}, b_i$排列在第$i$行,这样便形成了一个$n$行$n+1$列的数表, 称之为矩阵.然后模仿上述消元的过程, 可以消去某一行的若干个$0$.矩阵的初等变换主要有初等行变换和初等列变换, 两者等价.</p>
+          <p><a href="https://www.luogu.org/contestnew/show/7000">比赛地址</a><br>做题情况</p>
 <ul>
-<li>将某两行或两列交换.</li>
-<li>将某一行或某一列乘以某一常数加到另外一行或者一列.</li>
+<li>所有的时间都花在了前两个题上</li>
+<li>第一题没考虑清楚提交了两遍.</li>
+<li>第二题更是出极其zz的错误.</li>
+<li>有部分分的话大概第四题贪心能拿到不少.</li>
 </ul>
-<p>利用这些, 可以将这个矩阵变成一种特殊的矩阵, 即上三角或下三角矩阵.例如下面这种形式<br>$$\begin{bmatrix}<br>a_{11}&amp;\text{ }a_{12}&amp;\text{ }a_{13}&amp;\text{ } b_1\\<br>0&amp;\text{ }a_{22}&amp;\text{ }a_{23}&amp;\text{ }b_2\\<br>0&amp;\text{ }0&amp;\text{ }a_{33}&amp;\text{ }b_3<br>\end{bmatrix}$$<br>发现利用最后一行可以得到$x_3$的值, 然后利用第2行可以得到$x_2$的值, 以此类推.</p>
-<p>其实这些结论都是利用线性变换得到的.</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/LuoguMay/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+    
+    </div>
+    <div>
+    
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/codechef may Challenge/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/codechef may Challenge/" itemprop="url">CodeChef May Challenge</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-19T15:20:30+08:00">
+                2018-05-19
+              </time>
+            
+
+            
+
+            
+          </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/比赛/" itemprop="url" rel="index">
+                    <span itemprop="name">比赛</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/codechef may Challenge/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/codechef may Challenge/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><a href="https://www.codechef.com/MAY18B">比赛地址</a></p>
+<h3 id="吐槽"><a href="#吐槽" class="headerlink" title="吐槽"></a>吐槽</h3><ul>
+<li>前6道题提交了很多次, 题目有毒.</li>
+<li>网站速度太慢了, 中文pdf题面经常出现网络错误.</li>
+<li>代码都不长, 喜欢.</li>
+<li>仅仅是div. 2难度.</li>
+<li>目前做了前六道题</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/codechef may Challenge/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -623,6 +809,183 @@
 <p>　　那么如果每次给出$B$, 我们要求的便是$X$, 即所有自变量的值, 便可以通过高斯消元以$O(n^3)$的复杂度求解.每次求解复杂度$O(n^3)$, 一共有$m$组数据, 总复杂度为$O(n^3m)$, 不能通过.<br>　　可是数据明显能达到$10^9$的规模, 这时候这么做就不行了, 但是发现如果每一次都需要对系数矩阵进行一次初等变换以形成上三角矩阵或下三角矩阵, 对于每组不同的常数项这个过程都是相同的, 于是只需进行一次这个过程就行了, 总复杂度为$O(n^3+n^2m)$.<br>　　也可以通过求系数矩阵的逆矩阵从而每次进行一次线性变换(矩阵乘法)的方式求解.</p>
 <h4 id="divide"><a href="#divide" class="headerlink" title="divide"></a>divide</h4><p>　　这个题目放在第一题大概是比较合适.<br>　　引用:设d=gcd(a1,a2,…,an)可以证明若m=2^k<em>d则问题有解，否则问题无解。令a1=b1</em>d,a2=b2<em>d,…,an=bn</em>d,找出所有bi为奇数的i,两两配对进行逆操作,如此所有的bi将变为偶数,d的值将会倍增,直到等于m为止。倍增的次数为O(logm),配对的时间复杂度为O(n),故总时间复杂度O(nlogm)。</p>
 <h4 id="wifi"><a href="#wifi" class="headerlink" title="wifi"></a>wifi</h4><p>　　需要最小割的一个不怎么常见的模型: 最大权闭合子图, 是网络流的内容.用到这个这种类型的题不是很常见.我认为放在这套题里面让你们做极其不合适.实在想做这个题的, 我有一个xxy学姐的课件, 第107页开始讲到这个知识.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+    <div>
+    
+    </div>
+    <div>
+    
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/gauss/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/gauss/" itemprop="url">高斯消元</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-15T15:30:30+08:00">
+                2018-05-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/总结/" itemprop="url" rel="index">
+                    <span itemprop="name">总结</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/gauss/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/gauss/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="高斯消元"><a href="#高斯消元" class="headerlink" title="高斯消元"></a>高斯消元</h3><h4 id="线性方程组"><a href="#线性方程组" class="headerlink" title="线性方程组"></a>线性方程组</h4><p>对于一组线性方程组, 例如<br>$$<br>\begin{cases}<br>a_{11}x_1+a_{12}x_2=b_1\\<br>a_{21}x_1+a_{22}x_2=b_2\\<br>\end{cases}<br>$$<br>其通常解法如下, 消去其中一个式子的一个未知数, 令方程二减去方程一的$\frac{a_{22}}{a_{12}}$倍, 得到<br>$$\left(a_{21}-\frac{a_{22}a_{11}}{a_{12}}\right)x_1=b_2-b_1\frac{a_{22}a_{11}}{a_{12}}$$<br>此式只有一个未知数$x_1$, 可以解得$x_1$, 从而将其带入方程一求出$x_2$.<br>　　我们可以将这种方法推广开来, 给出$n$组$n$元线性方程组, 每次可以消去一个未知数, 得到一组新方程, 然后再消去其中一个未知数直到仅剩一个未知数.这样我们便可以解出方程组的解.<br>　　而高斯消元就是来进行这个过程的.只是其借助的是矩阵的初等变换.将第$i$个方程的所有系数和常数项$a_{i1},a_{i2},\cdots,a_{in}, b_i$排列在第$i$行,这样便形成了一个$n$行$n+1$列的数表, 称之为矩阵.然后模仿上述消元的过程, 可以消去某一行的若干个$0$.矩阵的初等变换主要有初等行变换和初等列变换, 两者等价.</p>
+<ul>
+<li>将某两行或两列交换.</li>
+<li>将某一行或某一列乘以某一常数加到另外一行或者一列.</li>
+</ul>
+<p>利用这些, 可以将这个矩阵变成一种特殊的矩阵, 即上三角或下三角矩阵.例如下面这种形式<br>$$\begin{bmatrix}<br>a_{11}&amp;\text{ }a_{12}&amp;\text{ }a_{13}&amp;\text{ } b_1\\<br>0&amp;\text{ }a_{22}&amp;\text{ }a_{23}&amp;\text{ }b_2\\<br>0&amp;\text{ }0&amp;\text{ }a_{33}&amp;\text{ }b_3<br>\end{bmatrix}$$<br>发现利用最后一行可以得到$x_3$的值, 然后利用第2行可以得到$x_2$的值, 以此类推.</p>
+<p>其实这些结论都是利用线性变换得到的.</p>
 
           
         
@@ -1731,359 +2094,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/bzoj1911/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="aiyoupass">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/myjson/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="落花微雨">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/bzoj1911/" itemprop="url">bzoj 1911 [APIO2010]特别行动队</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-10T14:43:20+08:00">
-                2018-05-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
-                    <span itemprop="name">信息学竞赛</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
-                    <span itemprop="name">题目</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/bzoj1911/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/bzoj1911/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="P3628-APIO2010-特别行动队"><a href="#P3628-APIO2010-特别行动队" class="headerlink" title="P3628 [APIO2010]特别行动队"></a>P3628 [APIO2010]特别行动队</h3><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>　　你有一支由 n 名预备役士兵组成的部队，士兵从 1 到 n 编号，要将他们拆分 成若干特别行动队调入战场。出于默契的考虑，同一支特别行动队中队员的编号 应该连续，即为形如$(i,i+1,\cdots,i+k)$ 的序列。 编号为 i 的士兵的初始战斗力为 $x_i$ ，一支特别行动队的初始战斗力 x 为队内 士兵初始战斗力之和，即 $x = x_i + x_{i+1} + … + x_{i+k}$<br>通过长期的观察，你总结出一支特别行动队的初始战斗力 $x$ 将按如下经验公 式修正为 $x’:x’= ax^2+bx+c$，其中 $a, b, c$ 是已知的系数（$a &lt; 0$）。 作为部队统帅，现在你要为这支部队进行编队，使得所有特别行动队修正后 战斗力之和最大。试求出这个最大和。</p>
-<p>　　例如，你有 4 名士兵， $x_1 = 2, x_2 = 2, x_3 = 3, x_4 = 4$.经验公式中的参数为 $a = –1, b = 10, c = –20$.此时，最佳方案是将士兵组成 3 个特别行动队：第一队包含士兵 $1$ 和士兵 $2$，第二队包含士兵 $3$，第三队包含士兵 $4$。特别行动队的初始战斗力分 别为 $4, 3, 4$，修正后的战斗力分别为 $4, 1, 4$。修正后的战斗力和为 $9$，没有其它 方案能使修正后的战斗力和更大。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/bzoj1911/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    <div>
-    
-    </div>
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/p2982/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="aiyoupass">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/myjson/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="落花微雨">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/p2982/" itemprop="url">p2982 USACO10FEB 慢下来Slowing down</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-10T11:16:30+08:00">
-                2018-05-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
-                    <span itemprop="name">信息学竞赛</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
-                    <span itemprop="name">题目</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/p2982/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/p2982/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>每天Farmer John的N头奶牛(1 &lt;= N &lt;= 100000，编号1…N)从粮仓走向他的自己的牧场。牧场构成了一棵树，粮仓在1号牧场。恰好有N-1条道路直接连接着牧场，使得牧场之间都恰好有一条路径相连。第i条路连接着A_i，B_i，(1 &lt;= A_i &lt;= N; 1 &lt;= B_i &lt;= N)。 奶牛们每人有一个私人牧场P_i (1 &lt;= P_i &lt;= N)。粮仓的门每次只能让一只奶牛离开。耐心的奶牛们会等到他们的前面的朋友们到达了自己的私人牧场后才离开。首先奶牛1离开，前往P_1；然后是奶牛2，以此类推。</p>
-<p>当奶牛i走向牧场P_i时候，他可能会经过正在吃草的同伴旁。当路过已经有奶牛的牧场时，奶牛i会放慢自己的速度，防止打扰他的朋友。</p>
-<p>FJ想要知道奶牛们总共要放慢多少次速度。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/p2982/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    <div>
-    
-    </div>
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2138,7 +2148,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">165</span>
+                  <span class="site-state-item-count">167</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2160,7 +2170,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">161</span>
+                  <span class="site-state-item-count">162</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

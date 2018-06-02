@@ -4,6 +4,54 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/matrix-md/</loc>
+    <lastmod>2018-06-02T13:46:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>矩阵</title>
+        <pubTime>2018-06-02T13:40:46.000Z</pubTime>
+        
+        <tag>线性代数</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/codevs1191/</loc>
+    <lastmod>2018-06-02T13:40:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>CodeVS 1191 数轴染色问题</title>
+        <pubTime>2018-06-02T13:35:30.000Z</pubTime>
+        
+        <tag>线段树</tag>
+         
+        <tag>标记永久化</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/p1455/</loc>
     <lastmod>2018-06-02T09:53:26.000Z</lastmod>
     <data>
@@ -675,11 +723,11 @@
          
         <tag>Tarjan</tag>
          
-        <tag>并查集</tag>
-         
         <tag>强连通分量</tag>
          
         <tag>遍历</tag>
+         
+        <tag>并查集</tag>
          
          
            
@@ -1311,9 +1359,9 @@
          
         <tag>模拟</tag>
          
-        <tag>最小生成树</tag>
-         
         <tag>倍增</tag>
+         
+        <tag>最小生成树</tag>
          
         <tag>NOIP</tag>
          
@@ -1381,9 +1429,9 @@
          
         <tag>模拟</tag>
          
-        <tag>背包</tag>
-         
         <tag>树形dp</tag>
+         
+        <tag>背包</tag>
          
         <tag>NOIP</tag>
          
@@ -1690,11 +1738,11 @@
         
         <tag>动态规划</tag>
          
-        <tag>模拟</tag>
-         
         <tag>随机化算法</tag>
          
         <tag>模拟退火</tag>
+         
+        <tag>模拟</tag>
          
          
            
@@ -2185,9 +2233,9 @@
         
         <tag>贪心</tag>
          
-        <tag>二分答案</tag>
-         
         <tag>倍增</tag>
+         
+        <tag>二分答案</tag>
          
         <tag>NOIP</tag>
          
@@ -2877,13 +2925,13 @@
          
         <tag>Floyd</tag>
          
-        <tag>最短路</tag>
-         
         <tag>贪心</tag>
          
-        <tag>二分答案</tag>
+        <tag>最短路</tag>
          
         <tag>倍增</tag>
+         
+        <tag>二分答案</tag>
          
          
            
