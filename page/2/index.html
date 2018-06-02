@@ -325,6 +325,897 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/gauss/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/gauss/" itemprop="url">高斯消元</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-15T15:30:30+08:00">
+                2018-05-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/总结/" itemprop="url" rel="index">
+                    <span itemprop="name">总结</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/gauss/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/gauss/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="高斯消元"><a href="#高斯消元" class="headerlink" title="高斯消元"></a>高斯消元</h3><h4 id="线性方程组"><a href="#线性方程组" class="headerlink" title="线性方程组"></a>线性方程组</h4><p>对于一组线性方程组, 例如<br>$$<br>\begin{cases}<br>a_{11}x_1+a_{12}x_2=b_1\\<br>a_{21}x_1+a_{22}x_2=b_2\\<br>\end{cases}<br>$$<br>其通常解法如下, 消去其中一个式子的一个未知数, 令方程二减去方程一的$\frac{a_{22}}{a_{12}}$倍, 得到<br>$$\left(a_{21}-\frac{a_{22}a_{11}}{a_{12}}\right)x_1=b_2-b_1\frac{a_{22}a_{11}}{a_{12}}$$<br>此式只有一个未知数$x_1$, 可以解得$x_1$, 从而将其带入方程一求出$x_2$.<br>　　我们可以将这种方法推广开来, 给出$n$组$n$元线性方程组, 每次可以消去一个未知数, 得到一组新方程, 然后再消去其中一个未知数直到仅剩一个未知数.这样我们便可以解出方程组的解.<br>　　而高斯消元就是来进行这个过程的.只是其借助的是矩阵的初等变换.将第$i$个方程的所有系数和常数项$a_{i1},a_{i2},\cdots,a_{in}, b_i$排列在第$i$行,这样便形成了一个$n$行$n+1$列的数表, 称之为矩阵.然后模仿上述消元的过程, 可以消去某一行的若干个$0$.矩阵的初等变换主要有初等行变换和初等列变换, 两者等价.</p>
+<ul>
+<li>将某两行或两列交换.</li>
+<li>将某一行或某一列乘以某一常数加到另外一行或者一列.</li>
+</ul>
+<p>利用这些, 可以将这个矩阵变成一种特殊的矩阵, 即上三角或下三角矩阵.例如下面这种形式<br>$$\begin{bmatrix}<br>a_{11}&amp;\text{ }a_{12}&amp;\text{ }a_{13}&amp;\text{ } b_1\\<br>0&amp;\text{ }a_{22}&amp;\text{ }a_{23}&amp;\text{ }b_2\\<br>0&amp;\text{ }0&amp;\text{ }a_{33}&amp;\text{ }b_3<br>\end{bmatrix}$$<br>发现利用最后一行可以得到$x_3$的值, 然后利用第2行可以得到$x_2$的值, 以此类推.</p>
+<p>其实这些结论都是利用线性变换得到的.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+    <div>
+    
+    </div>
+    <div>
+    
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/exam 5-13/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/exam 5-13/" itemprop="url">五月十五日NOIP模拟赛简要题解</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-15T15:30:30+08:00">
+                2018-05-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/考试/" itemprop="url" rel="index">
+                    <span itemprop="name">考试</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/exam 5-13/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/exam 5-13/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>虽然试题我没做.而且这套题给他们做太不合适了, 很多知识都没学(高斯消元最小割).</p>
+<h4 id="equation"><a href="#equation" class="headerlink" title="equation"></a>equation</h4><p>　　对于每一组线性方程组, 可以表示成一个线性变换的形式, 即<br>$$AX=B$$<br>其意义为一个向量$X=\left(x_1,x_2,\cdots,x_n\right)$经过一个函数$A: \mathbb{R}^n\rightarrow \mathbb{R}^n$变为$B={b_1,b_2,\cdots,b_n}$, 其中$x_i,i\in{1,\cdots,n}$为方程组的第$i$个自变量, $b_i,i\in{1,\cdots,n}$表示方程组的常数项, $A$称为系数矩阵.</p>
+<p>　　那么如果每次给出$B$, 我们要求的便是$X$, 即所有自变量的值, 便可以通过高斯消元以$O(n^3)$的复杂度求解.每次求解复杂度$O(n^3)$, 一共有$m$组数据, 总复杂度为$O(n^3m)$, 不能通过.<br>　　可是数据明显能达到$10^9$的规模, 这时候这么做就不行了, 但是发现如果每一次都需要对系数矩阵进行一次初等变换以形成上三角矩阵或下三角矩阵, 对于每组不同的常数项这个过程都是相同的, 于是只需进行一次这个过程就行了, 总复杂度为$O(n^3+n^2m)$.<br>　　也可以通过求系数矩阵的逆矩阵从而每次进行一次线性变换(矩阵乘法)的方式求解.</p>
+<h4 id="divide"><a href="#divide" class="headerlink" title="divide"></a>divide</h4><p>　　这个题目放在第一题大概是比较合适.<br>　　引用:设d=gcd(a1,a2,…,an)可以证明若m=2^k<em>d则问题有解，否则问题无解。令a1=b1</em>d,a2=b2<em>d,…,an=bn</em>d,找出所有bi为奇数的i,两两配对进行逆操作,如此所有的bi将变为偶数,d的值将会倍增,直到等于m为止。倍增的次数为O(logm),配对的时间复杂度为O(n),故总时间复杂度O(nlogm)。</p>
+<h4 id="wifi"><a href="#wifi" class="headerlink" title="wifi"></a>wifi</h4><p>　　需要最小割的一个不怎么常见的模型: 最大权闭合子图, 是网络流的内容.用到这个这种类型的题不是很常见.我认为放在这套题里面让你们做极其不合适.实在想做这个题的, 我有一个xxy学姐的课件, 第107页开始讲到这个知识.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+    <div>
+    
+    </div>
+    <div>
+    
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/vim1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/vim1/" itemprop="url">Vim 基本配置</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-13T16:44:30+08:00">
+                2018-05-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解决方案/" itemprop="url" rel="index">
+                    <span itemprop="name">解决方案</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解决方案/Vim/" itemprop="url" rel="index">
+                    <span itemprop="name">Vim</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/vim1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/vim1/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>　　很久之前就开始用Vim, 但是一直都是把它当成普通的文本编辑器来用, 没有真正发挥出它的优势, 因此决定好好学习一下Vim.主要有以下几个方面:</p>
+<ul>
+<li>学会使用其各种原生命令, 能提高工作效率.</li>
+<li>通过配置文件将其配置成适合我工作的样子.</li>
+<li>各种强大的插件, 如注释, 状态栏, 语法检查.</li>
+<li>To do: <ul>
+<li>目前使用的gvim8.0不支持Python, 以后自己编译一个支持Python的版本.</li>
+<li>目前用来语法检查的Clang不能找到我的MinGW中的头文件.</li>
+</ul>
+</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/vim1/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+    
+    </div>
+    <div>
+    
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/exam 5-11/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/exam 5-11/" itemprop="url">5-11 考试</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-11T18:20:30+08:00">
+                2018-05-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/考试/" itemprop="url" rel="index">
+                    <span itemprop="name">考试</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/exam 5-11/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/exam 5-11/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h3><p>试题来源: qbxt 2018年1月 北京省选班<br>难度: 我估计介于省选与NOIP之间</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/exam 5-11/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+    
+    </div>
+    <div>
+    
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/p2986/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/p2986/" itemprop="url">P2986 [Usaco2010 Mar]gather 奶牛大集会</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-10T17:18:00+08:00">
+                2018-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
+                    <span itemprop="name">题目</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            <!--noindex-->
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/p2986/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/p2986/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+              <!--/noindex-->
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><p>　　Bessie正在计划一年一度的奶牛大集会，来自全国各地的奶牛将来参加这一次集会。当然，她会选择最方便的地点来举办这次集会。每个奶牛居住在 N(1&lt;=N&lt;=100,000) 个农场中的一个，这些农场由N-1条道路连接，并且从任意一个农场都能够到达另外一个农场。道路i连接农场A_i和B_i(1 &lt;= A_i &lt;=N; 1 &lt;= B_i &lt;= N),长度为L_i(1 &lt;= L_i &lt;= 1,000)。集会可以在N个农场中的任意一个举行。另外，每个牛棚中居住者C_i(0 &lt;= C_i &lt;= 1,000)只奶牛。在选择集会的地点的时候，Bessie希望最大化方便的程度(也就是最小化不方便程度)。比如选择第X个农场作为集会地点，它的不方便程度是其它牛棚中每只奶牛去参加集会所走的路程之和，(比如，农场i到达农场X的距离是20，那么总路程就是C_i*20)。帮助Bessie找出最方便的地点来举行大集会。 考虑一个由五个农场组成的国家，分别由长度各异的道路连接起来。在所有农场中，3号和4号没有奶牛居住。 </p>
+<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>做法太多了.</p>
+<ul>
+<li>(我想到的)让集合点在树上移动, 利用上一次的不方便值.</li>
+<li>树形dp</li>
+<li>树形dp, 容斥原理.</li>
+<li>树的重心</li>
+</ul>
+<p>　　分析发现如果此时集合点在$u$处并且不方便值为$c$, 那么将集合点向某个方向移动一下, 有的点到新集合点的距离增大了, 有的减小了, 发现如果是从$u$移动到$v$, 那么与$v$相连的部分到集合点的路程都会减少, 与$u$相连的部分到集合点的路程会增加.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+    <div>
+    
+    </div>
+    <div>
+    
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/p2915/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1193,937 +2084,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/p2900/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="aiyoupass">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/myjson/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="落花微雨">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/p2900/" itemprop="url">p2900 USACO08MAR 土地征用Land Acquisition</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-10T09:37:40+08:00">
-                2018-05-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
-                    <span itemprop="name">信息学竞赛</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
-                    <span itemprop="name">题目</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/p2900/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/p2900/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>　　约翰准备扩大他的农场，眼前他正在考虑购买N块长方形的土地。如果约翰单买一块土 地，价格就是土地的面积。但他可以选择并购一组土地，并购的价格为这些土地中最大的长 乘以最大的宽。比如约翰并购一块3 × 5和一块5 × 3的土地，他只需要支付5 × 5 = 25元， 比单买合算。 约翰希望买下所有的土地。他发现，将这些土地分成不同的小组来并购可以节省经费。 给定每份土地的尺寸，请你帮助他计算购买所有土地所需的最小费用。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/p2900/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    <div>
-    
-    </div>
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/joyoi1608/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="aiyoupass">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/myjson/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="落花微雨">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/joyoi1608/" itemprop="url">JoyOi 1608 小熊分糖</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-09T16:53:38+08:00">
-                2018-05-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
-                    <span itemprop="name">信息学竞赛</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
-                    <span itemprop="name">题目</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/joyoi1608/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/joyoi1608/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>　　晴朗的上午，小熊BIBO抱着一罐糖，出去找好朋友，两只小兔子。从小熊家出来，穿过小树林，在一个有向日葵的路口向右拐，这就是小兔子家了。小熊BIBO见到好朋友，开心的不得了，BIBO要做的第一件事，是分糖，因为大熊说过，好东西是不可以独享的。<br>糖罐里有N颗糖，小熊BIBO要挑出m颗来给两只小兔子，剩下的留着自己吃。 对于这n颗糖中的每一颗，这两只小兔子都有各自的喜欢程度Ai和Bi。小熊BIBO想让挑出来这m颗糖的“Ai和”与“Bi和”的差尽量小，在满足“Ai和”与“Bi和”的差最小的情况下呢，要让“Ai和”与“Bi和”的和尽量大。 小熊BIBO可不擅长算数，所以想请你告诉她，如果选m颗糖，“Ai和”与“Bi和”的最小差是多少，还有在满足这个最小差的情况下，最大和是多少。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/joyoi1608/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    <div>
-    
-    </div>
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/Lagrange multiplier/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="aiyoupass">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/myjson/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="落花微雨">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/Lagrange multiplier/" itemprop="url">拉格朗日乘数法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-08T20:52:20+08:00">
-                2018-05-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
-                    <span itemprop="name">信息学竞赛</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/总结/" itemprop="url" rel="index">
-                    <span itemprop="name">总结</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/Lagrange multiplier/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/Lagrange multiplier/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://www.luogu.org/problemnew/show/P2179" target="_blank" rel="external">NOI2012骑行川藏</a>qbxt的基础班讲到了这道题, ……王老师你确定真的合适?然后gzy问我,我表示不会.然后看了一晚上加一上午的分析和微积分, 表示革新了我的时间观.</p>
-<ul>
-<li><a href="https://www.zhihu.com/question/38586401" target="_blank" rel="external">Zhihu</a></li>
-<li><a href="http://www.cnblogs.com/maybe2030/p/4946256.html#undefined" target="_blank" rel="external">Cnblogs</a></li>
-<li><a href="https://wenku.baidu.com/view/6dd13bef551810a6f52486e1.html?from=search" target="_blank" rel="external">WenKu</a></li>
-<li><a href="https://baike.baidu.com/item/%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E4%B9%98%E5%AD%90%E6%B3%95/1946079?fr=aladdin" target="_blank" rel="external">Baike</a></li>
-<li>物化课本附录</li>
-</ul>
-<p>知乎上讲的比较形象; cnblogs上例子比较多; 百科上比较全面; 文库上的比较专业.</p>
-<h3 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h3><p>$\nabla f$大概是标量场$f$在某一点的梯度.也就是这一点的法向量.也就是在这个方向上函数值上升最快.<br>$$<br>\begin{align}<br>&amp;\nabla f=-\lambda \nabla g\\<br>\Rightarrow &amp;\nabla f+\lambda \nabla g=0\\<br>\Rightarrow &amp;\nabla\left(f+\lambda g \right)=0\\<br>\Rightarrow &amp;\nabla F(x_1,\cdots,x_n,\lambda )=0\\<br>\Rightarrow<br>&amp;f_{x_1}+\lambda g_{x_1}=0\\<br>&amp;f_{x_2}+\lambda g_{x_2}=0\\<br>&amp;\cdots \cdots \\<br>&amp;f_{x_n}+\lambda g_{x_n}=0\\<br>&amp;f_{\lambda}+g=0<br>\end{align}<br>$$<br>其中$F$为拉格朗日函数, 它拥有和$f$一样的极值.</p>
-<h3 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h3><p>约束优化问题.<br>引入拉格朗日乘子将具有n个变量和k个约束条件的约束优化问题转化为含有(n+k)个变量的无约束优化问题.<br>数学意义:约束方程梯度线性组合中每个向量的系数.</p>
-<p>引入拉格朗日乘子建立极值条件.对n个变量分别求偏导建立了n个方程加上k个约束条件构成了(n+k)个方程的方程组问题.</p>
-<p>$$<br>\begin{align}<br>\min/\max \text{a function f(x,y,z), where x,y,z are not indepedent and g(x,y,z)=0.}<br>\end{align}<br>$$<br>$$\begin{align}<br>\min/\max f(x,y,z)\\<br>s.t. g(x,y,z)=0<br>\end{align}<br>$$</p>
-<h3 id="物化附录"><a href="#物化附录" class="headerlink" title="物化附录"></a>物化附录</h3><p><strong><em>以下内容凭借回忆</em></strong><br><strong>详见物理化学课本附录: 拉格朗日乘数子法</strong></p>
-<p>对一个函数$f(x_1,x_2,\cdots,x_n)$求极值为<br>$$<br>df=0/\nabla f=0<br>$$<br>$$<br>\begin{align}<br>\Rrightarrow \frac{\partial f}{x_1}=&amp;0\\<br>\frac{\partial f}{x_2}=&amp;0\\<br>\cdots \cdots\\<br>\frac{\partial f}{x_n}=&amp;0\\<br>\end{align}<br>$$<br>如果给出多组限制条件<br>$$<br>g_1(x_1,x_2,\cdots ,x_n)=c_1\\<br>g_2(x_1,x_2,\cdots ,x_n)=c_2\\<br>\cdots \cdots\\<br>g_k(x_1,x_2,\cdots ,x_n)=c_3\\<br>$$<br>再求极值就不能那么求了, 那么就可以用一个函数<br>$$<br>F(x_1,\cdots,x_n,\lambda_1,\cdots,\lambda_k)=f(x_1,\cdots ,x_n)+\lambda_1 (g_1-c_1)+\cdots+\lambda_k(g_k-c_k)<br>$$<br>这个函数的极值和$f$的极值相同.其极值为<br>$$dF=0$$<br>$$<br>\begin{align}<br>\Rightarrow \frac{\partial F}{\partial x_1}=&amp;0\\<br>\cdots \cdots\\<br>\frac{\partial F}{\partial x_n}=&amp;0\\<br>\frac{\partial F}{\partial \lambda_1}=&amp;0\\<br>\cdots \cdots \\<br>\frac{\partial F}{\partial \lambda_k}=&amp;0<br>\end{align}<br>$$<br>也就说解这$n+k$组方程会得到解.</p>
-<h3 id="数学实例"><a href="#数学实例" class="headerlink" title="数学实例:"></a>数学实例:</h3><p>给定椭球<br>$$<br>\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1<br>$$<br>求其内接长方体的最大体积.<br>$$<br>\max f(x,y,z)=8xyz\\<br>s.t. \frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1<br>$$<br>$F(x,y,z)$极值和$f(x,y,z)$相同.<br>转化为<br>$$<br>\begin{align}<br>F(x,y,z,\lambda)=&amp;f(x,y,z)+\lambda\phi(x,y,z)\\<br>=&amp;8xyz+\lambda(\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}-1)<br>\end{align}<br>$$<br>对其分别求偏导得到<br>$$<br>\begin{align}<br>\frac{\partial F(x,y,z,\lambda)}{\partial x}=&amp;8yz+\frac{2\lambda x}{a^2}=0\\<br>\frac{\partial F(x,y,z,\lambda)}{\partial x}=&amp;8xz+\frac{2\lambda x}{a^2}=0\\<br>\frac{\partial F(x,y,z,\lambda)}{\partial x}=&amp;8xy+\frac{2\lambda x}{c^2}=0\\<br>\frac{\partial F(x,y,z,\lambda)}{\partial \lambda }=&amp;\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}-1=0<br>\end{align}<br>$$<br>然后可以求得$x,y,z,\lambda$的值.</p>
-<h3 id="zhihu"><a href="#zhihu" class="headerlink" title="zhihu"></a>zhihu</h3><p><a href="link">https://www.zhihu.com/question/38586401</a></p>
-<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><p>极大极小值的必要条件: 梯度场与切空间垂直.<br>函数$f(x,y,z)=z$<br>希望$z$足够大.</p>
-<p>一个人在一座山上走, 希望走到山顶.根据周围的地形判断是往上走还是往下走.</p>
-<p>那么梯度$\nabla f=(0,0,1)$这是一个类似向量的东西, 一个点处的梯度为从周围标量场的最小处指向最大处.</p>
-<p>那么沿梯度方向$f$增长最快, 反方向增长最慢.</p>
-<p>我们可以移动的方向叫做这点的切空间.</p>
-<p>如果某处切空间某个方向与梯度方向夹角为锐角.那么往这移动$f$会增加, 因此这里不是山顶.实际上是说山顶处的切空间只能与梯度方向垂直.</p>
-<p>利用流形的信息可以得到切空间的方程.从而确定于切空间垂直的所有方向(法向).</p>
-<p>利用函数的信息可以得到梯度场的方向.</p>
-<p>梯度场方向与切空间垂直, 所以梯度场可以表示成一些特定的法向的线性组合.<br>系数记为$\lambda_1,\cdots,\lambda_k$.</p>
-<h4 id="一般形式"><a href="#一般形式" class="headerlink" title="一般形式"></a>一般形式</h4><p>一组约束条件$F(x)=0, F=(F_1,\cdots, F_k)$<br>约束条件下所有点为<br>$M={x\in \mathbf{R}^n|F(x)=0}$<br>$p$为$f$的局部极大值或者局部极小值.<br>那么$\nabla f\in (T_p M)^{\bot}$</p>
-<p>$M={x\in \mathbf{R}^n|F(x)=0}$, 所以法向量由$\nabla F_1,\nabla F_2,\cdots $张成.</p>
-<p>存在一组系数$\lambda_1,\cdots,\lambda_k$使得<br>$\nabla f=\lambda_1 \nabla F_1+\cdots $</p>
-<h3 id="骑行川藏"><a href="#骑行川藏" class="headerlink" title="骑行川藏"></a>骑行川藏</h3><p>但是因为我菜的不行因此只能将一些关键点写出来.而且我关注的只有<strong>数学推导过程</strong>, 如果您想<strong>背过结论</strong>而且直接用的话请跳过前面的内容.</p>
-<h4 id="多元函数的极值问题"><a href="#多元函数的极值问题" class="headerlink" title="多元函数的极值问题"></a>多元函数的极值问题</h4><p><strong><em>指的应该是局部极值</em></strong></p>
-<p>这应该是属于<strong>数学分析</strong>的内容.大概是数学专业的专业课程.</p>
-<p>求多元函数$f(x_1,\cdots,x_n)$极值<br>$$df=0$$</p>
-<p><strong>有约束的极值</strong>问题, 多组约束形如$g(x_1,\cdots,x_n)=0$可用<strong>拉格朗日乘数子法</strong>解决.</p>
-<p>关于拉格朗日乘数法.</p>
-<ul>
-<li><a href="https://www.zhihu.com/question/38586401" target="_blank" rel="external">Zhihu</a></li>
-<li><a href="http://www.cnblogs.com/maybe2030/p/4946256.html#undefined" target="_blank" rel="external">Cnblogs</a></li>
-<li><a href="https://wenku.baidu.com/view/6dd13bef551810a6f52486e1.html?from=search" target="_blank" rel="external">WenKu</a></li>
-<li><a href="https://baike.baidu.com/item/%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E4%B9%98%E5%AD%90%E6%B3%95/1946079?fr=aladdin" target="_blank" rel="external">Baike</a></li>
-<li>数学分析课本</li>
-</ul>
-<h5 id="偏导数"><a href="#偏导数" class="headerlink" title="偏导数"></a>偏导数</h5><p><strong>导数属于微积分的内容, 水实在是太深了, 完全不是高中课本上那些一元函数.</strong><br>二元函数$f(x,y)$在某一点$(x_0,y_0)$处对$x$的偏导数.<br>$$<br>f_x(x_0,y_0)=\lim_{\Delta x\rightarrow 0}\frac{f(x_0+\Delta x,y_0)-f(x_0,y_0)}{\Delta x}<br>$$<br>二元函数$f(x,y)$对$x$的偏导函数记为<br>$$<br>\frac{\partial f}{\partial x}\text{ or }f_x(x,y).<br>$$</p>
-<h5 id="梯度"><a href="#梯度" class="headerlink" title="梯度"></a>梯度</h5><p>$\nabla $是劈型算子, $\nabla f$可表示函数在某一点的梯度,梯度也就是某一点的法向量.也就是在这个方向上函数值上升最快.<br>$$<br>\nabla f=f_x(x_0,y_0)i+f_y(x_0,y_0)j<br>$$<br>$i,j$为单位向量.<br>根据$f$在$g$的约束条件下取得极值等价于下面的式子(为什么?看<a href="https://www.luogu.org/blog/aiyoupass/li-zi" target="_blank" rel="external">例子</a>)<br>$$<br>\begin{align}<br>&amp;\nabla f=-\lambda \nabla g\\<br>\Rightarrow &amp;\nabla f+\lambda \nabla g=0\\<br>\Rightarrow &amp;\nabla\left(f+\lambda g \right)=0\\<br>\Rightarrow &amp;\nabla F(x_1,\cdots,x_n,\lambda )=0\\<br>\Rightarrow<br>&amp;f_{x_1}+\lambda g_{x_1}=0\\<br>&amp;f_{x_2}+\lambda g_{x_2}=0\\<br>&amp;\cdots \cdots \\<br>&amp;f_{x_n}+\lambda g_{x_n}=0\\<br>&amp;f_{\lambda}+g=0<br>\end{align}<br>$$<br>其中$F$为拉格朗日函数, 它拥有和$f$一样的极值.</p>
-<h5 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h5><p>　　所以终于步入正题了, 分析这个题, 会发现其时间$f$是关于速度$v_1,v_2,\cdots ,v_n$的多元函数.能量$g$是也是关于$v_1,v_2,\cdots,v_n$的多元函数.但是要求$g\leq \text{E}$</p>
-<p>　　接下来会发现如果如果$g&lt;\text{E}$, 那么增大能量$g$, $f$一定会减小, 也就是说会得到更优秀的答案, 因此取得最终答案$v_{01},v_{02},\cdots ,v_{0n}$时能量$g$一定等于$E$.</p>
-<p>　　所以接下来问题就转变为了为了<br>$$\max f(v_1,\cdots,v_n)\\<br>\text{s.t.}  g(v_1,\cdots,v_n)-E=0$$<br>所以就可以构造出拉格朗日函数$F(v_1,\cdots,v_n,\lambda)=f(v_1,\cdots,v_n)+\lambda \left(g(v_1,\cdots,v_n)\right)$<br>求其极值.<br>$\text{d} F=0$<br>得到$n+1$个分量的方程.<br>$$<br>\frac{\partial F}{\partial v_1}=0\\<br>\frac{\partial F}{\partial v_2}=0\\<br>\cdots \cdots\\<br>\frac{\partial F}{\partial v_n}=0\\<br>\frac{\partial F}{\partial \lambda}=0<br>$$<br>这$n+1$个方程可统一表示成一种形式, 即<br>$$<br>\frac{\partial F}{\partial v_i}=0\text{和}\frac{\partial F}{\partial \lambda}=0<br>$$<br>在这个题目中可根据上面的方程求出$v_1,\cdots,v_n,\lambda$从而得到答案.</p>
-<p>$$\frac{\partial F}{\partial v_i}=(\frac{s_i}{v_i})’+(\lambda k_i(v_i-u_i)^2s_i)’=-\frac{s_i}{v_i^2}+2\lambda k_is_i(v_i-u_i)=0$$<br>$$\Rightarrow 2\lambda k_i(v_i-u_i)k_i=1$$<br>接下来就是二分$\lambda $的值,接着求出$v_1,v_2,\cdots,v_n$的值.然后判断是否满足$\text{E=E}_u$</p>
-<p>说实话, 这道题的需要的数学的难度远远大于代码难度.代码不是重点.</p>
-<h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h4><p><strong>小技巧</strong>: <strong><em>实数二分最好不用eps, 二分个50-100次基本上精度再大都够了.</em></strong><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 500010</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> inf 100000008</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n;</div><div class="line"><span class="keyword">double</span> k[N],s[N],u[N],Eu,v[N];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">double</span> a,<span class="keyword">double</span> b,<span class="keyword">int</span> i)</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="number">2.0</span>*a*k[i]*b*b*(b-u[i])&lt;=<span class="number">1.0</span>?<span class="literal">true</span>:<span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">TwoPoint</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">double</span> lambda)</span></span>&#123;</div><div class="line">    <span class="keyword">double</span> l=max(u[i],<span class="number">0.0</span>),r=inf,mid;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=<span class="number">100</span>;++j)&#123;</div><div class="line">        mid=(l+r)/<span class="number">2</span>;</div><div class="line">        <span class="keyword">if</span>(check(lambda,mid,i))l=mid;</div><div class="line">        <span class="keyword">else</span> r=mid;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> mid;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Check</span><span class="params">(<span class="keyword">double</span> mid)</span></span>&#123;</div><div class="line">    <span class="keyword">double</span> E=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)v[i]=TwoPoint(i,mid);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)E+=k[i]*s[i]*(v[i]-u[i])*(v[i]-u[i]);</div><div class="line">    <span class="keyword">return</span> E&gt;=Eu;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&amp;Eu);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%lf%lf%lf"</span>,&amp;s[i],&amp;k[i],&amp;u[i]);</div><div class="line">    <span class="keyword">double</span> l=<span class="number">0.0</span>,r=inf,mid;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=<span class="number">100</span>;++j)&#123;</div><div class="line">        mid=(l+r)/<span class="number">2</span>;</div><div class="line">        <span class="keyword">if</span>(Check(mid))l=mid;</div><div class="line">        <span class="keyword">else</span> r=mid;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">double</span> ans=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</div><div class="line">        ans+=s[i]/v[i];</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%.8f\n"</span>,ans);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-    <div>
-    
-    </div>
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/bzoj2318/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="aiyoupass">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/myjson/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="落花微雨">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/bzoj2318/" itemprop="url">bzoj 2318 Spoj4060 game with probability Problem</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-08T20:52:20+08:00">
-                2018-05-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
-                    <span itemprop="name">信息学竞赛</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
-                    <span itemprop="name">题目</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/bzoj2318/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/bzoj2318/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>　　Alice和Bob在玩一个游戏。有n个石子在这里，Alice和Bob轮流投掷硬币，如果正面朝上，则从n个石子中取出一个石子，否则不做任何事。取到最后一颗石子的人胜利。Alice在投掷硬币时有p的概率投掷出他想投的一面，同样，Bob有q的概率投掷出他相投的一面。<br>　　现在Alice先手投掷硬币，假设他们都想赢得游戏，问你Alice胜利的概率为多少。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/bzoj2318/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    <div>
-    
-    </div>
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/SomePhysicsProblemsInOi/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="aiyoupass">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/myjson/head.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="落花微雨">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/SomePhysicsProblemsInOi/" itemprop="url">浅谈信息学竞赛中的物理问题</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-08T17:06:30+08:00">
-                2018-05-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
-                    <span itemprop="name">信息学竞赛</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
-                    <span itemprop="name">题目</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/SomePhysicsProblemsInOi/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/SomePhysicsProblemsInOi/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><div id="my-contaniner"></div></p>
-<p><style><br>.pdfobject-container { height: 700px;}<br>.pdfobject { border: 1px solid #666; }<br>.margins { height: 700px;}<br></style></p>
-<script src="/js/pdfobject.js"></script>
-<script>PDFObject.embed("/pdf/2015paper.pdf", "#my-contaniner" , {height: "700px"});</script>
-
-<p>看到这篇论文, emm……我应该是会点, 于是就心血来潮看了看.</p>
-<p>值得一提的是这里的题思维难度并不是很大, 而且都是物理上比较套路的题目.</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/SomePhysicsProblemsInOi/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    <div>
-    
-    </div>
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2173,7 +2138,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">160</span>
+                  <span class="site-state-item-count">165</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2195,7 +2160,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">159</span>
+                  <span class="site-state-item-count">161</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

@@ -4,8 +4,139 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/p1455/</loc>
+    <lastmod>2018-06-02T09:53:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>P1455 搭配购买</title>
+        <pubTime>2018-06-02T08:47:20.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>并查集</tag>
+         
+        <tag>背包</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/p4358/</loc>
+    <lastmod>2018-06-02T09:35:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>P4358 CQOI2016 秘钥破解</title>
+        <pubTime>2018-06-02T08:47:20.000Z</pubTime>
+        
+        <tag>Pollard-rho</tag>
+         
+        <tag>逆元</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/MatrixDpExercise1/</loc>
+    <lastmod>2018-06-02T08:41:50.000Z</lastmod>
+    <data>
+        <display>
+        <title>矩阵快速幂优化dp练习</title>
+        <pubTime>2018-05-27T09:59:30.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>矩阵快速幂</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/miller-rabinandpollard-rho/</loc>
+    <lastmod>2018-06-02T08:38:10.000Z</lastmod>
+    <data>
+        <display>
+        <title>素数判定与因数分解</title>
+        <pubTime>2018-06-02T08:34:57.000Z</pubTime>
+        
+        <tag>Miller-Rabin</tag>
+         
+        <tag>Pollard-rho</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/exam5-27/</loc>
+    <lastmod>2018-05-27T09:58:24.000Z</lastmod>
+    <data>
+        <display>
+        <title>5月27日树专题练习</title>
+        <pubTime>2018-05-27T09:35:30.000Z</pubTime>
+        
+        <tag>最近公共祖先</tag>
+         
+        <tag>树上差分</tag>
+         
+        <tag>二分答案</tag>
+         
+        <tag>最小生成树</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="考试" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E8%80%83%E8%AF%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/k-d%20tree/</loc>
-    <lastmod>2018-05-22T13:08:26.000Z</lastmod>
+    <lastmod>2018-05-22T13:33:56.000Z</lastmod>
     <data>
         <display>
         <title>k-d tree</title>
@@ -1180,6 +1311,8 @@
          
         <tag>模拟</tag>
          
+        <tag>最小生成树</tag>
+         
         <tag>倍增</tag>
          
         <tag>NOIP</tag>
@@ -1189,8 +1322,6 @@
         <tag>逆序对</tag>
          
         <tag>归并排序</tag>
-         
-        <tag>最小生成树</tag>
          
         <tag>lca</tag>
          
@@ -1250,9 +1381,9 @@
          
         <tag>模拟</tag>
          
-        <tag>树形dp</tag>
-         
         <tag>背包</tag>
+         
+        <tag>树形dp</tag>
          
         <tag>NOIP</tag>
          
@@ -1320,9 +1451,9 @@
          
         <tag>树上差分</tag>
          
-        <tag>NOIP</tag>
-         
         <tag>二分答案</tag>
+         
+        <tag>NOIP</tag>
          
          
            
@@ -1559,11 +1690,11 @@
         
         <tag>动态规划</tag>
          
+        <tag>模拟</tag>
+         
         <tag>随机化算法</tag>
          
         <tag>模拟退火</tag>
-         
-        <tag>模拟</tag>
          
          
            
@@ -1867,9 +1998,9 @@
          
         <tag>斜率优化</tag>
          
-        <tag>错位排列数</tag>
-         
         <tag>逆元</tag>
+         
+        <tag>错位排列数</tag>
          
         <tag>SDOI</tag>
          
@@ -2054,13 +2185,13 @@
         
         <tag>贪心</tag>
          
+        <tag>二分答案</tag>
+         
         <tag>倍增</tag>
          
         <tag>NOIP</tag>
          
         <tag>扩展欧几里得</tag>
-         
-        <tag>二分答案</tag>
          
         <tag>查分</tag>
          
@@ -2583,9 +2714,9 @@
         
         <tag>模板</tag>
          
-        <tag>生成树</tag>
-         
         <tag>最小生成树</tag>
+         
+        <tag>生成树</tag>
          
          
            
@@ -2750,9 +2881,9 @@
          
         <tag>贪心</tag>
          
-        <tag>倍增</tag>
-         
         <tag>二分答案</tag>
+         
+        <tag>倍增</tag>
          
          
            
