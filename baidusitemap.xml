@@ -4,6 +4,114 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/wordequaion/</loc>
+    <lastmod>2018-06-03T13:49:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>Word公式解决方案</title>
+        <pubTime>2018-06-03T13:41:27.000Z</pubTime>
+        
+        <tag>解决方案</tag>
+         
+         
+           
+             
+              <breadCrumb title="解决方案" url="http://aiyoupass.com/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+          
+             
+              <breadCrumb title="Word" url="http://aiyoupass.com/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/Word/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/zuhesummod/</loc>
+    <lastmod>2018-06-03T13:39:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>组合数取模</title>
+        <pubTime>2018-06-03T13:34:54.000Z</pubTime>
+        
+        <tag>逆元</tag>
+         
+        <tag>组合数取模</tag>
+         
+        <tag>中国剩余定理</tag>
+         
+        <tag>卢卡斯定理</tag>
+         
+        <tag>扩展卢卡斯</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="我的文档" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/miller-rabinandpollard-rho/</loc>
+    <lastmod>2018-06-03T13:38:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>素数判定与因数分解</title>
+        <pubTime>2018-06-02T08:34:57.000Z</pubTime>
+        
+        <tag>Miller-Rabin</tag>
+         
+        <tag>Pollard-rho</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="我的文档" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/exam6-3/</loc>
+    <lastmod>2018-06-03T13:02:32.000Z</lastmod>
+    <data>
+        <display>
+        <title>6月3日考试</title>
+        <pubTime>2018-06-03T11:21:59.000Z</pubTime>
+        
+        <tag>线段树</tag>
+         
+        <tag>二分答案</tag>
+         
+        <tag>二叉搜索树</tag>
+         
+        <tag>最大公约数</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="考试" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E8%80%83%E8%AF%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/matrix-md/</loc>
     <lastmod>2018-06-02T13:46:06.000Z</lastmod>
     <data>
@@ -114,31 +222,6 @@
         <tag>动态规划</tag>
          
         <tag>矩阵快速幂</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/miller-rabinandpollard-rho/</loc>
-    <lastmod>2018-06-02T08:38:10.000Z</lastmod>
-    <data>
-        <display>
-        <title>素数判定与因数分解</title>
-        <pubTime>2018-06-02T08:34:57.000Z</pubTime>
-        
-        <tag>Miller-Rabin</tag>
-         
-        <tag>Pollard-rho</tag>
          
          
            
@@ -1738,11 +1821,11 @@
         
         <tag>动态规划</tag>
          
+        <tag>模拟</tag>
+         
         <tag>随机化算法</tag>
          
         <tag>模拟退火</tag>
-         
-        <tag>模拟</tag>
          
          
            
@@ -3218,11 +3301,11 @@
         <title>P2158 [SDOI2008]仪仗队</title>
         <pubTime>2018-02-06T03:35:53.000Z</pubTime>
         
+        <tag>最大公约数</tag>
+         
         <tag>莫比乌斯反演</tag>
          
         <tag>数论</tag>
-         
-        <tag>最大公约数</tag>
          
         <tag>欧拉函数</tag>
          
