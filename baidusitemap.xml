@@ -4,6 +4,163 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/problem1/</loc>
+    <lastmod>2018-06-14T10:00:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>题目1</title>
+        <pubTime>2018-06-14T09:30:39.000Z</pubTime>
+        
+        <tag>模板</tag>
+         
+        <tag>线性代数</tag>
+         
+        <tag>莫比乌斯反演</tag>
+         
+        <tag>快速幂</tag>
+         
+        <tag>扩展欧几里得</tag>
+         
+        <tag>逆元</tag>
+         
+        <tag>中国剩余定理</tag>
+         
+        <tag>线性基</tag>
+         
+        <tag>费马小定理</tag>
+         
+        <tag>概率与期望</tag>
+         
+        <tag>除法分块</tag>
+         
+        <tag>汉诺塔</tag>
+         
+        <tag>BSGS</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/p3366/</loc>
+    <lastmod>2018-06-04T02:18:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>P3366【模板】最小生成树</title>
+        <pubTime>2018-03-11T01:59:10.000Z</pubTime>
+        
+        <tag>模板</tag>
+         
+        <tag>最小生成树</tag>
+         
+        <tag>生成树</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="模板" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%A8%A1%E6%9D%BF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/anotcommondinic/</loc>
+    <lastmod>2018-06-04T02:17:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>一份不普通的Dinic</title>
+        <pubTime>2018-02-23T13:10:59.000Z</pubTime>
+        
+        <tag>指针</tag>
+         
+        <tag>模板</tag>
+         
+        <tag>网络流</tag>
+         
+        <tag>最大流</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="模板" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%A8%A1%E6%9D%BF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/loj6277/</loc>
+    <lastmod>2018-06-04T02:17:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>loj6277 数列分块入门 1</title>
+        <pubTime>2018-02-12T13:46:15.000Z</pubTime>
+        
+        <tag>模板</tag>
+         
+        <tag>分块</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="模板" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%A8%A1%E6%9D%BF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/segmenttemple/</loc>
+    <lastmod>2018-06-04T02:17:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>P3372 线段树1</title>
+        <pubTime>2018-02-09T07:30:30.000Z</pubTime>
+        
+        <tag>指针</tag>
+         
+        <tag>模板</tag>
+         
+        <tag>线段树</tag>
+         
+        <tag>内存池</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="模板" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%A8%A1%E6%9D%BF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/wordequaion/</loc>
     <lastmod>2018-06-04T02:09:40.000Z</lastmod>
     <data>
@@ -36,9 +193,9 @@
         
         <tag>逆元</tag>
          
-        <tag>组合数取模</tag>
-         
         <tag>中国剩余定理</tag>
+         
+        <tag>组合数取模</tag>
          
         <tag>卢卡斯定理</tag>
          
@@ -348,9 +505,9 @@
         <title>5-11 考试</title>
         <pubTime>2018-05-11T10:20:30.000Z</pubTime>
         
-        <tag>动态规划</tag>
-         
         <tag>计算几何</tag>
+         
+        <tag>动态规划</tag>
          
         <tag>离线</tag>
          
@@ -1547,11 +1704,11 @@
          
         <tag>NOIP</tag>
          
-        <tag>高精</tag>
-         
         <tag>二维前缀和</tag>
          
         <tag>秦九韶算法</tag>
+         
+        <tag>高精</tag>
          
          
            
@@ -1576,9 +1733,9 @@
         
         <tag>动态规划</tag>
          
-        <tag>最近公共祖先</tag>
-         
         <tag>贪心</tag>
+         
+        <tag>最近公共祖先</tag>
          
         <tag>树上差分</tag>
          
@@ -2836,36 +2993,6 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/p3366/</loc>
-    <lastmod>2018-03-11T02:38:12.000Z</lastmod>
-    <data>
-        <display>
-        <title>P3366【模板】最小生成树</title>
-        <pubTime>2018-03-11T01:59:10.000Z</pubTime>
-        
-        <tag>模板</tag>
-         
-        <tag>最小生成树</tag>
-         
-        <tag>生成树</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
-          
-             
-              <breadCrumb title="模板" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/%E6%A8%A1%E6%9D%BF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://aiyoupass.com/2018/Tarjan/</loc>
     <lastmod>2018-03-10T13:54:46.000Z</lastmod>
     <data>
@@ -3006,9 +3133,9 @@
          
         <tag>线段树</tag>
          
-        <tag>Floyd</tag>
-         
         <tag>贪心</tag>
+         
+        <tag>Floyd</tag>
          
         <tag>最短路</tag>
          
@@ -3486,9 +3613,9 @@
         
         <tag>数学</tag>
          
-        <tag>构造</tag>
-         
         <tag>搜索</tag>
+         
+        <tag>构造</tag>
          
         <tag>打表</tag>
          
@@ -3910,34 +4037,6 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/loj6277/</loc>
-    <lastmod>2018-02-27T23:45:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>loj6277 数列分块入门 1</title>
-        <pubTime>2018-02-12T13:46:15.000Z</pubTime>
-        
-        <tag>模板</tag>
-         
-        <tag>分块</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
-          
-             
-              <breadCrumb title="模板" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/%E6%A8%A1%E6%9D%BF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://aiyoupass.com/2018/hello-world/</loc>
     <lastmod>2018-02-27T23:45:04.000Z</lastmod>
     <data>
@@ -3968,7 +4067,7 @@
     <data>
         <display>
         <title>HDU 4825 Xor Sum</title>
-        <pubTime>2018-02-10T16:10:00.000Z</pubTime>
+        <pubTime>2018-02-11T21:40:00.000Z</pubTime>
         
         <tag>Trie</tag>
          
@@ -4196,38 +4295,6 @@
     </url>
 
     
-  <url>
-    <loc>http://aiyoupass.com/2018/anotcommondinic/</loc>
-    <lastmod>2018-02-23T23:51:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>一份不普通的Dinic</title>
-        <pubTime>2018-02-23T13:10:59.000Z</pubTime>
-        
-        <tag>指针</tag>
-         
-        <tag>模板</tag>
-         
-        <tag>网络流</tag>
-         
-        <tag>最大流</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
-          
-             
-              <breadCrumb title="模板" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/%E6%A8%A1%E6%9D%BF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
     
   <url>
     <loc>http://aiyoupass.com/2018/dpeasy/</loc>
@@ -4381,38 +4448,6 @@
           
              
               <breadCrumb title="线性代数" url="http://aiyoupass.com/categories/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/segmenttemple/</loc>
-    <lastmod>2018-02-09T08:42:26.000Z</lastmod>
-    <data>
-        <display>
-        <title>P3372 线段树1</title>
-        <pubTime>2018-02-09T07:30:30.000Z</pubTime>
-        
-        <tag>指针</tag>
-         
-        <tag>模板</tag>
-         
-        <tag>线段树</tag>
-         
-        <tag>内存池</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
-          
-             
-              <breadCrumb title="模板" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/%E6%A8%A1%E6%9D%BF/"/>
           
         </display>
     </data>
