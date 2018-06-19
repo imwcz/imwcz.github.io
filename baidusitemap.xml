@@ -4,6 +4,51 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/problem2/</loc>
+    <lastmod>2018-06-19T13:43:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>题目2</title>
+        <pubTime>2018-06-14T09:30:39.000Z</pubTime>
+        
+        <tag>模板</tag>
+         
+        <tag>线段树</tag>
+         
+        <tag>线性代数</tag>
+         
+        <tag>莫比乌斯反演</tag>
+         
+        <tag>快速幂</tag>
+         
+        <tag>逆元</tag>
+         
+        <tag>线性基</tag>
+         
+        <tag>费马小定理</tag>
+         
+        <tag>概率与期望</tag>
+         
+        <tag>除法分块</tag>
+         
+        <tag>汉诺塔</tag>
+         
+        <tag>BSGS</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/problem1/</loc>
     <lastmod>2018-06-14T10:00:26.000Z</lastmod>
     <data>
