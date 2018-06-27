@@ -95,7 +95,7 @@
 <meta property="og:url" content="http://aiyoupass.com/2018/gauss/index.html">
 <meta property="og:site_name" content="落花微雨">
 <meta property="og:description" content="高斯消元线性方程组对于一组线性方程组, 例如$$\begin{cases}a_{11}x_1+a_{12}x_2=b_1\\a_{21}x_1+a_{22}x_2=b_2\\\end{cases}$$其通常解法如下, 消去其中一个式子的一个未知数, 令方程二减去方程一的$\frac{a_{22}}{a_{12}}$倍, 得到$$\left(a_{21}-\frac{a_{22}a_{11}}{a_">
-<meta property="og:updated_time" content="2018-05-20T03:03:14.000Z">
+<meta property="og:updated_time" content="2018-06-27T10:07:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="高斯消元">
 <meta name="twitter:description" content="高斯消元线性方程组对于一组线性方程组, 例如$$\begin{cases}a_{11}x_1+a_{12}x_2=b_1\\a_{21}x_1+a_{22}x_2=b_2\\\end{cases}$$其通常解法如下, 消去其中一个式子的一个未知数, 令方程二减去方程一的$\frac{a_{22}}{a_{12}}$倍, 得到$$\left(a_{21}-\frac{a_{22}a_{11}}{a_">
@@ -354,8 +354,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-15T15:30:30+08:00">
-                2018-05-15
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-27T15:30:30+08:00">
+                2018-06-27
               </time>
             
 
@@ -443,7 +443,7 @@
 <li>将某一行或某一列乘以某一常数加到另外一行或者一列.</li>
 </ul>
 <p>利用这些, 可以将这个矩阵变成一种特殊的矩阵, 即上三角或下三角矩阵.例如下面这种形式<br>$$\begin{bmatrix}<br>a_{11}&amp;\text{ }a_{12}&amp;\text{ }a_{13}&amp;\text{ } b_1\\<br>0&amp;\text{ }a_{22}&amp;\text{ }a_{23}&amp;\text{ }b_2\\<br>0&amp;\text{ }0&amp;\text{ }a_{33}&amp;\text{ }b_3<br>\end{bmatrix}$$<br>发现利用最后一行可以得到$x_3$的值, 然后利用第2行可以得到$x_2$的值, 以此类推.</p>
-<p>其实这些结论都是利用线性变换得到的.</p>
+<p>其实这些结论都是利用线性变换得到的.<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// luogu-judger-enable-o2</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 105</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> eps 1e-6</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> A m</span></div><div class="line"><span class="keyword">int</span> n;</div><div class="line"></div><div class="line"><span class="keyword">double</span> m[N][N];</div><div class="line"><span class="keyword">double</span> b[N],x[N];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Gauss_Eli</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> num;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;i++)&#123;</div><div class="line">        num=i;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;=n;j++)</div><div class="line">          <span class="keyword">if</span>(<span class="built_in">fabs</span>(A[j][i])&gt;<span class="built_in">fabs</span>(A[num][i]))</div><div class="line">            num=j;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++) swap(A[i][j],A[num][j]);</div><div class="line">        swap(b[num],b[i]);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;=n;j++)&#123;</div><div class="line">            <span class="keyword">if</span>(<span class="built_in">fabs</span>(A[j][i])&lt;=eps) <span class="keyword">continue</span>;</div><div class="line">            <span class="keyword">double</span> t=A[j][i]/A[i][i];</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">1</span>;k&lt;=n;k++)</div><div class="line">              A[j][k]-=A[i][k]*t;</div><div class="line">            b[j]-=b[i]*t;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</div><div class="line">        <span class="keyword">if</span>(<span class="built_in">fabs</span>(A[i][i])&lt;=eps)</div><div class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    x[n]=b[n]/A[n][n];</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=n<span class="number">-1</span>;i&gt;<span class="number">0</span>;--i)&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;=n;++j)</div><div class="line">            b[i]-=A[i][j]*x[j];</div><div class="line">        x[i]=b[i]/A[i][i];</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n+<span class="number">1</span>;++j)</div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%lf"</span>,&amp;m[i][j]);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)b[i]=m[i][n+<span class="number">1</span>];</div><div class="line">    <span class="keyword">if</span>(!Gauss_Eli())&#123;<span class="built_in">printf</span>(<span class="string">"No Solution\n"</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%.2f\n"</span>,x[i]);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -490,8 +490,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/exam 5-13/" rel="next" title="五月十五日NOIP模拟赛简要题解">
-                <i class="fa fa-chevron-left"></i> 五月十五日NOIP模拟赛简要题解
+              <a href="/2018/learngit/" rel="next" title="Git 入门">
+                <i class="fa fa-chevron-left"></i> Git 入门
               </a>
             
           </div>
@@ -500,8 +500,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/codechef may Challenge/" rel="prev" title="CodeChef May Challenge">
-                CodeChef May Challenge <i class="fa fa-chevron-right"></i>
+              <a href="/2018/p4551/" rel="prev" title="P4551 最长的异或路径">
+                P4551 最长的异或路径 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -588,7 +588,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">172</span>
+                  <span class="site-state-item-count">179</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -599,7 +599,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -610,7 +610,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">173</span>
+                  <span class="site-state-item-count">174</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
