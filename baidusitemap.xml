@@ -4,6 +4,52 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/LearningThePointerOfC/</loc>
+    <lastmod>2018-07-02T07:04:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>C 指针学习</title>
+        <pubTime>2018-06-27T07:00:00.000Z</pubTime>
+        
+        <tag>指针</tag>
+         
+         
+           
+             
+              <breadCrumb title="语法学习" url="http://aiyoupass.com/categories/%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/"/>
+          
+             
+              <breadCrumb title="C/C++" url="http://aiyoupass.com/categories/%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/C-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/LearningGit/</loc>
+    <lastmod>2018-07-02T07:03:56.000Z</lastmod>
+    <data>
+        <display>
+        <title>Git 入门</title>
+        <pubTime>2018-06-27T07:00:00.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="解决方案" url="http://aiyoupass.com/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+          
+             
+              <breadCrumb title="Git" url="http://aiyoupass.com/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/Git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/TheNewBeginning/</loc>
     <lastmod>2018-07-02T06:58:40.000Z</lastmod>
     <data>
