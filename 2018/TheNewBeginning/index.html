@@ -89,16 +89,16 @@
     })();
 </script>
 
-<meta name="description" content="因为某些不为人知(智障)的原因我的博客的文章全部丢失, 所幸我根本就不想找回, 不如干干净净的来一个新的开始.">
+<meta name="description" content="因为某些不为人知(智障)的原因我的博客的文章丢失部分(md文件), 所幸我根本就不想找回, 不如干干净净的来一个新的开始.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="新的开始">
 <meta property="og:url" content="http://aiyoupass.com/2018/TheNewBeginning/index.html">
 <meta property="og:site_name" content="落花微雨">
-<meta property="og:description" content="因为某些不为人知(智障)的原因我的博客的文章全部丢失, 所幸我根本就不想找回, 不如干干净净的来一个新的开始.">
-<meta property="og:updated_time" content="2018-07-02T06:58:40.000Z">
+<meta property="og:description" content="因为某些不为人知(智障)的原因我的博客的文章丢失部分(md文件), 所幸我根本就不想找回, 不如干干净净的来一个新的开始.">
+<meta property="og:updated_time" content="2018-07-02T07:10:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="新的开始">
-<meta name="twitter:description" content="因为某些不为人知(智障)的原因我的博客的文章全部丢失, 所幸我根本就不想找回, 不如干干净净的来一个新的开始.">
+<meta name="twitter:description" content="因为某些不为人知(智障)的原因我的博客的文章丢失部分(md文件), 所幸我根本就不想找回, 不如干干净净的来一个新的开始.">
 
 
 
@@ -390,17 +390,15 @@
 
           
             
-            <!--noindex-->
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2018/TheNewBeginning/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/TheNewBeginning/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/TheNewBeginning/" itemprop="commentCount"></span>
                 </a>
               </span>
-              <!--/noindex-->
             
           
 
@@ -426,13 +424,13 @@
       
 
       
-        <p>因为某些不为人知(<del>智障</del>)的原因我的博客的文章全部丢失, 所幸我根本就不想找回, 不如干干净净的来一个新的开始.<br><a id="more"></a><br>新的开始我给自己的博客提出了几点要求:</p>
+        <p>因为某些不为人知(<del>智障</del>)的原因我的博客的文章丢失部分(md文件), 所幸我根本就不想找回, 不如干干净净的来一个新的开始.<br><a id="more"></a><br>新的开始我给自己的博客提出了几点要求:</p>
 <ul>
 <li>所记录的必须是值得记录的东西, 不能草率敷衍.</li>
 <li>博客的标签分类, 文章的结构都必须清晰调理.</li>
 <li>tags(标签)写知识点, 目录根据文章的性质, 类型分.</li>
 </ul>
-<p>旧的文章可以看<code>aiyoupass.com/Old/&lt;PostName&gt;</code>, 例如<a href="aiyoupass.com/Old/noip2016d1">noip2016d1</a>.</p>
+<p>旧的文章生成的HTML文件在我本地当然还是有一份存档的, 有时候自己也得拿出来看一下.</p>
 
       
     </div>
@@ -510,9 +508,7 @@
 
   
     <div class="comments" id="comments">
-      <div id="hypercomments_widget"></div>
     </div>
-
   
 
 
@@ -809,27 +805,17 @@
 
 	
 
-		<script type="text/javascript">
-		_hcwp = window._hcwp || [];
 
-		_hcwp.push({widget:"Bloggerstream", widget_id: 100323, selector:".hc-comment-count", label: "{\%COUNT%\}" });
 
-		
-		_hcwp.push({widget:"Stream", widget_id: 100323, xid: "2018/TheNewBeginning/"});
-		
 
-		(function() {
-		if("HC_LOAD_INIT" in window)return;
-		HC_LOAD_INIT = true;
-		var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
-		var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
-		hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://w.hypercomments.com/widget/hc/100323/"+lang+"/widget.js";
-		var s = document.getElementsByTagName("script")[0];
-		s.parentNode.insertBefore(hcc, s.nextSibling);
-		})();
-		</script>
 
-	
+  
+
+
+
+
+
+  
 
 
 
@@ -840,9 +826,27 @@
 
 
 
-
-
-
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'enljgi0OjJY1XU6c65Yd9nWz-gzGzoHsz',
+        appKey: 'BrxeA3UhBvNPLXWzErwFmRwd',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
