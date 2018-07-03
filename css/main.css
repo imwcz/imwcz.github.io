@@ -2862,7 +2862,7 @@ pre .javascript .function {
   box-sizing: border-box;
   padding: 40px;
   width: 700px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.5);
   min-height: 700px;
   box-shadow: initial;
   border-radius: initial;
