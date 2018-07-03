@@ -2804,6 +2804,7 @@ pre .javascript .function {
   padding: 0;
   width: 240px;
   background: #fff;
+  opacity: 0.8;
   box-shadow: initial;
   border-radius: initial;
 }
@@ -2862,7 +2863,8 @@ pre .javascript .function {
   box-sizing: border-box;
   padding: 40px;
   width: 700px;
-  background: rgba(255, 255, 255, 0.5);
+  background: #fff;
+  opacity: 0.95;
   min-height: 700px;
   box-shadow: initial;
   border-radius: initial;
@@ -3043,11 +3045,10 @@ pre .javascript .function {
 .sidebar-inner {
   box-sizing: border-box;
   width: 240px;
-  color: #555;
   background: #fff;
   box-shadow: initial;
   border-radius: initial;
-  opacity: 0;
+  opacity: 0.8;
 }
 .sidebar-inner.affix {
   position: fixed;
@@ -3185,7 +3186,7 @@ pre .javascript .function {
   height: 100%;
 }
 body {
-  background: url("https://i.loli.net/2018/05/04/5aeb9d90c40d0.png");
+  background: url("https://i.loli.net/2018/07/03/5b3b61513357d.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
