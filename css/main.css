@@ -3048,7 +3048,7 @@ pre .javascript .function {
   background: #fff;
   box-shadow: initial;
   border-radius: initial;
-  opacity: 0.8;
+  opacity: 0.8!important;
 }
 .sidebar-inner.affix {
   position: fixed;
