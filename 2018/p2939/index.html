@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="动态规划,最短路,堆优化," />
+
+
+
+
+
+
+
+
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+<meta name="description" content="DescriptionFarmer John dutifully checks on the cows every day. He traverses some of the M (1 &amp;lt;= M &amp;lt;= 50,000) trails conveniently numbered 1..M from pasture 1 all the way out to pasture N (a jour">
+<meta property="og:type" content="article">
+<meta property="og:title" content="P2939">
+<meta property="og:url" content="http://aiyoupass.com/2018/p2939/index.html">
+<meta property="og:site_name" content="落花微雨">
+<meta property="og:description" content="DescriptionFarmer John dutifully checks on the cows every day. He traverses some of the M (1 &amp;lt;= M &amp;lt;= 50,000) trails conveniently numbered 1..M from pasture 1 all the way out to pasture N (a jour">
+<meta property="og:updated_time" content="2018-07-05T13:35:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="P2939">
+<meta name="twitter:description" content="DescriptionFarmer John dutifully checks on the cows every day. He traverses some of the M (1 &amp;lt;= M &amp;lt;= 50,000) trails conveniently numbered 1..M from pasture 1 all the way out to pasture N (a jour">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '9AZWK32GMU',
+      apiKey: 'cfdae09f7596feb4221d4e18c22a727a',
+      indexName: 'blog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://aiyoupass.com/2018/p2939/"/>
+
+
+
+
+
+  <title>P2939 | 落花微雨</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">落花微雨</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">雨淋湿了天空,毁的很讲究.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            Schedule
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-knowledge">
+          <a href="/Knowledge/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />
+            
+            Knowledge
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/p2939/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">P2939</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-05T21:04:19+08:00">
+                2018-07-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
+                    <span itemprop="name">题目</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/p2939/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/p2939/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>Farmer John dutifully checks on the cows every day. He traverses some of the M (1 &lt;= M &lt;= 50,000) trails conveniently numbered 1..M from pasture 1 all the way out to pasture N (a journey which is always possible for trail maps given in the test data). The N (1 &lt;= N &lt;= 10,000) pastures conveniently numbered 1..N on Farmer John’s farm are currently connected by bidirectional dirt trails. Each trail i connects pastures P1_i and P2_i (1 &lt;= P1_i &lt;= N; 1 &lt;= P2_i &lt;= N) and requires T_i (1 &lt;= T_i &lt;= 1,000,000) units of time to traverse.<br>He wants to revamp some of the trails on his farm to save time on his long journey. Specifically, he will choose K (1 &lt;= K &lt;= 20) trails to turn into highways, which will effectively reduce the trail’s traversal time to 0. Help FJ decide which trails to revamp to minimize the resulting time of getting from pasture 1 to N.</p>
+<a id="more"></a>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>这道题明显和那道<a href="https://www.luogu.org/problemnew/show/P4568" target="_blank" rel="external">飞行路线</a>是一个题, 但是比它难做多了（卡时间啊）……</p>
+<p>改怎么做倒是不难想, 就是这个最短路如何优化值得考虑……<br>我有两种写法:</p>
+<ul>
+<li>一种是队列存<strong>点</strong>, 用点更新$f(i,j),j=0,1,\cdots,k$.</li>
+<li>第二种是所谓的分层图, 队列<strong>点和免费次数</strong>, 每次只需要更新$f(i,j),f(i,j+1)$</li>
+</ul>
+<p>感觉速度上差距不大, 可能是用了<code>pair&lt;int,int&gt;</code>的缘故吧.<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">spfa</span><span class="params">(<span class="keyword">int</span> s)</span></span>&#123;</div><div class="line">    <span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt;que;</div><div class="line">    <span class="built_in">memset</span>(dis,<span class="number">20</span>,<span class="keyword">sizeof</span>(dis));</div><div class="line">    vis[s]=<span class="literal">true</span>;que.push(s);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=k;++i)dis[s][i]=<span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> top;</div><div class="line">    <span class="keyword">while</span>(!que.empty())&#123;</div><div class="line">        top=que.front();que.pop();vis[top]=<span class="literal">false</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=head[top];i;i=e[i].nxt)&#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=k;++j)&#123;</div><div class="line">                <span class="keyword">if</span>(dis[top][j]+e[i].c&lt;dis[e[i].v][j])&#123;</div><div class="line">                    dis[e[i].v][j]=dis[top][j]+e[i].c;</div><div class="line">                    <span class="keyword">if</span>(!vis[e[i].v])que.push(e[i].v),vis[e[i].v]=<span class="literal">true</span>;</div><div class="line">                &#125;</div><div class="line">                <span class="keyword">if</span>(j&amp;&amp;dis[e[i].v][j]&gt;dis[top][j<span class="number">-1</span>])&#123;</div><div class="line">                    dis[e[i].v][j]=dis[top][j<span class="number">-1</span>];</div><div class="line">                    <span class="keyword">if</span>(!vis[e[i].v])que.push(e[i].v),vis[e[i].v]=<span class="literal">true</span>;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">spfa</span><span class="params">(<span class="keyword">int</span> s)</span></span>&#123;</div><div class="line">    <span class="built_in">queue</span>&lt;P&gt;que;</div><div class="line">    <span class="built_in">memset</span>(dis,<span class="number">10</span>,<span class="keyword">sizeof</span>(dis));</div><div class="line">    vis[s][<span class="number">0</span>]=<span class="literal">true</span>;que.push(make_pair(s,<span class="number">0</span>));</div><div class="line">    P top;<span class="keyword">int</span> j;dis[s][<span class="number">0</span>]=<span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(!que.empty())&#123;</div><div class="line">        top=que.front();que.pop();</div><div class="line">        vis[top.first][top.second]=<span class="literal">false</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=head[top.first];i;i=e[i].nxt)&#123;</div><div class="line">            j=top.second;</div><div class="line">            <span class="keyword">if</span>(dis[top.first][j]+e[i].c&lt;dis[e[i].v][j])&#123;</div><div class="line">                dis[e[i].v][j]=dis[top.first][j]+e[i].c;</div><div class="line">                <span class="keyword">if</span>(!vis[e[i].v][j])</div><div class="line">                    que.push(make_pair(e[i].v,j)),vis[e[i].v][j]=<span class="literal">true</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span>(j&lt;k)</div><div class="line">            <span class="keyword">if</span>(dis[e[i].v][j+<span class="number">1</span>]&gt;dis[top.first][j])&#123;</div><div class="line">                dis[e[i].v][j+<span class="number">1</span>]=dis[top.first][j];</div><div class="line">                <span class="keyword">if</span>(!vis[e[i].v][j+<span class="number">1</span>])</div><div class="line">                    que.push(make_pair(e[i].v,j+<span class="number">1</span>)),vis[e[i].v][j+<span class="number">1</span>]=<span class="literal">true</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><p>看了看题解:kv</p>
+<ul>
+<li>有一种优化方式:用<strong>优先队列(堆)</strong>优化<code>SPFA</code>.</li>
+<li>还有一种方式是<strong>堆</strong>优化<code>Dijkstra</code>.</li>
+</ul>
+<p>主要是看(写)了<code>SPFA</code>, 真的没想到会快那么多……以后写<code>SPFA</code>得用上堆优化.<br>成功卡进320ms, Rank 12.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">P q[N&lt;&lt;<span class="number">3</span>];</div><div class="line"><span class="keyword">int</span> top;</div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(P a,P b)</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> dis[a.first][a.second]&gt;dis[b.first][b.second];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> push(XXX) q[top++]=XXX;push_heap(q,q+top,cmp);</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> pop() pop_heap(q,q+top--,cmp)</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> top() *q</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> empty() (!top)</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">spfa</span><span class="params">(<span class="keyword">int</span> s)</span></span>&#123;</div><div class="line">    <span class="built_in">memset</span>(dis,<span class="number">20</span>,<span class="keyword">sizeof</span>(dis));</div><div class="line">    vis[s][<span class="number">0</span>]=<span class="literal">true</span>;push(make_pair(s,<span class="number">0</span>));</div><div class="line">    P Top;<span class="keyword">int</span> j;dis[s][<span class="number">0</span>]=<span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(!empty())&#123;</div><div class="line">        Top=top();pop();</div><div class="line">        vis[Top.first][Top.second]=<span class="literal">false</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=head[Top.first];i;i=e[i].nxt)&#123;</div><div class="line">            j=Top.second;</div><div class="line">            <span class="keyword">if</span>(dis[Top.first][j]+e[i].c&lt;dis[e[i].v][j])&#123;</div><div class="line">                dis[e[i].v][j]=dis[Top.first][j]+e[i].c;</div><div class="line">                <span class="keyword">if</span>(!vis[e[i].v][j])</div><div class="line">                    push(make_pair(e[i].v,j));vis[e[i].v][j]=<span class="literal">true</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span>(j&lt;k)</div><div class="line">            <span class="keyword">if</span>(dis[e[i].v][j+<span class="number">1</span>]&gt;dis[Top.first][j])&#123;</div><div class="line">                dis[e[i].v][j+<span class="number">1</span>]=dis[Top.first][j];</div><div class="line">                <span class="keyword">if</span>(!vis[e[i].v][j+<span class="number">1</span>])</div><div class="line">                    push(make_pair(e[i].v,j+<span class="number">1</span>));vis[e[i].v][j+<span class="number">1</span>]=<span class="literal">true</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>对了, 还可以把<code>pair</code>改成自定义的结构体, 可能还要快一些.</p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cctype&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 10005</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> gc() (SS==TT&amp;&amp;(TT=(SS=IN)+fread(IN,1,MAXIN,stdin),SS==TT)?EOF:*SS++)</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXIN=<span class="number">3e5</span>;</div><div class="line"><span class="keyword">char</span> IN[MAXIN],*SS=IN,*TT=IN;</div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> gc() (SS==TT&amp;&amp;(TT=(SS=IN)+fread(IN,1,MAXIN,stdin),SS==TT)?EOF:*SS++) </span></div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> now=<span class="number">0</span>,f=<span class="number">1</span>;<span class="keyword">register</span> <span class="keyword">char</span> c=gc();</div><div class="line">    <span class="keyword">for</span>(;!<span class="built_in">isdigit</span>(c);c=gc()) <span class="keyword">if</span>(c==<span class="string">'-'</span>) f=<span class="number">-1</span>;</div><div class="line">    <span class="keyword">for</span>(;<span class="built_in">isdigit</span>(c);now=now*<span class="number">10</span>+c-<span class="string">'0'</span>,c=gc());</div><div class="line">    <span class="keyword">return</span> now*f;</div><div class="line">&#125; </div><div class="line"></div><div class="line"><span class="keyword">struct</span> Edge&#123;</div><div class="line">    <span class="keyword">int</span> v,c,nxt;</div><div class="line">&#125;e[N*<span class="number">10</span>];</div><div class="line"><span class="keyword">int</span> head[N],tot;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">AddEdge</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v,<span class="keyword">int</span> c)</span></span>&#123;</div><div class="line">    e[++tot]=(Edge)&#123;v,c,head[u]&#125;;head[u]=tot;</div><div class="line">    e[++tot]=(Edge)&#123;u,c,head[v]&#125;;head[v]=tot;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n,k;</div><div class="line"><span class="keyword">int</span> vis[N][<span class="number">23</span>],dis[N][<span class="number">23</span>];</div><div class="line"><span class="keyword">struct</span> Mdzz&#123;</div><div class="line">    <span class="keyword">int</span> first,second;</div><div class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(Mdzz b)<span class="keyword">const</span>&#123;</div><div class="line">        <span class="keyword">return</span> dis[first][second]&gt;dis[b.first][b.second];</div><div class="line">    &#125;</div><div class="line">    Mdzz()&#123;&#125;</div><div class="line">    Mdzz(<span class="keyword">int</span> a,<span class="keyword">int</span> b)&#123;</div><div class="line">        first=a,second=b;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">Mdzz q[N&lt;&lt;<span class="number">3</span>];</div><div class="line"><span class="keyword">int</span> top;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(Mdzz a,Mdzz b)</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> dis[a.first][b.second]&gt;dis[b.first][b.second];</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> push(XXX) q[top++]=XXX;push_heap(q,q+top);</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> pop() pop_heap(q,q+top--)</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> top() *q</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> empty() (!top)</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">spfa</span><span class="params">(<span class="keyword">int</span> s)</span></span>&#123;</div><div class="line">    <span class="built_in">memset</span>(dis,<span class="number">20</span>,<span class="keyword">sizeof</span>(dis));</div><div class="line">    vis[s][<span class="number">0</span>]=<span class="literal">true</span>;push(Mdzz(s,<span class="number">0</span>));</div><div class="line">    Mdzz Top;<span class="keyword">int</span> j;dis[s][<span class="number">0</span>]=<span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(!empty())&#123;</div><div class="line">        Top=top();pop();</div><div class="line">        vis[Top.first][Top.second]=<span class="literal">false</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=head[Top.first];i;i=e[i].nxt)&#123;</div><div class="line">            j=Top.second;</div><div class="line">            <span class="keyword">if</span>(dis[Top.first][j]+e[i].c&lt;dis[e[i].v][j])&#123;</div><div class="line">                dis[e[i].v][j]=dis[Top.first][j]+e[i].c;</div><div class="line">                <span class="keyword">if</span>(!vis[e[i].v][j])</div><div class="line">                    push(Mdzz(e[i].v,j));vis[e[i].v][j]=<span class="literal">true</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span>(j&lt;k)</div><div class="line">            <span class="keyword">if</span>(dis[e[i].v][j+<span class="number">1</span>]&gt;dis[Top.first][j])&#123;</div><div class="line">                dis[e[i].v][j+<span class="number">1</span>]=dis[Top.first][j];</div><div class="line">                <span class="keyword">if</span>(!vis[e[i].v][j+<span class="number">1</span>])</div><div class="line">                    push(Mdzz(e[i].v,j+<span class="number">1</span>));vis[e[i].v][j+<span class="number">1</span>]=<span class="literal">true</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> m,a,b,c;</div><div class="line">    n=read(),m=read(),k=read();</div><div class="line">    <span class="keyword">int</span> s=<span class="number">1</span>,t=n;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;++i)&#123;</div><div class="line">        a=read(),b=read(),c=read();</div><div class="line">        AddEdge(a,b,c);</div><div class="line">    &#125;</div><div class="line">    spfa(s);</div><div class="line">    <span class="keyword">int</span> minl=<span class="number">0x3f3f3f3f</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=k;++i)</div><div class="line">        minl=min(minl,dis[t][i]);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>,minl);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+    <div>
+    
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+    
+    </div>
+    <div>
+    
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2018/p2939/">P2939</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 aiyoupass 的个人博客">aiyoupass</a></p>
+  <p><span>发布时间:</span>2018年07月05日 - 21:07</p>
+  <p><span>最后更新:</span>2018年07月05日 - 21:07</p>
+  <p><span>原始链接:</span><a href="/2018/p2939/" title="P2939">http://aiyoupass.com/2018/p2939/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://aiyoupass.com/2018/p2939/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/动态规划/" rel="tag"># 动态规划</a>
+          
+            <a href="/tags/最短路/" rel="tag"># 最短路</a>
+          
+            <a href="/tags/堆优化/" rel="tag"># 堆优化</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/p1613/" rel="next" title="P1613 跑路">
+                <i class="fa fa-chevron-left"></i> P1613 跑路
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/p3469/" rel="prev" title="P3469 [POI2008]BLO-Blockade">
+                P3469 [POI2008]BLO-Blockade <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/myjson/head.jpg"
+                alt="aiyoupass" />
+            
+              <p class="site-author-name" itemprop="name">aiyoupass</p>
+              <p class="site-description motion-element" itemprop="description"><script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&charset=utf-8"></script><div id="lwlhitokoto"><script>lwlhitokoto()</script></div></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/imwcz" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:aiyoupass@outlook.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://plus.google.com/" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://stackoverflow.com/" target="_blank" title="StackOverflow">
+                      
+                        <i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://11101001.com/" title="11101001" target="_blank" rel="external nofollow">11101001</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://attack204.com/" title="attack" target="_blank" rel="external nofollow">attack</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://menjiantong.github.io/" title="MenJianTong" target="_blank" rel="external nofollow">MenJianTong</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优化"><span class="nav-number">3.</span> <span class="nav-text">优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code"><span class="nav-number">4.</span> <span class="nav-text">Code</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">aiyoupass</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" href="http://hexo.io" rel="external nofollow">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'enljgi0OjJY1XU6c65Yd9nWz-gzGzoHsz',
+        appKey: 'BrxeA3UhBvNPLXWzErwFmRwd',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+	        displayMath: [ ['$$','$$'], ["\\[","\\]"] ], 
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        },
+        "HTML-CSS": {
+            scale: 90,minScaleAdjust: 85
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="custom_mathjax_source">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>
