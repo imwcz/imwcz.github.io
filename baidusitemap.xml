@@ -4,14 +4,72 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/p1613/</loc>
+    <lastmod>2018-07-06T11:27:24.000Z</lastmod>
+    <data>
+        <display>
+        <title>P1613 跑路</title>
+        <pubTime>2018-07-05T01:15:37.000Z</pubTime>
+        
+        <tag>倍增</tag>
+         
+        <tag>最短路</tag>
+         
+        <tag>Floyd</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/p3225/</loc>
-    <lastmod>2018-07-05T13:41:44.000Z</lastmod>
+    <lastmod>2018-07-06T11:26:56.000Z</lastmod>
     <data>
         <display>
         <title>P3225 矿场搭建</title>
         <pubTime>2018-07-05T13:35:47.000Z</pubTime>
         
         <tag>Tarjan</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/p2515/</loc>
+    <lastmod>2018-07-06T11:26:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>P2515 [HAOI2010]软件安装</title>
+        <pubTime>2018-07-06T11:23:03.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>树形dp</tag>
+         
+        <tag>OOP</tag>
+         
+        <tag>Tarjan</tag>
+         
+        <tag>树形背包</tag>
          
          
            
@@ -62,33 +120,6 @@
         <pubTime>2018-07-05T13:18:31.000Z</pubTime>
         
         <tag>Tarjan</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/p1613/</loc>
-    <lastmod>2018-07-05T01:35:18.000Z</lastmod>
-    <data>
-        <display>
-        <title>P1613 跑路</title>
-        <pubTime>2018-07-05T01:15:37.000Z</pubTime>
-        
-        <tag>倍增</tag>
-         
-        <tag>最短路</tag>
-         
-        <tag>Floyd</tag>
          
          
            
@@ -228,9 +259,9 @@
         <title>NOIP 2012 Day1</title>
         <pubTime>2018-03-27T07:10:05.000Z</pubTime>
         
-        <tag>模拟</tag>
-         
         <tag>NOIP</tag>
+         
+        <tag>模拟</tag>
          
         <tag>倍增</tag>
          
@@ -259,11 +290,11 @@
         <title>NOIP 2011 Day2</title>
         <pubTime>2018-03-25T06:39:24.000Z</pubTime>
         
+        <tag>NOIP</tag>
+         
         <tag>贪心</tag>
          
         <tag>模拟</tag>
-         
-        <tag>NOIP</tag>
          
          
            
@@ -332,9 +363,9 @@
         <title>NOIP 2013 Day1</title>
         <pubTime>2018-04-01T09:59:40.000Z</pubTime>
         
-        <tag>模拟</tag>
-         
         <tag>NOIP</tag>
+         
+        <tag>模拟</tag>
          
         <tag>倍增</tag>
          
@@ -371,17 +402,17 @@
         <title>NOIP 2012 Day2</title>
         <pubTime>2018-03-31T08:29:51.000Z</pubTime>
         
-        <tag>贪心</tag>
-         
         <tag>NOIP</tag>
          
-        <tag>倍增</tag>
+        <tag>贪心</tag>
          
         <tag>扩展欧几里得</tag>
          
         <tag>二分答案</tag>
          
         <tag>查分</tag>
+         
+        <tag>倍增</tag>
          
          
            
@@ -406,11 +437,11 @@
         
         <tag>NOIP</tag>
          
+        <tag>搜索</tag>
+         
         <tag>并查集</tag>
          
         <tag>动态规划</tag>
-         
-        <tag>搜索</tag>
          
          
            
@@ -514,15 +545,15 @@
         <title>NOIP 2013 Day2</title>
         <pubTime>2018-04-06T02:59:39.000Z</pubTime>
         
+        <tag>NOIP</tag>
+         
+        <tag>搜索</tag>
+         
         <tag>贪心</tag>
          
         <tag>模拟</tag>
          
-        <tag>NOIP</tag>
-         
         <tag>动态规划</tag>
-         
-        <tag>搜索</tag>
          
          
            
@@ -545,9 +576,9 @@
         <title>NOIP 2014 Day1</title>
         <pubTime>2018-04-07T07:05:44.000Z</pubTime>
         
-        <tag>模拟</tag>
-         
         <tag>NOIP</tag>
+         
+        <tag>模拟</tag>
          
         <tag>动态规划</tag>
          
@@ -576,9 +607,9 @@
         <title>NOIP 2014 Day2</title>
         <pubTime>2018-04-17T07:05:44.000Z</pubTime>
         
-        <tag>模拟</tag>
-         
         <tag>NOIP</tag>
+         
+        <tag>模拟</tag>
          
         <tag>高精</tag>
          
@@ -611,13 +642,13 @@
         <title>NOIP 2015 Day2</title>
         <pubTime>2018-04-29T03:22:13.000Z</pubTime>
         
-        <tag>贪心</tag>
-         
         <tag>NOIP</tag>
          
-        <tag>动态规划</tag>
+        <tag>贪心</tag>
          
         <tag>二分答案</tag>
+         
+        <tag>动态规划</tag>
          
         <tag>最近公共祖先</tag>
          
@@ -644,9 +675,9 @@
         <title>NOIP 2016 Day1</title>
         <pubTime>2018-04-29T07:22:13.000Z</pubTime>
         
-        <tag>模拟</tag>
-         
         <tag>NOIP</tag>
+         
+        <tag>模拟</tag>
          
         <tag>动态规划</tag>
          
@@ -673,13 +704,13 @@
         <title>NOIP 2015 Day1</title>
         <pubTime>2018-04-27T12:36:28.000Z</pubTime>
         
-        <tag>模拟</tag>
-         
         <tag>NOIP</tag>
          
-        <tag>并查集</tag>
-         
         <tag>搜索</tag>
+         
+        <tag>模拟</tag>
+         
+        <tag>并查集</tag>
          
          
            
@@ -702,17 +733,17 @@
         <title>NOIP 2016 Day2</title>
         <pubTime>2018-05-01T03:12:44.000Z</pubTime>
         
-        <tag>动态规划</tag>
-         
         <tag>搜索</tag>
          
-        <tag>记忆化搜索</tag>
+        <tag>动态规划</tag>
          
         <tag>组合数</tag>
          
         <tag>堆</tag>
          
         <tag>状压dp</tag>
+         
+        <tag>记忆化搜索</tag>
          
          
            
@@ -735,17 +766,17 @@
         <title>NOIP 2017 Day1</title>
         <pubTime>2018-05-02T13:39:41.000Z</pubTime>
         
-        <tag>模拟</tag>
-         
         <tag>NOIP</tag>
+         
+        <tag>模拟</tag>
          
         <tag>动态规划</tag>
          
         <tag>最短路</tag>
          
-        <tag>数论</tag>
-         
         <tag>记忆化搜索</tag>
+         
+        <tag>数论</tag>
          
         <tag>拓扑排序</tag>
          
@@ -772,15 +803,15 @@
         
         <tag>NOIP</tag>
          
-        <tag>并查集</tag>
-         
         <tag>搜索</tag>
+         
+        <tag>并查集</tag>
          
         <tag>树状数组</tag>
          
-        <tag>记忆化搜索</tag>
-         
         <tag>状压dp</tag>
+         
+        <tag>记忆化搜索</tag>
          
         <tag>平衡树</tag>
          
