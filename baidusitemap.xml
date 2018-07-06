@@ -4,6 +4,91 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/p1073/</loc>
+    <lastmod>2018-07-06T12:00:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>P1703 最优贸易</title>
+        <pubTime>2018-07-06T11:45:57.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>最短路</tag>
+         
+        <tag>拓扑排序</tag>
+         
+        <tag>分层图</tag>
+         
+        <tag>Tarjan</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/p2939/</loc>
+    <lastmod>2018-07-06T11:46:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>P2939 [USACO09FEB]改造路</title>
+        <pubTime>2018-07-05T13:04:19.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>最短路</tag>
+         
+        <tag>分层图</tag>
+         
+        <tag>堆优化</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/p1772/</loc>
+    <lastmod>2018-07-06T11:45:30.000Z</lastmod>
+    <data>
+        <display>
+        <title>P1772 [ZJOI2006]物流运输</title>
+        <pubTime>2018-07-06T11:35:33.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>最短路</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/p1613/</loc>
     <lastmod>2018-07-06T11:27:24.000Z</lastmod>
     <data>
@@ -65,38 +150,11 @@
          
         <tag>树形dp</tag>
          
-        <tag>OOP</tag>
-         
         <tag>Tarjan</tag>
          
+        <tag>OOP</tag>
+         
         <tag>树形背包</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/p2939/</loc>
-    <lastmod>2018-07-05T13:35:22.000Z</lastmod>
-    <data>
-        <display>
-        <title>P2939</title>
-        <pubTime>2018-07-05T13:04:19.000Z</pubTime>
-        
-        <tag>动态规划</tag>
-         
-        <tag>最短路</tag>
-         
-        <tag>堆优化</tag>
          
          
            
@@ -292,9 +350,9 @@
         
         <tag>NOIP</tag>
          
-        <tag>贪心</tag>
-         
         <tag>模拟</tag>
+         
+        <tag>贪心</tag>
          
          
            
@@ -404,6 +462,8 @@
         
         <tag>NOIP</tag>
          
+        <tag>倍增</tag>
+         
         <tag>贪心</tag>
          
         <tag>扩展欧几里得</tag>
@@ -411,8 +471,6 @@
         <tag>二分答案</tag>
          
         <tag>查分</tag>
-         
-        <tag>倍增</tag>
          
          
            
@@ -437,11 +495,11 @@
         
         <tag>NOIP</tag>
          
-        <tag>搜索</tag>
-         
         <tag>并查集</tag>
          
         <tag>动态规划</tag>
+         
+        <tag>搜索</tag>
          
          
            
@@ -547,13 +605,13 @@
         
         <tag>NOIP</tag>
          
-        <tag>搜索</tag>
+        <tag>动态规划</tag>
          
-        <tag>贪心</tag>
+        <tag>搜索</tag>
          
         <tag>模拟</tag>
          
-        <tag>动态规划</tag>
+        <tag>贪心</tag>
          
          
            
@@ -578,9 +636,9 @@
         
         <tag>NOIP</tag>
          
-        <tag>模拟</tag>
-         
         <tag>动态规划</tag>
+         
+        <tag>模拟</tag>
          
         <tag>树形dp</tag>
          
@@ -644,11 +702,11 @@
         
         <tag>NOIP</tag>
          
+        <tag>动态规划</tag>
+         
         <tag>贪心</tag>
          
         <tag>二分答案</tag>
-         
-        <tag>动态规划</tag>
          
         <tag>最近公共祖先</tag>
          
@@ -677,9 +735,9 @@
         
         <tag>NOIP</tag>
          
-        <tag>模拟</tag>
-         
         <tag>动态规划</tag>
+         
+        <tag>模拟</tag>
          
         <tag>概率期望</tag>
          
@@ -706,11 +764,11 @@
         
         <tag>NOIP</tag>
          
+        <tag>并查集</tag>
+         
         <tag>搜索</tag>
          
         <tag>模拟</tag>
-         
-        <tag>并查集</tag>
          
          
            
@@ -733,9 +791,9 @@
         <title>NOIP 2016 Day2</title>
         <pubTime>2018-05-01T03:12:44.000Z</pubTime>
         
-        <tag>搜索</tag>
-         
         <tag>动态规划</tag>
+         
+        <tag>搜索</tag>
          
         <tag>组合数</tag>
          
@@ -768,9 +826,9 @@
         
         <tag>NOIP</tag>
          
-        <tag>模拟</tag>
-         
         <tag>动态规划</tag>
+         
+        <tag>模拟</tag>
          
         <tag>最短路</tag>
          
@@ -803,9 +861,9 @@
         
         <tag>NOIP</tag>
          
-        <tag>搜索</tag>
-         
         <tag>并查集</tag>
+         
+        <tag>搜索</tag>
          
         <tag>树状数组</tag>
          
