@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="倍增,最短路,Floyd," />
+  <meta name="keywords" content="二分答案," />
 
 
 
@@ -89,16 +89,18 @@
     })();
 </script>
 
-<meta name="description" content="Description小A的工作不仅繁琐，更有苛刻的规定，要求小A每天早上在6：00之前到达公司，否则这个月工资清零。可是小A偏偏又有赖床的坏毛病。于是为了保住自己的工资，小A买了一个十分牛B的空间跑路器，每秒钟可以跑2^k千米（k是任意自然数）。当然，这个机器是用longint存的，所以总跑路长度不能超过maxlongint千米。小A的家到公司的路可以看做一个有向图，小A家为点1，公司为点n，每">
+<meta name="description" content="Descripiton在一个2维平面上有两条传送带，每一条传送带可以看成是一条线段。两条传送带分别为线段AB和线段CD。lxhgww在AB上的移动速度为P，在CD上的移动速度为Q，在平面上的移动速度R。现在lxhgww想从A点走到D点，他想知道最少需要走多长时间">
 <meta property="og:type" content="article">
-<meta property="og:title" content="P1613 跑路">
-<meta property="og:url" content="http://aiyoupass.com/2018/p1613/index.html">
+<meta property="og:title" content="P2571 [SCOI2010]传送带">
+<meta property="og:url" content="http://aiyoupass.com/2018/p2571/index.html">
 <meta property="og:site_name" content="落花微雨">
-<meta property="og:description" content="Description小A的工作不仅繁琐，更有苛刻的规定，要求小A每天早上在6：00之前到达公司，否则这个月工资清零。可是小A偏偏又有赖床的坏毛病。于是为了保住自己的工资，小A买了一个十分牛B的空间跑路器，每秒钟可以跑2^k千米（k是任意自然数）。当然，这个机器是用longint存的，所以总跑路长度不能超过maxlongint千米。小A的家到公司的路可以看做一个有向图，小A家为点1，公司为点n，每">
-<meta property="og:updated_time" content="2018-07-06T11:27:24.000Z">
+<meta property="og:description" content="Descripiton在一个2维平面上有两条传送带，每一条传送带可以看成是一条线段。两条传送带分别为线段AB和线段CD。lxhgww在AB上的移动速度为P，在CD上的移动速度为Q，在平面上的移动速度R。现在lxhgww想从A点走到D点，他想知道最少需要走多长时间">
+<meta property="og:image" content="https://cdn.luogu.org/upload/pic/22558.png">
+<meta property="og:updated_time" content="2018-07-07T13:41:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="P1613 跑路">
-<meta name="twitter:description" content="Description小A的工作不仅繁琐，更有苛刻的规定，要求小A每天早上在6：00之前到达公司，否则这个月工资清零。可是小A偏偏又有赖床的坏毛病。于是为了保住自己的工资，小A买了一个十分牛B的空间跑路器，每秒钟可以跑2^k千米（k是任意自然数）。当然，这个机器是用longint存的，所以总跑路长度不能超过maxlongint千米。小A的家到公司的路可以看做一个有向图，小A家为点1，公司为点n，每">
+<meta name="twitter:title" content="P2571 [SCOI2010]传送带">
+<meta name="twitter:description" content="Descripiton在一个2维平面上有两条传送带，每一条传送带可以看成是一条线段。两条传送带分别为线段AB和线段CD。lxhgww在AB上的移动速度为P，在CD上的移动速度为Q，在平面上的移动速度R。现在lxhgww想从A点走到D点，他想知道最少需要走多长时间">
+<meta name="twitter:image" content="https://cdn.luogu.org/upload/pic/22558.png">
 
 
 
@@ -128,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://aiyoupass.com/2018/p1613/"/>
+  <link rel="canonical" href="http://aiyoupass.com/2018/p2571/"/>
 
 
 
 
 
-  <title>P1613 跑路 | 落花微雨</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>P2571 [SCOI2010]传送带 | 落花微雨</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -329,7 +331,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/p1613/">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/p2571/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="aiyoupass">
@@ -346,7 +348,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">P1613 跑路</h1>
+          <h1 class="post-title" itemprop="name headline">P2571 [SCOI2010]传送带</h1>
         
 
         <div class="post-meta">
@@ -358,8 +360,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-05T09:15:37+08:00">
-                2018-07-05
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-07T21:40:06+08:00">
+                2018-07-07
               </time>
             
 
@@ -410,8 +412,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/p1613/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/p1613/" itemprop="commentCount"></span>
+                <a href="/2018/p2571/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/p2571/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -439,11 +441,18 @@
       
 
       
-        <h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>小A的工作不仅繁琐，更有苛刻的规定，要求小A每天早上在6：00之前到达公司，否则这个月工资清零。可是小A偏偏又有赖床的坏毛病。于是为了保住自己的工资，小A买了一个十分牛B的空间跑路器，每秒钟可以跑2^k千米（k是任意自然数）。当然，这个机器是用longint存的，所以总跑路长度不能超过maxlongint千米。小A的家到公司的路可以看做一个有向图，小A家为点1，公司为点n，每条边长度均为一千米。小A想每天能醒地尽量晚，所以让你帮他算算，他最少需要几秒才能到公司。数据保证1到n至少有一条路径。</p>
+        <h4 id="Descripiton"><a href="#Descripiton" class="headerlink" title="Descripiton"></a>Descripiton</h4><p>在一个2维平面上有两条传送带，每一条传送带可以看成是一条线段。两条传送带分别为线段AB和线段CD。lxhgww在AB上的移动速度为P，在CD上的移动速度为Q，在平面上的移动速度R。现在lxhgww想从A点走到D点，他想知道最少需要走多长时间</p>
 <a id="more"></a>
-<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>设$f(i,j,k)$表示$i$与$j$之间是否有一条长度为$2^k$的路径.那么可以用倍增求出它的值:<br>$$f(i,j,k)=f(i,j,k)\vee (f(i,m,k-1)\wedge f(m,j,k-1))$$<br>那么如果$i$与$j$之间是否有一条长度为$2^k$的路径, 也就意味着可以花费1秒的代价到达.</p>
-<p>我们假设$i,j$可以1秒到达, $j,k$可以1秒到达, 就意味着$i,k$可以2秒到达.这样就可以通过最短路算法$\text{Floyd}$算法求出最少时间.</p>
-<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 55</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> <span class="built_in">map</span>[N][N][<span class="number">32</span>];</div><div class="line"><span class="keyword">int</span> dis[N][N];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> n,m,u,v;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;++i)&#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;u,&amp;v);</div><div class="line">        <span class="built_in">map</span>[u][v][<span class="number">0</span>]=<span class="literal">true</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">1</span>;k&lt;=<span class="number">30</span>;++k)</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> l=<span class="number">1</span>;l&lt;=n;++l)</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</div><div class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;++j)</div><div class="line">                    <span class="built_in">map</span>[i][j][k]|=(<span class="built_in">map</span>[i][l][k<span class="number">-1</span>]&amp;&amp;<span class="built_in">map</span>[l][j][k<span class="number">-1</span>]);</div><div class="line">    <span class="built_in">memset</span>(dis,<span class="number">10</span>,<span class="keyword">sizeof</span>(dis));</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)dis[i][i]=<span class="literal">false</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;++j)</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;=<span class="number">30</span>;++k)</div><div class="line">                <span class="keyword">if</span>(<span class="built_in">map</span>[i][j][k])dis[i][j]=<span class="literal">true</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;++j)</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">1</span>;k&lt;=n;++k)</div><div class="line">                    dis[j][k]=min(dis[j][k],dis[j][i]+dis[i][k]);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,dis[<span class="number">1</span>][n]);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>设路径为$A\rightarrow E,E\rightarrow F,F\rightarrow D$<br>那么发现整个路径所花时间为$|AE|,|FD|$的二元函数.</p>
+<p>如果我们固定$|AE|$的长度, 那么发现路径长度为$|FD|$的函数并且是一个二次函数的形式.这个东西是一个单峰函数.(写出式子来发现的)</p>
+<p>所以我们可以求出当$|AE|$固定时路径的最小值.</p>
+<p>然后转化为怎么求出$|AE|$为何值时会取得路径最小值.</p>
+<p>可以感性的理解一下它也是一个单峰函数的形式(不会证明)</p>
+<p>然后就可以结合<a href="https://www.luogu.org/problemnew/show/P3382" target="_blank" rel="external">三分法</a>这道模板题求出答案了.<br><img src="https://cdn.luogu.org/upload/pic/22558.png" alt=""></p>
+<h3 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h3><p>三分法这个东西我一直都不会, 从我还不知道有三分法这个东西的时候就在用<strong>二分导函数零点</strong>的方式水三分法能做的东西了……233333</p>
+<p>具体<strong>二分导函数零点</strong>可以看<a href="https://www.luogu.org/blog/aiyoupass/solution-p3382" target="_blank" rel="external">我的blog</a></p>
+<p><strong>哦, 对了, 数据比较坑会出现直线长度为0的情况这时候就需要特判一下啦!</strong><br><del>卡了我好长时间啊</del></p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> eps 1e-9</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">struct</span> Point&#123;</div><div class="line">    <span class="keyword">double</span> x,y;Point()&#123;&#125;Point(<span class="keyword">double</span> _x,<span class="keyword">double</span> _y)&#123;x=_x,y=_y;&#125;</div><div class="line">    Point <span class="keyword">operator</span>+(<span class="keyword">const</span> Point&amp; o)<span class="keyword">const</span>&#123;<span class="keyword">return</span> Point(x+o.x,y+o.y);&#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">input</span><span class="params">()</span></span>&#123;<span class="built_in">scanf</span>(<span class="string">"%lf%lf"</span>,&amp;x,&amp;y);&#125;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">struct</span> Line&#123;</div><div class="line">    Point a,b;<span class="keyword">double</span> dx,dy,s,c,l;</div><div class="line">    Line()&#123;&#125;Line(Point _a,Point _b)&#123;</div><div class="line">        a=_a,b=_b;</div><div class="line">        dy=b.y-a.y,dx=b.x-a.x;</div><div class="line">        l=<span class="built_in">sqrt</span>(dx*dx+dy*dy),s=dy/l,c=dx/l;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"><span class="function">Point <span class="title">haha</span><span class="params">(Line&amp; a,<span class="keyword">double</span> b)</span></span>&#123;<span class="keyword">if</span>(!a.l)<span class="keyword">return</span> a.a;<span class="keyword">return</span> Point(a.a.x+b*a.c,a.a.y+b*a.s);&#125;</div><div class="line"></div><div class="line">Point a,b,c,d,e,f;</div><div class="line"><span class="keyword">double</span> p,q,r;<span class="keyword">int</span> n;</div><div class="line">Line ab,cd,ef;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">Check</span><span class="params">(<span class="keyword">double</span> x)</span></span>&#123;</div><div class="line">    f=haha(cd,x),ef=Line(e,f);</div><div class="line">    <span class="keyword">return</span> ef.l/q+(cd.l-x)/r;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">check</span><span class="params">(<span class="keyword">double</span> x)</span></span>&#123;</div><div class="line">    e=haha(ab,x);</div><div class="line">    <span class="keyword">double</span> L=<span class="number">0</span>,R=cd.l,mid;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">50</span>;++i)&#123;</div><div class="line">        mid=(L+R)/<span class="number">2</span>;</div><div class="line">        <span class="keyword">if</span>(Check(mid+eps)-Check(mid-eps)&gt;<span class="number">0</span>)R=mid;</div><div class="line">        <span class="keyword">else</span> L=mid;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> x/p+Check(L);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    a.input(),b.input(),c.input(),d.input(),</div><div class="line">    ab=Line(a,b),cd=Line(c,d);</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%lf%lf%lf"</span>,&amp;p,&amp;r,&amp;q);</div><div class="line">    <span class="keyword">double</span> l=<span class="number">0.0</span>,R=ab.l,mid;</div><div class="line">    <span class="keyword">if</span>(ab.l&gt;eps)</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">50</span>;++i)&#123;</div><div class="line">        mid=(l+R)/<span class="number">2</span>;</div><div class="line">        <span class="keyword">if</span>(check(mid+eps)-check(mid-eps)&gt;<span class="number">0</span>)R=mid;</div><div class="line">        <span class="keyword">else</span> l=mid;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%.2f"</span>,check(l));</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
     
@@ -465,12 +474,12 @@
   <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2018/p1613/">P1613 跑路</a></p>
+  <p><span>本文标题:</span><a href="/2018/p2571/">P2571 [SCOI2010]传送带</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 aiyoupass 的个人博客">aiyoupass</a></p>
-  <p><span>发布时间:</span>2018年07月05日 - 09:07</p>
-  <p><span>最后更新:</span>2018年07月06日 - 19:07</p>
-  <p><span>原始链接:</span><a href="/2018/p1613/" title="P1613 跑路">http://aiyoupass.com/2018/p1613/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://aiyoupass.com/2018/p1613/"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2018年07月07日 - 21:07</p>
+  <p><span>最后更新:</span>2018年07月07日 - 21:07</p>
+  <p><span>原始链接:</span><a href="/2018/p2571/" title="P2571 [SCOI2010]传送带">http://aiyoupass.com/2018/p2571/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://aiyoupass.com/2018/p2571/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -501,11 +510,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/倍增/" rel="tag"># 倍增</a>
-          
-            <a href="/tags/最短路/" rel="tag"># 最短路</a>
-          
-            <a href="/tags/Floyd/" rel="tag"># Floyd</a>
+            <a href="/tags/二分答案/" rel="tag"># 二分答案</a>
           
         </div>
       
@@ -518,8 +523,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/7-4easy/" rel="next" title="7月第一周简单题汇总">
-                <i class="fa fa-chevron-left"></i> 7月第一周简单题汇总
+              <a href="/2018/p1073/" rel="next" title="P1703 最优贸易">
+                <i class="fa fa-chevron-left"></i> P1703 最优贸易
               </a>
             
           </div>
@@ -528,8 +533,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/p2939/" rel="prev" title="P2939 [USACO09FEB]改造路">
-                P2939 [USACO09FEB]改造路 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/p3648/" rel="prev" title="P3648 [APIO2014]序列分割">
+                P3648 [APIO2014]序列分割 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -719,7 +724,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number">3.</span> <span class="nav-text">Code</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Descripiton"><span class="nav-number">1.</span> <span class="nav-text">Descripiton</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number"></span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体实现"><span class="nav-number"></span> <span class="nav-text">具体实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code"><span class="nav-number"></span> <span class="nav-text">Code</span></a></div>
             
 
           </div>

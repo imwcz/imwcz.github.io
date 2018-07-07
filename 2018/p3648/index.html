@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="倍增,最短路,Floyd," />
+  <meta name="keywords" content="动态规划,斜率优化," />
 
 
 
@@ -89,16 +89,31 @@
     })();
 </script>
 
-<meta name="description" content="Description小A的工作不仅繁琐，更有苛刻的规定，要求小A每天早上在6：00之前到达公司，否则这个月工资清零。可是小A偏偏又有赖床的坏毛病。于是为了保住自己的工资，小A买了一个十分牛B的空间跑路器，每秒钟可以跑2^k千米（k是任意自然数）。当然，这个机器是用longint存的，所以总跑路长度不能超过maxlongint千米。小A的家到公司的路可以看做一个有向图，小A家为点1，公司为点n，每">
+<meta name="description" content="Description你正在玩一个关于长度为 n 的非负整数序列的游戏。这个游戏中你需要把序列分成 k+1 个非空的块。为了得到 k+1 块，你需要重复下面的操作 k 次：
+
+选择一个有超过一个元素的块（初始时你只有一块，即整个序列）
+选择两个相邻元素把这个块从中间分开，得到两个非空的块。
+
+每次操作后你将获得那两个新产生的块的元素和的乘积的分数。你想要最大化最后的总得分。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="P1613 跑路">
-<meta property="og:url" content="http://aiyoupass.com/2018/p1613/index.html">
+<meta property="og:title" content="P3648 [APIO2014]序列分割">
+<meta property="og:url" content="http://aiyoupass.com/2018/p3648/index.html">
 <meta property="og:site_name" content="落花微雨">
-<meta property="og:description" content="Description小A的工作不仅繁琐，更有苛刻的规定，要求小A每天早上在6：00之前到达公司，否则这个月工资清零。可是小A偏偏又有赖床的坏毛病。于是为了保住自己的工资，小A买了一个十分牛B的空间跑路器，每秒钟可以跑2^k千米（k是任意自然数）。当然，这个机器是用longint存的，所以总跑路长度不能超过maxlongint千米。小A的家到公司的路可以看做一个有向图，小A家为点1，公司为点n，每">
-<meta property="og:updated_time" content="2018-07-06T11:27:24.000Z">
+<meta property="og:description" content="Description你正在玩一个关于长度为 n 的非负整数序列的游戏。这个游戏中你需要把序列分成 k+1 个非空的块。为了得到 k+1 块，你需要重复下面的操作 k 次：
+
+选择一个有超过一个元素的块（初始时你只有一块，即整个序列）
+选择两个相邻元素把这个块从中间分开，得到两个非空的块。
+
+每次操作后你将获得那两个新产生的块的元素和的乘积的分数。你想要最大化最后的总得分。">
+<meta property="og:updated_time" content="2018-07-07T13:43:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="P1613 跑路">
-<meta name="twitter:description" content="Description小A的工作不仅繁琐，更有苛刻的规定，要求小A每天早上在6：00之前到达公司，否则这个月工资清零。可是小A偏偏又有赖床的坏毛病。于是为了保住自己的工资，小A买了一个十分牛B的空间跑路器，每秒钟可以跑2^k千米（k是任意自然数）。当然，这个机器是用longint存的，所以总跑路长度不能超过maxlongint千米。小A的家到公司的路可以看做一个有向图，小A家为点1，公司为点n，每">
+<meta name="twitter:title" content="P3648 [APIO2014]序列分割">
+<meta name="twitter:description" content="Description你正在玩一个关于长度为 n 的非负整数序列的游戏。这个游戏中你需要把序列分成 k+1 个非空的块。为了得到 k+1 块，你需要重复下面的操作 k 次：
+
+选择一个有超过一个元素的块（初始时你只有一块，即整个序列）
+选择两个相邻元素把这个块从中间分开，得到两个非空的块。
+
+每次操作后你将获得那两个新产生的块的元素和的乘积的分数。你想要最大化最后的总得分。">
 
 
 
@@ -128,13 +143,13 @@
 
 
 
-  <link rel="canonical" href="http://aiyoupass.com/2018/p1613/"/>
+  <link rel="canonical" href="http://aiyoupass.com/2018/p3648/"/>
 
 
 
 
 
-  <title>P1613 跑路 | 落花微雨</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>P3648 [APIO2014]序列分割 | 落花微雨</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -329,7 +344,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/p1613/">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/p3648/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="aiyoupass">
@@ -346,7 +361,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">P1613 跑路</h1>
+          <h1 class="post-title" itemprop="name headline">P3648 [APIO2014]序列分割</h1>
         
 
         <div class="post-meta">
@@ -358,8 +373,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-05T09:15:37+08:00">
-                2018-07-05
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-07T21:40:06+08:00">
+                2018-07-07
               </time>
             
 
@@ -410,8 +425,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/p1613/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/p1613/" itemprop="commentCount"></span>
+                <a href="/2018/p3648/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/p3648/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -439,11 +454,19 @@
       
 
       
-        <h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>小A的工作不仅繁琐，更有苛刻的规定，要求小A每天早上在6：00之前到达公司，否则这个月工资清零。可是小A偏偏又有赖床的坏毛病。于是为了保住自己的工资，小A买了一个十分牛B的空间跑路器，每秒钟可以跑2^k千米（k是任意自然数）。当然，这个机器是用longint存的，所以总跑路长度不能超过maxlongint千米。小A的家到公司的路可以看做一个有向图，小A家为点1，公司为点n，每条边长度均为一千米。小A想每天能醒地尽量晚，所以让你帮他算算，他最少需要几秒才能到公司。数据保证1到n至少有一条路径。</p>
+        <h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>你正在玩一个关于长度为 n 的非负整数序列的游戏。这个游戏中你需要把序列分成 k+1 个非空的块。为了得到 k+1 块，你需要重复下面的操作 k 次：</p>
+<ul>
+<li>选择一个有超过一个元素的块（初始时你只有一块，即整个序列）</li>
+<li>选择两个相邻元素把这个块从中间分开，得到两个非空的块。</li>
+</ul>
+<p>每次操作后你将获得那两个新产生的块的元素和的乘积的分数。你想要最大化最后的总得分。</p>
 <a id="more"></a>
-<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>设$f(i,j,k)$表示$i$与$j$之间是否有一条长度为$2^k$的路径.那么可以用倍增求出它的值:<br>$$f(i,j,k)=f(i,j,k)\vee (f(i,m,k-1)\wedge f(m,j,k-1))$$<br>那么如果$i$与$j$之间是否有一条长度为$2^k$的路径, 也就意味着可以花费1秒的代价到达.</p>
-<p>我们假设$i,j$可以1秒到达, $j,k$可以1秒到达, 就意味着$i,k$可以2秒到达.这样就可以通过最短路算法$\text{Floyd}$算法求出最少时间.</p>
-<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 55</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> <span class="built_in">map</span>[N][N][<span class="number">32</span>];</div><div class="line"><span class="keyword">int</span> dis[N][N];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> n,m,u,v;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;++i)&#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;u,&amp;v);</div><div class="line">        <span class="built_in">map</span>[u][v][<span class="number">0</span>]=<span class="literal">true</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">1</span>;k&lt;=<span class="number">30</span>;++k)</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> l=<span class="number">1</span>;l&lt;=n;++l)</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</div><div class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;++j)</div><div class="line">                    <span class="built_in">map</span>[i][j][k]|=(<span class="built_in">map</span>[i][l][k<span class="number">-1</span>]&amp;&amp;<span class="built_in">map</span>[l][j][k<span class="number">-1</span>]);</div><div class="line">    <span class="built_in">memset</span>(dis,<span class="number">10</span>,<span class="keyword">sizeof</span>(dis));</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)dis[i][i]=<span class="literal">false</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;++j)</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;=<span class="number">30</span>;++k)</div><div class="line">                <span class="keyword">if</span>(<span class="built_in">map</span>[i][j][k])dis[i][j]=<span class="literal">true</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;++j)</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">1</span>;k&lt;=n;++k)</div><div class="line">                    dis[j][k]=min(dis[j][k],dis[j][i]+dis[i][k]);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,dis[<span class="number">1</span>][n]);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><h4 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h4><p>容易发现产生的得分只和切的位置有关和切的顺序无关.</p>
+<p>设$f(i,j)$表示前$i$个数切$j$刀产生的最大得分,$s_i=\sum_{i=1}^ia_i$(即前缀和).<br>那么切$j$刀可以看成是<strong>第一刀</strong>在第$l$个位置切一刀, 那么第$l+1\sim i$个数和前$l$个数产生了$(s_i-s_l)s_l$的得分, <strong>然后再对前$l$个数进行划分</strong>, 那么这样切的总得分就是$f(l,j-1)+(s_i-s_l)s_l$.</p>
+<p>那么可以得到转移方程<br>$$<br>f(i,j)=\max f(k,j-1)+(s_{i}-s_k)s_k\\<br>\text{若}f(k)+s_{k}^2-s_is_k&gt;f(l)+s_l^2-s_is_l\\<br>(s_l-s_k)s_i&gt;s_l^2-s_k^2+f(l)-f(k)\\<br>s_i&gt;\frac{s_l^2-s_k^2+f(l)-f(k)}{s_l-s_k}\\<br>$$<br>可以用斜率优化进行优化, 优化后dp的复杂度为$O(nk)$.<br>推荐斜率优化一道题<a href="https://www.luogu.org/problemnew/show/P3195" target="_blank" rel="external">玩具装箱</a>.</p>
+<h4 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h4><p>因为开二维数组所需空间过大, 又因为每次都是从$f(i,j-1)$转移到$f(k,j)$.所以可以用滚动数组优化.</p>
+<p>这里我开了两个一维数组$ff[],gg[]$,然后用两个指针$f=ff,g=gg$.<br>转移完一维时直接 <strong>交换$f,g$</strong> 即可.既方便又好用.</p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 100005</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> int long long</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n,k;</div><div class="line"><span class="keyword">int</span> q[N],h,t;</div><div class="line"><span class="keyword">int</span> fa[N][<span class="number">205</span>];</div><div class="line"><span class="keyword">int</span> s[N],ff[N],gg[N];</div><div class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">double</span> <span class="title">pq</span><span class="params">(<span class="keyword">int</span> b,<span class="keyword">int</span> a,<span class="keyword">int</span> *f)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(s[a]==s[b])<span class="keyword">return</span> <span class="number">-1e9</span>;</div><div class="line">    <span class="keyword">return</span> (s[b]*s[b]-s[a]*s[a]-f[b]+f[a])/(<span class="number">1.0</span>*(s[b]-s[a]));</div><div class="line">&#125;</div><div class="line">main()&#123;</div><div class="line">    <span class="keyword">int</span> tr;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%lld%lld"</span>,&amp;n,&amp;k);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;tr);</div><div class="line">        s[i]=s[i<span class="number">-1</span>]+tr;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">int</span> *f,*g;</div><div class="line">    f=ff,g=gg;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=k;++j)&#123;</div><div class="line">        h=t=<span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</div><div class="line">            <span class="keyword">while</span>(h&lt;t&amp;&amp;pq(q[h],q[h+<span class="number">1</span>],g)&lt;=s[i])++h;</div><div class="line">            f[i]=g[q[h]]+(s[i]-s[q[h]])*s[q[h]];</div><div class="line">            fa[i][j]=q[h];</div><div class="line">            <span class="keyword">while</span>(h&lt;t&amp;&amp;pq(q[t],i,g)&lt;=pq(q[t<span class="number">-1</span>],q[t],g))--t;</div><div class="line">            q[++t]=i;</div><div class="line">        &#125;</div><div class="line">        swap(f,g);</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,g[n]);</div><div class="line">    <span class="keyword">int</span> q=fa[n][k],p=k;</div><div class="line">    <span class="keyword">while</span>(p)&#123;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>,q);</div><div class="line">        q=fa[q][--p];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
     
@@ -465,12 +488,12 @@
   <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2018/p1613/">P1613 跑路</a></p>
+  <p><span>本文标题:</span><a href="/2018/p3648/">P3648 [APIO2014]序列分割</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 aiyoupass 的个人博客">aiyoupass</a></p>
-  <p><span>发布时间:</span>2018年07月05日 - 09:07</p>
-  <p><span>最后更新:</span>2018年07月06日 - 19:07</p>
-  <p><span>原始链接:</span><a href="/2018/p1613/" title="P1613 跑路">http://aiyoupass.com/2018/p1613/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://aiyoupass.com/2018/p1613/"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2018年07月07日 - 21:07</p>
+  <p><span>最后更新:</span>2018年07月07日 - 21:07</p>
+  <p><span>原始链接:</span><a href="/2018/p3648/" title="P3648 [APIO2014]序列分割">http://aiyoupass.com/2018/p3648/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://aiyoupass.com/2018/p3648/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -501,11 +524,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/倍增/" rel="tag"># 倍增</a>
+            <a href="/tags/动态规划/" rel="tag"># 动态规划</a>
           
-            <a href="/tags/最短路/" rel="tag"># 最短路</a>
-          
-            <a href="/tags/Floyd/" rel="tag"># Floyd</a>
+            <a href="/tags/斜率优化/" rel="tag"># 斜率优化</a>
           
         </div>
       
@@ -518,8 +539,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/7-4easy/" rel="next" title="7月第一周简单题汇总">
-                <i class="fa fa-chevron-left"></i> 7月第一周简单题汇总
+              <a href="/2018/p2571/" rel="next" title="P2571 [SCOI2010]传送带">
+                <i class="fa fa-chevron-left"></i> P2571 [SCOI2010]传送带
               </a>
             
           </div>
@@ -527,10 +548,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/p2939/" rel="prev" title="P2939 [USACO09FEB]改造路">
-                P2939 [USACO09FEB]改造路 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -719,7 +736,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number">3.</span> <span class="nav-text">Code</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#算法"><span class="nav-number">2.1.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现"><span class="nav-number">2.2.</span> <span class="nav-text">实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number">2.3.</span> <span class="nav-text">Code</span></a></li></ol></li></ol></div>
             
 
           </div>

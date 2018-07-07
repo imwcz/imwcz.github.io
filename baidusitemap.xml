@@ -4,6 +4,54 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/p3648/</loc>
+    <lastmod>2018-07-07T13:43:56.000Z</lastmod>
+    <data>
+        <display>
+        <title>P3648 [APIO2014]序列分割</title>
+        <pubTime>2018-07-07T13:40:06.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>斜率优化</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/p2571/</loc>
+    <lastmod>2018-07-07T13:41:16.000Z</lastmod>
+    <data>
+        <display>
+        <title>P2571 [SCOI2010]传送带</title>
+        <pubTime>2018-07-07T13:40:06.000Z</pubTime>
+        
+        <tag>二分答案</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/p1073/</loc>
     <lastmod>2018-07-06T12:00:14.000Z</lastmod>
     <data>
@@ -15,11 +63,11 @@
          
         <tag>最短路</tag>
          
-        <tag>拓扑排序</tag>
-         
         <tag>分层图</tag>
          
         <tag>Tarjan</tag>
+         
+        <tag>拓扑排序</tag>
          
          
            
@@ -464,13 +512,13 @@
          
         <tag>倍增</tag>
          
-        <tag>贪心</tag>
-         
         <tag>扩展欧几里得</tag>
          
         <tag>二分答案</tag>
          
         <tag>查分</tag>
+         
+        <tag>贪心</tag>
          
          
            
@@ -673,9 +721,9 @@
          
         <tag>Python</tag>
          
-        <tag>二维前缀和</tag>
-         
         <tag>最短路</tag>
+         
+        <tag>二维前缀和</tag>
          
         <tag>秦九韶算法</tag>
          
@@ -704,9 +752,9 @@
          
         <tag>动态规划</tag>
          
-        <tag>贪心</tag>
-         
         <tag>二分答案</tag>
+         
+        <tag>贪心</tag>
          
         <tag>最近公共祖先</tag>
          
@@ -832,11 +880,11 @@
          
         <tag>最短路</tag>
          
+        <tag>拓扑排序</tag>
+         
         <tag>记忆化搜索</tag>
          
         <tag>数论</tag>
-         
-        <tag>拓扑排序</tag>
          
          
            
