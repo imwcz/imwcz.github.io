@@ -95,7 +95,7 @@
 树链剖分本身过程就是两个深度遍历, 但是再结合什么查询修改和线段树代码就长了……
 我自己亲手实现了一遍写了150行左右, 考虑到我本人的代码风格和比较偏对象式的方式, 可能精简一下能压缩到120行之内, 其实这个长度也可">
 <meta property="og:type" content="article">
-<meta property="og:title" content="树链剖分非初次体验">
+<meta property="og:title" content="树链剖分正式初体验">
 <meta property="og:url" content="http://aiyoupass.com/2018/TreeChainSplit/index.html">
 <meta property="og:site_name" content="落花微雨">
 <meta property="og:description" content="为了高效的维护树上路径的信息, 如查询, 修改树上路径权值和, 出现了树链剖分这类算法.
@@ -104,9 +104,9 @@
 树链剖分本身过程就是两个深度遍历, 但是再结合什么查询修改和线段树代码就长了……
 我自己亲手实现了一遍写了150行左右, 考虑到我本人的代码风格和比较偏对象式的方式, 可能精简一下能压缩到120行之内, 其实这个长度也可">
 <meta property="og:image" content="https://i.loli.net/2018/07/11/5b45e71c712cf.jpg">
-<meta property="og:updated_time" content="2018-07-11T11:44:26.000Z">
+<meta property="og:updated_time" content="2018-07-12T09:56:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="树链剖分非初次体验">
+<meta name="twitter:title" content="树链剖分正式初体验">
 <meta name="twitter:description" content="为了高效的维护树上路径的信息, 如查询, 修改树上路径权值和, 出现了树链剖分这类算法.
 
 树链剖分是把二维的树拍扁到一维, 然后就可以很方便的用数据结构(如: 线段树)维护它.
@@ -148,7 +148,7 @@
 
 
 
-  <title>树链剖分非初次体验 | 落花微雨</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>树链剖分正式初体验 | 落花微雨</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -360,7 +360,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">树链剖分非初次体验</h1>
+          <h1 class="post-title" itemprop="name headline">树链剖分正式初体验</h1>
         
 
         <div class="post-meta">
@@ -406,8 +406,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/总结/" itemprop="url" rel="index">
-                    <span itemprop="name">总结</span>
+                  <a href="/categories/信息学竞赛/初体验/" itemprop="url" rel="index">
+                    <span itemprop="name">初体验</span>
                   </a>
                 </span>
 
@@ -460,6 +460,7 @@
 <li>我自己亲手实现了一遍写了<code>150</code>行左右, 考虑到我本人的代码风格和比较偏对象式的方式, 可能精简一下能压缩到120行之内, 其实这个长度也可以接受.</li>
 <li>因为树链剖分的线段树用数组写比较方便因此就没写指针版本的, 改天写个指针版本的.</li>
 </ul>
+<a id="more"></a>
 <h3 id="剖分"><a href="#剖分" class="headerlink" title="剖分"></a>剖分</h3><p>它实际上是把树拆分成一条一条的链, 一条链在一维序列中中是连续的一段. 可是一个点可以被划分到不同的链中, 不同的划分方式产生的一维序列结构也不同.如果查询树上一条链的信息, 而这条链在一维序列中被拆的支离破碎, 那么效率会很低.</p>
 <p>于是人们使用轻重儿子轻重链的方式来剖分, 这个划分方式比较合理的方式在于划分出的链长度比较长.于是能够保证一定的效率.</p>
 <h4 id="名词"><a href="#名词" class="headerlink" title="名词"></a>名词</h4><ul>
@@ -550,6 +551,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/hjt/" rel="prev" title="主席树正式体验">
+                主席树正式体验 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -632,7 +637,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">38</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -643,7 +648,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -654,7 +659,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -1002,24 +1007,7 @@
         }
       });
     </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config("");
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="custom_mathjax_source">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
