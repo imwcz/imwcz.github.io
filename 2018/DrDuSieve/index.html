@@ -89,22 +89,16 @@
     })();
 </script>
 
-<meta name="description" content="这篇文章的主题是杜教筛, 但是我总得给这个.md文件一个合适的英文名字.
-于是我大开脑洞: Dr. Du’s sieve.应用情景例如一个能用杜教筛解决的经典问题: 莫比乌斯函数前缀和.即$$\sum_{i=1}^n\mu(i)$$
-不同的是, 数据规模是$10^9$级别的.利用狄利克雷卷积两个数论函数$f,g$的狄利克雷卷积定义为$$(fg)(n)=\sum_{d|n}g(d)f(\frac{n">
+<meta name="description" content="这篇文章的主题是杜教筛 , 但是我总得给这个.md文件一个合适的英文名字.于是我大开脑洞: Dr. Du’s sieve.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="杜教筛初体验">
 <meta property="og:url" content="http://aiyoupass.com/2018/DrDuSieve/index.html">
 <meta property="og:site_name" content="落花微雨">
-<meta property="og:description" content="这篇文章的主题是杜教筛, 但是我总得给这个.md文件一个合适的英文名字.
-于是我大开脑洞: Dr. Du’s sieve.应用情景例如一个能用杜教筛解决的经典问题: 莫比乌斯函数前缀和.即$$\sum_{i=1}^n\mu(i)$$
-不同的是, 数据规模是$10^9$级别的.利用狄利克雷卷积两个数论函数$f,g$的狄利克雷卷积定义为$$(fg)(n)=\sum_{d|n}g(d)f(\frac{n">
-<meta property="og:updated_time" content="2018-07-19T13:32:34.000Z">
+<meta property="og:description" content="这篇文章的主题是杜教筛 , 但是我总得给这个.md文件一个合适的英文名字.于是我大开脑洞: Dr. Du’s sieve.">
+<meta property="og:updated_time" content="2018-07-19T13:54:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杜教筛初体验">
-<meta name="twitter:description" content="这篇文章的主题是杜教筛, 但是我总得给这个.md文件一个合适的英文名字.
-于是我大开脑洞: Dr. Du’s sieve.应用情景例如一个能用杜教筛解决的经典问题: 莫比乌斯函数前缀和.即$$\sum_{i=1}^n\mu(i)$$
-不同的是, 数据规模是$10^9$级别的.利用狄利克雷卷积两个数论函数$f,g$的狄利克雷卷积定义为$$(fg)(n)=\sum_{d|n}g(d)f(\frac{n">
+<meta name="twitter:description" content="这篇文章的主题是杜教筛 , 但是我总得给这个.md文件一个合适的英文名字.于是我大开脑洞: Dr. Du’s sieve.">
 
 
 
@@ -445,15 +439,17 @@
       
 
       
-        <p>这篇文章的主题是<strong>杜教筛</strong>, 但是我总得给这个<code>.md</code>文件一个合适的英文名字.</p>
-<h2 id="于是我大开脑洞-Dr-Du’s-sieve"><a href="#于是我大开脑洞-Dr-Du’s-sieve" class="headerlink" title="于是我大开脑洞: Dr. Du’s sieve."></a>于是我大开脑洞: Dr. Du’s sieve.</h2><h3 id="应用情景"><a href="#应用情景" class="headerlink" title="应用情景"></a>应用情景</h3><p>例如一个能用杜教筛解决的经典问题: <strong>莫比乌斯函数前缀和.</strong>即$$\sum_{i=1}^n\mu(i)$$</p>
-<h2 id="不同的是-数据规模是-10-9-级别的"><a href="#不同的是-数据规模是-10-9-级别的" class="headerlink" title="不同的是, 数据规模是$10^9$级别的."></a>不同的是, 数据规模是$10^9$级别的.</h2><h3 id="利用狄利克雷卷积"><a href="#利用狄利克雷卷积" class="headerlink" title="利用狄利克雷卷积"></a>利用狄利克雷卷积</h3><p>两个数论函数$f,g$的狄利克雷卷积定义为<br>$$<br>(f<em>g)(n)=\sum_{d|n}g(d)f(\frac{n}{d})<br>$$<br>求卷积前缀和<br>$$<br>\sum_{i=1}^n(f</em>g)(i)=\sum_{i=1}^n\sum_{d|i}g(d)f(\frac{i}{d})<br>$$</p>
+        <p>这篇文章的主题是<strong>杜教筛</strong> , 但是我总得给这个<code>.md</code>文件一个合适的英文名字.<br>于是我大开脑洞: Dr. Du’s sieve.</p>
+<a id="more"></a>
+<h3 id="应用情景"><a href="#应用情景" class="headerlink" title="应用情景"></a>应用情景</h3><p>例如一个能用杜教筛解决的经典问题: <strong>莫比乌斯函数前缀和.</strong> 即$$\sum_{i=1}^n\mu(i)$$<br>不同的是, 数据规模是$10^9$级别的.</p>
+<h3 id="利用狄利克雷卷积"><a href="#利用狄利克雷卷积" class="headerlink" title="利用狄利克雷卷积"></a>利用狄利克雷卷积</h3><p>两个数论函数$f,g$的狄利克雷卷积定义为<br>$$<br>(f\times g)(n)=\sum_{d|n}g(d)f(\frac{n}{d})<br>$$<br>求卷积前缀和<br>$$<br>\sum_{i=1}^n(f\times g)(i)=\sum_{i=1}^n\sum_{d|i}g(d)f(\frac{i}{d})<br>$$</p>
 <p>式子能变形为<br>$$<br>\begin{align}<br>\sum_{d=1}^ng(d)\sum_{d|i}f(\frac{i}{d})<br>=\sum_{d=1}^ng(d)\sum_{j=1}^{n/d}f(j)<br>=\sum_{d=1}g(d)S(\frac{n}{d})<br>\end{align}<br>$$</p>
-<p>利用前缀和的性质能得到这个式子<br>$$<br>\begin{align}<br>g(1)S(n)=&amp;S(\frac{n}{i})(\sum_{i=1}^ng(i)-\sum_{i=2}^ng(i))<br>=&amp;\sum_{i=1}^n(g*f)(i)-\sum_{i=2}^ng(i)S(\frac{n}{i})<br>\end{align}<br>$$<br>对后面的式子数论分块并递归运算.</p>
+<p>利用前缀和的性质能得到这个式子<br>$$<br>\begin{align}<br>g(1)S(n)=&amp;S(\frac{n}{i})(\sum_{i=1}^ng(i)-\sum_{i=2}^ng(i))<br>=&amp;\sum_{i=1}^n(g\times f)(i)-\sum_{i=2}^ng(i)S(\frac{n}{i})<br>\end{align}<br>$$<br>对后面的式子数论分块并递归运算.</p>
 <h3 id="莫比乌斯函数前缀和"><a href="#莫比乌斯函数前缀和" class="headerlink" title="莫比乌斯函数前缀和"></a>莫比乌斯函数前缀和</h3><p>求$$<br>\sum_{i=1}^n\mu(i)<br>$$<br>其中$n\le 10^9$</p>
-<p>让$g(i)=1$<br>那么$(f<em>g)(i)=\sum_{d|i}\mu(i)=[i=1]$<br>那么$\sum_{i=1}^n(f</em>g)(i)=1$<br>得到式子<br>$S(n)=1-\sum_{i=2}^nS(\frac{n}{i})$</p>
-<h2 id="通常处理这个问题都是先用线性筛处理出-1-10-7-的莫比乌斯函数-大于这个范围的再用上式计算"><a href="#通常处理这个问题都是先用线性筛处理出-1-10-7-的莫比乌斯函数-大于这个范围的再用上式计算" class="headerlink" title="通常处理这个问题都是先用线性筛处理出$1-10^7$的莫比乌斯函数, 大于这个范围的再用上式计算."></a>通常处理这个问题都是先用线性筛处理出$1-10^7$的莫比乌斯函数, 大于这个范围的再用上式计算.</h2><h3 id="欧拉函数前缀和"><a href="#欧拉函数前缀和" class="headerlink" title="欧拉函数前缀和"></a>欧拉函数前缀和</h3><p>求<br>$$<br>\sum_{i=1}^n\varphi(i)<br>$$<br>其中$n\le 10^9$</p>
-<p>依然是将$\varphi,1$进行狄利克雷卷积.<br>因为$(\varphi <em>1)(i)=i$<br>得到$$<br>\begin{align}<br>\S(n)g(1)=&amp;\sum_{i=1}^n(\varphi</em>1)(i)-\sum_{i=2}^n<br>=&amp;\sum_{i=1}^n+\sum_{i=2}^nS(\frac{n}{i})<br>\end{align}<br>$$</p>
+<p>让$g(i)=1$<br>那么$(f\times g)(i)=\sum_{d|i}\mu(i)=[i=1]$<br>那么$\sum_{i=1}^n(f\times g)(i)=1$<br>得到式子<br>$S(n)=1-\sum_{i=2}^nS(\frac{n}{i})$</p>
+<p>通常处理这个问题都是先用线性筛处理出$1-10^7$的莫比乌斯函数, 大于这个范围的再用上式计算.</p>
+<h3 id="欧拉函数前缀和"><a href="#欧拉函数前缀和" class="headerlink" title="欧拉函数前缀和"></a>欧拉函数前缀和</h3><p>求<br>$$<br>\sum_{i=1}^n\varphi(i)<br>$$<br>其中$n\le 10^9$</p>
+<p>依然是将$\varphi,1$进行狄利克雷卷积.<br>因为$(\varphi \times 1)(i)=i$<br>得到$$<br>\begin{align}<br>S(n)g(1)=&amp;\sum_{i=1}^n(\varphi\times 1)(i)-\sum_{i=2}^n\\<br>=&amp;\sum_{i=1}^n+\sum_{i=2}^nS(\frac{n}{i})<br>\end{align}<br>$$</p>
 <p>同样是利用数论分块以及提前预处理进行求解.</p>
 <h3 id="例题1-欧拉函数求和"><a href="#例题1-欧拉函数求和" class="headerlink" title="例题1: 欧拉函数求和"></a>例题1: <a href="https://www.lydsy.com/JudgeOnline/problem.php?id=4805" target="_blank" rel="external">欧拉函数求和</a></h3><h3 id="例题2-简单的数学题"><a href="#例题2-简单的数学题" class="headerlink" title="例题2: 简单的数学题"></a>例题2: <a href="https://www.luogu.org/problemnew/show/P3768" target="_blank" rel="external">简单的数学题</a></h3>
       
@@ -508,10 +504,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/cf498/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -606,7 +598,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -700,7 +692,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#于是我大开脑洞-Dr-Du’s-sieve"><span class="nav-number">1.</span> <span class="nav-text">于是我大开脑洞: Dr. Du’s sieve.</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#应用情景"><span class="nav-number">1.1.</span> <span class="nav-text">应用情景</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不同的是-数据规模是-10-9-级别的"><span class="nav-number">2.</span> <span class="nav-text">不同的是, 数据规模是$10^9$级别的.</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#利用狄利克雷卷积"><span class="nav-number">2.1.</span> <span class="nav-text">利用狄利克雷卷积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#莫比乌斯函数前缀和"><span class="nav-number">2.2.</span> <span class="nav-text">莫比乌斯函数前缀和</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通常处理这个问题都是先用线性筛处理出-1-10-7-的莫比乌斯函数-大于这个范围的再用上式计算"><span class="nav-number">3.</span> <span class="nav-text">通常处理这个问题都是先用线性筛处理出$1-10^7$的莫比乌斯函数, 大于这个范围的再用上式计算.</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#欧拉函数前缀和"><span class="nav-number">3.1.</span> <span class="nav-text">欧拉函数前缀和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题1-欧拉函数求和"><span class="nav-number">3.2.</span> <span class="nav-text">例题1: 欧拉函数求和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题2-简单的数学题"><span class="nav-number">3.3.</span> <span class="nav-text">例题2: 简单的数学题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#应用情景"><span class="nav-number">1.</span> <span class="nav-text">应用情景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#利用狄利克雷卷积"><span class="nav-number">2.</span> <span class="nav-text">利用狄利克雷卷积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#莫比乌斯函数前缀和"><span class="nav-number">3.</span> <span class="nav-text">莫比乌斯函数前缀和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#欧拉函数前缀和"><span class="nav-number">4.</span> <span class="nav-text">欧拉函数前缀和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题1-欧拉函数求和"><span class="nav-number">5.</span> <span class="nav-text">例题1: 欧拉函数求和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题2-简单的数学题"><span class="nav-number">6.</span> <span class="nav-text">例题2: 简单的数学题</span></a></li></ol></div>
             
 
           </div>

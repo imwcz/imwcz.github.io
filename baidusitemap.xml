@@ -4,22 +4,17 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/DrDuSieve/</loc>
-    <lastmod>2018-07-19T13:32:34.000Z</lastmod>
+    <loc>http://aiyoupass.com/2018/cf498/</loc>
+    <lastmod>2018-07-19T13:58:42.000Z</lastmod>
     <data>
         <display>
-        <title>杜教筛初体验</title>
-        <pubTime>2018-07-19T09:30:33.000Z</pubTime>
+        <title>Codeforces Round 498 Div.3</title>
+        <pubTime>2018-07-17T07:30:30.000Z</pubTime>
         
-        <tag>杜教筛</tag>
-         
          
            
              
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
+              <breadCrumb title="测试" url="http://aiyoupass.com/categories/%E6%B5%8B%E8%AF%95/"/>
           
         </display>
     </data>
@@ -28,7 +23,7 @@
     
   <url>
     <loc>http://aiyoupass.com/2018/SomeEditor/</loc>
-    <lastmod>2018-07-18T13:57:14.000Z</lastmod>
+    <lastmod>2018-07-19T13:57:54.000Z</lastmod>
     <data>
         <display>
         <title>常见编辑器使用体验</title>
@@ -48,15 +43,23 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/cf498/</loc>
-    <lastmod>2018-07-17T08:37:54.000Z</lastmod>
+    <loc>http://aiyoupass.com/2018/DrDuSieve/</loc>
+    <lastmod>2018-07-19T13:54:44.000Z</lastmod>
     <data>
         <display>
-        <title></title>
-        <pubTime>2018-07-19T13:34:38.514Z</pubTime>
+        <title>杜教筛初体验</title>
+        <pubTime>2018-07-19T09:30:33.000Z</pubTime>
         
+        <tag>杜教筛</tag>
+         
          
            
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
+          
         </display>
     </data>
     </url>
