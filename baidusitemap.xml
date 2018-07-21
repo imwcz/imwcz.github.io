@@ -4,6 +4,27 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/exam7-21/</loc>
+    <lastmod>2018-07-21T11:55:30.000Z</lastmod>
+    <data>
+        <display>
+        <title>7月21日考试</title>
+        <pubTime>2018-07-21T11:30:02.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>倍增</tag>
+         
+        <tag>前缀和</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/cf498/</loc>
     <lastmod>2018-07-21T11:17:18.000Z</lastmod>
     <data>
@@ -19,27 +40,6 @@
              
               <breadCrumb title="测试" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%B5%8B%E8%AF%95/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/exam7-21/</loc>
-    <lastmod>2018-07-21T11:16:32.000Z</lastmod>
-    <data>
-        <display>
-        <title>7月21日考试</title>
-        <pubTime>2018-07-21T11:30:02.000Z</pubTime>
-        
-        <tag>动态规划</tag>
-         
-        <tag>倍增</tag>
-         
-        <tag>前缀和</tag>
-         
-         
-           
         </display>
     </data>
     </url>

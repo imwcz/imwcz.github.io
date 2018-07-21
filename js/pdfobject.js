@@ -154,7 +154,7 @@
 
         var fullURL = PDFJS_URL + "?file=" + encodeURIComponent(url) + pdfOpenFragment;
         var scrollfix = (isIOS) ? "-webkit-overflow-scrolling: touch; overflow-y: scroll; " : "overflow: hidden; ";
-        var iframe = "<div style="" + scrollfix + "position: absolute; top: 0; right: 0; bottom: 0; left: 0;"><iframe "="" +="" id="" src="" + fullURL + "" style="border: none; width: 100%; height: 100%;" frameborder="0"></iframe></div>";
+        var iframe = "<div style='" + scrollfix + "position: absolute; top: 0; right: 0; bottom: 0; left: 0;'><iframe  " + id + " src='" + fullURL + "' style='border: none; width: 100%; height: 100%;' frameborder='0'></iframe></div>";
         targetNode.className += " pdfobject-container";
         targetNode.style.position = "relative";
         targetNode.style.overflow = "auto";
@@ -174,7 +174,7 @@
         }
 
         targetNode.className += " pdfobject-container";
-        targetNode.innerHTML = "<embed "="" +="" id="" class="pdfobject" src="" + url + pdfOpenFragment + "" type="application/pdf" style="overflow: auto; " + style + "">";
+        targetNode.innerHTML = "<embed " + id + " class='pdfobject' src='" + url + pdfOpenFragment + "' type='application/pdf' style='overflow: auto; " + style + "'/>";
 
         return targetNode.getElementsByTagName("embed")[0];
 
@@ -203,7 +203,7 @@
             targetNode = getTargetElement(targetSelector),
             fallbackHTML = "",
             pdfOpenFragment = "",
-            fallbackHTML_default = "<p>This browser does not support inline PDFs. Please download the PDF to view it: <a href="[url]">Download PDF</a></p>";
+            fallbackHTML_default = "<p>This browser does not support inline PDFs. Please download the PDF to view it: <a href='[url]'>Download PDF</a></p>";
 
         //If target element is specified but is not valid, exit without doing anything
         if(!targetNode){ return embedError("Target element cannot be determined"); }
