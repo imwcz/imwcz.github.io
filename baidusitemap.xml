@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://aiyoupass.com/2018/cf498/</loc>
-    <lastmod>2018-07-19T13:58:42.000Z</lastmod>
+    <lastmod>2018-07-21T11:17:18.000Z</lastmod>
     <data>
         <display>
         <title>Codeforces Round 498 Div.3</title>
@@ -14,7 +14,54 @@
          
            
              
-              <breadCrumb title="测试" url="http://aiyoupass.com/categories/%E6%B5%8B%E8%AF%95/"/>
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="测试" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%B5%8B%E8%AF%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/exam7-21/</loc>
+    <lastmod>2018-07-21T11:16:32.000Z</lastmod>
+    <data>
+        <display>
+        <title>7月21日考试</title>
+        <pubTime>2018-07-21T11:30:02.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>倍增</tag>
+         
+        <tag>前缀和</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/DrDuSieve/</loc>
+    <lastmod>2018-07-20T10:02:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>杜教筛初体验</title>
+        <pubTime>2018-07-19T09:30:33.000Z</pubTime>
+        
+        <tag>杜教筛</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
           
         </display>
     </data>
@@ -36,29 +83,6 @@
           
              
               <breadCrumb title="Editors" url="http://aiyoupass.com/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/Editors/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/DrDuSieve/</loc>
-    <lastmod>2018-07-19T13:54:44.000Z</lastmod>
-    <data>
-        <display>
-        <title>杜教筛初体验</title>
-        <pubTime>2018-07-19T09:30:33.000Z</pubTime>
-        
-        <tag>杜教筛</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
           
         </display>
     </data>

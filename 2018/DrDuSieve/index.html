@@ -89,16 +89,19 @@
     })();
 </script>
 
-<meta name="description" content="这篇文章的主题是杜教筛 , 但是我总得给这个.md文件一个合适的英文名字.于是我大开脑洞: Dr. Du’s sieve.">
+<meta name="description" content="这篇文章的主题是杜教筛 , 但是我总得给这个.md文件一个合适的英文名字.于是我大开脑洞: Dr. Du’s sieve.
+推荐阅读">
 <meta property="og:type" content="article">
 <meta property="og:title" content="杜教筛初体验">
 <meta property="og:url" content="http://aiyoupass.com/2018/DrDuSieve/index.html">
 <meta property="og:site_name" content="落花微雨">
-<meta property="og:description" content="这篇文章的主题是杜教筛 , 但是我总得给这个.md文件一个合适的英文名字.于是我大开脑洞: Dr. Du’s sieve.">
-<meta property="og:updated_time" content="2018-07-19T13:54:44.000Z">
+<meta property="og:description" content="这篇文章的主题是杜教筛 , 但是我总得给这个.md文件一个合适的英文名字.于是我大开脑洞: Dr. Du’s sieve.
+推荐阅读">
+<meta property="og:updated_time" content="2018-07-20T10:02:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杜教筛初体验">
-<meta name="twitter:description" content="这篇文章的主题是杜教筛 , 但是我总得给这个.md文件一个合适的英文名字.于是我大开脑洞: Dr. Du’s sieve.">
+<meta name="twitter:description" content="这篇文章的主题是杜教筛 , 但是我总得给这个.md文件一个合适的英文名字.于是我大开脑洞: Dr. Du’s sieve.
+推荐阅读">
 
 
 
@@ -440,7 +443,7 @@
 
       
         <p>这篇文章的主题是<strong>杜教筛</strong> , 但是我总得给这个<code>.md</code>文件一个合适的英文名字.<br>于是我大开脑洞: Dr. Du’s sieve.</p>
-<a id="more"></a>
+<p><a href="https://blog.csdn.net/skywalkert/article/details/50500009" target="_blank" rel="external">推荐阅读</a><br><a id="more"></a></p>
 <h3 id="应用情景"><a href="#应用情景" class="headerlink" title="应用情景"></a>应用情景</h3><p>例如一个能用杜教筛解决的经典问题: <strong>莫比乌斯函数前缀和.</strong> 即$$\sum_{i=1}^n\mu(i)$$<br>不同的是, 数据规模是$10^9$级别的.</p>
 <h3 id="利用狄利克雷卷积"><a href="#利用狄利克雷卷积" class="headerlink" title="利用狄利克雷卷积"></a>利用狄利克雷卷积</h3><p>两个数论函数$f,g$的狄利克雷卷积定义为<br>$$<br>(f\times g)(n)=\sum_{d|n}g(d)f(\frac{n}{d})<br>$$<br>求卷积前缀和<br>$$<br>\sum_{i=1}^n(f\times g)(i)=\sum_{i=1}^n\sum_{d|i}g(d)f(\frac{i}{d})<br>$$</p>
 <p>式子能变形为<br>$$<br>\begin{align}<br>\sum_{d=1}^ng(d)\sum_{d|i}f(\frac{i}{d})<br>=\sum_{d=1}^ng(d)\sum_{j=1}^{n/d}f(j)<br>=\sum_{d=1}g(d)S(\frac{n}{d})<br>\end{align}<br>$$</p>
@@ -451,7 +454,13 @@
 <h3 id="欧拉函数前缀和"><a href="#欧拉函数前缀和" class="headerlink" title="欧拉函数前缀和"></a>欧拉函数前缀和</h3><p>求<br>$$<br>\sum_{i=1}^n\varphi(i)<br>$$<br>其中$n\le 10^9$</p>
 <p>依然是将$\varphi,1$进行狄利克雷卷积.<br>因为$(\varphi \times 1)(i)=i$<br>得到$$<br>\begin{align}<br>S(n)g(1)=&amp;\sum_{i=1}^n(\varphi\times 1)(i)-\sum_{i=2}^n\\<br>=&amp;\sum_{i=1}^n+\sum_{i=2}^nS(\frac{n}{i})<br>\end{align}<br>$$</p>
 <p>同样是利用数论分块以及提前预处理进行求解.</p>
-<h3 id="例题1-欧拉函数求和"><a href="#例题1-欧拉函数求和" class="headerlink" title="例题1: 欧拉函数求和"></a>例题1: <a href="https://www.lydsy.com/JudgeOnline/problem.php?id=4805" target="_blank" rel="external">欧拉函数求和</a></h3><h3 id="例题2-简单的数学题"><a href="#例题2-简单的数学题" class="headerlink" title="例题2: 简单的数学题"></a>例题2: <a href="https://www.luogu.org/problemnew/show/P3768" target="_blank" rel="external">简单的数学题</a></h3>
+<h3 id="例题1-欧拉函数求和"><a href="#例题1-欧拉函数求和" class="headerlink" title="例题1: 欧拉函数求和"></a>例题1: <a href="https://www.lydsy.com/JudgeOnline/problem.php?id=4805" target="_blank" rel="external">欧拉函数求和</a></h3><p>核心部分代码</p>
+<ul>
+<li>预处理出1e7的欧拉函数前缀和;</li>
+<li>大于1e7的数论分块递归求解.</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">S</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> x)</span></span>&#123;</div><div class="line">	<span class="keyword">if</span>(x&lt;=N)</div><div class="line">		<span class="keyword">return</span> phi[x];</div><div class="line">	<span class="keyword">if</span>(M[x])<span class="keyword">return</span> M[x];</div><div class="line">	<span class="keyword">long</span> <span class="keyword">long</span> ans=<span class="number">0</span>;<span class="keyword">int</span> l;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=x;i=l+<span class="number">1</span>)&#123;</div><div class="line">		l=x/(x/i);</div><div class="line">		ans+=S(x/i)*(l-i+<span class="number">1</span>);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> M[x]=x*(x+<span class="number">1</span>)/<span class="number">2</span>-ans;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="例题2-莫比乌斯函数之和"><a href="#例题2-莫比乌斯函数之和" class="headerlink" title="例题2: 莫比乌斯函数之和"></a>例题2: <a href="http://www.51nod.com/onlineJudge/questionCode.html#!problemId=1244" target="_blank" rel="external">莫比乌斯函数之和</a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">long long S(long long x)&#123;</div><div class="line">	if(x&lt;=N)return mu[x];</div><div class="line">	if(M[x])return M[x];</div><div class="line">	long long ans=0ll,l;</div><div class="line">	for(long long i=2ll;i&lt;=x;i=l+1)&#123;</div><div class="line">		l=x/(x/i);</div><div class="line">		ans+=S(x/i)*(l-i+1);</div><div class="line">	&#125;</div><div class="line">	return M[x]=1-ans;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
     
@@ -504,6 +513,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/exam7-21/" rel="prev" title="7月21日考试">
+                7月21日考试 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -587,7 +600,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -609,7 +622,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-count">53</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -692,7 +705,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#应用情景"><span class="nav-number">1.</span> <span class="nav-text">应用情景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#利用狄利克雷卷积"><span class="nav-number">2.</span> <span class="nav-text">利用狄利克雷卷积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#莫比乌斯函数前缀和"><span class="nav-number">3.</span> <span class="nav-text">莫比乌斯函数前缀和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#欧拉函数前缀和"><span class="nav-number">4.</span> <span class="nav-text">欧拉函数前缀和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题1-欧拉函数求和"><span class="nav-number">5.</span> <span class="nav-text">例题1: 欧拉函数求和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题2-简单的数学题"><span class="nav-number">6.</span> <span class="nav-text">例题2: 简单的数学题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#应用情景"><span class="nav-number">1.</span> <span class="nav-text">应用情景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#利用狄利克雷卷积"><span class="nav-number">2.</span> <span class="nav-text">利用狄利克雷卷积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#莫比乌斯函数前缀和"><span class="nav-number">3.</span> <span class="nav-text">莫比乌斯函数前缀和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#欧拉函数前缀和"><span class="nav-number">4.</span> <span class="nav-text">欧拉函数前缀和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题1-欧拉函数求和"><span class="nav-number">5.</span> <span class="nav-text">例题1: 欧拉函数求和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题2-莫比乌斯函数之和"><span class="nav-number">6.</span> <span class="nav-text">例题2: 莫比乌斯函数之和</span></a></li></ol></div>
             
 
           </div>
