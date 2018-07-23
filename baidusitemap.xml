@@ -4,14 +4,31 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/cf757E/</loc>
-    <lastmod>2018-07-23T08:25:06.000Z</lastmod>
+    <loc>http://aiyoupass.com/2018/p4318/</loc>
+    <lastmod>2018-07-23T11:56:42.000Z</lastmod>
     <data>
         <display>
-        <title>E. Bash Plays with Functions</title>
-        <pubTime>2018-07-23T04:00:00.000Z</pubTime>
+        <title></title>
+        <pubTime>2018-07-23T11:55:56.600Z</pubTime>
         
-        <tag>狄利克雷卷积</tag>
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/bzoj3994/</loc>
+    <lastmod>2018-07-23T11:51:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>BZOJ3994  SDOI2015约数个数和</title>
+        <pubTime>2018-07-23T08:40:30.000Z</pubTime>
+        
+        <tag>莫比乌斯反演</tag>
+         
+        <tag>线性筛</tag>
          
          
            
@@ -28,7 +45,7 @@
     
   <url>
     <loc>http://aiyoupass.com/2018/p4449/</loc>
-    <lastmod>2018-07-23T08:24:10.000Z</lastmod>
+    <lastmod>2018-07-23T09:40:40.000Z</lastmod>
     <data>
         <display>
         <title>P4449 于神之怒加强版</title>
@@ -37,6 +54,29 @@
         <tag>莫比乌斯反演</tag>
          
         <tag>线性筛</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/cf757E/</loc>
+    <lastmod>2018-07-23T08:25:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>E. Bash Plays with Functions</title>
+        <pubTime>2018-07-23T04:00:00.000Z</pubTime>
+        
+        <tag>狄利克雷卷积</tag>
          
          
            
