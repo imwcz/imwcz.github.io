@@ -348,7 +348,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/p4318/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2018/p4318/" itemprop="url">P4318 完全平方数</a></h1>
         
 
         <div class="post-meta">
@@ -360,7 +360,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-23T19:55:56+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-23T19:50:30+08:00">
                 2018-07-23
               </time>
             
@@ -370,6 +370,39 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
+                    <span itemprop="name">题目</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -410,7 +443,13 @@
       
         
           
-            <h2 id="—"><a href="#—" class="headerlink" title="—"></a>—</h2>
+            <h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>小 X 自幼就很喜欢数。但奇怪的是，他十分讨厌完全平方数。他觉得这些数看起来很令人难受。由此，他也讨厌所有是完全平方数的正整数倍的数。然而这丝毫不影响他对其他数的热爱。</p>
+<p>这天是小X的生日，小 W 想送一个数给他作为生日礼物。当然他不能送一个小X讨厌的数。他列出了所有小X不讨厌的数，然后选取了第 K个数送给了小X。小X很开心地收下了。</p>
+<p>然而现在小 W 却记不起送给小X的是哪个数了。你能帮他一下吗？</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><h4 id="二分答案"><a href="#二分答案" class="headerlink" title="二分答案"></a>二分答案</h4><p>二分第$k$个非完全平方数出现在$n$位置, 然后检验一下$[1,n]$中是否存在$n-k$个完全平方数的倍数即可.</p>
+<h4 id="暴力"><a href="#暴力" class="headerlink" title="暴力"></a>暴力</h4><p>$\sum_{i=1}^n[\mu(i)=0]$</p>
+<h4 id="反演"><a href="#反演" class="headerlink" title="反演"></a>反演</h4><p>$\sum_{i=1}^\sqrt n\lfloor\mu(i)\frac{n}{i^2}\rfloor$</p>
+
           
         
       
