@@ -4,24 +4,25 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/p4318/</loc>
-    <lastmod>2018-07-23T13:30:46.000Z</lastmod>
+    <loc>http://aiyoupass.com/2018/bzoj4916/</loc>
+    <lastmod>2018-07-24T08:27:18.000Z</lastmod>
     <data>
         <display>
-        <title>P4318 完全平方数</title>
-        <pubTime>2018-07-23T11:50:30.000Z</pubTime>
+        <title>BZOJ 4916  ���ĺ��X�m</title>
+        <pubTime>2018-07-24T07:30:30.000Z</pubTime>
         
-        <tag>二分答案</tag>
-         
-        <tag>莫比乌斯反演</tag>
+        <tag>�Ž�ɸ</tag>
          
          
            
              
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+              <breadCrumb title="��Ϣѧ����" url="http://aiyoupass.com/categories/%EF%BF%BD%EF%BF%BD%CF%A2%D1%A7%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD/"/>
           
              
-              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+              <breadCrumb title="��Ŀ" url="http://aiyoupass.com/categories/%EF%BF%BD%EF%BF%BD%CF%A2%D1%A7%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD/%EF%BF%BD%EF%BF%BDL/"/>
+          
+             
+              <breadCrumb title="[object Object]" url="http://aiyoupass.com/categories/%EF%BF%BD%EF%BF%BD%CF%A2%D1%A7%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD/%EF%BF%BD%EF%BF%BDL/object-Object/"/>
           
         </display>
     </data>
@@ -30,7 +31,7 @@
     
   <url>
     <loc>http://aiyoupass.com/2018/bzoj3994/</loc>
-    <lastmod>2018-07-23T11:51:28.000Z</lastmod>
+    <lastmod>2018-07-23T13:05:14.000Z</lastmod>
     <data>
         <display>
         <title>BZOJ3994  SDOI2015约数个数和</title>
@@ -217,6 +218,8 @@
     </data>
     </url>
 
+    
+    
     
   <url>
     <loc>http://aiyoupass.com/2018/cf498/</loc>
@@ -410,11 +413,11 @@
          
         <tag>最短路</tag>
          
+        <tag>拓扑排序</tag>
+         
         <tag>分层图</tag>
          
         <tag>Tarjan</tag>
-         
-        <tag>拓扑排序</tag>
          
          
            
@@ -712,11 +715,11 @@
         <title>NOIP 2012 Day1</title>
         <pubTime>2018-03-27T07:10:05.000Z</pubTime>
         
+        <tag>倍增</tag>
+         
         <tag>NOIP</tag>
          
         <tag>模拟</tag>
-         
-        <tag>倍增</tag>
          
         <tag>高精</tag>
          
@@ -745,9 +748,9 @@
         
         <tag>NOIP</tag>
          
-        <tag>模拟</tag>
-         
         <tag>贪心</tag>
+         
+        <tag>模拟</tag>
          
          
            
@@ -816,11 +819,11 @@
         <title>NOIP 2013 Day1</title>
         <pubTime>2018-04-01T09:59:40.000Z</pubTime>
         
+        <tag>倍增</tag>
+         
         <tag>NOIP</tag>
          
         <tag>模拟</tag>
-         
-        <tag>倍增</tag>
          
         <tag>快速幂</tag>
          
@@ -855,17 +858,17 @@
         <title>NOIP 2012 Day2</title>
         <pubTime>2018-03-31T08:29:51.000Z</pubTime>
         
+        <tag>倍增</tag>
+         
         <tag>NOIP</tag>
          
-        <tag>倍增</tag>
+        <tag>贪心</tag>
          
         <tag>扩展欧几里得</tag>
          
         <tag>二分答案</tag>
          
         <tag>查分</tag>
-         
-        <tag>贪心</tag>
          
          
            
@@ -888,13 +891,13 @@
         <title>NOIP 2010</title>
         <pubTime>2018-03-23T23:24:30.000Z</pubTime>
         
-        <tag>NOIP</tag>
-         
-        <tag>并查集</tag>
-         
         <tag>动态规划</tag>
          
+        <tag>NOIP</tag>
+         
         <tag>搜索</tag>
+         
+        <tag>并查集</tag>
          
          
            
@@ -998,15 +1001,15 @@
         <title>NOIP 2013 Day2</title>
         <pubTime>2018-04-06T02:59:39.000Z</pubTime>
         
-        <tag>NOIP</tag>
-         
         <tag>动态规划</tag>
+         
+        <tag>NOIP</tag>
          
         <tag>搜索</tag>
          
-        <tag>模拟</tag>
-         
         <tag>贪心</tag>
+         
+        <tag>模拟</tag>
          
          
            
@@ -1029,9 +1032,9 @@
         <title>NOIP 2014 Day1</title>
         <pubTime>2018-04-07T07:05:44.000Z</pubTime>
         
-        <tag>NOIP</tag>
-         
         <tag>动态规划</tag>
+         
+        <tag>NOIP</tag>
          
         <tag>模拟</tag>
          
@@ -1068,9 +1071,9 @@
          
         <tag>Python</tag>
          
-        <tag>最短路</tag>
-         
         <tag>二维前缀和</tag>
+         
+        <tag>最短路</tag>
          
         <tag>秦九韶算法</tag>
          
@@ -1095,13 +1098,13 @@
         <title>NOIP 2015 Day2</title>
         <pubTime>2018-04-29T03:22:13.000Z</pubTime>
         
-        <tag>NOIP</tag>
-         
         <tag>动态规划</tag>
          
-        <tag>二分答案</tag>
+        <tag>NOIP</tag>
          
         <tag>贪心</tag>
+         
+        <tag>二分答案</tag>
          
         <tag>最近公共祖先</tag>
          
@@ -1128,9 +1131,9 @@
         <title>NOIP 2016 Day1</title>
         <pubTime>2018-04-29T07:22:13.000Z</pubTime>
         
-        <tag>NOIP</tag>
-         
         <tag>动态规划</tag>
+         
+        <tag>NOIP</tag>
          
         <tag>模拟</tag>
          
@@ -1159,11 +1162,11 @@
         
         <tag>NOIP</tag>
          
-        <tag>并查集</tag>
-         
         <tag>搜索</tag>
          
         <tag>模拟</tag>
+         
+        <tag>并查集</tag>
          
          
            
@@ -1219,19 +1222,19 @@
         <title>NOIP 2017 Day1</title>
         <pubTime>2018-05-02T13:39:41.000Z</pubTime>
         
-        <tag>NOIP</tag>
-         
         <tag>动态规划</tag>
+         
+        <tag>NOIP</tag>
          
         <tag>模拟</tag>
          
         <tag>最短路</tag>
          
-        <tag>拓扑排序</tag>
-         
         <tag>记忆化搜索</tag>
          
         <tag>数论</tag>
+         
+        <tag>拓扑排序</tag>
          
          
            
@@ -1256,11 +1259,11 @@
         
         <tag>NOIP</tag>
          
-        <tag>并查集</tag>
-         
         <tag>搜索</tag>
          
         <tag>树状数组</tag>
+         
+        <tag>并查集</tag>
          
         <tag>状压dp</tag>
          
@@ -1295,8 +1298,6 @@
     </data>
     </url>
 
-    
-    
     
     
     
