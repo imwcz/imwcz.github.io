@@ -4,7 +4,76 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/nabla/</loc>
+    <loc>http://aiyoupass.com/2018/FirstDrDuSieve/</loc>
+    <lastmod>2018-07-25T08:39:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>杜教筛初体验</title>
+        <pubTime>2018-07-19T09:30:33.000Z</pubTime>
+        
+        <tag>杜教筛</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="初体验" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E5%88%9D%E4%BD%93%E9%AA%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/noi20181/</loc>
+    <lastmod>2018-07-25T08:34:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>NOI2018 屠龙勇士</title>
+        <pubTime>2018-07-25T06:30:30.000Z</pubTime>
+        
+        <tag>同余方程组</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/FirstConGruenceEquations/</loc>
+    <lastmod>2018-07-25T08:27:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>解同余方程组</title>
+        <pubTime>2018-07-25T07:05:30.000Z</pubTime>
+        
+        <tag>同余方程组</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="初体验" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E5%88%9D%E4%BD%93%E9%AA%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/MathNabla/</loc>
     <lastmod>2018-07-24T13:20:20.000Z</lastmod>
     <data>
         <display>
@@ -50,7 +119,7 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/mobuis/</loc>
+    <loc>http://aiyoupass.com/2018/Allmobuis/</loc>
     <lastmod>2018-07-24T09:45:04.000Z</lastmod>
     <data>
         <display>
@@ -270,29 +339,6 @@
     </url>
 
     
-  <url>
-    <loc>http://aiyoupass.com/2018/DrDuSieve/</loc>
-    <lastmod>2018-07-22T00:28:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>杜教筛初体验</title>
-        <pubTime>2018-07-19T09:30:33.000Z</pubTime>
-        
-        <tag>杜教筛</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
     
     
   <url>
@@ -317,7 +363,7 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/SomeEditor/</loc>
+    <loc>http://aiyoupass.com/2018/SolveSomeEditor/</loc>
     <lastmod>2018-07-19T13:57:54.000Z</lastmod>
     <data>
         <display>
@@ -359,7 +405,7 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/TreeChainSplit/</loc>
+    <loc>http://aiyoupass.com/2018/FirstTreeChainSplit/</loc>
     <lastmod>2018-07-12T09:56:28.000Z</lastmod>
     <data>
         <display>
@@ -384,7 +430,7 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/hjt/</loc>
+    <loc>http://aiyoupass.com/2018/Firsthjt/</loc>
     <lastmod>2018-07-12T09:54:52.000Z</lastmod>
     <data>
         <display>
@@ -407,7 +453,7 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/LinuxInWin10/</loc>
+    <loc>http://aiyoupass.com/2018/SolveLinuxInWin10/</loc>
     <lastmod>2018-07-11T11:44:56.000Z</lastmod>
     <data>
         <display>
@@ -665,7 +711,7 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/7-4easy/</loc>
+    <loc>http://aiyoupass.com/2018/Easy7-4/</loc>
     <lastmod>2018-07-05T00:42:24.000Z</lastmod>
     <data>
         <display>
@@ -757,7 +803,7 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/Matrix/</loc>
+    <loc>http://aiyoupass.com/2018/P1088/</loc>
     <lastmod>2018-07-04T03:31:36.000Z</lastmod>
     <data>
         <display>
@@ -865,7 +911,7 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/TexLive2018/</loc>
+    <loc>http://aiyoupass.com/2018/SolveTexLive2018/</loc>
     <lastmod>2018-07-03T12:57:10.000Z</lastmod>
     <data>
         <display>
@@ -969,9 +1015,9 @@
          
         <tag>NOIP</tag>
          
-        <tag>搜索</tag>
-         
         <tag>并查集</tag>
+         
+        <tag>搜索</tag>
          
          
            
@@ -987,7 +1033,7 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/mathjax/</loc>
+    <loc>http://aiyoupass.com/2018/Solvemathjax/</loc>
     <lastmod>2018-07-03T01:13:22.000Z</lastmod>
     <data>
         <display>
@@ -1002,7 +1048,7 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/TheNewBeginning/</loc>
+    <loc>http://aiyoupass.com/2018/AboutTheNewBeginning/</loc>
     <lastmod>2018-07-02T07:10:34.000Z</lastmod>
     <data>
         <display>
@@ -1236,11 +1282,11 @@
         
         <tag>NOIP</tag>
          
+        <tag>并查集</tag>
+         
         <tag>搜索</tag>
          
         <tag>模拟</tag>
-         
-        <tag>并查集</tag>
          
          
            
@@ -1267,13 +1313,13 @@
          
         <tag>搜索</tag>
          
+        <tag>记忆化搜索</tag>
+         
         <tag>组合数</tag>
          
         <tag>堆</tag>
          
         <tag>状压dp</tag>
-         
-        <tag>记忆化搜索</tag>
          
          
            
@@ -1304,9 +1350,9 @@
          
         <tag>最短路</tag>
          
-        <tag>记忆化搜索</tag>
-         
         <tag>数论</tag>
+         
+        <tag>记忆化搜索</tag>
          
         <tag>拓扑排序</tag>
          
@@ -1333,15 +1379,15 @@
         
         <tag>NOIP</tag>
          
+        <tag>并查集</tag>
+         
         <tag>搜索</tag>
          
         <tag>树状数组</tag>
          
-        <tag>并查集</tag>
+        <tag>记忆化搜索</tag>
          
         <tag>状压dp</tag>
-         
-        <tag>记忆化搜索</tag>
          
         <tag>平衡树</tag>
          
