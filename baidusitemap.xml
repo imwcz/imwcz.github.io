@@ -4,6 +4,68 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/LearnGoogleCodeStandard/</loc>
+    <lastmod>2018-07-27T03:00:56.000Z</lastmod>
+    <data>
+        <display>
+        <title>Google C++代码规范</title>
+        <pubTime>2018-07-26T08:30:30.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="语法学习" url="http://aiyoupass.com/categories/%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/"/>
+          
+             
+              <breadCrumb title="C++" url="http://aiyoupass.com/categories/%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/AboutCodingStyle/</loc>
+    <lastmod>2018-07-27T03:00:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>我的代码风格/规范</title>
+        <pubTime>2018-07-27T02:24:30.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="其它" url="http://aiyoupass.com/categories/%E5%85%B6%E5%AE%83/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/noi20184/</loc>
+    <lastmod>2018-07-26T00:50:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>NOI2018 归程</title>
+        <pubTime>2018-07-26T00:12:30.000Z</pubTime>
+        
+        <tag>Kruskal重构树</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/Saying1/</loc>
     <lastmod>2018-07-25T09:03:28.000Z</lastmod>
     <data>
@@ -146,11 +208,11 @@
         <title>莫比乌斯反演题目概述</title>
         <pubTime>2018-07-24T09:30:30.000Z</pubTime>
         
-        <tag>杜教筛</tag>
-         
         <tag>莫比乌斯反演</tag>
          
         <tag>线性筛</tag>
+         
+        <tag>杜教筛</tag>
          
          
            
@@ -321,9 +383,9 @@
         <title>P3768 简单的数学题</title>
         <pubTime>2018-07-22T02:10:30.000Z</pubTime>
         
-        <tag>杜教筛</tag>
-         
         <tag>莫比乌斯反演</tag>
+         
+        <tag>杜教筛</tag>
          
          
            
@@ -584,9 +646,9 @@
          
         <tag>最短路</tag>
          
-        <tag>分层图</tag>
-         
         <tag>堆优化</tag>
+         
+        <tag>分层图</tag>
          
          
            
@@ -688,9 +750,9 @@
          
         <tag>树形dp</tag>
          
-        <tag>Tarjan</tag>
-         
         <tag>OOP</tag>
+         
+        <tag>Tarjan</tag>
          
         <tag>树形背包</tag>
          
@@ -888,9 +950,9 @@
         
         <tag>NOIP</tag>
          
-        <tag>贪心</tag>
-         
         <tag>模拟</tag>
+         
+        <tag>贪心</tag>
          
          
            
@@ -1035,9 +1097,9 @@
          
         <tag>NOIP</tag>
          
-        <tag>并查集</tag>
-         
         <tag>搜索</tag>
+         
+        <tag>并查集</tag>
          
          
            
@@ -1145,11 +1207,11 @@
          
         <tag>NOIP</tag>
          
-        <tag>搜索</tag>
+        <tag>模拟</tag>
          
         <tag>贪心</tag>
          
-        <tag>模拟</tag>
+        <tag>搜索</tag>
          
          
            
@@ -1211,9 +1273,9 @@
          
         <tag>Python</tag>
          
-        <tag>二维前缀和</tag>
-         
         <tag>最短路</tag>
+         
+        <tag>二维前缀和</tag>
          
         <tag>秦九韶算法</tag>
          
@@ -1302,11 +1364,11 @@
         
         <tag>NOIP</tag>
          
-        <tag>并查集</tag>
+        <tag>模拟</tag>
          
         <tag>搜索</tag>
          
-        <tag>模拟</tag>
+        <tag>并查集</tag>
          
          
            
@@ -1333,13 +1395,13 @@
          
         <tag>搜索</tag>
          
-        <tag>记忆化搜索</tag>
-         
         <tag>组合数</tag>
          
         <tag>堆</tag>
          
         <tag>状压dp</tag>
+         
+        <tag>记忆化搜索</tag>
          
          
            
@@ -1368,11 +1430,11 @@
          
         <tag>模拟</tag>
          
-        <tag>最短路</tag>
+        <tag>记忆化搜索</tag>
          
         <tag>数论</tag>
          
-        <tag>记忆化搜索</tag>
+        <tag>最短路</tag>
          
         <tag>拓扑排序</tag>
          
@@ -1399,15 +1461,15 @@
         
         <tag>NOIP</tag>
          
-        <tag>并查集</tag>
-         
         <tag>搜索</tag>
+         
+        <tag>并查集</tag>
          
         <tag>树状数组</tag>
          
-        <tag>记忆化搜索</tag>
-         
         <tag>状压dp</tag>
+         
+        <tag>记忆化搜索</tag>
          
         <tag>平衡树</tag>
          
