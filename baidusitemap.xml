@@ -4,6 +4,68 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/Easy7-28/</loc>
+    <lastmod>2018-07-28T08:12:30.000Z</lastmod>
+    <data>
+        <display>
+        <title>七月第四周简单题汇总</title>
+        <pubTime>2018-07-28T08:03:30.000Z</pubTime>
+        
+        <tag>简单题汇总</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/PracticeOnOffer/</loc>
+    <lastmod>2018-07-28T07:43:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>剑指offer 练习选做</title>
+        <pubTime>2018-07-28T03:15:30.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/AboutCodingStyle/</loc>
+    <lastmod>2018-07-27T03:15:46.000Z</lastmod>
+    <data>
+        <display>
+        <title>我的代码风格/规范</title>
+        <pubTime>2018-07-27T02:24:30.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="其它" url="http://aiyoupass.com/categories/%E5%85%B6%E5%AE%83/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/LearnGoogleCodeStandard/</loc>
     <lastmod>2018-07-27T03:00:56.000Z</lastmod>
     <data>
@@ -18,24 +80,6 @@
           
              
               <breadCrumb title="C++" url="http://aiyoupass.com/categories/%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/AboutCodingStyle/</loc>
-    <lastmod>2018-07-27T03:00:34.000Z</lastmod>
-    <data>
-        <display>
-        <title>我的代码风格/规范</title>
-        <pubTime>2018-07-27T02:24:30.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="其它" url="http://aiyoupass.com/categories/%E5%85%B6%E5%AE%83/"/>
           
         </display>
     </data>
