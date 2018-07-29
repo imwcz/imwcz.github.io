@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="指针," />
+
+
+
+
+
+
+
+
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+<meta name="description" content="虽然指针平时不少写, 平时练习的时候几乎每次都多多少少的用到, 可是还是担心用的不熟练出这样那样的问题, 所以以后要多用到指针, 少出Bug的最好方式就是多写Bug.
+另外在C#中指针已经被划入黑名单了, 原因是不安全, 这个东西最大的缺点就是不安全. 每次使用指针无论是编译还是函数和对象都需要用unsafe修饰真是不爽.
+这里以及后文提到的安全性不是说它会让电脑爆炸, 主要是内存泄露, 数据的完">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C/C++ 指针实战">
+<meta property="og:url" content="http://aiyoupass.com/2018/LearnPointerPratice/index.html">
+<meta property="og:site_name" content="落花微雨">
+<meta property="og:description" content="虽然指针平时不少写, 平时练习的时候几乎每次都多多少少的用到, 可是还是担心用的不熟练出这样那样的问题, 所以以后要多用到指针, 少出Bug的最好方式就是多写Bug.
+另外在C#中指针已经被划入黑名单了, 原因是不安全, 这个东西最大的缺点就是不安全. 每次使用指针无论是编译还是函数和对象都需要用unsafe修饰真是不爽.
+这里以及后文提到的安全性不是说它会让电脑爆炸, 主要是内存泄露, 数据的完">
+<meta property="og:updated_time" content="2018-07-29T02:16:46.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C/C++ 指针实战">
+<meta name="twitter:description" content="虽然指针平时不少写, 平时练习的时候几乎每次都多多少少的用到, 可是还是担心用的不熟练出这样那样的问题, 所以以后要多用到指针, 少出Bug的最好方式就是多写Bug.
+另外在C#中指针已经被划入黑名单了, 原因是不安全, 这个东西最大的缺点就是不安全. 每次使用指针无论是编译还是函数和对象都需要用unsafe修饰真是不爽.
+这里以及后文提到的安全性不是说它会让电脑爆炸, 主要是内存泄露, 数据的完">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '9AZWK32GMU',
+      apiKey: 'cfdae09f7596feb4221d4e18c22a727a',
+      indexName: 'blog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://aiyoupass.com/2018/LearnPointerPratice/"/>
+
+
+
+
+
+  <title>C/C++ 指针实战 | 落花微雨</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">落花微雨</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">用笑容去改变世界,别让世界改变了你的笑容.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            Schedule
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-knowledge">
+          <a href="/Knowledge/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />
+            
+            Knowledge
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/LearnPointerPratice/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">C/C++ 指针实战</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-29T08:27:30+08:00">
+                2018-07-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/语法学习/" itemprop="url" rel="index">
+                    <span itemprop="name">语法学习</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/语法学习/C-C/" itemprop="url" rel="index">
+                    <span itemprop="name">C/C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/LearnPointerPratice/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/LearnPointerPratice/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>虽然指针平时不少写, 平时练习的时候几乎每次都多多少少的用到, 可是还是担心用的不熟练出这样那样的问题, 所以以后要多用到指针, <del>少出Bug的最好方式就是多写Bug</del>.</p>
+<p>另外在<code>C#</code>中指针已经被划入黑名单了, 原因是<strong>不安全</strong>, 这个东西最大的缺点就是不安全. 每次使用指针无论是编译还是函数和对象都需要用<code>unsafe</code>修饰真是不爽.</p>
+<p>这里以及后文提到的安全性不是说它会让电脑爆炸, 主要是内存泄露, 数据的完整性, 多线程以及内存访问这类问题.</p>
+<a id="more"></a>
+<p>关于指针更多的可以看:<a href="http://www.cnblogs.com/lulipro/p/5052620.html" target="_blank" rel="external">1</a>, <a href="https://www.cnblogs.com/lulipro/p/7460206.html" target="_blank" rel="external">2</a>.</p>
+<p>下文中的<code>&lt;ObjectName&gt;</code>等用尖括号括起来的都是指的一类东西, 没有具体的指代意义.</p>
+<h3 id="指针对象"><a href="#指针对象" class="headerlink" title="指针对象"></a>指针对象</h3><p>　　实例: <a href="http://acm.hdu.edu.cn/showproblem.php?pid=1166" target="_blank" rel="external">HDU 1166: 排兵布阵</a><br>　　众所周知<code>C</code>没有较好的垃圾回收机制, <code>C++</code>倒是出现诸如智能指针之内的东西, <del>可惜我不会用</del>.</p>
+<h4 id="动态申请"><a href="#动态申请" class="headerlink" title="动态申请"></a>动态申请</h4><p>　　因为这道题目是多组数据, 每组数据都需要建一棵线段树, 所以当我一组数据处理完的时候要删掉这棵树. <del>不删掉的直接后果会导致MLE</del></p>
+<p>　　使用<code>new &lt;ObjectName&gt;(&lt;ConstructorArgument&gt;)</code>的方式新建一个<code>&lt;ObjectName&gt;</code>对象并返回它的指针, 新建一个<code>int</code>对象方式的办法是<code>new int</code>;</p>
+<p> 　　但是这样建出来的对象有一个问题: <strong>它不会自动释放内存;</strong> 如果在一个函数内声明了一个变量, 函数结束后会自动释放掉; 这就可以存在内存泄露, 也就是说程序运行时使用的内存一直被”占用”.</p>
+<p>　　但是程序结束后使用的全部内存会被释放掉, <del>因此不用担心内存泄露会吞掉你的内存霸占你的电脑</del>, 在程序中释放掉<code>new</code>方式申请的内存的方式是<code>delete</code>, 与此对应的是<code>malloc</code>和<code>free</code>;</p>
+<p>　　但是在这个实例中, <code>new</code>一个<code>SegmentTree</code>对象, 构造函数中有<code>new Node</code>, 其他函数中也有<code>new Node</code>……那么就出现了一个问题, <code>delete</code>一个<code>SegmentTree</code>对象<strong>只是删掉了它使用的空间, 也就是删掉了<code>new Node</code>返回的指针, <code>Node</code>本身没有被删除</strong>, <strong><em>仍然存在内存泄露</em></strong>, 所以这个方式存在很大的副作用.</p>
+<p>　　因此还需要手动删除掉所有申请的<code>Node</code>.也就是下面的函数:<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Delete</span> <span class="params">(Node *a, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span></span>&#123;</div><div class="line">	<span class="keyword">if</span> (l == r) <span class="keyword">return</span> <span class="keyword">delete</span> a;</div><div class="line">	<span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</div><div class="line">	Delete (a-&gt;ls, l, mid);</div><div class="line">	Delete (a-&gt;rs, mid + <span class="number">1</span>, r);</div><div class="line">	<span class="keyword">delete</span> a;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span> </span>&#123; Delete (root, <span class="number">1</span>, n); &#125;</div></pre></td></tr></table></figure></p>
+<p>　　Tips: 观察对象是否被释放的方式是<strong>析构函数</strong>, 也就是<code>~ &lt;ObjectName&gt; () {}</code>, 每次对象即将被删除时会调用这个函数.</p>
+<h4 id="内存池"><a href="#内存池" class="headerlink" title="内存池"></a>内存池</h4><p>　　不过通过<code>new/malloc</code>方式申请空间的方式虽然方便, 但是效率不高, 而且容易造成内存泄露, 不如使用另一种方式: <strong>内存池</strong>.</p>
+<p>　　这个玩意虽然看上去能实现动态申请内存, 但是本质上仍然是静态的, 它是程序运行之前提前申请了一块很大的空间, 下次需要 “动态” 获取空间时直接从里面拿就好了……</p>
+<p>　　具体方式可以是在全局开一个很大的对象数组……就像:<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;ObjectName&gt; pool[&lt;N&gt;];</div><div class="line"></div><div class="line"><span class="keyword">static</span> <span class="keyword">int</span> cnt = <span class="number">0</span>;</div><div class="line">&lt;ObjectName&gt;* new_Node()&#123;</div><div class="line">	<span class="keyword">return</span> &amp;pool[cnt++];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>　　所以我们可以看到这个方式真的非常直接……但是我一般用这个……效率高啊.</p>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1166" target="_blank" rel="external">HDU 1166: 排兵布阵</a><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">class</span> SegmentTree&#123;</div><div class="line">	<span class="keyword">private</span>:</div><div class="line">	<span class="keyword">struct</span> Node&#123;</div><div class="line">		<span class="keyword">int</span> val;</div><div class="line">		Node *ls, *rs;</div><div class="line">		Node() &#123; ls = <span class="literal">NULL</span>, rs = <span class="literal">NULL</span>; &#125;</div><div class="line">		~ Node() &#123; <span class="comment">/* printf ("Node: delete %g \n", this); */</span> &#125;</div><div class="line">		<span class="function"><span class="keyword">void</span> <span class="title">Update</span> <span class="params">()</span> </span>&#123; <span class="keyword">this</span>-&gt;val = ls-&gt;val + rs-&gt;val; &#125;</div><div class="line">	&#125;;</div><div class="line">	Node* root;</div><div class="line">	<span class="keyword">int</span> n;</div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">query</span> <span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">const</span> Node* o, <span class="keyword">const</span> <span class="keyword">int</span> &amp;L, <span class="keyword">const</span> <span class="keyword">int</span> &amp;R)</span></span>&#123;</div><div class="line">		<span class="keyword">if</span> (l &gt;= L &amp;&amp; r &lt;= R) <span class="keyword">return</span> o-&gt;val;</div><div class="line">		<span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>, ans = <span class="number">0</span>;</div><div class="line">		<span class="keyword">if</span> (L &lt;= mid) ans += query (l, mid, o-&gt;ls, L, R);</div><div class="line">		<span class="keyword">if</span> (R &gt; mid) ans += query (mid + <span class="number">1</span>, r, o-&gt;rs, L, R);</div><div class="line">		<span class="keyword">return</span> ans;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">modify</span> <span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, Node* o, <span class="keyword">const</span> <span class="keyword">int</span> &amp;p, <span class="keyword">const</span> <span class="keyword">int</span> &amp;k)</span></span>&#123;</div><div class="line">		<span class="keyword">if</span> (l == r) &#123; o-&gt;val += k; <span class="keyword">return</span> ; &#125;</div><div class="line">		<span class="keyword">int</span> mid = l + r &gt;&gt;<span class="number">1</span>;</div><div class="line">		<span class="keyword">if</span> (p &lt;= mid) modify (l, mid, o-&gt;ls, p, k);</div><div class="line">		<span class="keyword">if</span> (p &gt; mid) modify (mid + <span class="number">1</span>, r, o-&gt;rs, p, k);</div><div class="line">		o-&gt;Update();</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">build</span> <span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, Node* o, <span class="keyword">const</span> <span class="keyword">int</span> *a)</span></span>&#123;</div><div class="line">		<span class="keyword">if</span> (l == r)&#123; o-&gt;val = a[l - <span class="number">1</span>];<span class="keyword">return</span> ; &#125;</div><div class="line">		o-&gt;ls = <span class="keyword">new</span> Node();</div><div class="line">		o-&gt;rs = <span class="keyword">new</span> Node();</div><div class="line">		<span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</div><div class="line">		build (l, mid, o-&gt;ls, a);</div><div class="line">		build (mid + <span class="number">1</span>, r, o-&gt;rs, a);</div><div class="line">		o-&gt;Update();</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">public</span>: </div><div class="line">	~ SegmentTree() &#123; <span class="comment">/* printf ("Segment: delete %g \n", this); */</span> &#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">Delete</span> <span class="params">(Node *a, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span></span>&#123;</div><div class="line">		<span class="keyword">if</span> (l == r) <span class="keyword">return</span> <span class="keyword">delete</span> a;</div><div class="line">		<span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</div><div class="line">		Delete (a-&gt;ls, l, mid);</div><div class="line">		Delete (a-&gt;rs, mid + <span class="number">1</span>, r);</div><div class="line">		<span class="keyword">delete</span> a;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span> </span>&#123; Delete (root, <span class="number">1</span>, n); &#125;</div><div class="line">	SegmentTree () &#123;</div><div class="line">		root = <span class="keyword">new</span> Node();</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">Build</span> <span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> &amp;N, <span class="keyword">const</span> <span class="keyword">int</span> *a)</span></span>&#123;</div><div class="line">		<span class="keyword">return</span> n = N, build (<span class="number">1</span>, n, root, a);</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">Query</span> <span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> &amp;l, <span class="keyword">const</span> <span class="keyword">int</span> &amp;r)</span></span>&#123;</div><div class="line">		<span class="keyword">return</span> query (<span class="number">1</span>, n, root, l, r);</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">Modify</span> <span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> &amp;p, <span class="keyword">const</span> <span class="keyword">int</span> &amp;k)</span></span>&#123;</div><div class="line">		<span class="keyword">return</span> modify (<span class="number">1</span>, n, root, p, k);</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">int</span> a[<span class="number">500005</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> T, n;</div><div class="line">    <span class="built_in">scanf</span> (<span class="string">"%d"</span>, &amp;T);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> t = <span class="number">0</span>; t &lt; T; t += <span class="number">1</span>) &#123;</div><div class="line">        SegmentTree* T = <span class="keyword">new</span> SegmentTree();</div><div class="line">        <span class="built_in">scanf</span> (<span class="string">"%d"</span>, &amp;n);</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i += <span class="number">1</span>)</div><div class="line">            <span class="built_in">scanf</span> (<span class="string">"%d"</span>, &amp;a[i]);</div><div class="line"></div><div class="line">        T-&gt;Build (n, a);</div><div class="line"></div><div class="line">        <span class="keyword">int</span> i, j;</div><div class="line">        <span class="built_in">std</span>:: <span class="built_in">string</span> str;</div><div class="line"></div><div class="line">        <span class="built_in">std</span>:: <span class="built_in">cin</span> &gt;&gt; str;</div><div class="line">        <span class="built_in">scanf</span> (<span class="string">"%d %d"</span>, &amp;i, &amp;j);</div><div class="line">        </div><div class="line">        <span class="built_in">printf</span>(<span class="string">"Case %d:\n"</span>, t + <span class="number">1</span>);</div><div class="line"></div><div class="line">        <span class="keyword">while</span> (str != <span class="string">"End"</span>)&#123;</div><div class="line">            <span class="keyword">if</span> (str == <span class="string">"Add"</span>)</div><div class="line">                T-&gt;Modify (i, j);</div><div class="line">            <span class="keyword">if</span> (str == <span class="string">"Sub"</span>)</div><div class="line">                T-&gt;Modify (i, -j);</div><div class="line">            <span class="keyword">if</span> (str == <span class="string">"Query"</span>)</div><div class="line">                <span class="built_in">printf</span> (<span class="string">"%d\n"</span>, T-&gt;Query (i, j));</div><div class="line">            <span class="built_in">std</span>:: <span class="built_in">cin</span> &gt;&gt; str; </div><div class="line">            <span class="keyword">if</span> (str == <span class="string">"End"</span>)</div><div class="line">            	<span class="keyword">break</span>;</div><div class="line">            <span class="built_in">scanf</span> (<span class="string">"%d %d"</span>, &amp;i, &amp;j);</div><div class="line">        &#125;</div><div class="line">        T-&gt;clear();</div><div class="line">        <span class="keyword">delete</span> T;</div><div class="line">        T = <span class="literal">NULL</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h3><p>关于这部分可以参考我以前写的博客<a href="https://aiyoupass.com/2018/LearningThePointerOfC/">C指针学习</a>.</p>
+<h4 id="方式"><a href="#方式" class="headerlink" title="方式"></a>方式</h4><ul>
+<li><del>全局变量</del></li>
+<li>引用</li>
+<li>指针</li>
+<li>值</li>
+</ul>
+<p>一般情况下我都是使用<strong>引用</strong>和<strong>指针</strong>, 原因是他们的效率一般要比值高一些(<em>看编译器和OS</em>).</p>
+<p>虽然全局变量很方便很快, 但是少用啊……<br>这个东西的缺点在小程序中体现不大, 在大工程中就是噩梦啊!<br><del>具体例子参考丰田控制系统的1.2万个全局变量</del>.<br>还是需要养成良好的习惯.<br><del>当空间过大时不得不用全局变量</del>.</p>
+<h4 id="单个变量"><a href="#单个变量" class="headerlink" title="单个变量"></a>单个变量</h4><p>这个用引用就比较合适, 为了安全性一般要加<code>const</code>修饰.<br>指针也可以, 但是不如引用方便.<br>值参的优点是安全.</p>
+<h4 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h4><p>当然要用指针了.</p>
+<p>所谓的数组不过就是一段连续的空间……所以<code>a[i]</code>等价于<code>*(a+i)</code>.</p>
+<p>如果是一个一维数组<code>&lt;ArrayName&gt;</code>, 可以这么传参<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">void</span> &lt;Function&gt; (<span class="keyword">const</span> <span class="keyword">int</span>* &lt;ArrayName&gt;, ...)</div></pre></td></tr></table></figure></p>
+<p><code>const</code>表示这个数组不可修改.如果要要求数组可修改只需要去掉<code>const</code>即可.</p>
+<h4 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h4><p>还是只能用指针.<br>和一维数组不用的是传参时需要表明第二维的大小.</p>
+<h4 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h4><p>一维数组求和<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">Sump</span><span class="params">(<span class="keyword">int</span> *s,<span class="keyword">int</span> *e)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> ans=<span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(s&lt;e)&#123;</div><div class="line">        ans+=*s++;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> C[<span class="number">10</span>]=&#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>&#125;;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,Sump(C,C+<span class="number">10</span>));</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>或者是<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">Sum</span><span class="params">(<span class="keyword">int</span> *c,<span class="keyword">int</span> n)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> ans=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;++i)&#123;</div><div class="line">        ans+=c[i];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> C[<span class="number">10</span>]=&#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>&#125;;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,Sum(C,<span class="number">10</span>));</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>二维数组求和<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">int TwoDimSum(int (*p)[3],int n,int m)&#123;</div><div class="line">    int ans=0;</div><div class="line">    for(int i=0;i&lt;n;++i)</div><div class="line">        for(int j=0;j&lt;m;++j)</div><div class="line">            ans+=p[i][j];</div><div class="line">    return ans;</div><div class="line">&#125;</div><div class="line"></div><div class="line">int main()&#123;</div><div class="line">    int w[5][3]=&#123;&#123;0,1,2&#125;,&#123;1,2,3&#125;,&#123;3,4,5&#125;,&#123;4,5,6&#125;,&#123;5,6,7&#125;&#125;;</div><div class="line">    printf("%d\n",TwoDimSum(&amp;w[0],5,3));</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    
+    
+    <div>
+    
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+    
+    </div>
+    <div>
+    
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2018/LearnPointerPratice/">C/C++ 指针实战</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 aiyoupass 的个人博客">aiyoupass</a></p>
+  <p><span>发布时间:</span>2018年07月29日 - 08:07</p>
+  <p><span>最后更新:</span>2018年07月29日 - 10:07</p>
+  <p><span>原始链接:</span><a href="/2018/LearnPointerPratice/" title="C/C++ 指针实战">http://aiyoupass.com/2018/LearnPointerPratice/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://aiyoupass.com/2018/LearnPointerPratice/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/指针/" rel="tag"># 指针</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/Easy7-28/" rel="next" title="七月第四周简单题汇总">
+                <i class="fa fa-chevron-left"></i> 七月第四周简单题汇总
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/myjson/head.jpg"
+                alt="aiyoupass" />
+            
+              <p class="site-author-name" itemprop="name">aiyoupass</p>
+              <p class="site-description motion-element" itemprop="description"><script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&charset=utf-8"></script><div id="lwlhitokoto"><script>lwlhitokoto()</script></div></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">61</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">62</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/imwcz" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:aiyoupass@outlook.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://plus.google.com/" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://stackoverflow.com/" target="_blank" title="StackOverflow">
+                      
+                        <i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://11101001.com/" title="11101001" target="_blank" rel="external nofollow">11101001</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://attack204.com/" title="attack" target="_blank" rel="external nofollow">attack</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://menjiantong.github.io/" title="MenJianTong" target="_blank" rel="external nofollow">MenJianTong</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#指针对象"><span class="nav-number">1.</span> <span class="nav-text">指针对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#动态申请"><span class="nav-number">1.1.</span> <span class="nav-text">动态申请</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内存池"><span class="nav-number">1.2.</span> <span class="nav-text">内存池</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例"><span class="nav-number">1.3.</span> <span class="nav-text">实例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参数传递"><span class="nav-number">2.</span> <span class="nav-text">参数传递</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#方式"><span class="nav-number">2.1.</span> <span class="nav-text">方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#单个变量"><span class="nav-number">2.2.</span> <span class="nav-text">单个变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一维数组"><span class="nav-number">2.3.</span> <span class="nav-text">一维数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二维数组"><span class="nav-number">2.4.</span> <span class="nav-text">二维数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例-1"><span class="nav-number">2.5.</span> <span class="nav-text">实例</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">aiyoupass</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" href="http://hexo.io" rel="external nofollow">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'enljgi0OjJY1XU6c65Yd9nWz-gzGzoHsz',
+        appKey: 'BrxeA3UhBvNPLXWzErwFmRwd',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+	        displayMath: [ ['$$','$$'], ["\\[","\\]"] ], 
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        },
+        "HTML-CSS": {
+            scale: 90,minScaleAdjust: 85
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>
