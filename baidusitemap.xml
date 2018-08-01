@@ -4,6 +4,102 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/LearnCSharp1/</loc>
+    <lastmod>2018-08-01T02:47:04.000Z</lastmod>
+    <data>
+        <display>
+        <title>C Sharp语法学习</title>
+        <pubTime>2018-07-30T07:30:30.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="语法学习" url="http://aiyoupass.com/categories/%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/"/>
+          
+             
+              <breadCrumb title="C Sharp" url="http://aiyoupass.com/categories/%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/C-Sharp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/FirstPolya/</loc>
+    <lastmod>2018-08-01T02:46:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>置换群的简单应用</title>
+        <pubTime>2018-07-31T08:00:00.000Z</pubTime>
+        
+        <tag>群</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="初体验" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E5%88%9D%E4%BD%93%E9%AA%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/bzoj4Pratice/</loc>
+    <lastmod>2018-07-30T13:42:50.000Z</lastmod>
+    <data>
+        <display>
+        <title>BZOJ 4001,3288,3884,1762(LG)</title>
+        <pubTime>2018-07-30T00:10:10.000Z</pubTime>
+        
+        <tag>数论</tag>
+         
+        <tag>生成函数</tag>
+         
+        <tag>扩展欧拉定理</tag>
+         
+        <tag>线性代数</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/csu1216/</loc>
+    <lastmod>2018-07-29T23:48:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>CSU 1216 异或最大值</title>
+        <pubTime>2018-07-29T23:30:30.000Z</pubTime>
+        
+        <tag>字典树</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/LearnPointerPratice/</loc>
     <lastmod>2018-07-29T02:16:46.000Z</lastmod>
     <data>
