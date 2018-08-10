@@ -4,12 +4,52 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/p4159/</loc>
+    <lastmod>2018-08-10T13:54:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>P4159 [SCOI2009]迷路</title>
+        <pubTime>2018-08-10T13:45:30.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>矩阵快速幂</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/NowCoder8-10/</loc>
+    <lastmod>2018-08-10T13:54:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>牛客练习赛24 (AK 大赛)</title>
+        <pubTime>2018-08-10T13:16:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="测试" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%B5%8B%E8%AF%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/Easy8-8/</loc>
-    <lastmod>2018-08-08T13:11:32.000Z</lastmod>
+    <lastmod>2018-08-09T13:40:02.000Z</lastmod>
     <data>
         <display>
         <title>八月第一周简单题汇总</title>
-        <pubTime>2018-08-08T13:11:40.247Z</pubTime>
+        <pubTime>2018-08-10T13:55:28.146Z</pubTime>
         
         <tag>简单题汇总</tag>
          
@@ -29,6 +69,21 @@
              
               <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/Physic1/</loc>
+    <lastmod>2018-08-08T13:52:28.000Z</lastmod>
+    <data>
+        <display>
+        <title></title>
+        <pubTime>2018-08-10T13:55:27.984Z</pubTime>
+        
+         
+           
         </display>
     </data>
     </url>
