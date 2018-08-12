@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="凸包," />
+
+
+
+
+
+
+
+
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+<meta name="description" content="为什么要学凸包呢, 以我的习惯, 做题的话找个模板改改就算了, 可是在我找凸包模板的时候, 被他们的代码恶心到了.
+天哪, 这么丑的代码他们也敢贴在网站上?当然只是大多数人, 有些人的代码还是不错的.
+丑体现在可怕的代码习惯以及几乎没有的可读性……真惭愧, 虽然一段时间以前我也是这样做的.
+本文中的图片大多数来自wikipedia.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="凸包">
+<meta property="og:url" content="http://aiyoupass.com/2018/FirstConvexHull/index.html">
+<meta property="og:site_name" content="落花微雨">
+<meta property="og:description" content="为什么要学凸包呢, 以我的习惯, 做题的话找个模板改改就算了, 可是在我找凸包模板的时候, 被他们的代码恶心到了.
+天哪, 这么丑的代码他们也敢贴在网站上?当然只是大多数人, 有些人的代码还是不错的.
+丑体现在可怕的代码习惯以及几乎没有的可读性……真惭愧, 虽然一段时间以前我也是这样做的.
+本文中的图片大多数来自wikipedia.">
+<meta property="og:image" content="https://i.loli.net/2018/08/12/5b700998773f7.png">
+<meta property="og:image" content="https://i.loli.net/2018/08/12/5b6ff3773176c.png">
+<meta property="og:image" content="https://i.loli.net/2018/08/12/5b7002e9a2fb3.png">
+<meta property="og:image" content="https://i.loli.net/2018/08/12/5b6fff0f12304.png">
+<meta property="og:image" content="https://i.loli.net/2018/08/12/5b6ff3773176c.png">
+<meta property="og:image" content="https://i.loli.net/2018/08/12/5b6fecdab243e.gif">
+<meta property="og:updated_time" content="2018-08-12T13:39:42.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="凸包">
+<meta name="twitter:description" content="为什么要学凸包呢, 以我的习惯, 做题的话找个模板改改就算了, 可是在我找凸包模板的时候, 被他们的代码恶心到了.
+天哪, 这么丑的代码他们也敢贴在网站上?当然只是大多数人, 有些人的代码还是不错的.
+丑体现在可怕的代码习惯以及几乎没有的可读性……真惭愧, 虽然一段时间以前我也是这样做的.
+本文中的图片大多数来自wikipedia.">
+<meta name="twitter:image" content="https://i.loli.net/2018/08/12/5b700998773f7.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '9AZWK32GMU',
+      apiKey: 'cfdae09f7596feb4221d4e18c22a727a',
+      indexName: 'blog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://aiyoupass.com/2018/FirstConvexHull/"/>
+
+
+
+
+
+  <title>凸包 | 落花微雨</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">落花微雨</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">用笑容去改变世界,别让世界改变了你的笑容.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            Schedule
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-knowledge">
+          <a href="/Knowledge/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />
+            
+            Knowledge
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/FirstConvexHull/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">凸包</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-12T15:30:00+08:00">
+                2018-08-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/初体验/" itemprop="url" rel="index">
+                    <span itemprop="name">初体验</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/FirstConvexHull/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/FirstConvexHull/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>为什么要学凸包呢, 以我的习惯, 做题的话找个模板改改就算了, 可是在我找凸包模板的时候, 被他们的代码恶心到了.</p>
+<p>天哪, 这么丑的代码他们也敢贴在网站上?<del>当然只是大多数人, 有些人的代码还是不错的.</del></p>
+<p>丑体现在可怕的代码习惯以及几乎没有的可读性……<br><del>真惭愧, 虽然一段时间以前我也是这样做的.</del></p>
+<p>本文中的图片大多数来自wikipedia.</p>
+<a id="more"></a>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>给定平面上$n$个点, 求将其包括在内的最小凸多边形.<br><img src="https://i.loli.net/2018/08/12/5b700998773f7.png" alt=""><br>此图来自<a href="https://www.cnblogs.com/cjyyb/p/7260523.html" target="_blank" rel="external">yyb’s blog</a></p>
+<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><p>最主要也最好用的办法是Graham扫描法.</p>
+<h3 id="判断凸性"><a href="#判断凸性" class="headerlink" title="判断凸性"></a>判断凸性</h3><p>给定一个多边形问是否是凸多边形.<br><img src="https://i.loli.net/2018/08/12/5b6ff3773176c.png" alt=""></p>
+<h4 id="向量积"><a href="#向量积" class="headerlink" title="向量积"></a>向量积</h4><p>推荐阅读<a href="https://en.wikipedia.org/wiki/Cross_product" target="_blank" rel="external">wiki</a><br>我们对于两个三维向量$\boldsymbol A(x_1,y_1,z_1),\boldsymbol B(x_2,y_2,z_2)$, 定义其向量积如下<br>$$<br>\boldsymbol A\times \boldsymbol B = \begin{vmatrix}\boldsymbol i &amp;\boldsymbol j &amp;\boldsymbol k\\x_1 &amp;y_1 &amp;z_1\\x_2 &amp;y_2 &amp;z_2\end{vmatrix}<br>$$<br>化简得<img src="https://i.loli.net/2018/08/12/5b7002e9a2fb3.png" alt=""><br>当然在<strong>标准正交基</strong>下$i\times i, j\times j$这些都是可以约去的.<br>其中$\boldsymbol A,\boldsymbol B, \boldsymbol A\times \boldsymbol B$的方向满足右手坐标系<img src="https://i.loli.net/2018/08/12/5b6fff0f12304.png" alt=""></p>
+<p>那么, 取$A,B$所在平面, 取其中一对标准基为${\boldsymbol i,\boldsymbol j}$, 与$\boldsymbol i,\boldsymbol j$垂直的单位向量为$\boldsymbol k$, 设<br>$$<br>\boldsymbol A=x_1\boldsymbol i +x_2 \boldsymbol j, \boldsymbol B = x_2 \boldsymbol i + y_2 \boldsymbol j<br>$$<br>则<br>$$<br>\boldsymbol A\times \boldsymbol B = (x_1y_2-x_2y_1)\boldsymbol k<br>$$<br>回到这个题中的二维坐标系, 其基为标准正交基.那么平面上的两向量的向量积垂直于平面, 方向满足右手定则, 所以虽然我们无法用向量表示出其向量积, 但是只要算出$x_1y_2-x_2y_1$, 就能判断其方向.</p>
+<h4 id="判断"><a href="#判断" class="headerlink" title="判断"></a>判断</h4><p>好吧, 扯远了……<br>现在讲如何判断是否为凸多边形, 利用的就是向量积.<br><img src="https://i.loli.net/2018/08/12/5b6ff3773176c.png" alt=""><br>现在来看这个多边形, 可以看到以$A,C,D$连成的折线是多边形的一部分, $D,C,G$不是.</p>
+<p>令$\boldsymbol u=\boldsymbol{A-C}, \boldsymbol v=\boldsymbol {D-C}$<br>然后拿出右手, 看看$u\times v$的方向; 同样看看$(G-C)\times(D-C)$的方向.</p>
+<p>然后恍然大悟.有些东西啊, 必须得自己去试一试.</p>
+<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><p><img src="https://i.loli.net/2018/08/12/5b6fecdab243e.gif" alt=""><br>这张图应该是表述的相当清楚了, 对于这个过程.</p>
+<ul>
+<li>首先是选择一个必定在凸包上的点, 例如$y$坐标最小的点;</li>
+<li>按照与这个点的仰角排序;</li>
+<li>从仰角小到仰角大的点开始;</li>
+<li>如果当前点与上一个被选择的点不满足凸性, 放弃上一个点, 直到满足.</li>
+<li>将当前点加入凸包.</li>
+</ul>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>实现还是比较好办的, 只要真的理解了上述过程.</p>
+<h3 id="二维向量类"><a href="#二维向量类" class="headerlink" title="二维向量类"></a>二维向量类</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><span class="keyword">class</span> Point &#123;</div><div class="line"><span class="keyword">public</span>: </div><div class="line">    T x, y;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">input</span><span class="params">()</span> </span>&#123; <span class="built_in">std</span>:: <span class="built_in">cin</span> &gt;&gt; x &gt;&gt; y; &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123; <span class="built_in">std</span>:: <span class="built_in">cout</span> &lt;&lt; x &lt;&lt; <span class="string">" "</span> &lt;&lt; y &lt;&lt; <span class="string">"\n"</span>; &#125;</div><div class="line">    Point()&#123;&#125; Point(T X, T Y) : x(X), y(Y) &#123;&#125;</div><div class="line">    Point <span class="keyword">operator</span> + (<span class="keyword">const</span> Point&amp; o) <span class="keyword">const</span> &#123; <span class="keyword">return</span> Point (x + o.x, y + o.y); &#125;</div><div class="line">    Point <span class="keyword">operator</span> - (<span class="keyword">const</span> Point&amp; o) <span class="keyword">const</span> &#123; <span class="keyword">return</span> Point (x - o.x, y - o.y); &#125;</div><div class="line">    <span class="keyword">void</span> <span class="keyword">operator</span> -= (<span class="keyword">const</span> Point&amp; o) &#123; x -= o.x, y -= o.y; &#125;</div><div class="line">    Point <span class="keyword">operator</span> * (T P) <span class="keyword">const</span> &#123; <span class="keyword">return</span> Point (x * P, y * P); &#125;</div><div class="line">    T <span class="keyword">operator</span> * (<span class="keyword">const</span> Point&amp; o) <span class="keyword">const</span> &#123; <span class="keyword">return</span> x * o.y - y * o.x; &#125;</div><div class="line">    <span class="function">T <span class="title">Length</span> <span class="params">()</span> </span>&#123; <span class="keyword">return</span> <span class="built_in">sqrt</span> (x * x + y * y); &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>其中 * 运算符被重载为向量积, <del>当然返回的不是一个向量</del>.</p>
+<h3 id="凸包"><a href="#凸包" class="headerlink" title="凸包"></a>凸包</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">cmp</span> <span class="params">(Point&lt;T&gt; a, Point&lt;T&gt; b)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> a.y * b.x &lt; b.y * a.x; </div><div class="line">&#125;</div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line">pair&lt;Point&lt;T&gt;*, <span class="keyword">int</span>&gt; Graham (Point&lt;T&gt;* a, <span class="keyword">int</span> n) &#123;</div><div class="line">    Point&lt;T&gt;* Q = <span class="keyword">new</span> Point&lt;T&gt;[n], tmp;</div><div class="line">    <span class="keyword">int</span> mH = <span class="number">0</span>, t = <span class="number">-1</span>; </div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i += <span class="number">1</span>)</div><div class="line">        <span class="keyword">if</span> (a[mH].y &gt; a[i].y) mH = i;</div><div class="line">    swap(a[mH], a[<span class="number">0</span>]); tmp = a[<span class="number">0</span>];</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i += <span class="number">1</span>) a[i] -= tmp;</div><div class="line">    sort(a + <span class="number">1</span>, a + n, cmp&lt;T&gt;);</div><div class="line">    Q[<span class="number">0</span>] = a[<span class="number">0</span>], Q[<span class="number">1</span>] = a[<span class="number">1</span>], t = <span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; n; i += <span class="number">1</span>) &#123;</div><div class="line">        <span class="keyword">while</span> (t &amp;&amp; (a[i] - Q[t]) * (Q[t - <span class="number">1</span>] - Q[t]) &lt; <span class="number">0</span>) t -= <span class="number">1</span>;</div><div class="line">        Q[t+=<span class="number">1</span>] = a[i];</div><div class="line">    &#125;</div><div class="line">    t += <span class="number">1</span>;</div><div class="line">    <span class="keyword">return</span> make_pair(Q, t);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>效率嘛……<del>最起码可读性好啊, 而且还可以复用, 多好啊是啊吧</del><br>考试的时候肯定不会这么写的, 也就是把模板元换成<code>double</code>而已.</p>
+<h2 id="P2742-【模板】二维凸包"><a href="#P2742-【模板】二维凸包" class="headerlink" title="P2742 【模板】二维凸包"></a>P2742 【模板】二维凸包</h2><p>求凸包的周长.<br>求出凸包上点集然后就将相邻两点的连线的长度加起来.<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="built_in">std</span>:: <span class="built_in">vector</span>;</div><div class="line"><span class="keyword">using</span> <span class="built_in">std</span>:: pair;</div><div class="line"><span class="keyword">using</span> <span class="built_in">std</span>:: make_pair;</div><div class="line"><span class="keyword">using</span> <span class="built_in">std</span>:: <span class="built_in">cin</span>;</div><div class="line"><span class="keyword">using</span> <span class="built_in">std</span>:: sort;</div><div class="line"><span class="keyword">using</span> <span class="built_in">std</span>:: swap;</div><div class="line"></div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><span class="keyword">class</span> Point &#123;</div><div class="line"><span class="keyword">public</span>: </div><div class="line">    T x, y;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">input</span><span class="params">()</span> </span>&#123; <span class="built_in">std</span>:: <span class="built_in">cin</span> &gt;&gt; x &gt;&gt; y; &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123; <span class="built_in">std</span>:: <span class="built_in">cout</span> &lt;&lt; x &lt;&lt; <span class="string">" "</span> &lt;&lt; y &lt;&lt; <span class="string">"\n"</span>; &#125;</div><div class="line">    Point()&#123;&#125; Point(T X, T Y) : x(X), y(Y) &#123;&#125;</div><div class="line">    Point <span class="keyword">operator</span> + (<span class="keyword">const</span> Point&amp; o) <span class="keyword">const</span> &#123; <span class="keyword">return</span> Point (x + o.x, y + o.y); &#125;</div><div class="line">    Point <span class="keyword">operator</span> - (<span class="keyword">const</span> Point&amp; o) <span class="keyword">const</span> &#123; <span class="keyword">return</span> Point (x - o.x, y - o.y); &#125;</div><div class="line">    <span class="keyword">void</span> <span class="keyword">operator</span> -= (<span class="keyword">const</span> Point&amp; o) &#123; x -= o.x, y -= o.y; &#125;</div><div class="line">    Point <span class="keyword">operator</span> * (T P) <span class="keyword">const</span> &#123; <span class="keyword">return</span> Point (x * P, y * P); &#125;</div><div class="line">    T <span class="keyword">operator</span> * (<span class="keyword">const</span> Point&amp; o) <span class="keyword">const</span> &#123; <span class="keyword">return</span> x * o.y - y * o.x; &#125;</div><div class="line">    <span class="function">T <span class="title">Length</span> <span class="params">()</span> </span>&#123; <span class="keyword">return</span> <span class="built_in">sqrt</span> (x * x + y * y); &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">cmp</span> <span class="params">(Point&lt;T&gt; a, Point&lt;T&gt; b)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> a.y * b.x &lt; b.y * a.x; </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line">pair&lt;Point&lt;T&gt;*, <span class="keyword">int</span>&gt; Graham (Point&lt;T&gt;* a, <span class="keyword">int</span> n) &#123;</div><div class="line">    Point&lt;T&gt;* Q = <span class="keyword">new</span> Point&lt;T&gt;[n], tmp;</div><div class="line">    <span class="keyword">int</span> mH = <span class="number">0</span>, t = <span class="number">-1</span>; </div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i += <span class="number">1</span>)</div><div class="line">        <span class="keyword">if</span> (a[mH].y &gt; a[i].y) mH = i;</div><div class="line">    swap(a[mH], a[<span class="number">0</span>]); tmp = a[<span class="number">0</span>];</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i += <span class="number">1</span>) a[i] -= tmp;</div><div class="line">    sort(a + <span class="number">1</span>, a + n, cmp&lt;T&gt;);</div><div class="line">    Q[<span class="number">0</span>] = a[<span class="number">0</span>], Q[<span class="number">1</span>] = a[<span class="number">1</span>], t = <span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; n; i += <span class="number">1</span>) &#123;</div><div class="line">        <span class="keyword">while</span> (t &amp;&amp; (a[i] - Q[t]) * (Q[t - <span class="number">1</span>] - Q[t]) &lt; <span class="number">0</span>) t -= <span class="number">1</span>;</div><div class="line">        Q[t+=<span class="number">1</span>] = a[i];</div><div class="line">    &#125;</div><div class="line">    t += <span class="number">1</span>;</div><div class="line">    T res = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; t; i += <span class="number">1</span>)</div><div class="line">        res += (Q[i] - Q[i - <span class="number">1</span>]).Length();</div><div class="line">    res += (Q[t - <span class="number">1</span>] - Q[<span class="number">0</span>]).Length();</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%.2f"</span>, <span class="keyword">double</span>(res));</div><div class="line">    <span class="keyword">return</span> make_pair(Q, t);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">10005</span>;</div><div class="line">Point&lt;<span class="keyword">double</span>&gt; P[N];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> n; <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i += <span class="number">1</span>) P[i].input();</div><div class="line">    Graham(P, n);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    
+    
+    <div>
+    
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+    
+    </div>
+    <div>
+    
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/凸包/" rel="tag"># 凸包</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/FirstKaKe/" rel="next" title="旋转卡壳">
+                <i class="fa fa-chevron-left"></i> 旋转卡壳
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/myjson/head.jpg"
+                alt="aiyoupass" />
+            
+              <p class="site-author-name" itemprop="name">aiyoupass</p>
+              <p class="site-description motion-element" itemprop="description"><script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&charset=utf-8"></script><div id="lwlhitokoto"><script>lwlhitokoto()</script></div></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">78</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">79</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/imwcz" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:aiyoupass@outlook.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://plus.google.com/" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://stackoverflow.com/" target="_blank" title="StackOverflow">
+                      
+                        <i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://11101001.com/" title="11101001" target="_blank" rel="external nofollow">11101001</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://attack204.com/" title="attack" target="_blank" rel="external nofollow">attack</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://menjiantong.github.io/" title="MenJianTong" target="_blank" rel="external nofollow">MenJianTong</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法"><span class="nav-number">2.</span> <span class="nav-text">解法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#判断凸性"><span class="nav-number">2.1.</span> <span class="nav-text">判断凸性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#向量积"><span class="nav-number">2.1.1.</span> <span class="nav-text">向量积</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#判断"><span class="nav-number">2.1.2.</span> <span class="nav-text">判断</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#步骤"><span class="nav-number">2.2.</span> <span class="nav-text">步骤</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现"><span class="nav-number">3.</span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#二维向量类"><span class="nav-number">3.1.</span> <span class="nav-text">二维向量类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#凸包"><span class="nav-number">3.2.</span> <span class="nav-text">凸包</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#P2742-【模板】二维凸包"><span class="nav-number">4.</span> <span class="nav-text">P2742 【模板】二维凸包</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">aiyoupass</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" href="http://hexo.io" rel="external nofollow">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'enljgi0OjJY1XU6c65Yd9nWz-gzGzoHsz',
+        appKey: 'BrxeA3UhBvNPLXWzErwFmRwd',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+	        displayMath: [ ['$$','$$'], ["\\[","\\]"] ], 
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        },
+        "HTML-CSS": {
+            scale: 90,minScaleAdjust: 85
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>
