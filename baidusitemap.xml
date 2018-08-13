@@ -4,6 +4,104 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/exam8-13/</loc>
+    <lastmod>2018-08-13T12:27:02.000Z</lastmod>
+    <data>
+        <display>
+        <title>8月13日考试</title>
+        <pubTime>2018-08-13T06:30:00.000Z</pubTime>
+        
+        <tag>线段树</tag>
+         
+        <tag>打表找规律</tag>
+         
+        <tag>区间dp</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="测试" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%B5%8B%E8%AF%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/FirstKaKe/</loc>
+    <lastmod>2018-08-13T12:10:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>旋转卡壳</title>
+        <pubTime>2018-08-12T04:30:00.000Z</pubTime>
+        
+        <tag>旋转卡壳</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="初体验" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E5%88%9D%E4%BD%93%E9%AA%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/p4166/</loc>
+    <lastmod>2018-08-13T12:09:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>P4166 [SCOI2007]最大土地面积</title>
+        <pubTime>2018-08-13T11:30:00.000Z</pubTime>
+        
+        <tag>凸包</tag>
+         
+        <tag>旋转卡壳</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/exam7-3/</loc>
+    <lastmod>2018-08-13T06:51:56.000Z</lastmod>
+    <data>
+        <display>
+        <title>七月3日考试</title>
+        <pubTime>2018-07-03T13:02:04.000Z</pubTime>
+        
+        <tag>pdf</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="测试" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%B5%8B%E8%AF%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/Easy8-11/</loc>
     <lastmod>2018-08-12T13:42:06.000Z</lastmod>
     <data>
@@ -30,29 +128,6 @@
           
              
               <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/FirstKaKe/</loc>
-    <lastmod>2018-08-12T13:40:40.000Z</lastmod>
-    <data>
-        <display>
-        <title>旋转卡壳</title>
-        <pubTime>2018-08-12T04:30:00.000Z</pubTime>
-        
-        <tag>旋转卡壳</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="初体验" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E5%88%9D%E4%BD%93%E9%AA%8C/"/>
           
         </display>
     </data>
@@ -1310,29 +1385,6 @@
           
              
               <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/exam7-3/</loc>
-    <lastmod>2018-07-04T23:51:26.000Z</lastmod>
-    <data>
-        <display>
-        <title>七月三日考试</title>
-        <pubTime>2018-07-03T13:02:04.000Z</pubTime>
-        
-        <tag>pdf</tag>
-         
-         
-           
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="测试" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%B5%8B%E8%AF%95/"/>
           
         </display>
     </data>
