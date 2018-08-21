@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="动态规划,容斥原理,区间dp,错位排列数," />
+
+
+
+
+
+
+
+
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+<meta name="description" content="吐槽
+讲题讲了1个多小时喉咙嘶哑;
+日常挂T1;
+
+试题(OneDrive)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="8月21日考试">
+<meta property="og:url" content="http://aiyoupass.com/2018/exam8-21/index.html">
+<meta property="og:site_name" content="落花微雨">
+<meta property="og:description" content="吐槽
+讲题讲了1个多小时喉咙嘶哑;
+日常挂T1;
+
+试题(OneDrive)">
+<meta property="og:image" content="https://i.loli.net/2018/08/21/5b7bc4398a65e.png">
+<meta property="og:image" content="https://i.loli.net/2018/08/21/5b7bca460225d.png">
+<meta property="og:image" content="https://i.loli.net/2018/08/21/5b7bca49cb398.png">
+<meta property="og:image" content="https://i.loli.net/2018/08/21/5b7bdda530bff.png">
+<meta property="og:image" content="https://i.loli.net/2018/08/21/5b7bdda54a49a.png">
+<meta property="og:updated_time" content="2018-08-21T13:30:26.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="8月21日考试">
+<meta name="twitter:description" content="吐槽
+讲题讲了1个多小时喉咙嘶哑;
+日常挂T1;
+
+试题(OneDrive)">
+<meta name="twitter:image" content="https://i.loli.net/2018/08/21/5b7bc4398a65e.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '9AZWK32GMU',
+      apiKey: 'cfdae09f7596feb4221d4e18c22a727a',
+      indexName: 'blog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://aiyoupass.com/2018/exam8-21/"/>
+
+
+
+
+
+  <title>8月21日考试 | 落花微雨</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">落花微雨</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">用笑容去改变世界,别让世界改变了你的笑容.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            Schedule
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-knowledge">
+          <a href="/Knowledge/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />
+            
+            Knowledge
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/exam8-21/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">8月21日考试</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-21T16:40:00+08:00">
+                2018-08-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/测试/" itemprop="url" rel="index">
+                    <span itemprop="name">测试</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/exam8-21/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/exam8-21/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="吐槽"><a href="#吐槽" class="headerlink" title="吐槽"></a>吐槽</h2><ul>
+<li>讲题讲了1个多小时喉咙嘶哑;</li>
+<li>日常挂T1;</li>
+</ul>
+<p><a href="https://1drv.ms/u/s!AmXDWOyfksuQwHepgC6qRq_j8HfU" target="_blank" rel="external">试题(OneDrive)</a></p>
+<a id="more"></a>
+<h2 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h2><p>模拟, 因为大小写丢掉10分.<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</div><div class="line">	freopen(<span class="string">"number.in"</span>, <span class="string">"r"</span>, <span class="built_in">stdin</span>);</div><div class="line">	freopen(<span class="string">"number.out"</span>, <span class="string">"w"</span>, <span class="built_in">stdout</span>);</div><div class="line">	<span class="built_in">std</span>:: <span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; S;</div><div class="line">	<span class="built_in">std</span>:: <span class="built_in">string</span> s1, s2;</div><div class="line">	<span class="built_in">std</span>:: <span class="built_in">cin</span> &gt;&gt; s1 &gt;&gt; s2; </div><div class="line">	<span class="keyword">int</span>  n = s1.size();</div><div class="line">	<span class="keyword">bool</span> flag = <span class="literal">false</span>;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i += <span class="number">1</span>) </div><div class="line">		<span class="keyword">if</span> (s1[i] &gt;= s2[i]) &#123;</div><div class="line">			S.push(s1[i] - <span class="string">'0'</span>);</div><div class="line">			flag = <span class="literal">true</span>;</div><div class="line">		&#125;</div><div class="line">	<span class="keyword">if</span> (!flag) <span class="built_in">printf</span>(<span class="string">"BOOM"</span>);</div><div class="line">	<span class="keyword">else</span> &#123;</div><div class="line">		<span class="keyword">while</span> (S.front() == <span class="number">0</span> and S.size() &gt; <span class="number">1</span>)</div><div class="line">			S.pop();</div><div class="line">		<span class="keyword">while</span> (!S.empty())</div><div class="line">			<span class="built_in">printf</span>(<span class="string">"%d"</span>, S.front()), S.pop();</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">puts</span>(<span class="string">""</span>); flag = <span class="literal">false</span>;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i += <span class="number">1</span>) </div><div class="line">		<span class="keyword">if</span> (s1[i] &lt;= s2[i]) &#123;</div><div class="line">			S.push(s2[i] - <span class="string">'0'</span>);</div><div class="line">			flag = <span class="literal">true</span>;</div><div class="line">		&#125;</div><div class="line">	<span class="keyword">if</span> (!flag) <span class="built_in">printf</span>(<span class="string">"BOOM"</span>);</div><div class="line">	<span class="keyword">else</span> &#123;</div><div class="line">		<span class="keyword">while</span> (S.front() == <span class="number">0</span> and S.size() &gt; <span class="number">1</span>)</div><div class="line">			S.pop();</div><div class="line">		<span class="keyword">while</span> (!S.empty())</div><div class="line">			<span class="built_in">printf</span>(<span class="string">"%d"</span>, S.front()), S.pop();</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h2><p>为什么都是10,20分呢?</p>
+<h3 id="color-green-N-4"><a href="#color-green-N-4" class="headerlink" title="${\color{green}{N^4}}$"></a>${\color{green}{N^4}}$</h3><p>$$<br>f(l,r)=\min{f(l,k_1) + f(k_1 + 1, k_2 - 1) + f(k_2,r)}<br>$$<br>枚举四个量, $r-l+1,l,k_1,k_2$.</p>
+<p>虽然复杂度算起来只有60分, 但是实际远远不到上界.<br>本地测试极限数据不超过0.5s(O2).<br><img src="https://i.loli.net/2018/08/21/5b7bc4398a65e.png" alt=""></p>
+<p>但是还是被没有O2而且GCC版本及其古老的辣鸡评测机坑了一把.<br><img src="https://i.loli.net/2018/08/21/5b7bca460225d.png" alt=""><img src="https://i.loli.net/2018/08/21/5b7bca49cb398.png" alt=""></p>
+<h3 id="color-yellowgreen-N-3"><a href="#color-yellowgreen-N-3" class="headerlink" title="${\color{yellowgreen}{N^3}}$"></a>${\color{yellowgreen}{N^3}}$</h3><p>$$<br>f(l,r)=\min{\min{f(l,k_1) + f(k_1 + 1, k_2 - 1)} + f(k_2,r)}<br>$$<br>其中$\min{f(l,k_1) + f(k_1 + 1, k_2 - 1)}$可以提前预处理出来<br>枚举三个量, $r-l+1,l,k_2$.</p>
+<p>代码实现比较简单.<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">405</span>;</div><div class="line"><span class="keyword">using</span> <span class="built_in">std</span>:: min;</div><div class="line"></div><div class="line"><span class="keyword">long</span> <span class="keyword">long</span> s[N];</div><div class="line"><span class="keyword">long</span> <span class="keyword">long</span> f[N][N];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">s</span><span class="params">(<span class="keyword">int</span> )</span></span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> Sum(l,r) s[r]-s[l-1]</span></div><div class="line"></div><div class="line"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> &#123;</div><div class="line">	freopen(<span class="string">"merge.in"</span>, <span class="string">"r"</span>, <span class="built_in">stdin</span>);</div><div class="line">	freopen(<span class="string">"merge.out"</span>, <span class="string">"w"</span>, <span class="built_in">stdout</span>);</div><div class="line">	<span class="keyword">int</span> n; <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</div><div class="line">	<span class="built_in">memset</span>(f, <span class="number">0x3f</span>, <span class="keyword">sizeof</span> f);</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i += <span class="number">1</span>)</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%I64d"</span>, &amp;s[i]), s[i] += s[i - <span class="number">1</span>];</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i += <span class="number">1</span>) f[i][i] = <span class="number">0</span>;</div><div class="line"></div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> len = <span class="number">3</span>; len &lt;= n; len += <span class="number">2</span>) </div><div class="line">	  <span class="keyword">for</span> (<span class="keyword">int</span> l = <span class="number">0</span>, r = l + len - <span class="number">1</span>; r &lt; n; l += <span class="number">1</span>, r += <span class="number">1</span>)</div><div class="line">	    <span class="keyword">for</span> (<span class="keyword">int</span> k1 = l; k1 &lt; r - <span class="number">1</span>; k1 += <span class="number">2</span>)</div><div class="line">	      <span class="keyword">for</span> (<span class="keyword">int</span> k2 = r; k2 &gt; k1 + <span class="number">1</span>; k2 -= <span class="number">2</span>)</div><div class="line">	      	f[l][r] = min(f[l][r], f[l][k1] + f[k2][r] + f[k1 + <span class="number">1</span>][k2 - <span class="number">1</span>] + Sum(l, r));</div><div class="line"></div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%I64d\n"</span>, min(f[<span class="number">0</span>][n - <span class="number">1</span>], f[<span class="number">0</span>][n - <span class="number">2</span>]));</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h2><p>容斥原理, 错位排列.</p>
+<p>虽然都是利用容斥.<br>但是我的容斥做法和题解的容斥完全不是一个妈生的.<br>具体请听我慢慢道来:</p>
+<h2 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h2><h3 id="PS-错排递推公式"><a href="#PS-错排递推公式" class="headerlink" title="(PS: )错排递推公式"></a>(PS: )错排递推公式</h3><p><img src="https://i.loli.net/2018/08/21/5b7bdda530bff.png" alt=""><br><img src="https://i.loli.net/2018/08/21/5b7bdda54a49a.png" alt=""></p>
+<p>有没有人觉得第二种情况不对啊?</p>
+<h3 id="组合数-排列数-取模"><a href="#组合数-排列数-取模" class="headerlink" title="组合数(排列数)取模"></a>组合数(排列数)取模</h3><p>模数$100000007$为素数, 利用费马小定理, $a$的逆元$a^{-1}\equiv a^{100000007-2}\pmod{1000000007}$</p>
+<p>利用组合数, 排列数的公式<br>$$<br>{n\choose m}=\frac{n!}{m!(n-m)!}, A_{n}^m=\frac{n!}{(n-m)!}<br>$$<br>再利用逆元把除法转化为乘法.</p>
+<h3 id="30分-standrad-Solution"><a href="#30分-standrad-Solution" class="headerlink" title="30分(standrad Solution)"></a>30分(standrad Solution)</h3><p>生成全排列, 复杂度$N!$.</p>
+<h3 id="60分-standrad-Solution"><a href="#60分-standrad-Solution" class="headerlink" title="60分(standrad Solution)"></a>60分(standrad Solution)</h3><p>状态压缩, 我不会谁教教我.</p>
+<h3 id="100分-standrad-Solution"><a href="#100分-standrad-Solution" class="headerlink" title="100分(standrad Solution)"></a>100分(standrad Solution)</h3><h4 id="错位排列数"><a href="#错位排列数" class="headerlink" title="错位排列数"></a>错位排列数</h4><p><del>PS: 这部分和错位排列数递推式没有关系, 请不要自觉代入.</del><br>考虑$n$的全排列, 其中第$i$位为$i$的排列有$(n-1)!$种.</p>
+<p>那么根据容斥原理:<br>$$<br>d_n=\sum_{i = 0}^n(-1)^i{n\choose i}(n-i)!<br>$$</p>
+<h4 id="扩展一下"><a href="#扩展一下" class="headerlink" title="扩展一下:"></a>扩展一下:</h4><p>${\small \color{red}{\text{Position 1}}}$<br>现在让第$x_i$个位置上放上$y_i$, 那么画画图考虑一下会出现几种情况,</p>
+<ul>
+<li>$x$放在$x$的位置, $y$放在$y$的位置……;</li>
+<li>$x$放在$y$的位置, $y$放在$x$的位置…….（其实构成了一个环）</li>
+<li>$x$放在$y$的位置, $y$放在$z$的位置…….（不构成环）</li>
+<li>$x$放在$y$的位置, $y$没有被限制.</li>
+</ul>
+<p>现在观察一下, 前两种好像没有什么区别, 这些被限制的数对答案没有影响.于是把他们删去就可以了.<br>设删去这些数之后有$n$个数.</p>
+<p>现在设有$m$个数可以被放到原本的位置, 也就是上面第四种情况中的$y$.<br>${\small \color{red}{\text{Position 2}}}$</p>
+<p>那么考虑$n$的全排列, 其中第$i$位为$i$的排列有$(n-1)!$种.<br>继续枚举$i$, 然后容斥, 会得到和上面很相似的一个式子.<br>$$<br>\sum_{i = 0}^m(-1)^i{m\choose i}(n-i)!<br>$$<br>哈哈, 是不是感觉被耍了, 其实我也是这么想的.</p>
+<h3 id="My-Solution"><a href="#My-Solution" class="headerlink" title="My Solution"></a>My Solution</h3><p>讲讲我的解法 , 可能对你们有借鉴意义<br><del>陷入思维定势的坏处</del><br><strong>不要陷入思维定势, 不要陷入思维定势, 不要陷入思维定势!</strong><br><strong>不要背公式, 不要背公式, 不要背公式!</strong></p>
+<p>虽然这个递推公式好用又好写, 但是, 但是, 只是知道公式确不知道它的来历, 就会除了模板题之外变个形式就变SB, 还是要学一个东西就完整全面的学习.</p>
+<p>我下意识的想用递推公式直接做.<br>于是得到了一个比较鬼畜<strong>复杂度对劲但是常数巨大无法通过</strong>的算法.</p>
+<p>和标准解法建立于同样的基础之上.</p>
+<p>请调转到${\small \color{red}{\text{Position 1}}}$和${\small \color{red}{\text{Position 2}}}$之间的内容.<br>好吧, 在我的程序里上面的$m$为$n$, 将$n-m$用$m$代替, 下面自动代替, 请小心.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">Result</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span> </span>&#123; <span class="comment">//容斥</span></div><div class="line">	<span class="keyword">if</span> (!n) <span class="keyword">return</span> FFF(m);</div><div class="line">	<span class="keyword">if</span> (R[n]) <span class="keyword">return</span> R[n];</div><div class="line">	<span class="keyword">long</span> <span class="keyword">long</span> res = GetD(n) * FFF(m) % mod;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>, t = <span class="number">1</span>; i &lt;= <span class="built_in">std</span>:: min(n, m); i += <span class="number">1</span>, t = ((~t) ? <span class="number">-1</span> : <span class="number">1</span>)) &#123;</div><div class="line">		res += (<span class="number">1l</span>l * t * GetC(m, i) * GetA(n, i) % mod) * Result(n - i, m) % mod;</div><div class="line">		res %= mod;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> R[n] = (res + mod) % mod;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>当$n=0$时随便放没事的, 答案为$m!$；</li>
+<li>需要记忆化, 不记忆化对于前60分好像也没什么影响；</li>
+<li>将可以放到原本位置的元素放到原本的位置, 答案数为$d_n\cdot m!$；</li>
+<li>考虑将一个不可放在原本位置的元素放在另一些中;</li>
+<li>两个;</li>
+<li>三个</li>
+<li>……</li>
+<li>$\min(n,m)$个.</li>
+<li>容斥一下, 完事.</li>
+</ul>
+<p>理论上复杂度上界为$O(nm)$, 只有$10^8$的级别, 但是常数TM的大死人.<br>谁能帮我卡卡常 啊?</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="comment">//__next_permutation</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">100005</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">long</span> <span class="keyword">long</span> mod = <span class="number">1e9</span> + <span class="number">7</span>;</div><div class="line"></div><div class="line"><span class="keyword">namespace</span> &#123;</div><div class="line">	<span class="keyword">long</span> <span class="keyword">long</span> f[N], F[N];</div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">Pow</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123; <span class="comment">//快速幂</span></div><div class="line">		<span class="keyword">long</span> <span class="keyword">long</span> res = <span class="number">1l</span>l, base = a;</div><div class="line">		<span class="keyword">while</span> (b) &#123;</div><div class="line">			<span class="keyword">if</span> (b &amp; <span class="number">1</span>) res = res * base % mod;</div><div class="line">			base = base * base % mod;</div><div class="line">			b &gt;&gt;= <span class="number">1</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> (<span class="keyword">int</span>)res;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">FFF</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123; <span class="comment">//阶乘</span></div><div class="line">		<span class="keyword">if</span> (F[n]) <span class="keyword">return</span> F[n];</div><div class="line">		F[<span class="number">0</span>] = F[<span class="number">1</span>] = <span class="number">1</span>;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; i += <span class="number">1</span>)</div><div class="line">			F[i] = F[i - <span class="number">1</span>] * i % mod;</div><div class="line">		<span class="keyword">return</span> F[n];</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">GetD</span><span class="params">(<span class="keyword">int</span> nn)</span> </span>&#123; <span class="comment">//错位排列数</span></div><div class="line">		<span class="keyword">if</span> (f[nn]) <span class="keyword">return</span> f[nn];</div><div class="line">		f[<span class="number">2</span>] = <span class="number">1</span>;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">3</span>; i &lt;= nn; i += <span class="number">1</span>)</div><div class="line">			f[i] = (i - <span class="number">1</span>) * ((f[i - <span class="number">1</span>] + f[i - <span class="number">2</span>]) % mod) % mod;</div><div class="line">		<span class="keyword">return</span> f[nn];</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">long</span> <span class="keyword">long</span> A[<span class="number">5005</span>][<span class="number">1505</span>];</div><div class="line">	<span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">GetA</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span> </span>&#123; <span class="comment">//排列数</span></div><div class="line">		<span class="keyword">if</span> (n &lt; <span class="number">5005</span>) &#123;</div><div class="line">			<span class="keyword">if</span>( A[n][m]) <span class="keyword">return</span> A[n][m];</div><div class="line">			A[n][m] = FFF(n) * Pow(FFF(n - m), mod - <span class="number">2</span>) % mod;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> FFF(n) * Pow(FFF(n - m), mod - <span class="number">2</span>) % mod;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">long</span> <span class="keyword">long</span> C[N];</div><div class="line">	<span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">GetC</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span> </span>&#123; <span class="comment">//组合数</span></div><div class="line">		<span class="keyword">if</span> (C[m]) <span class="keyword">return</span> C[m];</div><div class="line">		<span class="keyword">return</span> C[m] = FFF(n) * Pow(FFF(m), mod - <span class="number">2</span>) % mod * Pow(FFF(n - m), mod - <span class="number">2</span>) % mod;</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">long</span> <span class="keyword">long</span> R[N];</div><div class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">Result</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span> </span>&#123; <span class="comment">//容斥原理</span></div><div class="line">	<span class="keyword">if</span> (!n) <span class="keyword">return</span> FFF(m);</div><div class="line">	<span class="keyword">if</span> (R[n]) <span class="keyword">return</span> R[n];</div><div class="line">	<span class="keyword">long</span> <span class="keyword">long</span> res = GetD(n) * FFF(m) % mod;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>, t = <span class="number">1</span>; i &lt;= <span class="built_in">std</span>:: min(n, m); i += <span class="number">1</span>, t = ((~t) ? <span class="number">-1</span> : <span class="number">1</span>)) &#123;</div><div class="line">		res += (<span class="number">1l</span>l * t * GetC(m, i) * GetA(n, i) % mod) * Result(n - i, m) % mod;</div><div class="line">		res %= mod;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> R[n] = (res + mod) % mod;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">int</span> x[N], y[N];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</div><div class="line">	freopen(<span class="string">"problem.in"</span>, <span class="string">"r"</span>, <span class="built_in">stdin</span>);</div><div class="line">	freopen(<span class="string">"problem.out"</span>, <span class="string">"w"</span>, <span class="built_in">stdout</span>);</div><div class="line">	<span class="keyword">int</span> n, m, mm, nn; </div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;m); mm = nn = <span class="number">0</span>; </div><div class="line">	FFF(n); GetD(n);</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, u, v; i &lt; m; i += <span class="number">1</span>)&#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;u, &amp;v), x[u] = v, y[v] = u;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i += <span class="number">1</span>) &#123;</div><div class="line">		<span class="keyword">if</span> (not x[i] and not y[i]) nn += <span class="number">1</span>;</div><div class="line">		<span class="keyword">if</span> (not x[i] and y[i]) mm += <span class="number">1</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%I64d\n"</span>, Result(nn, mm));</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+    <div>
+    
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+    
+    </div>
+    <div>
+    
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/动态规划/" rel="tag"># 动态规划</a>
+          
+            <a href="/tags/容斥原理/" rel="tag"># 容斥原理</a>
+          
+            <a href="/tags/区间dp/" rel="tag"># 区间dp</a>
+          
+            <a href="/tags/错位排列数/" rel="tag"># 错位排列数</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/exam8-17/" rel="next" title="8月17日考试">
+                <i class="fa fa-chevron-left"></i> 8月17日考试
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/myjson/head.jpg"
+                alt="aiyoupass" />
+            
+              <p class="site-author-name" itemprop="name">aiyoupass</p>
+              <p class="site-description motion-element" itemprop="description"><script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&charset=utf-8"></script><div id="lwlhitokoto"><script>lwlhitokoto()</script></div></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">82</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">83</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/imwcz" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:aiyoupass@outlook.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://plus.google.com/" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://stackoverflow.com/" target="_blank" title="StackOverflow">
+                      
+                        <i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://11101001.com/" title="11101001" target="_blank" rel="external nofollow">11101001</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://attack204.com/" title="attack" target="_blank" rel="external nofollow">attack</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://menjiantong.github.io/" title="MenJianTong" target="_blank" rel="external nofollow">MenJianTong</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#吐槽"><span class="nav-number">1.</span> <span class="nav-text">吐槽</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一题"><span class="nav-number">2.</span> <span class="nav-text">第一题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二题"><span class="nav-number">3.</span> <span class="nav-text">第二题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#color-green-N-4"><span class="nav-number">3.1.</span> <span class="nav-text">${\color{green}{N^4}}$</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#color-yellowgreen-N-3"><span class="nav-number">3.2.</span> <span class="nav-text">${\color{yellowgreen}{N^3}}$</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三题"><span class="nav-number">4.</span> <span class="nav-text">第三题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前置知识"><span class="nav-number">5.</span> <span class="nav-text">前置知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PS-错排递推公式"><span class="nav-number">5.1.</span> <span class="nav-text">(PS: )错排递推公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组合数-排列数-取模"><span class="nav-number">5.2.</span> <span class="nav-text">组合数(排列数)取模</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#30分-standrad-Solution"><span class="nav-number">5.3.</span> <span class="nav-text">30分(standrad Solution)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#60分-standrad-Solution"><span class="nav-number">5.4.</span> <span class="nav-text">60分(standrad Solution)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#100分-standrad-Solution"><span class="nav-number">5.5.</span> <span class="nav-text">100分(standrad Solution)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#错位排列数"><span class="nav-number">5.5.1.</span> <span class="nav-text">错位排列数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#扩展一下"><span class="nav-number">5.5.2.</span> <span class="nav-text">扩展一下:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#My-Solution"><span class="nav-number">5.6.</span> <span class="nav-text">My Solution</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">aiyoupass</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" href="http://hexo.io" rel="external nofollow">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'enljgi0OjJY1XU6c65Yd9nWz-gzGzoHsz',
+        appKey: 'BrxeA3UhBvNPLXWzErwFmRwd',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+	        displayMath: [ ['$$','$$'], ["\\[","\\]"] ], 
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        },
+        "HTML-CSS": {
+            scale: 90,minScaleAdjust: 85
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>
