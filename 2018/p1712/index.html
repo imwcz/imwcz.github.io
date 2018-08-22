@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="杜教筛," />
+  <meta name="keywords" content="线段树," />
 
 
 
@@ -89,19 +89,21 @@
     })();
 </script>
 
-<meta name="description" content="这篇文章的主题是杜教筛 , 但是我总得给这个.md文件一个合适的英文名字.于是我大开脑洞: Dr. Du’s sieve.
-推荐阅读">
+<meta name="description" content="Description在数轴上有 $N$ 个闭区间  $[l_1,r_1],[l_2,r_2],…,[l_n,r_n]$ 。现在要从中选出 $M$ 个区间，使得这 $M$ 个区间共同包含至少一个位置。换句话说，就是使得存在一个  $x$ ，使得对于每一个被选中的区间 $[l_i,r_i]$ ，都有  $l_i≤x≤r_i$ 。
+对于一个合法的选取方案，它的花费为被选中的最长区间长度减去被选中的最短">
 <meta property="og:type" content="article">
-<meta property="og:title" content="杜教筛初体验">
-<meta property="og:url" content="http://aiyoupass.com/2018/FirstDrDuSieve/index.html">
+<meta property="og:title" content="P1712 [NOI2016]区间">
+<meta property="og:url" content="http://aiyoupass.com/2018/p1712/index.html">
 <meta property="og:site_name" content="落花微雨">
-<meta property="og:description" content="这篇文章的主题是杜教筛 , 但是我总得给这个.md文件一个合适的英文名字.于是我大开脑洞: Dr. Du’s sieve.
-推荐阅读">
-<meta property="og:updated_time" content="2018-07-25T08:39:18.000Z">
+<meta property="og:description" content="Description在数轴上有 $N$ 个闭区间  $[l_1,r_1],[l_2,r_2],…,[l_n,r_n]$ 。现在要从中选出 $M$ 个区间，使得这 $M$ 个区间共同包含至少一个位置。换句话说，就是使得存在一个  $x$ ，使得对于每一个被选中的区间 $[l_i,r_i]$ ，都有  $l_i≤x≤r_i$ 。
+对于一个合法的选取方案，它的花费为被选中的最长区间长度减去被选中的最短">
+<meta property="og:image" content="https://i.loli.net/2018/08/22/5b7d5d70589f8.png">
+<meta property="og:updated_time" content="2018-08-22T13:39:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="杜教筛初体验">
-<meta name="twitter:description" content="这篇文章的主题是杜教筛 , 但是我总得给这个.md文件一个合适的英文名字.于是我大开脑洞: Dr. Du’s sieve.
-推荐阅读">
+<meta name="twitter:title" content="P1712 [NOI2016]区间">
+<meta name="twitter:description" content="Description在数轴上有 $N$ 个闭区间  $[l_1,r_1],[l_2,r_2],…,[l_n,r_n]$ 。现在要从中选出 $M$ 个区间，使得这 $M$ 个区间共同包含至少一个位置。换句话说，就是使得存在一个  $x$ ，使得对于每一个被选中的区间 $[l_i,r_i]$ ，都有  $l_i≤x≤r_i$ 。
+对于一个合法的选取方案，它的花费为被选中的最长区间长度减去被选中的最短">
+<meta name="twitter:image" content="https://i.loli.net/2018/08/22/5b7d5d70589f8.png">
 
 
 
@@ -131,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://aiyoupass.com/2018/FirstDrDuSieve/"/>
+  <link rel="canonical" href="http://aiyoupass.com/2018/p1712/"/>
 
 
 
 
 
-  <title>杜教筛初体验 | 落花微雨</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>P1712 [NOI2016]区间 | 落花微雨</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -332,7 +334,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/FirstDrDuSieve/">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/p1712/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="aiyoupass">
@@ -349,7 +351,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">杜教筛初体验</h1>
+          <h1 class="post-title" itemprop="name headline">P1712 [NOI2016]区间</h1>
         
 
         <div class="post-meta">
@@ -361,8 +363,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-19T17:30:33+08:00">
-                2018-07-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-22T20:30:00+08:00">
+                2018-08-22
               </time>
             
 
@@ -395,8 +397,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/初体验/" itemprop="url" rel="index">
-                    <span itemprop="name">初体验</span>
+                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
+                    <span itemprop="name">题目</span>
                   </a>
                 </span>
 
@@ -413,8 +415,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/FirstDrDuSieve/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/FirstDrDuSieve/" itemprop="commentCount"></span>
+                <a href="/2018/p1712/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/p1712/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -442,25 +444,13 @@
       
 
       
-        <p>这篇文章的主题是<strong>杜教筛</strong> , 但是我总得给这个<code>.md</code>文件一个合适的英文名字.<br>于是我大开脑洞: Dr. Du’s sieve.</p>
-<p><a href="https://blog.csdn.net/skywalkert/article/details/50500009" target="_blank" rel="external">推荐阅读</a><br><a id="more"></a></p>
-<h3 id="应用情景"><a href="#应用情景" class="headerlink" title="应用情景"></a>应用情景</h3><p>例如一个能用杜教筛解决的经典问题: <strong>莫比乌斯函数前缀和.</strong> 即$$\sum_{i=1}^n\mu(i)$$<br>不同的是, 数据规模是$10^9$级别的.</p>
-<h3 id="利用狄利克雷卷积"><a href="#利用狄利克雷卷积" class="headerlink" title="利用狄利克雷卷积"></a>利用狄利克雷卷积</h3><p>两个数论函数$f,g$的狄利克雷卷积定义为<br>$$<br>(f\times g)(n)=\sum_{d|n}g(d)f(\frac{n}{d})<br>$$<br>求卷积前缀和<br>$$<br>\sum_{i=1}^n(f\times g)(i)=\sum_{i=1}^n\sum_{d|i}g(d)f(\frac{i}{d})<br>$$</p>
-<p>式子能变形为<br>$$<br>\begin{align}<br>\sum_{d=1}^ng(d)\sum_{d|i}f(\frac{i}{d})<br>=\sum_{d=1}^ng(d)\sum_{j=1}^{n/d}f(j)<br>=\sum_{d=1}g(d)S(\frac{n}{d})<br>\end{align}<br>$$</p>
-<p>利用前缀和的性质能得到这个式子<br>$$<br>\begin{align}<br>g(1)S(n)=&amp;S(\frac{n}{i})(\sum_{i=1}^ng(i)-\sum_{i=2}^ng(i))<br>=&amp;\sum_{i=1}^n(g\times f)(i)-\sum_{i=2}^ng(i)S(\frac{n}{i})<br>\end{align}<br>$$<br>对后面的式子数论分块并递归运算.</p>
-<h3 id="莫比乌斯函数前缀和"><a href="#莫比乌斯函数前缀和" class="headerlink" title="莫比乌斯函数前缀和"></a>莫比乌斯函数前缀和</h3><p>求$$<br>\sum_{i=1}^n\mu(i)<br>$$<br>其中$n\le 10^9$</p>
-<p>让$g(i)=1$<br>那么$(f\times g)(i)=\sum_{d|i}\mu(i)=[i=1]$<br>那么$\sum_{i=1}^n(f\times g)(i)=1$<br>得到式子<br>$S(n)=1-\sum_{i=2}^nS(\frac{n}{i})$</p>
-<p>通常处理这个问题都是先用线性筛处理出$1-10^7$的莫比乌斯函数, 大于这个范围的再用上式计算.</p>
-<h3 id="欧拉函数前缀和"><a href="#欧拉函数前缀和" class="headerlink" title="欧拉函数前缀和"></a>欧拉函数前缀和</h3><p>求<br>$$<br>\sum_{i=1}^n\varphi(i)<br>$$<br>其中$n\le 10^9$</p>
-<p>依然是将$\varphi,1$进行狄利克雷卷积.<br>因为$(\varphi \times 1)(i)=i$<br>得到$$<br>\begin{align}<br>S(n)g(1)=&amp;\sum_{i=1}^n(\varphi\times 1)(i)-\sum_{i=2}^n\\<br>=&amp;\sum_{i=1}^n+\sum_{i=2}^nS(\frac{n}{i})<br>\end{align}<br>$$</p>
-<p>同样是利用数论分块以及提前预处理进行求解.</p>
-<h3 id="例题1-欧拉函数求和"><a href="#例题1-欧拉函数求和" class="headerlink" title="例题1: 欧拉函数求和"></a>例题1: <a href="https://www.lydsy.com/JudgeOnline/problem.php?id=4805" target="_blank" rel="external">欧拉函数求和</a></h3><p>核心部分代码</p>
-<ul>
-<li>预处理出1e7的欧拉函数前缀和;</li>
-<li>大于1e7的数论分块递归求解.</li>
-</ul>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">S</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> x)</span></span>&#123;</div><div class="line">	<span class="keyword">if</span>(x&lt;=N)</div><div class="line">		<span class="keyword">return</span> phi[x];</div><div class="line">	<span class="keyword">if</span>(M[x])<span class="keyword">return</span> M[x];</div><div class="line">	<span class="keyword">long</span> <span class="keyword">long</span> ans=<span class="number">0</span>;<span class="keyword">int</span> l;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=x;i=l+<span class="number">1</span>)&#123;</div><div class="line">		l=x/(x/i);</div><div class="line">		ans+=S(x/i)*(l-i+<span class="number">1</span>);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> M[x]=x*(x+<span class="number">1</span>)/<span class="number">2</span>-ans;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="例题2-莫比乌斯函数之和"><a href="#例题2-莫比乌斯函数之和" class="headerlink" title="例题2: 莫比乌斯函数之和"></a>例题2: <a href="http://www.51nod.com/onlineJudge/questionCode.html#!problemId=1244" target="_blank" rel="external">莫比乌斯函数之和</a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">long long S(long long x)&#123;</div><div class="line">	if(x&lt;=N)return mu[x];</div><div class="line">	if(M[x])return M[x];</div><div class="line">	long long ans=0ll,l;</div><div class="line">	for(long long i=2ll;i&lt;=x;i=l+1)&#123;</div><div class="line">		l=x/(x/i);</div><div class="line">		ans+=S(x/i)*(l-i+1);</div><div class="line">	&#125;</div><div class="line">	return M[x]=1-ans;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>在数轴上有 $N$ 个闭区间  $[l_1,r_1],[l_2,r_2],…,[l_n,r_n]$ 。现在要从中选出 $M$ 个区间，使得这 $M$ 个区间共同包含至少一个位置。换句话说，就是使得存在一个  $x$ ，使得对于每一个被选中的区间 $[l_i,r_i]$ ，都有  $l_i≤x≤r_i$ 。</p>
+<p>对于一个合法的选取方案，它的花费为被选中的最长区间长度减去被选中的最短区间长度。区间 $[l_i,r_i]$ 的长度定义为 $r_i-l_i$ ，即等于它的右端点的值减去左端点的值。</p>
+<p>求所有合法方案中最小的花费。如果不存在合法的方案，输出 $-1$ 。</p>
+<a id="more"></a>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>首先离散化, 按区间长度从小到大往线段树上加区间, 若出现了被覆盖m次的区间, 最长的区间能确定, 但是最短的区间没办法确定, 这时需要把前面的区间去掉.被去掉的区间就不用再加回来了, 因为肯定不会出现更优的解.<br>这样选择的线段区间至多有$2N$个, 复杂度为$N\log_2 N$.</p>
+<p>注意, 离散化一定不能用STL中的<code>set</code>和<code>map</code>, 会超时的.<br><img src="https://i.loli.net/2018/08/22/5b7d5d70589f8.png" alt=""><br>参考我的提交……</p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">500005</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> inf = <span class="number">0x3f3f3f3f</span>;</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> getchar() (p1 == p2 &amp;&amp; (p2 = (p1 = buf) + fread(buf, 1, 1&lt;&lt;22, stdin), p1 == p2) ? EOF : *p1++)</span></div><div class="line"><span class="keyword">char</span> buf[(<span class="number">1</span> &lt;&lt; <span class="number">22</span>)], *p1 = buf, *p2 = buf;</div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">char</span> c = getchar(); <span class="keyword">int</span> x = <span class="number">0</span>, f = <span class="number">1</span>;</div><div class="line">    <span class="keyword">while</span>(c &lt; <span class="string">'0'</span> || c &gt; <span class="string">'9'</span>) &#123;<span class="keyword">if</span>(c == <span class="string">'-'</span>) f = <span class="number">-1</span>; c = getchar();&#125;</div><div class="line">    <span class="keyword">while</span>(c &gt;= <span class="string">'0'</span> &amp;&amp; c &lt;= <span class="string">'9'</span>) x = x * <span class="number">10</span> + c - <span class="string">'0'</span>, c = getchar();</div><div class="line">    <span class="keyword">return</span> x * f;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">int</span> app[N &lt;&lt; <span class="number">1</span>];</div><div class="line"><span class="keyword">static</span> <span class="keyword">int</span> cnt;</div><div class="line"></div><div class="line"><span class="keyword">struct</span> Query &#123;</div><div class="line">    <span class="keyword">int</span> l, r, len, id;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">input</span><span class="params">(<span class="keyword">int</span> _)</span> </span>&#123; </div><div class="line">        l = read(), r = read(), id = _, len = r - l;</div><div class="line">        app[cnt++] = l, app[cnt++] = r;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(<span class="keyword">const</span> Query &amp;o) <span class="keyword">const</span> &#123;</div><div class="line">        <span class="keyword">return</span> len &lt; o.len;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">Query Q[N];</div><div class="line"></div><div class="line"><span class="keyword">struct</span> Node &#123;</div><div class="line">    <span class="keyword">int</span> val, f;</div><div class="line">    Node *ls, *rs;</div><div class="line">    Node () &#123; ls = rs = <span class="literal">NULL</span>, val = f = <span class="number">0</span>; &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">merge</span> <span class="params">()</span> </span>&#123; val = <span class="built_in">std</span>:: max(ls-&gt;val, rs-&gt;val); &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> k)</span> </span>&#123; val += k, f += k; &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Down</span><span class="params">()</span> </span>&#123; f ? ls-&gt;update(f), rs-&gt;update(f), f = <span class="number">0</span> : <span class="literal">NULL</span>; &#125;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">int</span> tot;</div><div class="line">Node pool[N &lt;&lt; <span class="number">2</span>];</div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> new_Node() &amp;pool[tot++]</span></div><div class="line"></div><div class="line"><span class="keyword">class</span> Tree &#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    Node *root; <span class="keyword">int</span> n;</div><div class="line">    Tree() &#123; root = new_Node(); &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">class</span> SegmentTree : <span class="keyword">public</span> Tree&#123;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, Node *node)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (l == r) <span class="keyword">return</span> ;</div><div class="line">        <span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</div><div class="line">        node-&gt;ls = new_Node(); node-&gt;rs = new_Node();</div><div class="line">        build(l, mid, node-&gt;ls);</div><div class="line">        build(mid + <span class="number">1</span>, r, node-&gt;rs);</div><div class="line">        node-&gt;merge();</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">addition</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> L, <span class="keyword">int</span> R, Node *node, <span class="keyword">int</span> k)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (l &gt;= L and r &lt;= R) &#123;</div><div class="line">            node-&gt;update(k); <span class="keyword">return</span> ;</div><div class="line">        &#125;</div><div class="line">        node-&gt;Down();</div><div class="line">        <span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</div><div class="line">        <span class="keyword">if</span> (L &lt;= mid) addition(l, mid, L, R, node-&gt;ls, k);</div><div class="line">        <span class="keyword">if</span> (R &gt; mid) addition(mid + <span class="number">1</span>, r, L, R, node-&gt;rs, k);</div><div class="line">        node-&gt;merge();</div><div class="line">    &#125;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, Node *node, <span class="keyword">int</span> k)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> node-&gt;val == k;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Build</span><span class="params">(<span class="keyword">int</span> _)</span> </span>&#123; n = _, build(<span class="number">1</span>, n, root); &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Addition</span><span class="params">(<span class="keyword">int</span> L, <span class="keyword">int</span> R, <span class="keyword">int</span> k)</span> </span>&#123; addition(<span class="number">1</span>, n, L, R, root, k); &#125;</div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> Query(k) query(1,n,T-&gt;root,k)</span></div><div class="line">&#125;;</div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> Find(x) std:: lower_bound(app, app+cnt,x)-app+1</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> n, m; n = read(), m = read();</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i += <span class="number">1</span>) Q[i].input(i);</div><div class="line">    <span class="built_in">std</span>:: sort (Q, Q + n), <span class="built_in">std</span>:: sort (app, app + cnt), cnt = <span class="built_in">std</span>:: unique(app, app + cnt) - app;</div><div class="line">    SegmentTree *T = <span class="keyword">new</span> SegmentTree(); T-&gt;Build(cnt);</div><div class="line">    <span class="keyword">int</span> res = inf; <span class="keyword">bool</span> flag = <span class="literal">false</span>;</div><div class="line">    <span class="keyword">int</span> l = <span class="number">0</span>, r = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span> (<span class="literal">true</span>)&#123;</div><div class="line">        <span class="keyword">while</span> (!T-&gt;Query(m) and r &lt; n)</div><div class="line">            T-&gt;Addition(Find(Q[r].l), Find(Q[r].r), <span class="number">1</span>), r += <span class="number">1</span>;</div><div class="line">        <span class="keyword">if</span> (!T-&gt;Query(m)) <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">while</span>(T-&gt;Query(m) and l &lt; n)</div><div class="line">            T-&gt;Addition(Find(Q[l].l), Find(Q[l].r), <span class="number">-1</span>), l += <span class="number">1</span>;</div><div class="line">        res = <span class="built_in">std</span>:: min(res, Q[r - <span class="number">1</span>].len - Q[l - <span class="number">1</span>].len);</div><div class="line">        flag = <span class="literal">true</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (!flag) <span class="built_in">printf</span>(<span class="string">"-1\n"</span>);</div><div class="line">    <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"%d"</span>, res);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
     
@@ -478,33 +468,6 @@
     <div>
     
         
-<div class="my_post_copyright">
-  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2018/FirstDrDuSieve/">杜教筛初体验</a></p>
-  <p><span>文章作者:</span><a href="/" title="访问 aiyoupass 的个人博客">aiyoupass</a></p>
-  <p><span>发布时间:</span>2018年07月19日 - 17:07</p>
-  <p><span>最后更新:</span>2018年07月25日 - 16:07</p>
-  <p><span>原始链接:</span><a href="/2018/FirstDrDuSieve/" title="杜教筛初体验">http://aiyoupass.com/2018/FirstDrDuSieve/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://aiyoupass.com/2018/FirstDrDuSieve/"  aria-label="复制成功！"></i></span>
-  </p>
-  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
-</div>
-<script> 
-    var clipboard = new Clipboard('.fa-clipboard');
-      $(".fa-clipboard").click(function(){
-      clipboard.on('success', function(){
-        swal({   
-          title: "",   
-          text: '复制成功',
-          icon: "success", 
-          showConfirmButton: true
-          });
-        });
-    });  
-</script>
-
     
     </div>
 
@@ -518,7 +481,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/杜教筛/" rel="tag"># 杜教筛</a>
+            <a href="/tags/线段树/" rel="tag"># 线段树</a>
           
         </div>
       
@@ -531,8 +494,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/SolveSomeEditor/" rel="next" title="常见编辑器使用体验">
-                <i class="fa fa-chevron-left"></i> 常见编辑器使用体验
+              <a href="/2018/exam8-21/" rel="next" title="8月21日考试">
+                <i class="fa fa-chevron-left"></i> 8月21日考试
               </a>
             
           </div>
@@ -541,8 +504,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/Saying1/" rel="prev" title="一言选摘">
-                一言选摘 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/leetcode/" rel="prev" title="LeetCode">
+                LeetCode <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -732,7 +695,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#应用情景"><span class="nav-number">1.</span> <span class="nav-text">应用情景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#利用狄利克雷卷积"><span class="nav-number">2.</span> <span class="nav-text">利用狄利克雷卷积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#莫比乌斯函数前缀和"><span class="nav-number">3.</span> <span class="nav-text">莫比乌斯函数前缀和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#欧拉函数前缀和"><span class="nav-number">4.</span> <span class="nav-text">欧拉函数前缀和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题1-欧拉函数求和"><span class="nav-number">5.</span> <span class="nav-text">例题1: 欧拉函数求和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题2-莫比乌斯函数之和"><span class="nav-number">6.</span> <span class="nav-text">例题2: 莫比乌斯函数之和</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code"><span class="nav-number">3.</span> <span class="nav-text">Code</span></a></li></ol></div>
             
 
           </div>

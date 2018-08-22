@@ -4,13 +4,56 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/leetcode/</loc>
+    <lastmod>2018-08-22T13:52:12.000Z</lastmod>
+    <data>
+        <display>
+        <title>LeetCode</title>
+        <pubTime>2018-08-22T13:40:30.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="其它" url="http://aiyoupass.com/categories/%E5%85%B6%E5%AE%83/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/p1712/</loc>
+    <lastmod>2018-08-22T13:39:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>P1712 [NOI2016]区间</title>
+        <pubTime>2018-08-22T12:30:00.000Z</pubTime>
+        
+        <tag>线段树</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/Easy8-11/</loc>
-    <lastmod>2018-08-22T13:09:00.000Z</lastmod>
+    <lastmod>2018-08-22T13:38:50.000Z</lastmod>
     <data>
         <display>
         <title>八月第二三周简单题汇总</title>
         <pubTime>2018-08-11T03:50:00.000Z</pubTime>
         
+        <tag>简单题汇总</tag>
+         
         <tag>动态规划</tag>
          
         <tag>倍增</tag>
@@ -37,21 +80,6 @@
              
               <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/leetcode/</loc>
-    <lastmod>2018-08-22T13:01:26.000Z</lastmod>
-    <data>
-        <display>
-        <title></title>
-        <pubTime>2018-08-22T13:09:31.007Z</pubTime>
-        
-         
-           
         </display>
     </data>
     </url>
