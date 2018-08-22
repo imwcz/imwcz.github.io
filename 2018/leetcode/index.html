@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="杜教筛," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -89,16 +89,13 @@
     })();
 </script>
 
-<meta name="description" content="Description请你读入一个整数N;1&amp;lt;=N&amp;lt;=$10^9$,A、B模$10^9+7$;请你输出一个整数$A=\sum_{i=1}^N{\mu (i^2)};$请你输出一个整数$B=\sum_{i=1}^N{\varphi (i^2)};$">
 <meta property="og:type" content="article">
-<meta property="og:title" content="BZOJ 4916  神犇和蒟蒻">
-<meta property="og:url" content="http://aiyoupass.com/2018/bzoj4916/index.html">
+<meta property="og:title" content="落花微雨">
+<meta property="og:url" content="http://aiyoupass.com/2018/leetcode/index.html">
 <meta property="og:site_name" content="落花微雨">
-<meta property="og:description" content="Description请你读入一个整数N;1&amp;lt;=N&amp;lt;=$10^9$,A、B模$10^9+7$;请你输出一个整数$A=\sum_{i=1}^N{\mu (i^2)};$请你输出一个整数$B=\sum_{i=1}^N{\varphi (i^2)};$">
-<meta property="og:updated_time" content="2018-07-24T13:17:52.000Z">
+<meta property="og:updated_time" content="2018-08-22T13:01:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BZOJ 4916  神犇和蒟蒻">
-<meta name="twitter:description" content="Description请你读入一个整数N;1&amp;lt;=N&amp;lt;=$10^9$,A、B模$10^9+7$;请你输出一个整数$A=\sum_{i=1}^N{\mu (i^2)};$请你输出一个整数$B=\sum_{i=1}^N{\varphi (i^2)};$">
+<meta name="twitter:title" content="落花微雨">
 
 
 
@@ -128,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://aiyoupass.com/2018/bzoj4916/"/>
+  <link rel="canonical" href="http://aiyoupass.com/2018/leetcode/"/>
 
 
 
 
 
-  <title>BZOJ 4916  神犇和蒟蒻 | 落花微雨</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> | 落花微雨</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -329,7 +326,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/bzoj4916/">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/leetcode/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="aiyoupass">
@@ -346,7 +343,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">BZOJ 4916  神犇和蒟蒻</h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -358,8 +355,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-24T15:30:30+08:00">
-                2018-07-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-22T21:09:31+08:00">
+                2018-08-22
               </time>
             
 
@@ -369,39 +366,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
-                    <span itemprop="name">信息学竞赛</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
-                    <span itemprop="name">题目</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -410,8 +374,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/bzoj4916/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/bzoj4916/" itemprop="commentCount"></span>
+                <a href="/2018/leetcode/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/leetcode/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -439,15 +403,8 @@
       
 
       
-        <h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>请你读入一个整数N;1&lt;=N&lt;=$10^9$,A、B模$10^9+7$;<br>请你输出一个整数$A=\sum_{i=1}^N{\mu (i^2)};$<br>请你输出一个整数$B=\sum_{i=1}^N{\varphi (i^2)};$</p>
-<a id="more"></a>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>看到数据范围, emm用杜教筛是肯定的.</p>
-<h4 id="莫比乌斯平方前缀和"><a href="#莫比乌斯平方前缀和" class="headerlink" title="莫比乌斯平方前缀和"></a>莫比乌斯平方前缀和</h4><p>根据定义, 知道当$n$有平方质因子时$\mu(n)=0$,<br>所以$\mu(i^2)=0$<br>但是$\mu(1)=1$,<br>所以$\sum_{i=1}^n\mu(i)=1$</p>
-<h4 id="欧拉函数平方前缀和"><a href="#欧拉函数平方前缀和" class="headerlink" title="欧拉函数平方前缀和"></a>欧拉函数平方前缀和</h4><p>回顾线性筛欧拉函数的时候, 我们知道$\varphi(i^2)=i\varphi(i)$</p>
-<p>利用线性筛可以求出$\varphi(1),\cdots,\varphi(n)$, 接下来的问题是如何利用杜教筛求出$\sum_{i=1}^ni\varphi(i)$</p>
-<p>考虑$i\phi(i)$与另一个函数$g$的狄利克雷卷积,<br>$$<br>\sum_{d|n}g(d)\frac{n}{d}\varphi(\frac{n}{d})<br>$$<br>寻找一个$g$使得能直接求出$i\varphi\times g$的值.</p>
-<p>一种好的方式是令$g(n)=n$, 那么<br>$$<br>\sum_{d|n}d\frac{n}{d}\varphi(\frac{n}{d})\\<br>=n\sum_{d|n}\varphi(d)\\<br>=n^2<br>$$<br>那么<br>$$<br>\sum_{i=1}^nn^2=\frac{n(n+1)(2n+1)}{6}<br>$$<br>结合杜教筛的式子得到:<br>$$<br>S(n)g(1)=\frac{n(n+1)(2n+1)}{6}-\sum_{i=2}^niS(\frac{n}{i})<br>$$</p>
-<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 1000000</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> mod 1000000007</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">Pow</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</div><div class="line">    <span class="keyword">long</span> <span class="keyword">long</span> u=<span class="number">1</span>,v=a;</div><div class="line">    <span class="keyword">while</span> (b)&#123;</div><div class="line">        <span class="keyword">if</span> (b&amp;<span class="number">1</span>)</div><div class="line">            u=u*v%mod;</div><div class="line">        v=v*v%mod;</div><div class="line">        b&gt;&gt;=<span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> u;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">int</span> tot;</div><div class="line"><span class="keyword">int</span> pri[N+<span class="number">6</span>];</div><div class="line"><span class="keyword">long</span> <span class="keyword">long</span> Inv,inv;</div><div class="line"><span class="keyword">bool</span> mark[N+<span class="number">6</span>];</div><div class="line"><span class="keyword">long</span> <span class="keyword">long</span> phi[N+<span class="number">5</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Get</span><span class="params">()</span></span>&#123;</div><div class="line">	phi[<span class="number">1</span>]=<span class="number">1</span>;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=N;++i)&#123;</div><div class="line">		<span class="keyword">if</span> (!mark[i])</div><div class="line">			pri[++tot]=i,phi[i]=i<span class="number">-1</span>;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=tot&amp;&amp;i*pri[j]&lt;=N;++j)&#123;</div><div class="line">			mark[i*pri[j]]=<span class="number">1</span>;</div><div class="line">			<span class="keyword">if</span> (i%pri[j])</div><div class="line">				phi[i*pri[j]]=<span class="number">1l</span>l*phi[i]*phi[pri[j]];</div><div class="line">			<span class="keyword">else</span> &#123;</div><div class="line">				phi[i*pri[j]]=<span class="number">1l</span>l*phi[i]*pri[j];</div><div class="line">				<span class="keyword">break</span>;</div><div class="line">			&#125;			</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;++i)phi[i]=i*phi[i]%mod+phi[i<span class="number">-1</span>],phi[i]%=mod;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">map</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>,<span class="keyword">long</span> <span class="keyword">long</span>&gt;m1;</div><div class="line"><span class="built_in">map</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>,<span class="keyword">long</span> <span class="keyword">long</span>&gt;m2;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">GPhi</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> n)</span></span>&#123;</div><div class="line">	<span class="keyword">if</span> (n&lt;=N)</div><div class="line">		<span class="keyword">return</span> phi[n];</div><div class="line">	<span class="keyword">if</span> (m2[n])</div><div class="line">		<span class="keyword">return</span> m2[n];</div><div class="line">	<span class="keyword">long</span> <span class="keyword">long</span> ans=n*(n+<span class="number">1</span>)%mod*(n+n+<span class="number">1</span>)%mod*Inv%mod,t;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">long</span> <span class="keyword">long</span> i=<span class="number">2</span>,l;i&lt;=n;i=l+<span class="number">1</span>)&#123;</div><div class="line">		l=n/(n/i);</div><div class="line">		t=(l+<span class="number">1</span>)*l%mod*inv%mod-(i<span class="number">-1</span>)*i%mod*inv%mod,t=(t%mod+mod)%mod;</div><div class="line">		ans-=<span class="number">1l</span>l*t*GPhi(n/i)%mod,ans%=mod;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> m2[n]=(ans%mod+mod)%mod;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">	Get();</div><div class="line">	<span class="keyword">long</span> <span class="keyword">long</span> n;</div><div class="line">	Inv=Pow(<span class="number">6</span>,mod<span class="number">-2</span>);</div><div class="line">	inv=Pow(<span class="number">2</span>,mod<span class="number">-2</span>);</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;n);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"1\n%lld\n"</span>,GPhi(n));</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <hr>
+<hr>
 
       
     </div>
@@ -466,33 +423,6 @@
     <div>
     
         
-<div class="my_post_copyright">
-  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2018/bzoj4916/">BZOJ 4916  神犇和蒟蒻</a></p>
-  <p><span>文章作者:</span><a href="/" title="访问 aiyoupass 的个人博客">aiyoupass</a></p>
-  <p><span>发布时间:</span>2018年07月24日 - 15:07</p>
-  <p><span>最后更新:</span>2018年07月24日 - 21:07</p>
-  <p><span>原始链接:</span><a href="/2018/bzoj4916/" title="BZOJ 4916  神犇和蒟蒻">http://aiyoupass.com/2018/bzoj4916/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://aiyoupass.com/2018/bzoj4916/"  aria-label="复制成功！"></i></span>
-  </p>
-  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
-</div>
-<script> 
-    var clipboard = new Clipboard('.fa-clipboard');
-      $(".fa-clipboard").click(function(){
-      clipboard.on('success', function(){
-        swal({   
-          title: "",   
-          text: '复制成功',
-          icon: "success", 
-          showConfirmButton: true
-          });
-        });
-    });  
-</script>
-
     
     </div>
 
@@ -504,12 +434,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/杜教筛/" rel="tag"># 杜教筛</a>
-          
-        </div>
-      
 
       
       
@@ -519,8 +443,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/p4318/" rel="next" title="P4318 完全平方数">
-                <i class="fa fa-chevron-left"></i> P4318 完全平方数
+              <a href="/2018/exam8-21/" rel="next" title="8月21日考试">
+                <i class="fa fa-chevron-left"></i> 8月21日考试
               </a>
             
           </div>
@@ -528,10 +452,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/Allmobuis/" rel="prev" title="莫比乌斯反演题目概述">
-                莫比乌斯反演题目概述 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -586,17 +506,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -710,22 +621,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#莫比乌斯平方前缀和"><span class="nav-number">2.1.</span> <span class="nav-text">莫比乌斯平方前缀和</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#欧拉函数平方前缀和"><span class="nav-number">2.2.</span> <span class="nav-text">欧拉函数平方前缀和</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code"><span class="nav-number">3.</span> <span class="nav-text">Code</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
