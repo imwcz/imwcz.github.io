@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="线段树,动态规划,逆序对,状压dp,拓扑排序,离散化," />
+
+
+
+
+
+
+
+
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+<meta name="description" content="吐槽
+第一天没做;
+第二天也没怎么做;
+题目整体还是比较简单的, 不会出现死活做不出来的情况.
+
+试题地址(保密)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="8月30-31日考试">
+<meta property="og:url" content="http://aiyoupass.com/2018/exam8-30-31/index.html">
+<meta property="og:site_name" content="落花微雨">
+<meta property="og:description" content="吐槽
+第一天没做;
+第二天也没怎么做;
+题目整体还是比较简单的, 不会出现死活做不出来的情况.
+
+试题地址(保密)">
+<meta property="og:image" content="https://i.loli.net/2018/08/31/5b88e8adb5a37.png">
+<meta property="og:updated_time" content="2018-08-31T07:48:14.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="8月30-31日考试">
+<meta name="twitter:description" content="吐槽
+第一天没做;
+第二天也没怎么做;
+题目整体还是比较简单的, 不会出现死活做不出来的情况.
+
+试题地址(保密)">
+<meta name="twitter:image" content="https://i.loli.net/2018/08/31/5b88e8adb5a37.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '9AZWK32GMU',
+      apiKey: 'cfdae09f7596feb4221d4e18c22a727a',
+      indexName: 'blog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://aiyoupass.com/2018/exam8-30-31/"/>
+
+
+
+
+
+  <title>8月30-31日考试 | 落花微雨</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">落花微雨</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">用笑容去改变世界,别让世界改变了你的笑容.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            Schedule
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-knowledge">
+          <a href="/Knowledge/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />
+            
+            Knowledge
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/exam8-30-31/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">8月30-31日考试</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-31T14:30:30+08:00">
+                2018-08-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/测试/" itemprop="url" rel="index">
+                    <span itemprop="name">测试</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/exam8-30-31/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/exam8-30-31/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="吐槽"><a href="#吐槽" class="headerlink" title="吐槽"></a>吐槽</h2><ul>
+<li>第一天没做;</li>
+<li>第二天也没怎么做;</li>
+<li>题目整体还是比较简单的, 不会出现死活做不出来的情况.</li>
+</ul>
+<p>试题地址(保密)</p>
+<a id="more"></a>
+<h2 id="第一天"><a href="#第一天" class="headerlink" title="第一天"></a>第一天</h2><h3 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h3><p>随便水.</p>
+<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>用字符串暴力做可以, 也可以用数字代替字符串.</p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">1005</span>;</div><div class="line"></div><div class="line"><span class="built_in">std</span>:: <span class="built_in">string</span> name[N];</div><div class="line"><span class="keyword">struct</span> Node &#123;</div><div class="line">	<span class="keyword">int</span> siz; <span class="built_in">std</span>:: <span class="built_in">string</span>* id;</div><div class="line">	Node () &#123;&#125;</div><div class="line">	Node (<span class="keyword">int</span> _, <span class="built_in">std</span>:: <span class="built_in">string</span>*  __) : siz(_), id(__) &#123;&#125;</div><div class="line">&#125;p[N];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</div><div class="line">	freopen(<span class="string">"y.in"</span>, <span class="string">"r"</span>, <span class="built_in">stdin</span>);</div><div class="line">	freopen(<span class="string">"y.out"</span>, <span class="string">"w"</span>, <span class="built_in">stdout</span>);</div><div class="line">	<span class="keyword">int</span> n; <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n); <span class="built_in">std</span>:: <span class="built_in">string</span> str;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i += <span class="number">1</span>) &#123;</div><div class="line">		<span class="built_in">std</span>:: <span class="built_in">cin</span> &gt;&gt; name[i]; </div><div class="line">		p[i] = Node(<span class="number">0</span>, &amp;name[i]);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">int</span> m; <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;m);</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; i += <span class="number">1</span>) &#123;</div><div class="line">		<span class="keyword">int</span> u, v;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;u, &amp;v);</div><div class="line">		p[u] = Node(p[v].siz + <span class="number">1</span>, p[v].id);</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">std</span>:: <span class="built_in">string</span>* P = p[<span class="number">1</span>].id;</div><div class="line">	<span class="keyword">int</span> s = p[<span class="number">1</span>].siz;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= s; i += <span class="number">1</span>) <span class="built_in">printf</span>(<span class="string">"I_love_"</span>);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%s"</span>, (*P).c_str());</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h3><h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>先对每个位置减去$k$, 求一遍前缀和, 那么一段区间$[l,r]$合法需满足$s_r-s_{l-1} \le 0$, 因此令右端点为$r$, 满足条件的左端点$l$需满足$s_{l-1}&gt;s_r$, 于是转化为类似于求逆序对的问题, 用线段树或树状数组都可以.<br>若$s_r\le 0$, 则区间$[1,r]$也满足情况.</p>
+<h4 id="Code-1"><a href="#Code-1" class="headerlink" title="Code"></a>Code</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctype.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">5000005</span>;</div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> nc() getchar()</span></div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="keyword">int</span> x = <span class="number">0</span>, f = <span class="number">1</span>; <span class="keyword">char</span> ch = nc(); <span class="keyword">for</span> (; !<span class="built_in">isdigit</span>(ch); ch=nc()) <span class="keyword">if</span> (ch==<span class="string">'-'</span>) f = <span class="number">-1</span>;</div><div class="line">	<span class="keyword">for</span> (; <span class="built_in">isdigit</span>(ch); ch=nc()) x = x * <span class="number">10</span> + ch - <span class="string">'0'</span>; <span class="keyword">return</span> x * f;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">int</span> val[N], cnt;</div><div class="line"><span class="keyword">long</span> <span class="keyword">long</span> s[N], B[N];</div><div class="line"></div><div class="line"><span class="keyword">struct</span> Node &#123;</div><div class="line">	<span class="keyword">int</span> v; Node *ls, *rs;</div><div class="line">	Node () &#123; v = <span class="number">0</span>, ls = rs = <span class="literal">NULL</span>; &#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">merge</span> <span class="params">()</span> </span>&#123; v = ls-&gt;v + rs-&gt;v; &#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span> </span>&#123; <span class="keyword">if</span> (ls) ls-&gt;clear(), rs-&gt;clear(); <span class="keyword">delete</span> <span class="keyword">this</span>; &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Node&gt;</div><div class="line"><span class="keyword">class</span> Tree &#123;</div><div class="line">	Node *root; <span class="keyword">int</span> n;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">	Tree () &#123; root = <span class="keyword">new</span> Node(); &#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span> </span>&#123; root-&gt;clear(); &#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">build</span> <span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, Node *node)</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span> (l == r) <span class="keyword">return</span> ;</div><div class="line">		<span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</div><div class="line">		node-&gt;ls = <span class="keyword">new</span> Node(); node-&gt;rs = <span class="keyword">new</span> Node();</div><div class="line">		build(l, mid, node-&gt;ls);</div><div class="line">		build(mid + <span class="number">1</span>, r, node-&gt;rs);</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">Build</span> <span class="params">(<span class="keyword">int</span> _)</span> </span>&#123; n = _; build(<span class="number">1</span>, n, root); &#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">rebuild</span> <span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, Node *node)</span> </span>&#123;</div><div class="line">		node-&gt;v = <span class="number">0</span>;</div><div class="line">		<span class="keyword">if</span> (l == r) <span class="keyword">return</span> ;</div><div class="line">		<span class="keyword">if</span> (!node-&gt;ls) node-&gt;ls = <span class="keyword">new</span> Node();</div><div class="line">		<span class="keyword">if</span> (!node-&gt;rs) node-&gt;rs = <span class="keyword">new</span> Node();</div><div class="line">		<span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</div><div class="line">		rebuild(l, mid, node-&gt;ls);</div><div class="line">		rebuild(mid + <span class="number">1</span>, r, node-&gt;rs);</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">reBuild</span> <span class="params">(<span class="keyword">int</span> _)</span> </span>&#123; n = _; rebuild(<span class="number">1</span>, n, root); &#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">addition</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> k, Node *node)</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span> (l == r) &#123;</div><div class="line">			node-&gt;v += <span class="number">1</span>;</div><div class="line">			<span class="keyword">return</span> ;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</div><div class="line">		<span class="keyword">if</span> (k &lt;= mid) addition(l, mid, k, node-&gt;ls);</div><div class="line">		<span class="keyword">if</span> (k &gt; mid ) addition(mid + <span class="number">1</span>, r, k, node-&gt;rs);</div><div class="line">		node-&gt;merge();</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">Addition</span><span class="params">(<span class="keyword">int</span> p)</span> </span>&#123; addition(<span class="number">1</span>, n, p, root); &#125;</div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> L, <span class="keyword">int</span> R, Node *node)</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span> (l &gt;= L and r &lt;= R)</div><div class="line">			<span class="keyword">return</span> node-&gt;v;</div><div class="line">		<span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>; </div><div class="line">		<span class="keyword">int</span> res = <span class="number">0</span>;</div><div class="line">		<span class="keyword">if</span> (L &lt;= mid) res += query(l, mid, L, R, node-&gt;ls);</div><div class="line">		<span class="keyword">if</span> (R &gt;  mid) res += query(mid + <span class="number">1</span>, r, L, R, node-&gt;rs);</div><div class="line">		<span class="keyword">return</span> res;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">Query</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123; </div><div class="line">		<span class="keyword">if</span> (l &gt; r) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">		<span class="keyword">return</span> query(<span class="number">1</span>, n, l, r, root);</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</div><div class="line">	freopen(<span class="string">"h.in"</span> , <span class="string">"r"</span>, <span class="built_in">stdin</span>);</div><div class="line">	freopen(<span class="string">"h.out"</span>, <span class="string">"w"</span>, <span class="built_in">stdout</span>);</div><div class="line">	<span class="keyword">int</span> n = read();</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i += <span class="number">1</span>) val[i] = read();</div><div class="line">	<span class="keyword">int</span> m = read();</div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> Find(x) std:: lower_bound(B + 1, B + cnt + 1, x) - B</span></div><div class="line">	<span class="keyword">bool</span> flag = <span class="literal">false</span>;</div><div class="line">	Tree&lt;Node&gt; *T = <span class="keyword">new</span> Tree&lt;Node&gt;();</div><div class="line">	<span class="keyword">while</span> (m--) &#123;</div><div class="line">		cnt = <span class="number">0</span>;</div><div class="line">		<span class="keyword">int</span> k = read();</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i += <span class="number">1</span>) s[i] = s[i - <span class="number">1</span>] + val[i] - k;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i += <span class="number">1</span>) B[++cnt] = s[i]; </div><div class="line">		<span class="built_in">std</span>:: sort(B + <span class="number">1</span>, B + cnt + <span class="number">1</span>); cnt = <span class="built_in">std</span>:: unique(B + <span class="number">1</span>, B + cnt + <span class="number">1</span>) - B;</div><div class="line">		<span class="keyword">if</span> (!flag) T-&gt;Build(cnt), flag = <span class="literal">true</span>;</div><div class="line">		<span class="keyword">else</span> T-&gt;reBuild(cnt);</div><div class="line">		<span class="keyword">int</span> res = <span class="number">0</span>;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i += <span class="number">1</span>) &#123;</div><div class="line">			res += T-&gt;Query(Find(s[i]), cnt);</div><div class="line">			T-&gt;Addition(Find(s[i]));</div><div class="line">			<span class="keyword">if</span> (s[i] &lt;= <span class="number">0</span>) res += <span class="number">1</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, res);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h3><h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>类似于找规律吧, 需要用拓扑排序.</p>
+<h2 id="第二天"><a href="#第二天" class="headerlink" title="第二天"></a>第二天</h2><h3 id="第一题-1"><a href="#第一题-1" class="headerlink" title="第一题"></a>第一题</h3><ul>
+<li>上界$O(N^2)$, 下界$\Omega(N)$的算法在随机数据下可以通过.</li>
+<li>$O(N\log_2 N)$的算法如线段树, 二分通过看常数.</li>
+<li>$O(N)$的算法可以正常通过, 双指针.</li>
+</ul>
+<h4 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h4><p><img src="https://i.loli.net/2018/08/31/5b88e8adb5a37.png" alt=""></p>
+<h4 id="Code-2"><a href="#Code-2" class="headerlink" title="Code"></a>Code</h4><p>无论开不开O2, 加不加读优, 开不开内存池都能过.<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">1000005</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> inf = <span class="number">0x3f3f3f3f</span>;</div><div class="line"></div><div class="line"><span class="keyword">char</span> buf[<span class="number">100000</span>], *p1, *p2;</div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> nc() (p1==p2&amp;&amp;(p2=(p1=buf)+fread(buf,1,100000,stdin),p1==p2)?EOF:*p1++)</span></div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="keyword">int</span> x = <span class="number">0</span>, f = <span class="number">1</span>; <span class="keyword">char</span> ch = nc(); <span class="keyword">for</span> (; !<span class="built_in">isdigit</span>(ch); ch=nc()) <span class="keyword">if</span> (ch==<span class="string">'-'</span>) f = <span class="number">-1</span>;</div><div class="line">	<span class="keyword">for</span> (; <span class="built_in">isdigit</span>(ch); ch=nc()) x = x * <span class="number">10</span> + ch - <span class="string">'0'</span>; <span class="keyword">return</span> x * f;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">struct</span> Node1 &#123;</div><div class="line">	<span class="keyword">int</span> v;</div><div class="line">	Node1 *ls, *rs;</div><div class="line">	Node1 () &#123; ls = rs = <span class="literal">NULL</span>, v = <span class="number">0</span>; &#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">()</span> </span>&#123; v = <span class="built_in">std</span>:: max(ls-&gt;v, rs-&gt;v); &#125;</div><div class="line">&#125;pool[N &lt;&lt; <span class="number">1</span>];</div><div class="line"><span class="keyword">static</span> <span class="keyword">int</span> cnt = <span class="number">0</span>;</div><div class="line"><span class="function">Node1 *<span class="title">new_Node</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="keyword">return</span> &amp;pool[cnt++];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Node&gt;</div><div class="line"><span class="keyword">class</span> Tree &#123;</div><div class="line">	<span class="keyword">int</span> n;</div><div class="line">	Node* root;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">	Tree() &#123; root = new_Node(); &#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, Node *node, <span class="keyword">int</span> *a)</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span> (l == r) &#123; node-&gt;v = a[l]; <span class="keyword">return</span>; &#125;</div><div class="line">		<span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</div><div class="line">		node-&gt;ls = new_Node();</div><div class="line">		node-&gt;rs = new_Node();</div><div class="line">		build (l, mid, node-&gt;ls, a);</div><div class="line">		build (mid + <span class="number">1</span>, r, node-&gt;rs, a);</div><div class="line">		node-&gt;merge();</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">Build</span><span class="params">(<span class="keyword">int</span> _, <span class="keyword">int</span> *a)</span> </span>&#123; n = _; build(<span class="number">1</span>, n, root, a); &#125; </div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">queryMin</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> L, <span class="keyword">int</span> R, Node *node, <span class="keyword">int</span> lim)</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span> (l == r) <span class="keyword">return</span> node-&gt;v &lt; lim ? inf : l;</div><div class="line">		<span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</div><div class="line">		<span class="keyword">if</span> (l &gt;= L and mid &lt;= R and node-&gt;ls-&gt;v &gt;= lim) <span class="keyword">return</span> queryMin(l, mid, L, R, node-&gt;ls, lim);</div><div class="line">		<span class="keyword">if</span> (mid &gt; L and r &lt;= R and node-&gt;rs-&gt;v &gt;= lim) <span class="keyword">return</span> queryMin(mid + <span class="number">1</span>, r, L, R, node-&gt;rs, lim);</div><div class="line">		<span class="keyword">int</span> res = inf;</div><div class="line">		<span class="keyword">if</span> (L &lt;= mid and node-&gt;ls-&gt;v &gt;= lim) res = <span class="built_in">std</span>:: min(res, queryMin(l, mid, L, R, node-&gt;ls, lim));</div><div class="line">		<span class="keyword">if</span> (R &gt; mid and node-&gt;rs-&gt;v &gt;= lim) res = <span class="built_in">std</span>:: min(res, queryMin(mid + <span class="number">1</span>, r, L, R, node-&gt;rs, lim));</div><div class="line">		<span class="keyword">return</span> res;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">queryMax</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> L, <span class="keyword">int</span> R, Node *node, <span class="keyword">int</span> lim)</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span> (l == r) <span class="keyword">return</span> node-&gt;v &lt; lim ? <span class="number">-1</span> : l;</div><div class="line">		<span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</div><div class="line">		<span class="keyword">if</span> (mid &gt; L and r &lt;= R and node-&gt;rs-&gt;v &gt;= lim) <span class="keyword">return</span> queryMax(mid + <span class="number">1</span>, r, L, R, node-&gt;rs, lim);</div><div class="line">		<span class="keyword">if</span> (l &gt;= L and mid &lt;= R and node-&gt;ls-&gt;v &gt;= lim) <span class="keyword">return</span> queryMax(l, mid, L, R, node-&gt;ls, lim);</div><div class="line">		<span class="keyword">int</span> res = <span class="number">-1</span>;</div><div class="line">		<span class="keyword">if</span> (R &gt; mid and node-&gt;rs-&gt;v &gt;= lim) res = <span class="built_in">std</span>:: max(res, queryMax(mid + <span class="number">1</span>, r, L, R, node-&gt;rs, lim));</div><div class="line">		<span class="keyword">if</span> (L &lt;= mid and node-&gt;ls-&gt;v &gt;= lim) res = <span class="built_in">std</span>:: max(res, queryMax(l, mid, L, R, node-&gt;ls, lim));</div><div class="line">		<span class="keyword">return</span> res;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">QueryMin</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> lim)</span> </span>&#123; <span class="keyword">if</span> (l &gt; r) <span class="keyword">return</span> inf;</div><div class="line">		<span class="keyword">return</span> queryMin(<span class="number">1</span>, n, l, r, root, lim);</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">QueryMax</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> lim)</span> </span>&#123; <span class="keyword">if</span> (l &gt; r) <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">		<span class="keyword">return</span> queryMax(<span class="number">1</span>, n, l, r, root, lim);</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">int</span> A[N];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</div><div class="line">	freopen(<span class="string">"w.in"</span>, <span class="string">"r"</span>, <span class="built_in">stdin</span>);</div><div class="line">	freopen(<span class="string">"w.out"</span>, <span class="string">"w"</span>, <span class="built_in">stdout</span>);</div><div class="line">	<span class="keyword">int</span> n; n = read();</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i += <span class="number">1</span>) A[i] = read();</div><div class="line">	Tree&lt;Node1&gt; *T = <span class="keyword">new</span> Tree&lt;Node1&gt;(); T-&gt;Build(n, A);</div><div class="line">	<span class="keyword">long</span> <span class="keyword">long</span> res = <span class="number">0</span>;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i += <span class="number">1</span>) &#123;</div><div class="line">		res = <span class="built_in">std</span>:: max(res, (<span class="keyword">long</span> <span class="keyword">long</span>)A[i]);</div><div class="line">		<span class="keyword">int</span> pos = T-&gt;QueryMin(<span class="number">1</span>, i - <span class="number">1</span>, A[i]);</div><div class="line">		<span class="keyword">if</span> (pos != inf) res = <span class="built_in">std</span>:: max(res, <span class="number">1l</span>l * (i - pos + <span class="number">1</span>) * A[i]);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = n; i &gt;= <span class="number">1</span>; i -= <span class="number">1</span>) &#123;</div><div class="line">		<span class="keyword">int</span> pos = T-&gt;QueryMax(i + <span class="number">1</span>, n, A[i]);</div><div class="line">		<span class="keyword">if</span> (pos !=  <span class="number">-1</span>) res = <span class="built_in">std</span>:: max(res, <span class="number">1l</span>l * (pos - i + <span class="number">1</span>) * A[i]);</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%lld"</span>, res);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="第二题-1"><a href="#第二题-1" class="headerlink" title="第二题"></a>第二题</h3><h4 id="Solution-4"><a href="#Solution-4" class="headerlink" title="Solution"></a>Solution</h4><p>设$a \text{ and } b = b - x, a \text{ or } b = a + x$, 那么$(a-x)^2+(a+x)^2=a^2+b^2+2x(x+a-b)$.<br>可以看出能进行操作时总是最优的.</p>
+<p>观察发现, 两个数$a,b$进行操作相当于是将两个数中不同的数位移动到同一个数上, 因此无需模拟题意, 直接统计数位的个数, 然后尽量往数上加即可.</p>
+<h3 id="第三题-1"><a href="#第三题-1" class="headerlink" title="第三题"></a>第三题</h3><p>感觉明明是个很好写的状态压缩dp, 怎么就没人做呢?</p>
+<h4 id="Solution-5"><a href="#Solution-5" class="headerlink" title="Solution"></a>Solution</h4><p>常规状压dp的思路.</p>
+<h4 id="Code-3"><a href="#Code-3" class="headerlink" title="Code"></a>Code</h4><p>目测速度应该是比较快的.<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">15</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> mod = <span class="number">1e9</span> + <span class="number">7</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> notexist[N + <span class="number">5</span>];</div><div class="line"><span class="built_in">std</span>:: <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;way[N + <span class="number">5</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isnotexist</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</div><div class="line">	<span class="keyword">if</span> (i &amp; (i &lt;&lt; <span class="number">1</span>)) <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">	<span class="keyword">if</span> (i &amp; (i &lt;&lt; <span class="number">2</span>)) <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">	<span class="keyword">if</span> (i &amp; (i &gt;&gt; <span class="number">1</span>)) <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">	<span class="keyword">if</span> (i &amp; (i &gt;&gt; <span class="number">2</span>)) <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">XiangJiao</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</div><div class="line">	<span class="keyword">if</span> (i &amp; j) <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">	<span class="keyword">if</span> (i &amp; (j &lt;&lt; <span class="number">1</span>)) <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">	<span class="keyword">if</span> (i &amp; (j &gt;&gt; <span class="number">1</span>)) <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">int</span> f[N + <span class="number">5</span>][<span class="number">466</span>][<span class="number">466</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</div><div class="line">	freopen(<span class="string">"l.in"</span> , <span class="string">"r"</span>, <span class="built_in">stdin</span>);</div><div class="line">	freopen(<span class="string">"l.out"</span>, <span class="string">"w"</span>, <span class="built_in">stdout</span>);</div><div class="line">	<span class="keyword">int</span> n, m, k;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>, &amp;n, &amp;m, &amp;k);</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>, u, v; i &lt;= k; i += <span class="number">1</span>) &#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;u, &amp;v); v -= <span class="number">1</span>;</div><div class="line">		notexist[u] += <span class="number">1</span> &lt;&lt; v;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">int</span> tot = <span class="number">1</span> &lt;&lt; m; way[<span class="number">0</span>].push_back(<span class="number">0</span>); </div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i += <span class="number">1</span>) &#123; </div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; tot; j += <span class="number">1</span>) &#123; </div><div class="line">			<span class="keyword">if</span> ((notexist[i] &amp; j) or isnotexist(j)) <span class="keyword">continue</span>; </div><div class="line">			way[i].push_back(j); </div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; way[<span class="number">1</span>].size(); i += <span class="number">1</span>) f[<span class="number">1</span>][i][<span class="number">0</span>] = <span class="number">1</span>;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; i += <span class="number">1</span>)</div><div class="line">	  <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; way[i].size(); j += <span class="number">1</span>)</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; way[i - <span class="number">1</span>].size(); k += <span class="number">1</span>)</div><div class="line">		  <span class="keyword">if</span> (not XiangJiao(way[i][j], way[i - <span class="number">1</span>][k])) </div><div class="line">		  	<span class="keyword">for</span> (<span class="keyword">int</span> l = <span class="number">0</span>; l &lt; way[i - <span class="number">2</span>].size(); l += <span class="number">1</span>)</div><div class="line">			  <span class="keyword">if</span> (not (way[i][j] &amp; way[i - <span class="number">2</span>][l]))</div><div class="line">				<span class="keyword">if</span> (not XiangJiao(way[i - <span class="number">1</span>][k], way[i - <span class="number">2</span>][l]))</div><div class="line">				  f[i][j][k] += f[i - <span class="number">1</span>][k][l], f[i][j][k] %= mod;</div><div class="line">	<span class="keyword">int</span> res = <span class="number">0</span>;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; way[n].size() ; i += <span class="number">1</span>) </div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; way[n - <span class="number">1</span>].size(); j += <span class="number">1</span>) &#123;</div><div class="line">			res += f[n][i][j],</div><div class="line">			res %= mod;</div><div class="line">		&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, res);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    
+    
+    <div>
+    
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+    
+    </div>
+    <div>
+    
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/线段树/" rel="tag"># 线段树</a>
+          
+            <a href="/tags/动态规划/" rel="tag"># 动态规划</a>
+          
+            <a href="/tags/逆序对/" rel="tag"># 逆序对</a>
+          
+            <a href="/tags/状压dp/" rel="tag"># 状压dp</a>
+          
+            <a href="/tags/拓扑排序/" rel="tag"># 拓扑排序</a>
+          
+            <a href="/tags/离散化/" rel="tag"># 离散化</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/exam8-25-26/" rel="next" title="8月25-26日考试">
+                <i class="fa fa-chevron-left"></i> 8月25-26日考试
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/myjson/head.jpg"
+                alt="aiyoupass" />
+            
+              <p class="site-author-name" itemprop="name">aiyoupass</p>
+              <p class="site-description motion-element" itemprop="description"><script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&charset=utf-8"></script><div id="lwlhitokoto"><script>lwlhitokoto()</script></div></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">89</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">85</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/imwcz" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:aiyoupass@outlook.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://plus.google.com/" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://stackoverflow.com/" target="_blank" title="StackOverflow">
+                      
+                        <i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://11101001.com/" title="11101001" target="_blank" rel="external nofollow">11101001</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://attack204.com/" title="attack" target="_blank" rel="external nofollow">attack</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://menjiantong.github.io/" title="MenJianTong" target="_blank" rel="external nofollow">MenJianTong</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#吐槽"><span class="nav-number">1.</span> <span class="nav-text">吐槽</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一天"><span class="nav-number">2.</span> <span class="nav-text">第一天</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一题"><span class="nav-number">2.1.</span> <span class="nav-text">第一题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution"><span class="nav-number">2.1.1.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code"><span class="nav-number">2.1.2.</span> <span class="nav-text">Code</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二题"><span class="nav-number">2.2.</span> <span class="nav-text">第二题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">Code</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三题"><span class="nav-number">2.3.</span> <span class="nav-text">第三题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-2"><span class="nav-number">2.3.1.</span> <span class="nav-text">Solution</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二天"><span class="nav-number">3.</span> <span class="nav-text">第二天</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一题-1"><span class="nav-number">3.1.</span> <span class="nav-text">第一题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-3"><span class="nav-number">3.1.1.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code-2"><span class="nav-number">3.1.2.</span> <span class="nav-text">Code</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二题-1"><span class="nav-number">3.2.</span> <span class="nav-text">第二题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-4"><span class="nav-number">3.2.1.</span> <span class="nav-text">Solution</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三题-1"><span class="nav-number">3.3.</span> <span class="nav-text">第三题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution-5"><span class="nav-number">3.3.1.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code-3"><span class="nav-number">3.3.2.</span> <span class="nav-text">Code</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">aiyoupass</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" href="http://hexo.io" rel="external nofollow">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'enljgi0OjJY1XU6c65Yd9nWz-gzGzoHsz',
+        appKey: 'BrxeA3UhBvNPLXWzErwFmRwd',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+	        displayMath: [ ['$$','$$'], ["\\[","\\]"] ], 
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        },
+        "HTML-CSS": {
+            scale: 90,minScaleAdjust: 85
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>
