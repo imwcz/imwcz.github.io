@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="线段树," />
+
+
+
+
+
+
+
+
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+<meta name="description" content="DescriptionYou are given a sequence A[1], A[2], …, A[N] . ( |A[i]| ≤ 15007 , 1 ≤ N ≤ 50000 ). A query is defined as follows:Query(x,y) = Max { a[i]+a[i+1]+…+a[j] ; x ≤ i ≤ j ≤ y }.Given M queries, you">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SP1043 GSS1">
+<meta property="og:url" content="http://aiyoupass.com/2018/SP1043/index.html">
+<meta property="og:site_name" content="落花微雨">
+<meta property="og:description" content="DescriptionYou are given a sequence A[1], A[2], …, A[N] . ( |A[i]| ≤ 15007 , 1 ≤ N ≤ 50000 ). A query is defined as follows:Query(x,y) = Max { a[i]+a[i+1]+…+a[j] ; x ≤ i ≤ j ≤ y }.Given M queries, you">
+<meta property="og:image" content="https://i.loli.net/2018/09/01/5b89e13441679.png">
+<meta property="og:updated_time" content="2018-09-01T00:50:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SP1043 GSS1">
+<meta name="twitter:description" content="DescriptionYou are given a sequence A[1], A[2], …, A[N] . ( |A[i]| ≤ 15007 , 1 ≤ N ≤ 50000 ). A query is defined as follows:Query(x,y) = Max { a[i]+a[i+1]+…+a[j] ; x ≤ i ≤ j ≤ y }.Given M queries, you">
+<meta name="twitter:image" content="https://i.loli.net/2018/09/01/5b89e13441679.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '9AZWK32GMU',
+      apiKey: 'cfdae09f7596feb4221d4e18c22a727a',
+      indexName: 'blog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://aiyoupass.com/2018/SP1043/"/>
+
+
+
+
+
+  <title>SP1043 GSS1 | 落花微雨</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">落花微雨</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">用笑容去改变世界,别让世界改变了你的笑容.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            Schedule
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-knowledge">
+          <a href="/Knowledge/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />
+            
+            Knowledge
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aiyoupass.com/2018/SP1043/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aiyoupass">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myjson/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落花微雨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">SP1043 GSS1</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-01T08:30:30+08:00">
+                2018-09-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/" itemprop="url" rel="index">
+                    <span itemprop="name">信息学竞赛</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/信息学竞赛/题目/" itemprop="url" rel="index">
+                    <span itemprop="name">题目</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/SP1043/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/SP1043/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>You are given a sequence A[1], A[2], …, A[N] . ( |A[i]| ≤ 15007 , 1 ≤ N ≤ 50000 ). A query is defined as follows:<br>Query(x,y) = Max { a[i]+a[i+1]+…+a[j] ; x ≤ i ≤ j ≤ y }.<br>Given M queries, your program must output the results of these queries.</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>用线段树维护区间和, 区间最大子段和, 区间左侧最大和, 区间右侧最大和.<br>最重要的部分是合并两个区间.</p>
+<p>其中卡过时间限制花了很长时间;</p>
+<ol>
+<li>如果按照常规思路来查询, 每次递归查询都需要至少合并一次区间;</li>
+<li>使用<code>new</code>, <code>delete</code>来管理内存可能会出现严重的内存泄露, 而且效率不高;</li>
+<li>合并区间中有大量的无用步骤, 需要精简;</li>
+</ol>
+<p>解决方法:</p>
+<ol>
+<li>更改查询方式, 使得每次至多合并一次区间;</li>
+<li>直接使用局部变量, 并且在合并时用值代替指针;</li>
+<li>将合并过程精简到一条语句;</li>
+<li>使用读入优化.</li>
+</ol>
+<p><img src="https://i.loli.net/2018/09/01/5b89e13441679.png" alt=""></p>
+<p>真·惨!</p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">50005</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> inf = <span class="number">0x3f3f3f3f</span>;</div><div class="line"><span class="keyword">using</span> <span class="built_in">std</span>:: max;</div><div class="line"></div><div class="line"><span class="keyword">char</span> buf[(<span class="number">1</span> &lt;&lt; <span class="number">22</span>)], *p1 = buf, *p2 = buf;</div><div class="line"><span class="keyword">char</span> obuf[<span class="number">1</span>&lt;&lt;<span class="number">24</span>], *O = obuf;</div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> getchar() (p1 == p2 &amp;&amp; (p2 = (p1 = buf) + fread(buf, 1, 1&lt;&lt;22, stdin), p1 == p2) ? EOF : *p1++)</span></div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">char</span> c = getchar(); <span class="keyword">int</span> x = <span class="number">0</span>, f = <span class="number">1</span>;</div><div class="line">    <span class="keyword">while</span>(c &lt; <span class="string">'0'</span> || c &gt; <span class="string">'9'</span>) &#123;<span class="keyword">if</span>(c == <span class="string">'-'</span>) f = <span class="number">-1</span>; c = getchar();&#125;</div><div class="line">    <span class="keyword">while</span>(c &gt;= <span class="string">'0'</span> &amp;&amp; c &lt;= <span class="string">'9'</span>) x = x * <span class="number">10</span> + c - <span class="string">'0'</span>, c = getchar();</div><div class="line">    <span class="keyword">return</span> x * f;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">struct</span> Node &#123;</div><div class="line">	<span class="keyword">int</span> v, val, la, ra;</div><div class="line">	Node *ls, *rs;</div><div class="line">	Node () &#123; v = la = ra = -inf, val = <span class="number">0</span>; ls = rs = <span class="literal">NULL</span>; &#125;</div><div class="line">	Node (<span class="keyword">int</span> _, <span class="keyword">int</span> _a, <span class="keyword">int</span> _b, <span class="keyword">int</span> _c): ls(<span class="literal">NULL</span>), rs(<span class="literal">NULL</span>) &#123; v = _, val = _a, la = _b, ra = _c; &#125;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">merge</span> <span class="params">()</span> </span>&#123;</div><div class="line">		val = ls-&gt;val + rs-&gt;val, v = max(ls-&gt;ra + rs-&gt;la, max(ls-&gt;v, rs-&gt;v)),</div><div class="line">		ra = max(rs-&gt;ra, rs-&gt;val + ls-&gt;ra), la = max(ls-&gt;la, ls-&gt;val + rs-&gt;la);</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> new_Node() new Node()</span></div><div class="line"></div><div class="line"><span class="function">Node <span class="title">merge</span><span class="params">(Node rs, Node ls)</span></span>&#123;</div><div class="line">	<span class="keyword">return</span> Node(max(ls.ra + rs.la, max(ls.v, rs.v)), ls.val + rs.val, </div><div class="line">				max(ls.la, ls.val + rs.la), max(rs.ra, rs.val + ls.ra));</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; </div><div class="line"><span class="keyword">class</span> Tree &#123;</div><div class="line"> 	Node *root; <span class="keyword">int</span> n;</div><div class="line"><span class="keyword">public</span> :</div><div class="line"> 	Tree () &#123; root = new_Node(); &#125;</div><div class="line"> 	<span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, Node *node, <span class="keyword">int</span> *a)</span> </span>&#123;</div><div class="line"> 		<span class="keyword">if</span> (l == r) &#123;</div><div class="line"> 			node-&gt;val = node-&gt;v = node-&gt;la = node-&gt;ra = a[l];</div><div class="line"> 			<span class="keyword">return</span> ;</div><div class="line"> 		&#125;</div><div class="line"> 		<span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</div><div class="line"> 		node-&gt;ls = new_Node(); node-&gt;rs = new_Node();</div><div class="line"> 		build(l, mid, node-&gt;ls, a);</div><div class="line"> 		build(mid + <span class="number">1</span>, r, node-&gt;rs, a);</div><div class="line"> 		node-&gt;merge();</div><div class="line"> 	&#125;</div><div class="line"> 	<span class="function"><span class="keyword">void</span> <span class="title">Build</span><span class="params">(<span class="keyword">int</span> _, <span class="keyword">int</span> *a)</span> </span>&#123; <span class="keyword">return</span> n = _, build(<span class="number">1</span>, n, root, a); &#125;</div><div class="line"> 	<span class="function">Node <span class="title">query</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> L, <span class="keyword">int</span> R, Node *node)</span> </span>&#123;</div><div class="line"> 		<span class="keyword">if</span> (l &gt;= L and r &lt;= R) <span class="keyword">return</span> *node;</div><div class="line"> 		<span class="keyword">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</div><div class="line"> 		<span class="keyword">if</span> (L &gt; mid) <span class="keyword">return</span> query(mid + <span class="number">1</span>, r, L, R, node-&gt;rs);</div><div class="line"> 		<span class="keyword">else</span> <span class="keyword">if</span> (R &lt;= mid) <span class="keyword">return</span> query(l, mid, L, R, node-&gt;ls);</div><div class="line"> 		<span class="keyword">else</span> <span class="keyword">return</span> merge(query(mid + <span class="number">1</span>, r, L, R, node-&gt;rs), query(l, mid, L, R, node-&gt;ls));</div><div class="line"> 	&#125;</div><div class="line"> 	<span class="function"><span class="keyword">int</span> <span class="title">Query</span><span class="params">(<span class="keyword">int</span> L, <span class="keyword">int</span> R)</span> </span>&#123; <span class="keyword">return</span> query(<span class="number">1</span>, n, L, R, root).v; &#125;</div><div class="line">&#125;;</div><div class="line"> </div><div class="line"><span class="keyword">int</span> A[N];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span> </span>&#123;</div><div class="line">	<span class="keyword">int</span> n; </div><div class="line">	n = read();</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i += <span class="number">1</span>) A[i] = read();</div><div class="line">	<span class="keyword">int</span> m, l, r;</div><div class="line">	m = read();</div><div class="line">	Tree&lt;Node&gt; *T = <span class="keyword">new</span> Tree&lt;Node&gt;(); T-&gt;Build(n, A);</div><div class="line">	<span class="keyword">while</span> (m--) &#123;</div><div class="line">		l = read(), r = read();</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, T-&gt;Query(l, r));</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+    <div>
+    
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+    
+    </div>
+    <div>
+    
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/线段树/" rel="tag"># 线段树</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/exam8-30-31/" rel="next" title="8月30-31日考试">
+                <i class="fa fa-chevron-left"></i> 8月30-31日考试
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/exam9-2/" rel="prev" title="9月1日A题">
+                9月1日A题 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/myjson/head.jpg"
+                alt="aiyoupass" />
+            
+              <p class="site-author-name" itemprop="name">aiyoupass</p>
+              <p class="site-description motion-element" itemprop="description"><script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&charset=utf-8"></script><div id="lwlhitokoto"><script>lwlhitokoto()</script></div></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">92</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">87</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/imwcz" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:aiyoupass@outlook.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://plus.google.com/" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://stackoverflow.com/" target="_blank" title="StackOverflow">
+                      
+                        <i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://11101001.com/" title="11101001" target="_blank" rel="external nofollow">11101001</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://attack204.com/" title="attack" target="_blank" rel="external nofollow">attack</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://menjiantong.github.io/" title="MenJianTong" target="_blank" rel="external nofollow">MenJianTong</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code"><span class="nav-number">3.</span> <span class="nav-text">Code</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">aiyoupass</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" href="http://hexo.io" rel="external nofollow">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'enljgi0OjJY1XU6c65Yd9nWz-gzGzoHsz',
+        appKey: 'BrxeA3UhBvNPLXWzErwFmRwd',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+	        displayMath: [ ['$$','$$'], ["\\[","\\]"] ], 
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        },
+        "HTML-CSS": {
+            scale: 90,minScaleAdjust: 85
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>
