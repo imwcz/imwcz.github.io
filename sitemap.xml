@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://aiyoupass.com/2018/MiOJ/</loc>
+    <loc>http://aiyoupass.com/2018/94/</loc>
     
-    <lastmod>2018-09-09T09:29:18.000Z</lastmod>
+    <lastmod>2018-09-11T13:35:32.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://aiyoupass.com/2018/exam9-8night/</loc>
     
-    <lastmod>2018-09-09T09:21:54.000Z</lastmod>
+    <lastmod>2018-09-11T02:14:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://aiyoupass.com/2018/exam9-10night/</loc>
+    
+    <lastmod>2018-09-11T02:06:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://aiyoupass.com/2018/MiOJ/</loc>
+    
+    <lastmod>2018-09-09T09:29:18.000Z</lastmod>
     
   </url>
   
