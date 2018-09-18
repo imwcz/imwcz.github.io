@@ -95,7 +95,7 @@
 <meta property="og:url" content="http://aiyoupass.com/2018/p3994/index.html">
 <meta property="og:site_name" content="落花微雨">
 <meta property="og:description" content="挖坑不填系列起码我会做法了">
-<meta property="og:updated_time" content="2018-08-11T13:29:04.000Z">
+<meta property="og:updated_time" content="2018-09-16T06:29:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="P3994 高速公路">
 <meta name="twitter:description" content="挖坑不填系列起码我会做法了">
@@ -441,8 +441,7 @@
       
         <p>挖坑不填系列<br><del>起码我会做法了</del><br><a id="more"></a></p>
 <h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>C国拥有一张四通八达的高速公路网树，其中有n个城市，城市之间由一共n-1条高速公路连接。除了首都1号城市，每个城市都有一家本地的客运公司，可以发车前往全国各地，有若干条高速公路连向其他城市，这是一个树型结构，1号城市（首都）为根。假设有一个人要从i号城市坐车出发前往j号城市，那么他要花费Pi*（i城市到j城市的距离）+Qi元。由于距离首都越远，国家的监管就越松，所以距离首都越远，客运公司的Pi（单位距离价格）越大，形式化的说，如果把高速路网看成一棵以首都为根的有根树，i号城市是j号城市的某个祖先，那么一定存在Pi&lt;=Pj。</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>如果把树上的链单独拿出来考虑的话, 可以列出dp方程<br>$$<br>f_i = \min f_j+dis_j\cdot P_i +q_i<br>$$<br>可以考虑使用斜率优化, 当从$j$转移比$k$更优时满足<br>$$<br>f_j+dis_{i,j}\cdot P_i +q_i<f_k+dis_{i,k}\cdot p_i="" +q_i\\="" \rightarrow="">\frac{f_j-f_k}{dis_{i,k}-dis_{i,j}}<br>$$<br>考虑到这里我就没有办法了， 因为这需要维护一个单调队列, 而后效性使得每个拥有多个子节点的结点必须单独保存一个单调队列, 这需要大量的空间.</f_k+dis_{i,k}\cdot></p>
-<p>无奈之下, 求助于XXY学姐的<a href="http://www.cnblogs.com/TheRoadToTheGold/p/8468557.html#commentform" target="_blank" rel="external">Blog</a>.</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>如果把树上的链单独拿出来考虑的话, 可以列出dp方程<br>$$<br>f_i = \min f_j+dis_j\cdot P_i +q_i<br>$$<br>可以考虑使用斜率优化, 当从$j$转移比$k$更优时满足<br>$$<br>f_j+dis_{i,j}\cdot P_i +q_i&lt; f_k+dis_{i,k}\cdot P_i +q_i$$<br>$$\Rightarrow P_i &gt;\frac{f_j-f_k}{dis_{i,k}-dis_{i,j}}<br>$$<br>考虑到这里我就没有办法了， 因为这需要维护一个单调队列, 而后效性使得每个拥有多个子节点的结点必须单独保存一个单调队列, 这需要大量的空间.<br>无奈之下, 求助于XXY学姐的<a href="http://www.cnblogs.com/TheRoadToTheGold/p/8468557.html#commentform" target="_blank" rel="external">Blog</a>.</p>
 <pre><code>只需要考虑如何去除兄弟节点的子树对单调队列的影响
 即在一个节点退出dfs时，将单调队列恢复为这个节点开始dfs的情况
 头指针只是不断的+1，没有涉及到单调队列中元素的修改，所以记录下头指针在哪个位置即可
@@ -596,7 +595,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">100</span>
+                  <span class="site-state-item-count">101</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
