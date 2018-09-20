@@ -4,25 +4,38 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/p3994/</loc>
-    <lastmod>2018-09-19T13:38:36.000Z</lastmod>
+    <loc>http://aiyoupass.com/2018/p2096/</loc>
+    <lastmod>2018-09-20T12:42:08.000Z</lastmod>
     <data>
         <display>
-        <title>P3994 高速公路</title>
-        <pubTime>2018-09-19T13:28:30.000Z</pubTime>
+        <title>SCOI2010 股票交易</title>
+        <pubTime>2018-09-20T13:11:00.000Z</pubTime>
         
         <tag>动态规划</tag>
          
-        <tag>斜率优化</tag>
+        <tag>单调队列</tag>
          
          
            
-             
-              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
-          
-             
-              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
-          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/P2081/</loc>
+    <lastmod>2018-09-20T10:12:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>NOI 2012迷失游乐园</title>
+        <pubTime>2018-09-19T13:11:00.000Z</pubTime>
+        
+        <tag>概率期望</tag>
+         
+        <tag>基环树</tag>
+         
+         
+           
         </display>
     </data>
     </url>
@@ -30,7 +43,7 @@
     
   <url>
     <loc>http://aiyoupass.com/2018/poj2096/</loc>
-    <lastmod>2018-09-19T13:20:44.000Z</lastmod>
+    <lastmod>2018-09-20T10:08:12.000Z</lastmod>
     <data>
         <display>
         <title>POJ2096 Collecting Bugs</title>
@@ -52,19 +65,50 @@
 
     
   <url>
-    <loc>http://aiyoupass.com/2018/P2081/</loc>
-    <lastmod>2018-09-19T13:14:42.000Z</lastmod>
+    <loc>http://aiyoupass.com/2018/myImg1/</loc>
+    <lastmod>2018-09-20T10:07:34.000Z</lastmod>
     <data>
         <display>
-        <title>NOI 2012迷失游乐园</title>
-        <pubTime>2018-09-19T13:11:00.000Z</pubTime>
+        <title>树戍数点</title>
+        <pubTime>2018-09-20T09:30:00.000Z</pubTime>
         
-        <tag>概率期望</tag>
+        <tag>动态规划</tag>
          
-        <tag>基环树</tag>
+        <tag>原创</tag>
          
          
            
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/p3994/</loc>
+    <lastmod>2018-09-19T13:38:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>P3994 高速公路</title>
+        <pubTime>2018-09-19T13:28:30.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>斜率优化</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
         </display>
     </data>
     </url>

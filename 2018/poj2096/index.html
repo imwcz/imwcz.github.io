@@ -89,16 +89,16 @@
     })();
 </script>
 
-<meta name="description" content="DescriptionIvan is fond of collecting. Unlike other people who collect post stamps, coins or other material stuff, he collects software bugs. When Ivan gets a new program, he classifies all possible b">
+<meta name="description" content="概率期望简单题.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="POJ2096 Collecting Bugs">
 <meta property="og:url" content="http://aiyoupass.com/2018/poj2096/index.html">
 <meta property="og:site_name" content="落花微雨">
-<meta property="og:description" content="DescriptionIvan is fond of collecting. Unlike other people who collect post stamps, coins or other material stuff, he collects software bugs. When Ivan gets a new program, he classifies all possible b">
-<meta property="og:updated_time" content="2018-09-19T13:20:44.000Z">
+<meta property="og:description" content="概率期望简单题.">
+<meta property="og:updated_time" content="2018-09-20T10:08:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="POJ2096 Collecting Bugs">
-<meta name="twitter:description" content="DescriptionIvan is fond of collecting. Unlike other people who collect post stamps, coins or other material stuff, he collects software bugs. When Ivan gets a new program, he classifies all possible b">
+<meta name="twitter:description" content="概率期望简单题.">
 
 
 
@@ -439,7 +439,8 @@
       
 
       
-        <h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Ivan is fond of collecting. Unlike other people who collect post stamps, coins or other material stuff, he collects software bugs. When Ivan gets a new program, he classifies all possible bugs into n categories. Each day he discovers exactly one bug in the program and adds information about it and its category into a spreadsheet. When he finds bugs in all bug categories, he calls the program disgusting, publishes this spreadsheet on his home page, and forgets completely about the program.<br>Two companies, Macrosoft and Microhard are in tight competition. Microhard wants to decrease sales of one Macrosoft program. They hire Ivan to prove that the program in question is disgusting. However, Ivan has a complicated problem. This new program has s subcomponents, and finding bugs of all types in each subcomponent would take too long before the target could be reached. So Ivan and Microhard agreed to use a simpler criteria — Ivan should find at least one bug in each subsystem and at least one bug of each category.<br>Macrosoft knows about these plans and it wants to estimate the time that is required for Ivan to call its program disgusting. It’s important because the company releases a new version soon, so it can correct its plans and release it quicker. Nobody would be interested in Ivan’s opinion about the reliability of the obsolete version.<br>A bug found in the program can be of any category with equal probability. Similarly, the bug can be found in any given subsystem with equal probability. Any particular bug cannot belong to two different categories or happen simultaneously in two different subsystems. The number of bugs in the program is almost infinite, so the probability of finding a new bug of some category in some subsystem does not reduce after finding any number of bugs of that category in that subsystem.<br>Find an average time (in days of Ivan’s work) required to name the program disgusting.</p>
+        <p>概率期望简单题.<br><a id="more"></a></p>
+<h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Ivan is fond of collecting. Unlike other people who collect post stamps, coins or other material stuff, he collects software bugs. When Ivan gets a new program, he classifies all possible bugs into n categories. Each day he discovers exactly one bug in the program and adds information about it and its category into a spreadsheet. When he finds bugs in all bug categories, he calls the program disgusting, publishes this spreadsheet on his home page, and forgets completely about the program.<br>Two companies, Macrosoft and Microhard are in tight competition. Microhard wants to decrease sales of one Macrosoft program. They hire Ivan to prove that the program in question is disgusting. However, Ivan has a complicated problem. This new program has s subcomponents, and finding bugs of all types in each subcomponent would take too long before the target could be reached. So Ivan and Microhard agreed to use a simpler criteria — Ivan should find at least one bug in each subsystem and at least one bug of each category.<br>Macrosoft knows about these plans and it wants to estimate the time that is required for Ivan to call its program disgusting. It’s important because the company releases a new version soon, so it can correct its plans and release it quicker. Nobody would be interested in Ivan’s opinion about the reliability of the obsolete version.<br>A bug found in the program can be of any category with equal probability. Similarly, the bug can be found in any given subsystem with equal probability. Any particular bug cannot belong to two different categories or happen simultaneously in two different subsystems. The number of bugs in the program is almost infinite, so the probability of finding a new bug of some category in some subsystem does not reduce after finding any number of bugs of that category in that subsystem.<br>Find an average time (in days of Ivan’s work) required to name the program disgusting.</p>
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>倒推期望. 考虑每次发现一个新BUG有四种情况, 讨论一下.</p>
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">double</span> dp[<span class="number">1005</span>][<span class="number">1005</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="keyword">int</span> n, s;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;s);</div><div class="line">	dp[n][s] = <span class="number">0</span>;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = n; i &gt;= <span class="number">0</span>; --i)</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j = s; j &gt;= <span class="number">0</span>; --j) &#123;</div><div class="line">			<span class="keyword">if</span>(i == n &amp;&amp; s == j) <span class="keyword">continue</span>;</div><div class="line">			<span class="keyword">double</span> tmp = n * s - i * j;</div><div class="line">			dp[i][j] = (dp[i + <span class="number">1</span>][j] * (n - i) * j + </div><div class="line">						dp[i][j + <span class="number">1</span>] * i * (s - j) + </div><div class="line">						dp[i + <span class="number">1</span>][j + <span class="number">1</span>] * (n - i) * (s - j) + </div><div class="line">						n * s) / (<span class="keyword">double</span>)(n * s - i * j);</div><div class="line">		&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%f\n"</span>, dp[<span class="number">0</span>][<span class="number">0</span>]);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
@@ -581,7 +582,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">103</span>
+                  <span class="site-state-item-count">105</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -603,7 +604,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">94</span>
+                  <span class="site-state-item-count">95</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
