@@ -4,6 +4,252 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2018/SolveSublime/</loc>
+    <lastmod>2018-09-27T13:33:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>折腾Sublime Text 3</title>
+        <pubTime>2018-09-27T08:30:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="解决方案" url="http://aiyoupass.com/categories/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/p4058/</loc>
+    <lastmod>2018-09-27T08:31:04.000Z</lastmod>
+    <data>
+        <display>
+        <title>Code Plus</title>
+        <pubTime>2018-09-27T07:40:00.000Z</pubTime>
+        
+        <tag>二分答案</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/p3565/</loc>
+    <lastmod>2018-09-27T08:03:30.000Z</lastmod>
+    <data>
+        <display>
+        <title>P3565 POI2014 HOT-Hotels</title>
+        <pubTime>2018-09-27T08:01:00.000Z</pubTime>
+        
+        <tag>动态规划</tag>
+         
+        <tag>树形dp</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/p3065/</loc>
+    <lastmod>2018-09-27T08:00:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>P3065 [USACO12DEC]第一!First!</title>
+        <pubTime>2018-09-27T07:50:00.000Z</pubTime>
+        
+        <tag>拓扑排序</tag>
+         
+        <tag>Trie</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/p1558/</loc>
+    <lastmod>2018-09-27T07:51:32.000Z</lastmod>
+    <data>
+        <display>
+        <title>P1558 色板游戏</title>
+        <pubTime>2018-09-27T07:43:00.000Z</pubTime>
+        
+        <tag>线段树</tag>
+         
+        <tag>状态压缩</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/loj10221/</loc>
+    <lastmod>2018-09-26T11:49:32.000Z</lastmod>
+    <data>
+        <display>
+        <title>Fibonacci 前 n 项和</title>
+        <pubTime>2018-09-26T11:40:00.000Z</pubTime>
+        
+        <tag>矩阵快速幂</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/p2857/</loc>
+    <lastmod>2018-09-25T11:53:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>P2857 Steady Cow Assignment</title>
+        <pubTime>2018-09-25T11:52:00.000Z</pubTime>
+        
+        <tag>网络流</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/p3521/</loc>
+    <lastmod>2018-09-25T11:39:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>ROT-Tree Rotations</title>
+        <pubTime>2018-09-25T09:13:00.000Z</pubTime>
+        
+        <tag>线段树合并</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/sp2713/</loc>
+    <lastmod>2018-09-25T11:10:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>GSS4 - Can you answer these queries IV</title>
+        <pubTime>2018-09-25T02:00:00.000Z</pubTime>
+        
+        <tag>线段树</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/exam9-21/</loc>
+    <lastmod>2018-09-21T13:24:10.000Z</lastmod>
+    <data>
+        <display>
+        <title></title>
+        <pubTime>2018-09-27T13:41:52.108Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/FirstMergeSegTree/</loc>
+    <lastmod>2018-09-21T13:23:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>线段树合并</title>
+        <pubTime>2018-09-21T13:16:00.000Z</pubTime>
+        
+        <tag>线段树合并</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="初体验" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E5%88%9D%E4%BD%93%E9%AA%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/p2096/</loc>
     <lastmod>2018-09-20T12:42:08.000Z</lastmod>
     <data>
