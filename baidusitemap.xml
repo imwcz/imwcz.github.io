@@ -4,6 +4,73 @@
 
     
   <url>
+    <loc>http://aiyoupass.com/2019/TheEndOfOI/</loc>
+    <lastmod>2019-01-13T14:01:30.000Z</lastmod>
+    <data>
+        <display>
+        <title>新生活的开始</title>
+        <pubTime>2019-01-13T13:46:24.380Z</pubTime>
+        
+        <tag>NOIP</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2019/noip2018/</loc>
+    <lastmod>2019-01-13T13:45:50.000Z</lastmod>
+    <data>
+        <display>
+        <title>NOIP2018 游记</title>
+        <pubTime>2019-01-13T13:41:19.730Z</pubTime>
+        
+        <tag>NOIP</tag>
+         
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="总结" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aiyoupass.com/2018/U32670/</loc>
+    <lastmod>2018-09-28T07:09:24.000Z</lastmod>
+    <data>
+        <display>
+        <title>U32670 小凯的数字</title>
+        <pubTime>2018-09-25T12:15:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="信息学竞赛" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/"/>
+          
+             
+              <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://aiyoupass.com/2018/SolveSublime/</loc>
     <lastmod>2018-09-27T13:33:36.000Z</lastmod>
     <data>
@@ -206,21 +273,6 @@
              
               <breadCrumb title="题目" url="http://aiyoupass.com/categories/%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AB%9E%E8%B5%9B/%E9%A2%98%E7%9B%AE/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://aiyoupass.com/2018/exam9-21/</loc>
-    <lastmod>2018-09-21T13:24:10.000Z</lastmod>
-    <data>
-        <display>
-        <title></title>
-        <pubTime>2018-09-27T13:41:52.108Z</pubTime>
-        
-         
-           
         </display>
     </data>
     </url>
